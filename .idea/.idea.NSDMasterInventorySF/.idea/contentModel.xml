@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\titom\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_NSDMasterInventorySF.2043959596.00" t="ExcludeRecursive" />
+    <e p="C:\Users\titom\source\repos\NSDMasterInventorySF" t="IncludeFlat">
+      <e p="Installer\Installer.vdproj" t="IncludeRecursive" />
+      <e p="NSDMasterInventorySF" t="IncludeRecursive">
+        <e p="app.config" t="Include" />
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ComboBoxBuilder.xaml" t="Include" />
+        <e p="ComboBoxBuilder.xaml.cs" t="Include" />
+        <e p="DatabaseManager.xaml" t="Include" />
+        <e p="DatabaseManager.xaml.cs" t="Include" />
+        <e p="EditTable.xaml" t="Include" />
+        <e p="EditTable.xaml.cs" t="Include" />
+        <e p="FindAndReplace.xaml" t="Include" />
+        <e p="FindAndReplace.xaml.cs" t="Include" />
+        <e p="Images" t="Include">
+          <e p="Backward_16xMD.png" t="Include" />
+          <e p="Close_red_16x.png" t="Include" />
+          <e p="Comma_16x.png" t="Include" />
+          <e p="ConnectToDatabase_16x.png" t="Include" />
+          <e p="datamatrix.png" t="Include" />
+          <e p="DataTable_16x.png" t="Include" />
+          <e p="DeleteTable_16x.png" t="Include" />
+          <e p="DeleteTableRow_16x.png" t="Include" />
+          <e p="ExcelWorksheetView_16x.png" t="Include" />
+          <e p="Export_16x.png" t="Include" />
+          <e p="FindDown_16x.png" t="Include" />
+          <e p="FindSymbol_16x.png" t="Include" />
+          <e p="GroupClause_16x.png" t="Include" />
+          <e p="pete.ico" t="Include" />
+          <e p="ResetTimelineView_16x.png" t="Include" />
+          <e p="Restart_16x.png" t="Include" />
+          <e p="RestoreDefaultView_16x.png" t="Include" />
+          <e p="RuntimeToolbar_16x.png" t="Include" />
+          <e p="Schema_16x.png" t="Include" />
+          <e p="SharedModule_16x.png" t="Include" />
+          <e p="StyleBlock_16x.png" t="Include" />
+          <e p="table-save.png" t="Include" />
+          <e p="Table_16x.png" t="Include" />
+          <e p="Undo_16x.png" t="Include" />
+        </e>
+        <e p="io" t="Include">
+          <e p="BarcodeGenerator.cs" t="Include" />
+          <e p="ConfigGenerator.cs" t="Include" />
+          <e p="ConfigurationEcnrypterDecrypter.cs" t="Include" />
+          <e p="ExcelWriter.cs" t="Include" />
+          <e p="SqlDependencyEx.cs" t="Include" />
+          <e p="SvWriter.cs" t="Include" />
+        </e>
+        <e p="MainWindow.xaml" t="Include" />
+        <e p="MainWindow.xaml.cs" t="Include" />
+        <e p="NSDMasterInventorySF.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PrefabBuilder.xaml" t="Include" />
+        <e p="PrefabBuilder.xaml.cs" t="Include" />
+        <e p="PrefabManager.xaml" t="Include" />
+        <e p="PrefabManager.xaml.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="app.manifest" t="Include" />
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="Recycled.xaml" t="Include" />
+        <e p="Recyled.xaml.cs" t="Include" />
+        <e p="RestorationManager.xaml" t="Include" />
+        <e p="RestorationManager.xaml.cs" t="Include" />
+        <e p="Settings.cs" t="Include" />
+        <e p="StyleChooser.xaml" t="Include" />
+        <e p="StyleChooser.xaml.cs" t="Include" />
+        <e p="TableManager.xaml" t="Include" />
+        <e p="TableManager.xaml.cs" t="Include" />
+        <e p="ui" t="Include">
+          <e p="CellStyleSelector.cs" t="Include" />
+          <e p="DataGridBehavior.cs" t="Include" />
+          <e p="GridCellComboBoxRendererExt.cs" t="Include" />
+          <e p="GridColumnExtension.cs" t="Include" />
+          <e p="RowIndexConverter.cs" t="Include" />
+          <e p="SearchHelperExt.cs" t="Include" />
+          <e p="SfDataGridExt.cs" t="Include" />
+          <e p="UiHelper.cs" t="Include" />
+        </e>
+      </e>
+      <e p="NSDMasterInventorySF.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
