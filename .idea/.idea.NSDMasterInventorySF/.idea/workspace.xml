@@ -1,0 +1,1504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9bba55b0-31ee-4b2f-9ffa-615f176d9aae" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NSDMasterInventorySF/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NSDMasterInventorySF/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/NSDMasterInventorySF/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/NSDMasterInventorySF/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/NSDMasterInventorySF/v15/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/NSDMasterInventorySF/v15/Server/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/App.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/App.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/ComboBoxBuilder.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/ComboBoxBuilder.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/ComboBoxBuilder.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/ComboBoxBuilder.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/DatabaseManager.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/DatabaseManager.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/DatabaseManager.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/DatabaseManager.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/EditTable.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/EditTable.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/EditTable.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/EditTable.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/FindAndReplace.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/FindAndReplace.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/FindAndReplace.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/FindAndReplace.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/NSDMasterInventorySF.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/NSDMasterInventorySF.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/PrefabBuilder.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/PrefabBuilder.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/PrefabBuilder.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/PrefabBuilder.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/PrefabManager.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/PrefabManager.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/PrefabManager.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/PrefabManager.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/Recycled.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/Recycled.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/Recyled.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/Recyled.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/RestorationManager.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/RestorationManager.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/RestorationManager.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/RestorationManager.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/StyleChooser.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/StyleChooser.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/StyleChooser.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/StyleChooser.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/TableManager.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/TableManager.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/TableManager.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/TableManager.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.application" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.application" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.exe" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.exe.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.exe.manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/app.publish/Rapid Recorder.exe" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/app.publish/Rapid Recorder.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/io/BarcodeGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/io/BarcodeGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/io/ExcelWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/io/ExcelWriter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/io/SqlDependencyEx.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/io/SqlDependencyEx.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/io/SvWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/io/SvWriter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/App.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/App.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/App.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/App.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/ComboBoxBuilder.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/ComboBoxBuilder.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/ComboBoxBuilder.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/ComboBoxBuilder.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/ComboBoxBuilder.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/ComboBoxBuilder.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/DatabaseManager.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/DatabaseManager.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/DatabaseManager.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/DatabaseManager.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/DatabaseManager.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/DatabaseManager.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/EditTable.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/EditTable.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/EditTable.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/EditTable.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/EditTable.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/EditTable.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/FindAndReplace.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/FindAndReplace.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/FindAndReplace.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/FindAndReplace.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/FindAndReplace.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/FindAndReplace.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/MainWindow.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/MainWindow.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/MainWindow.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/NSDMasterInventorySF.csprojResolveAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/NSDMasterInventorySF.csprojResolveAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabBuilder.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabBuilder.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabBuilder.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabBuilder.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabBuilder.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabBuilder.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabManager.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabManager.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabManager.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabManager.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabManager.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabManager.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.application" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.application" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.exe" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.exe.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.exe.manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.g.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder_MarkupCompile.i.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder_MarkupCompile.i.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Recycled.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Recycled.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Recycled.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Recycled.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/RestorationManager.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/RestorationManager.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/RestorationManager.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/RestorationManager.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/RestorationManager.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/RestorationManager.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/StyleChooser.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/StyleChooser.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/StyleChooser.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/StyleChooser.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/StyleChooser.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/StyleChooser.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/TableManager.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/TableManager.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/TableManager.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/TableManager.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/TableManager.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/TableManager.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/ui/UiHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/ui/UiHelper.cs" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Inventory@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Inventory@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="Inventory: database" type="bdf80c8a:MssqlImplModel$Database" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="NSDMasterInventorySF" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="App.xaml.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/App.xaml.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2348">
+              <caret line="355" column="57" selection-start-line="355" selection-start-column="57" selection-end-line="355" selection-end-column="57" />
+              <folding>
+                <marker date="1524887308743" expanded="false" signature="6:344" ph="..." />
+                <marker date="1524887308743" expanded="true" signature="346:411" ph="/* TODO: Recycleds window ... */" />
+                <marker date="1524887308743" expanded="true" signature="442:17446" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="446:535" ph="///     Interaction logic for App.xaml ... " />
+                <marker date="1524887308743" expanded="true" signature="575:17444" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="998:1911" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="1136:1862" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="1287:1331" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="1467:1511" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="1643:1687" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="1797:1838" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="1943:2019" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="2050:4007" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="2149:3954" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="2162:3773" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="2228:3767" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="2444:2494" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="2572:3739" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="2711:3321" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="3047:3241" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="3442:3492" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="3681:3731" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="3788:3902" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="4103:5076" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="4697:4801" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="4944:5072" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="5127:5836" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="5189:5832" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="5888:6594" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="5950:6590" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="6658:7246" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="6935:7205" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="6989:7200" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="7325:7690" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="7451:7649" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="7505:7644" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="7765:8119" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="7808:7902" ph="/* Set up a command with the given query and associate ... */" />
+                <marker date="1524887308743" expanded="true" signature="7976:8098" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="8030:8093" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="8208:8899" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="8402:8496" ph="/* Set up a command with the given query and associate ... */" />
+                <marker date="1524887308743" expanded="true" signature="8582:8878" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="8636:8873" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="9003:9677" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="9197:9291" ph="/* Set up a command with the given query and associate ... */" />
+                <marker date="1524887308743" expanded="true" signature="9377:9656" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="9431:9651" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="9752:10317" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="9961:10288" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="10403:11054" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="10465:11050" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="10790:11003" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="11117:11746" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="11179:11742" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="11487:11717" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="11778:12320" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="11896:12300" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="11972:12276" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="12082:12270" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="12137:12263" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="12367:13464" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="12469:13437" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="12562:13129" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="12672:13110" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="12770:13103" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="12840:13095" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="13130:13413" ph="/* using (SqlDependencyEx dependencyEx = ... */" />
+                <marker date="1524887308743" expanded="true" signature="13564:14603" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="13696:14110" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="13890:13934" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="14061:14105" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="14197:14599" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="14288:14594" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="14332:14588" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="14682:15190" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="14868:15161" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="15249:16208" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="15257:16187" ph="/* var inTypesProp = GetProp(prefab, &quot;Types&quot;); ... */" />
+                <marker date="1524887308743" expanded="true" signature="16308:16599" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="16673:16909" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="16982:16990" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="17034:17211" ph="{...}" />
+                <marker date="1524887308743" expanded="true" signature="17260:17441" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainWindow.xaml.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-834">
+              <caret line="586" column="35" selection-start-line="586" selection-start-column="35" selection-end-line="586" selection-end-column="35" />
+              <folding>
+                <marker date="1524887284909" expanded="false" signature="6:844" ph="..." />
+                <marker date="1524887284909" expanded="true" signature="876:19331" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="880:956" ph="///     Interaction logic for MainWindow.xaml ... " />
+                <marker date="1524887284909" expanded="true" signature="998:19329" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="1023:2321" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="1061:1183" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="1129:1178" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="1196:1551" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="2148:2173" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="2253:2278" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="2373:2398" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="2452:2480" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="2539:4564" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="3024:3433" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="3097:3209" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="3139:3164" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="3288:3409" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="3438:3583" ph="/* Debug.WriteLine(tabIndex); ... */" />
+                <marker date="1524887284909" expanded="true" signature="3909:4223" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="4231:4501" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="4601:4788" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="4818:5054" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="4929:5050" ph="/* foreach (var grid in MasterDataGrids) ... */" />
+                <marker date="1524887284909" expanded="true" signature="5141:5532" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="5595:5657" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="5701:8288" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="5864:8094" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="5877:7785" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="5953:7779" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="6038:7751" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="6232:6285" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="6347:6451" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="6463:6520" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="6541:7743" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="6554:7535" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="6752:6811" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="6822:6924" ph="/* Debug.WriteLine(table.TableName); ... */" />
+                <marker date="1524887284909" expanded="true" signature="6969:7484" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="7182:7401" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="7558:7734" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="7865:8042" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="8163:8223" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="8353:8599" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="8416:8568" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="8663:8995" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="8714:8815" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="9057:9403" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="9465:9811" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="9880:10483" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="9958:10429" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="9971:10172" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="10202:10302" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="10328:10424" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="10561:10598" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="10640:11631" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="10674:11569" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="10722:11361" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="10889:11170" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="11370:11564" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="11590:11627" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="11694:11875" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="11764:11871" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="11939:12098" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="12009:12094" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="12164:12324" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="12234:12320" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="12365:12473" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="12554:12715" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="12629:12679" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="12719:12929" ph="///     Called when [loaded]. ... " />
+                <marker date="1524887284909" expanded="true" signature="12987:13043" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="13047:13138" ph="///     On Visual Style Changed. ... " />
+                <marker date="1524887284909" expanded="true" signature="13176:13457" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="13523:13835" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="13902:13922" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="14005:14210" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="14084:14172" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="14290:14486" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="14363:14451" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="14558:14663" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="14589:14659" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="14744:14810" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="14853:16154" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="15174:15637" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="15570:15631" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="16034:16072" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="16211:16333" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="16396:16622" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="16450:16538" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="16678:16854" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="16735:16823" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="16905:16937" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="17006:17173" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="17240:17394" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="17288:17376" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="17463:17537" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="17616:17624" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="17705:17732" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="17786:17900" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="17797:17842" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="17855:17879" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="17963:17997" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="18062:18184" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="18188:18919" ph="Fields" />
+                <marker date="1524887284909" expanded="false" signature="18923:19326" ph="Properties" />
+                <marker date="1524887284909" expanded="true" signature="18945:19072" ph="///     Gets or sets the current visual style. ... " />
+                <marker date="1524887284909" expanded="true" signature="19107:19224" ph="{...}" />
+                <marker date="1524887284909" expanded="true" signature="19149:19220" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrefabBuilder.xaml.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/PrefabBuilder.xaml.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="694" column="52" selection-start-line="694" selection-start-column="52" selection-end-line="694" selection-end-column="52" />
+              <folding>
+                <marker date="1524887875146" expanded="false" signature="6:417" ph="..." />
+                <marker date="1524887875146" expanded="true" signature="449:21557" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="453:532" ph="///     Interaction logic for PrefabBuilder.xaml ... " />
+                <marker date="1524887875146" expanded="true" signature="577:21555" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="1258:1511" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="1573:2281" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="1873:2151" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="2317:2434" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="2359:2430" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="2492:4430" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="2558:4426" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="4163:4369" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="4471:10520" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="4549:4643" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="4710:4759" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="4798:4841" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="4952:5040" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="5430:5472" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="5511:5547" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="5644:5717" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="5765:6208" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="5972:6203" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="6261:6646" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="6677:6793" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="6831:7211" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="7080:7136" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="7219:7256" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="7295:7326" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="7359:7450" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="7513:7554" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="7593:7628" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="7660:7749" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="7811:7850" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="7889:7922" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="7954:8064" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="8072:8113" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="8152:8187" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="8216:8320" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="8355:8866" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="8534:8708" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="8725:8809" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="8874:8909" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="8948:8977" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="9203:9246" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="9285:9322" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="9408:10495" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="9587:9700" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="9717:9790" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="9796:10183" ph="/* try ... */" />
+                <marker date="1524887875146" expanded="true" signature="10552:11116" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="11154:11741" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="11201:11313" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="11802:19241" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="11930:19165" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="12174:12546" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="12189:12245" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="12262:12270" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="12280:12334" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="12351:12359" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="12369:12425" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="12442:12450" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="12460:12515" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="12532:12540" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="12642:12869" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="12769:12813" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="13131:13347" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="13517:13702" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="13926:14118" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="14345:14538" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="15049:15626" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="15092:15160" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="15170:15297" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="15386:15467" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="15478:15620" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="15635:15960" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="15728:15805" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="15816:15954" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="15991:16171" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="16180:16307" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="16338:16508" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="16517:16630" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="16661:16827" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="16836:16946" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="17462:17512" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="17695:17745" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="17874:17918" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="17965:18043" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="18052:18106" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="18121:18153" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="18374:18540" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="18572:18962" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="19317:19812" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="19524:19808" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="19875:19895" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="19975:20247" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="20330:20414" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="20497:21117" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="20552:21090" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="21156:21437" ph="{...}" />
+                <marker date="1524887875146" expanded="true" signature="21496:21552" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>pete.ico</find>
+      <find>database</find>
+      <find>selectionchanged</find>
+      <find>+ &quot;</find>
+      <find>&quot; +</find>
+      <find>textbox</find>
+      <find>onkeydown</find>
+      <find>truncate</find>
+      <find>barcode</find>
+      <find>BACKUP</find>
+      <find>dependency</find>
+      <find>sqldependencyex</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6FFA6DC0-8506-41B6-8356-65C3C96B7F41/eb/3d8c45f5/UIElement.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/DatabaseManager.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/DatabaseManager.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/ComboBoxBuilder.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/PrefabManager.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/FindAndReplace.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/EditTable.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/TableManager.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/TableManager.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/io/ExcelWriter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/io/SvWriter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/io/BarcodeGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/ui/UiHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/ui/SearchHelperExt.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/ui/CellStyleSelector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/ui/RowIndexConverter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/ui/SfDataGridExt.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A0DB5EA3-BB7B-4E18-9FCE-22221233EA44/f5/8e859824/ModifierKeys.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/io/SqlDependencyEx.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6FFA6DC0-8506-41B6-8356-65C3C96B7F41/66/5a49d2f6/KeyGesture.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/Recycled.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/Properties/Resources.resx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/app.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/Properties/Settings.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/App.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F6E70350-B81B-4B67-A86E-BBC5866A81CE/de/3e2aec47/String.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/App.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/PrefabBuilder.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/Recyled.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/ComboBoxBuilder.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/NSDMasterInventorySF.csproj" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/ui/CellStyleSelector.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/ui/RowIndexConverter.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/ComboBoxBuilder.xaml" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/RestoreFromBackupsManager.xaml.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/RestoreFromBackupsManager.xaml" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/DatabaseManager.xaml.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/EditTable.xaml.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/PrefabManager.xaml.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/TableManager.xaml.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/RestorationManager.xaml" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/RestorationManager.xaml.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/ui/SearchHelperExt.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/ui/UiHelper.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/Recyled.xaml" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/SqlDependencyEx.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e30488da-7b7d-4e72-bd76-a41c13e38e7a/console.sql" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/Recyled.xaml.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/App.xaml" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/ComboBoxBuilder.xaml.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/io/SqlDependencyEx.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/io/ExcelWriter.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/io/SvWriter.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/io/BarcodeGenerator.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/App.xaml.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/FindAndReplace.xaml.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/io/Extensor.cs" />
+        <option value="$PROJECT_DIR$/NSDMasterInventorySF/PrefabBuilder.xaml.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="NSDMasterInventorySF (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="NSDMasterInventorySF (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="NSDMasterInventorySF" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="NSDMasterInventorySF (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="NSDMasterInventorySF" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="io" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="NSDMasterInventorySF (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="NSDMasterInventorySF" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="App.xaml" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="NSDMasterInventorySF (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="NSDMasterInventorySF" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="ComboBoxBuilder.xaml" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="NSDMasterInventorySF (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="NSDMasterInventorySF" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="FindAndReplace.xaml" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="RiderNuGetCacheManager.AutoClear.global-packages" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.http-cache" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.packages-cache" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.temp" value="1" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="SQL Server (Microsoft)" />
+    <property name="do_not_show_solution_notification" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/NSDMasterInventorySF/RestorationManager.xaml.cs" />
+    <property name="nodejs.cucumber.cucumber_node_package_dir" value="" />
+    <property name="settings.editor.selected.configurable" value="Inspections-C#" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/NSDMasterInventorySF/NSDMasterInventorySF.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.6.1" />
+    </configuration>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9bba55b0-31ee-4b2f-9ffa-615f176d9aae" name="Default" comment="" />
+      <created>1520977680157</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1520977680157</updated>
+      <workItem from="1520977683808" duration="772000" />
+      <workItem from="1521410978986" duration="5858000" />
+      <workItem from="1521417546963" duration="1256000" />
+      <workItem from="1521418951655" duration="79000" />
+      <workItem from="1522625724286" duration="2470000" />
+      <workItem from="1522772055869" duration="1443000" />
+      <workItem from="1522979673453" duration="1687000" />
+      <workItem from="1522981389414" duration="20000" />
+      <workItem from="1522981946009" duration="3013000" />
+      <workItem from="1523018224055" duration="6126000" />
+      <workItem from="1523026060315" duration="3474000" />
+      <workItem from="1523032248242" duration="1576000" />
+      <workItem from="1523035567322" duration="5290000" />
+      <workItem from="1523066595414" duration="931000" />
+      <workItem from="1523121271103" duration="21216000" />
+      <workItem from="1524837185287" duration="398000" />
+      <workItem from="1524838281472" duration="4281000" />
+      <workItem from="1524881746458" duration="6349000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="66239000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Errors In Solution" order="1" side_tool="true" weight="0.30612245" />
+      <window_info anchor="bottom" id="Stacktrace" weight="0.32905984" />
+      <window_info anchor="bottom" id="Event Log" internal_type="SLIDING" order="2" side_tool="true" type="SLIDING" weight="0.3295325" />
+      <window_info anchor="bottom" id="Unit Tests" order="5" />
+      <window_info anchor="bottom" id="Database Changes" order="6" />
+      <window_info anchor="bottom" id="Run" order="13" weight="0.3298969" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="NuGet" order="8" weight="0.3295325" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5997151" visible="true" weight="0.2637584" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" auto_hide="true" id="Build" order="4" weight="0.32905984" />
+      <window_info id="Database" order="2" sideWeight="0.55644244" weight="0.25402793" />
+      <window_info id="Structure" order="1" sideWeight="0.4002849" side_tool="true" visible="true" weight="0.2637584" />
+      <window_info anchor="bottom" auto_hide="true" id="Debug" internal_type="SLIDING" order="3" weight="0.3988604" />
+      <window_info anchor="right" id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="15" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.3298969" />
+      <window_info anchor="bottom" id="Database Console" order="9" weight="0.3295325" />
+      <window_info anchor="bottom" id="Message" order="11" />
+      <window_info anchor="bottom" id="Cvs" order="14" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="12" weight="0.3298969" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" isUnityUI="false" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F6E70350-B81B-4B67-A86E-BBC5866A81CE/de/3e2aec47/String.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c9ac12fb-8278-4121-810c-65081fcc9cf1/database/Inventory/schema/Tables/table/TESTING" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/70090D3B-B3D1-4D4D-964B-884EDD10803E/94/b84c391c/XamlReader.cs" />
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/ui/CellStyleSelector.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="24" column="97" selection-start-line="24" selection-start-column="97" selection-end-line="24" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/ui/RowIndexConverter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/RestoreFromBackupsManager.xaml.cs" />
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/RestoreFromBackupsManager.xaml" />
+    <entry file="das://e30488da-7b7d-4e72-bd76-a41c13e38e7a/database/Inventory/schema/IT Tables/table/AMS" />
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/ComboBoxBuilder.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="78" selection-start-line="4" selection-start-column="78" selection-end-line="4" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Installer/Installer.vdproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3043" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/DatabaseManager.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-418" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/TableManager.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="195" column="72" selection-start-line="195" selection-start-column="72" selection-end-line="195" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/PrefabManager.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="97" column="106" selection-start-line="97" selection-start-column="106" selection-end-line="97" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/EditTable.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="115" column="78" selection-start-line="115" selection-start-column="78" selection-end-line="115" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/Properties/Settings.Designer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e30488da-7b7d-4e72-bd76-a41c13e38e7a/database/Inventory/schema/IT Tables/table/Accessories" />
+    <entry file="das://e30488da-7b7d-4e72-bd76-a41c13e38e7a/database/Inventory/schema/IT Tables_BACKUPS/table/Accessories" />
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/TableManager.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/DatabaseManager.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1797">
+          <caret line="150" selection-start-line="150" selection-end-line="150" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/85EA37E6-F5FE-47C8-B537-44C2C1863344/b6/958b7b95/SqlConnection.cs" />
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/RestorationManager.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="80" column="45" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/RestorationManager.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82D100C0-D5DD-45B1-9D35-2A4133A79B1F/a1/30667402/DateTimePattern.cs" />
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/ui/SearchHelperExt.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="87" column="38" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6C46755A-58B2-4F6B-867B-02DA0307F600/e4/118aea63/Enumerable.cs" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FE4B0088-17C8-40D9-A31A-B98084D9C3E5/4c/3c34a901/String.cs" />
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/ui/UiHelper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2142">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A0DB5EA3-BB7B-4E18-9FCE-22221233EA44/b5/b2c44661/ICollectionView.cs" />
+    <entry file="file://C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/Microsoft.Common.CurrentVersion.targets">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="2051" column="4" selection-start-line="2051" selection-start-column="4" selection-end-line="2051" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/ui/SfDataGridExt.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/ade0ab92/e30488da-7b7d-4e72-bd76-a41c13e38e7a/Inventory.IT Tables.AMS">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="%%physloc%%" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/SqlDependencyEx.cs" />
+    <entry file="das://view:/ade0ab92/e30488da-7b7d-4e72-bd76-a41c13e38e7a/Inventory.sys.transmission_queue">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/ade0ab92/e30488da-7b7d-4e72-bd76-a41c13e38e7a/Inventory.IT Tables.Accessories">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="%%physloc%%" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/Recycled.xaml" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6FFA6DC0-8506-41B6-8356-65C3C96B7F41/eb/3d8c45f5/UIElement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="319" column="39" lean-forward="true" selection-start-line="319" selection-start-column="39" selection-end-line="319" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/App.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A0DB5EA3-BB7B-4E18-9FCE-22221233EA44/f5/8e859824/ModifierKeys.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6FFA6DC0-8506-41B6-8356-65C3C96B7F41/66/5a49d2f6/KeyGesture.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/Recyled.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="134" column="8" selection-start-line="134" selection-start-column="8" selection-end-line="134" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/ComboBoxBuilder.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="191" lean-forward="true" selection-start-line="191" selection-end-line="191" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2504">
+          <caret line="177" column="47" selection-start-line="177" selection-start-column="47" selection-end-line="177" selection-end-column="47" />
+          <folding>
+            <marker date="1524842038270" expanded="true" signature="0:9384" ph="&lt;&lt;Window.Resources&gt;&#10;&#9;&#9;&lt;ui:RowIndexConverter x:Key=&quot;Rowindexconverter&quot; /&gt;&#10;&#9;&#9;&lt;Style TargetType=&quot;syncfusion:GridRowHeaderCell&quot;&gt;&#10;&#9;&#9;&#9;&lt;Setter Property=&quot;Template&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;Setter.Value&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;ControlTemplate TargetType=&quot;syncfusion:GridRowHeaderCell&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Border x:Name=&quot;PART_RowHeaderCellBorder&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        Background=&quot;{TemplateBinding Background}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderBrush=&quot;{TemplateBinding BorderBrush}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderThickness=&quot;0.18&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           TextAlignment=&quot;Center&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Binding Path=&quot;RowIndex&quot; RelativeSource=&quot;{RelativeSource TemplatedParent}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;         Converter=&quot;{StaticResource Rowindexconverter}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/Border&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/ControlTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Setter.Value&gt;&#10;&#9;&#9;&#9;&lt;/Setter&gt;&#10;&#9;&#9;&lt;/Style&gt;&#10;&#9;&lt;/Window.Resources&gt; &lt;DockPanel&gt;&#10;&#9;&#9;&lt;Menu DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_File&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_Backup All&quot; Click=&quot;BackupTables&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Backward_16xMD.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_Restore from Backups&quot; Click=&quot;RestoreFromBackups&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RestoreDefaultView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_View Recycled&quot; Click=&quot;ViewRecycled&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/DeleteTable_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;Separator /&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Export...&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Export_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _Excel&quot; Click=&quot;ExportToExcel&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ExcelWorksheetView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _CSVs&quot; Click=&quot;ExportToCsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Comma_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _TSVs&quot; Click=&quot;ExportToTsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RuntimeToolbar_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _Barcodes&quot; Click=&quot;GenerateBarCodes&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/datamatrix.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Save All&quot; Click=&quot;Save_Changes&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/DataTable_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontWeight=&quot;Bold&quot; Header=&quot;Save and _Close&quot; Click=&quot;CloseApplication&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Close_red_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Edit&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Table Manager&quot; Click=&quot;OpenSheetManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Table_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Prefab Manager&quot; Click=&quot;OpenPrefabManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Schema_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Database Manager&quot; Click=&quot;OpenDatabaseManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ConnectToDatabase_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;Change _Style&quot; Click=&quot;OpenStyleChooser&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/StyleBlock_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&lt;/Menu&gt;&#10;&#9;&#9;&lt;WrapPanel DockPanel.Dock=&quot;Top&quot; HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; Margin=&quot;5,5,5,5&quot;&gt;&#10;&#9;&#9;&#9;&lt;Image Source=&quot;Images/FindDown_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; Margin=&quot;0,0,5,0&quot; /&gt;&#10;&#9;&#9;&#9;&lt;syncfusion:SfTextBoxExt x:Name=&quot;SearchField&quot; TextWrapping=&quot;Wrap&quot; Width=&quot;225&quot;&#10;&#9;&#9;&#9;                         Margin=&quot;0,0,0,0&quot; HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; FontSize=&quot;14&quot;&#10;&#9;&#9;&#9;                         Watermark=&quot;Search...&quot; TextChanged=&quot;SearchFieldTextChanged&quot; AutoCompleteMode=&quot;SuggestAppend&quot;&#10;&#9;&#9;&#9;                         ToolTip=&quot;Search for an Item.&quot; KeyDown=&quot;SearchField_OnKeyDown&quot; /&gt;&#10;&#9;&#9;&#9;&lt;Separator Margin=&quot;0,0,0,0&quot; Width=&quot;30&quot; VerticalAlignment=&quot;Center&quot; RenderTransformOrigin=&quot;0.5,0.5&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ScaleTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;SkewTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RotateTransform Angle=&quot;90&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TranslateTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&lt;/Separator&gt;&#10;&#9;&#9;&#9;&lt;CheckBox x:Name=&quot;ResetSorts&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; Checked=&quot;ResetSorting&quot; Unchecked=&quot;UnResetSorting&quot;&#10;&#9;&#9;&#9;          IsChecked=&quot;True&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/ResetTimelineView_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Default Sorting and Filtering&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt;&#10;&#9;&#9;&#9;&lt;CheckBox x:Name=&quot;ResetGroupsBox&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; Checked=&quot;ResetGrouping&quot; Unchecked=&quot;UnResetGrouping&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/GroupClause_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Default Grouping&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt;&#10;&#9;&#9;&#9;&lt;CheckBox x:Name=&quot;DeleteModeCheckBox&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; Click=&quot;EnterDeleteMode&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/DeleteTableRow_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Delete Mode&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt;&#10;&#9;&#9;&#9;&lt;!--&lt;CheckBox x:Name=&quot;ViewChangesTextBox&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,0,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; Checked=&quot;ViewChangesTextBox_OnChecked&quot; Unchecked=&quot;ViewChangesTextBox_OnUnChecked&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/FindSymbol_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;View Changes&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt;--&gt;&#10;&#9;&#9;&#9;&lt;Separator Margin=&quot;0,0,0,0&quot; VerticalAlignment=&quot;Center&quot; Width=&quot;30&quot; RenderTransformOrigin=&quot;0.5,0.5&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ScaleTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;SkewTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RotateTransform Angle=&quot;90&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TranslateTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&lt;/Separator&gt;&#10;&#9;&#9;&#9;&lt;syncfusion:ButtonAdv x:Name=&quot;RevertChanges&quot; VerticalAlignment=&quot;Center&quot; IsEnabled=&quot;False&quot; FontSize=&quot;14&quot;&#10;&#9;&#9;&#9;                      Margin=&quot;0,0,10,0&quot; Click=&quot;Revert_Changes&quot; SmallIcon=&quot;Images/Undo_16x.png&quot; Label=&quot;Revert Changes&quot; /&gt;&#10;&#9;&#9;&#9;&lt;syncfusion:ButtonAdv x:Name=&quot;RefreshAll&quot; VerticalAlignment=&quot;Center&quot; SmallIcon=&quot;Images/Restart_16x.png&quot;&#10;&#9;&#9;&#9;                      Label=&quot;Refresh&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,0,0&quot; Click=&quot;RefreshAll_OnClick&quot; /&gt;&#10;&#9;&#9;&lt;/WrapPanel&gt;&#10;&#9;&#9;&lt;DockPanel DockPanel.Dock=&quot;Bottom&quot; Margin=&quot;10, 10, 10, 10&quot;&gt;&#10;&#9;&#9;&#9;&lt;syncfusion:ButtonAdv DockPanel.Dock=&quot;Right&quot; FontSize=&quot;16&quot; x:Name=&quot;BarcodeInventoryCommit&quot; IconHeight=&quot;0&quot;&#10;&#9;&#9;&#9;                      IconWidth=&quot;0&quot; Label=&quot;Inventory Item&quot;&#10;&#9;&#9;&#9;                      ToolTip=&quot;Inventory item from a barcode to the Database.&quot;&#10;&#9;&#9;&#9;                      Click=&quot;BarcodeInventoryCommit_OnClick&quot; /&gt;&#10;&#9;&#9;&#9;&lt;syncfusion:SfTextBoxExt AcceptsTab=&quot;True&quot; TextWrapping=&quot;Wrap&quot; FontSize=&quot;16&quot; Watermark=&quot;Enter your barcode here...&quot;&#10;&#9;&#9;&#9;                         DockPanel.Dock=&quot;Left&quot; x:Name=&quot;BarcodeTextBox&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;                         ToolTip=&quot;Enter an Item Barcode here.&quot; KeyDown=&quot;BarcodeTextBox_OnKeyDown&quot; /&gt;&#10;&#9;&#9;&lt;/DockPanel&gt;&#10;&#9;&#9;&lt;syncfusion:TabControlExt ShowTabItemContextMenu=&quot;False&quot; AllowDragDrop=&quot;False&quot; TabScrollButtonVisibility=&quot;Auto&quot;&#10;&#9;&#9;                          TabScrollStyle=&quot;Extended&quot; DockPanel.Dock=&quot;Left&quot; TabStripPlacement=&quot;Bottom&quot;&#10;&#9;&#9;                          EnableLabelEdit=&quot;False&quot;&#10;&#9;&#9;                          x:Name=&quot;MasterTabControl&quot; /&gt;&#10;&#9;&lt;/DockPanel&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="628:1529" ph="&lt;&lt;ui:RowIndexConverter x:Key=&quot;Rowindexconverter&quot; /&gt; &lt;Style TargetType=&quot;syncfusion:GridRowHeaderCell&quot;&gt;&#10;&#9;&#9;&#9;&lt;Setter Property=&quot;Template&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;Setter.Value&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;ControlTemplate TargetType=&quot;syncfusion:GridRowHeaderCell&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Border x:Name=&quot;PART_RowHeaderCellBorder&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        Background=&quot;{TemplateBinding Background}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderBrush=&quot;{TemplateBinding BorderBrush}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderThickness=&quot;0.18&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           TextAlignment=&quot;Center&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Binding Path=&quot;RowIndex&quot; RelativeSource=&quot;{RelativeSource TemplatedParent}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;         Converter=&quot;{StaticResource Rowindexconverter}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/Border&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/ControlTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Setter.Value&gt;&#10;&#9;&#9;&#9;&lt;/Setter&gt;&#10;&#9;&#9;&lt;/Style&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="702:1508" ph="&lt;&lt;Setter Property=&quot;Template&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;Setter.Value&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;ControlTemplate TargetType=&quot;syncfusion:GridRowHeaderCell&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Border x:Name=&quot;PART_RowHeaderCellBorder&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        Background=&quot;{TemplateBinding Background}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderBrush=&quot;{TemplateBinding BorderBrush}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderThickness=&quot;0.18&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           TextAlignment=&quot;Center&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Binding Path=&quot;RowIndex&quot; RelativeSource=&quot;{RelativeSource TemplatedParent}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;         Converter=&quot;{StaticResource Rowindexconverter}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/Border&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/ControlTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Setter.Value&gt;&#10;&#9;&#9;&#9;&lt;/Setter&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="755:1497" ph="&lt;&lt;Setter.Value&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;ControlTemplate TargetType=&quot;syncfusion:GridRowHeaderCell&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Border x:Name=&quot;PART_RowHeaderCellBorder&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        Background=&quot;{TemplateBinding Background}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderBrush=&quot;{TemplateBinding BorderBrush}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderThickness=&quot;0.18&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           TextAlignment=&quot;Center&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Binding Path=&quot;RowIndex&quot; RelativeSource=&quot;{RelativeSource TemplatedParent}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;         Converter=&quot;{StaticResource Rowindexconverter}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/Border&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/ControlTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Setter.Value&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="788:1484" ph="&lt;&lt;ControlTemplate TargetType=&quot;syncfusion:GridRowHeaderCell&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Border x:Name=&quot;PART_RowHeaderCellBorder&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        Background=&quot;{TemplateBinding Background}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderBrush=&quot;{TemplateBinding BorderBrush}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderThickness=&quot;0.18&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           TextAlignment=&quot;Center&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Binding Path=&quot;RowIndex&quot; RelativeSource=&quot;{RelativeSource TemplatedParent}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;         Converter=&quot;{StaticResource Rowindexconverter}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/Border&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/ControlTemplate&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="808:1464" ph="&lt;&lt;Border x:Name=&quot;PART_RowHeaderCellBorder&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        Background=&quot;{TemplateBinding Background}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderBrush=&quot;{TemplateBinding BorderBrush}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderThickness=&quot;0.18&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           TextAlignment=&quot;Center&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Binding Path=&quot;RowIndex&quot; RelativeSource=&quot;{RelativeSource TemplatedParent}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;         Converter=&quot;{StaticResource Rowindexconverter}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/Border&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="874:1440" ph="&lt;&lt;TextBlock HorizontalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           TextAlignment=&quot;Center&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Binding Path=&quot;RowIndex&quot; RelativeSource=&quot;{RelativeSource TemplatedParent}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;         Converter=&quot;{StaticResource Rowindexconverter}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="1075:1424" ph="&lt;&lt;TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Binding Path=&quot;RowIndex&quot; RelativeSource=&quot;{RelativeSource TemplatedParent}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;         Converter=&quot;{StaticResource Rowindexconverter}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock.Text&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="1210:1404" ph="&lt;&lt;Binding Path=&quot;RowIndex&quot; RelativeSource=&quot;{RelativeSource TemplatedParent}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;         Converter=&quot;{StaticResource Rowindexconverter}&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="1236:1378" ph="&lt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="1532:9374" ph="&lt;&lt;Menu DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_File&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_Backup All&quot; Click=&quot;BackupTables&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Backward_16xMD.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_Restore from Backups&quot; Click=&quot;RestoreFromBackups&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RestoreDefaultView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_View Recycled&quot; Click=&quot;ViewRecycled&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/DeleteTable_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;Separator /&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Export...&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Export_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _Excel&quot; Click=&quot;ExportToExcel&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ExcelWorksheetView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _CSVs&quot; Click=&quot;ExportToCsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Comma_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _TSVs&quot; Click=&quot;ExportToTsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RuntimeToolbar_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _Barcodes&quot; Click=&quot;GenerateBarCodes&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/datamatrix.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Save All&quot; Click=&quot;Save_Changes&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/DataTable_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontWeight=&quot;Bold&quot; Header=&quot;Save and _Close&quot; Click=&quot;CloseApplication&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Close_red_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Edit&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Table Manager&quot; Click=&quot;OpenSheetManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Table_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Prefab Manager&quot; Click=&quot;OpenPrefabManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Schema_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Database Manager&quot; Click=&quot;OpenDatabaseManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ConnectToDatabase_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;Change _Style&quot; Click=&quot;OpenStyleChooser&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/StyleBlock_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&lt;/Menu&gt; &lt;WrapPanel DockPanel.Dock=&quot;Top&quot; HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; Margin=&quot;5,5,5,5&quot;&gt;&#10;&#9;&#9;&#9;&lt;Image Source=&quot;Images/FindDown_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; Margin=&quot;0,0,5,0&quot; /&gt;&#10;&#9;&#9;&#9;&lt;syncfusion:SfTextBoxExt x:Name=&quot;SearchField&quot; TextWrapping=&quot;Wrap&quot; Width=&quot;225&quot;&#10;&#9;&#9;&#9;                         Margin=&quot;0,0,0,0&quot; HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; FontSize=&quot;14&quot;&#10;&#9;&#9;&#9;                         Watermark=&quot;Search...&quot; TextChanged=&quot;SearchFieldTextChanged&quot; AutoCompleteMode=&quot;SuggestAppend&quot;&#10;&#9;&#9;&#9;                         ToolTip=&quot;Search for an Item.&quot; KeyDown=&quot;SearchField_OnKeyDown&quot; /&gt;&#10;&#9;&#9;&#9;&lt;Separator Margin=&quot;0,0,0,0&quot; Width=&quot;30&quot; VerticalAlignment=&quot;Center&quot; RenderTransformOrigin=&quot;0.5,0.5&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ScaleTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;SkewTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RotateTransform Angle=&quot;90&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TranslateTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&lt;/Separator&gt;&#10;&#9;&#9;&#9;&lt;CheckBox x:Name=&quot;ResetSorts&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; Checked=&quot;ResetSorting&quot; Unchecked=&quot;UnResetSorting&quot;&#10;&#9;&#9;&#9;          IsChecked=&quot;True&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/ResetTimelineView_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Default Sorting and Filtering&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt;&#10;&#9;&#9;&#9;&lt;CheckBox x:Name=&quot;ResetGroupsBox&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; Checked=&quot;ResetGrouping&quot; Unchecked=&quot;UnResetGrouping&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/GroupClause_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Default Grouping&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt;&#10;&#9;&#9;&#9;&lt;CheckBox x:Name=&quot;DeleteModeCheckBox&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; Click=&quot;EnterDeleteMode&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/DeleteTableRow_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Delete Mode&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt;&#10;&#9;&#9;&#9;&lt;!--&lt;CheckBox x:Name=&quot;ViewChangesTextBox&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,0,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; Checked=&quot;ViewChangesTextBox_OnChecked&quot; Unchecked=&quot;ViewChangesTextBox_OnUnChecked&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/FindSymbol_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;View Changes&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt;--&gt;&#10;&#9;&#9;&#9;&lt;Separator Margin=&quot;0,0,0,0&quot; VerticalAlignment=&quot;Center&quot; Width=&quot;30&quot; RenderTransformOrigin=&quot;0.5,0.5&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ScaleTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;SkewTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RotateTransform Angle=&quot;90&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TranslateTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&lt;/Separator&gt;&#10;&#9;&#9;&#9;&lt;syncfusion:ButtonAdv x:Name=&quot;RevertChanges&quot; VerticalAlignment=&quot;Center&quot; IsEnabled=&quot;False&quot; FontSize=&quot;14&quot;&#10;&#9;&#9;&#9;                      Margin=&quot;0,0,10,0&quot; Click=&quot;Revert_Changes&quot; SmallIcon=&quot;Images/Undo_16x.png&quot; Label=&quot;Revert Changes&quot; /&gt;&#10;&#9;&#9;&#9;&lt;syncfusion:ButtonAdv x:Name=&quot;RefreshAll&quot; VerticalAlignment=&quot;Center&quot; SmallIcon=&quot;Images/Restart_16x.png&quot;&#10;&#9;&#9;&#9;                      Label=&quot;Refresh&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,0,0&quot; Click=&quot;RefreshAll_OnClick&quot; /&gt;&#10;&#9;&#9;&lt;/WrapPanel&gt; &lt;DockPanel DockPanel.Dock=&quot;Bottom&quot; Margin=&quot;10, 10, 10, 10&quot;&gt;&#10;&#9;&#9;&#9;&lt;syncfusion:ButtonAdv DockPanel.Dock=&quot;Right&quot; FontSize=&quot;16&quot; x:Name=&quot;BarcodeInventoryCommit&quot; IconHeight=&quot;0&quot;&#10;&#9;&#9;&#9;                      IconWidth=&quot;0&quot; Label=&quot;Inventory Item&quot;&#10;&#9;&#9;&#9;                      ToolTip=&quot;Inventory item from a barcode to the Database.&quot;&#10;&#9;&#9;&#9;                      Click=&quot;BarcodeInventoryCommit_OnClick&quot; /&gt;&#10;&#9;&#9;&#9;&lt;syncfusion:SfTextBoxExt AcceptsTab=&quot;True&quot; TextWrapping=&quot;Wrap&quot; FontSize=&quot;16&quot; Watermark=&quot;Enter your barcode here...&quot;&#10;&#9;&#9;&#9;                         DockPanel.Dock=&quot;Left&quot; x:Name=&quot;BarcodeTextBox&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;                         ToolTip=&quot;Enter an Item Barcode here.&quot; KeyDown=&quot;BarcodeTextBox_OnKeyDown&quot; /&gt;&#10;&#9;&#9;&lt;/DockPanel&gt; &lt;syncfusion:TabControlExt ShowTabItemContextMenu=&quot;False&quot; AllowDragDrop=&quot;False&quot; TabScrollButtonVisibility=&quot;Auto&quot;&#10;&#9;&#9;                          TabScrollStyle=&quot;Extended&quot; DockPanel.Dock=&quot;Left&quot; TabStripPlacement=&quot;Bottom&quot;&#10;&#9;&#9;                          EnableLabelEdit=&quot;False&quot;&#10;&#9;&#9;                          x:Name=&quot;MasterTabControl&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="1546:4222" ph="&lt;&lt;MenuItem Header=&quot;_File&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_Backup All&quot; Click=&quot;BackupTables&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Backward_16xMD.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_Restore from Backups&quot; Click=&quot;RestoreFromBackups&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RestoreDefaultView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_View Recycled&quot; Click=&quot;ViewRecycled&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/DeleteTable_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;Separator /&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Export...&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Export_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _Excel&quot; Click=&quot;ExportToExcel&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ExcelWorksheetView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _CSVs&quot; Click=&quot;ExportToCsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Comma_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _TSVs&quot; Click=&quot;ExportToTsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RuntimeToolbar_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _Barcodes&quot; Click=&quot;GenerateBarCodes&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/datamatrix.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Save All&quot; Click=&quot;Save_Changes&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/DataTable_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontWeight=&quot;Bold&quot; Header=&quot;Save and _Close&quot; Click=&quot;CloseApplication&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Close_red_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem Header=&quot;_Edit&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Table Manager&quot; Click=&quot;OpenSheetManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Table_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Prefab Manager&quot; Click=&quot;OpenPrefabManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Schema_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Database Manager&quot; Click=&quot;OpenDatabaseManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ConnectToDatabase_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;Change _Style&quot; Click=&quot;OpenStyleChooser&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/StyleBlock_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&lt;/MenuItem&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="1577:3428" ph="&lt;&lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_Backup All&quot; Click=&quot;BackupTables&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Backward_16xMD.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_Restore from Backups&quot; Click=&quot;RestoreFromBackups&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RestoreDefaultView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_View Recycled&quot; Click=&quot;ViewRecycled&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/DeleteTable_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;Separator /&gt; &lt;MenuItem Header=&quot;_Export...&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Export_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _Excel&quot; Click=&quot;ExportToExcel&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ExcelWorksheetView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _CSVs&quot; Click=&quot;ExportToCsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Comma_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _TSVs&quot; Click=&quot;ExportToTsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RuntimeToolbar_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _Barcodes&quot; Click=&quot;GenerateBarCodes&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/datamatrix.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem Header=&quot;_Save All&quot; Click=&quot;Save_Changes&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/DataTable_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem FontWeight=&quot;Bold&quot; Header=&quot;Save and _Close&quot; Click=&quot;CloseApplication&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Close_red_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="1607:1788" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Backward_16xMD.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="1684:1772" ph="&lt;&lt;Image Source=&quot;Images/Backward_16xMD.png&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="1793:1998" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RestoreDefaultView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="1886:1982" ph="&lt;&lt;Image Source=&quot;Images/RestoreDefaultView_16x.png&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="2003:2188" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/DeleteTable_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="2083:2172" ph="&lt;&lt;Image Source=&quot;Images/DeleteTable_16x.png&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="2211:3057" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Export_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt; &lt;MenuItem Header=&quot;To _Excel&quot; Click=&quot;ExportToExcel&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ExcelWorksheetView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem Header=&quot;To _CSVs&quot; Click=&quot;ExportToCsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Comma_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem Header=&quot;To _TSVs&quot; Click=&quot;ExportToTsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RuntimeToolbar_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem Header=&quot;To _Barcodes&quot; Click=&quot;GenerateBarCodes&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/datamatrix.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="2247:2331" ph="&lt;&lt;Image Source=&quot;Images/Export_16x.png&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="2337:2510" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ExcelWorksheetView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="2395:2493" ph="&lt;&lt;Image Source=&quot;Images/ExcelWorksheetView_16x.png&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="2516:2673" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Comma_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="2571:2656" ph="&lt;&lt;Image Source=&quot;Images/Comma_16x.png&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="2679:2845" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RuntimeToolbar_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="2734:2828" ph="&lt;&lt;Image Source=&quot;Images/RuntimeToolbar_16x.png&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="2851:3041" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/datamatrix.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="2915:3024" ph="&lt;&lt;Image Source=&quot;Images/datamatrix.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="3062:3221" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/DataTable_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="3118:3205" ph="&lt;&lt;Image Source=&quot;Images/DataTable_16x.png&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="3226:3413" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Close_red_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="3310:3397" ph="&lt;&lt;Image Source=&quot;Images/Close_red_16x.png&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="3432:4212" ph="&lt;&lt;MenuItem Header=&quot;_Table Manager&quot; Click=&quot;OpenSheetManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Table_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem Header=&quot;_Prefab Manager&quot; Click=&quot;OpenPrefabManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Schema_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem Header=&quot;_Database Manager&quot; Click=&quot;OpenDatabaseManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ConnectToDatabase_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem Header=&quot;Change _Style&quot; Click=&quot;OpenStyleChooser&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/StyleBlock_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="3462:3639" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Table_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="3540:3623" ph="&lt;&lt;Image Source=&quot;Images/Table_16x.png&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="3644:3824" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Schema_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="3724:3808" ph="&lt;&lt;Image Source=&quot;Images/Schema_16x.png&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="3829:4024" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ConnectToDatabase_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="3913:4008" ph="&lt;&lt;Image Source=&quot;Images/ConnectToDatabase_16x.png&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="4029:4197" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/StyleBlock_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="4093:4181" ph="&lt;&lt;Image Source=&quot;Images/StyleBlock_16x.png&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="4225:8322" ph="&lt;&lt;Image Source=&quot;Images/FindDown_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; Margin=&quot;0,0,5,0&quot; /&gt; &lt;syncfusion:SfTextBoxExt x:Name=&quot;SearchField&quot; TextWrapping=&quot;Wrap&quot; Width=&quot;225&quot;&#10;&#9;&#9;&#9;                         Margin=&quot;0,0,0,0&quot; HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; FontSize=&quot;14&quot;&#10;&#9;&#9;&#9;                         Watermark=&quot;Search...&quot; TextChanged=&quot;SearchFieldTextChanged&quot; AutoCompleteMode=&quot;SuggestAppend&quot;&#10;&#9;&#9;&#9;                         ToolTip=&quot;Search for an Item.&quot; KeyDown=&quot;SearchField_OnKeyDown&quot; /&gt; &lt;Separator Margin=&quot;0,0,0,0&quot; Width=&quot;30&quot; VerticalAlignment=&quot;Center&quot; RenderTransformOrigin=&quot;0.5,0.5&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ScaleTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;SkewTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RotateTransform Angle=&quot;90&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TranslateTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&lt;/Separator&gt; &lt;CheckBox x:Name=&quot;ResetSorts&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; Checked=&quot;ResetSorting&quot; Unchecked=&quot;UnResetSorting&quot;&#10;&#9;&#9;&#9;          IsChecked=&quot;True&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/ResetTimelineView_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Default Sorting and Filtering&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt; &lt;CheckBox x:Name=&quot;ResetGroupsBox&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; Checked=&quot;ResetGrouping&quot; Unchecked=&quot;UnResetGrouping&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/GroupClause_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Default Grouping&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt; &lt;CheckBox x:Name=&quot;DeleteModeCheckBox&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; Click=&quot;EnterDeleteMode&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/DeleteTableRow_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Delete Mode&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt; &lt;Separator Margin=&quot;0,0,0,0&quot; VerticalAlignment=&quot;Center&quot; Width=&quot;30&quot; RenderTransformOrigin=&quot;0.5,0.5&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ScaleTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;SkewTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RotateTransform Angle=&quot;90&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TranslateTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&lt;/Separator&gt; &lt;syncfusion:ButtonAdv x:Name=&quot;RevertChanges&quot; VerticalAlignment=&quot;Center&quot; IsEnabled=&quot;False&quot; FontSize=&quot;14&quot;&#10;&#9;&#9;&#9;                      Margin=&quot;0,0,10,0&quot; Click=&quot;Revert_Changes&quot; SmallIcon=&quot;Images/Undo_16x.png&quot; Label=&quot;Revert Changes&quot; /&gt; &lt;syncfusion:ButtonAdv x:Name=&quot;RefreshAll&quot; VerticalAlignment=&quot;Center&quot; SmallIcon=&quot;Images/Restart_16x.png&quot;&#10;&#9;&#9;&#9;                      Label=&quot;Refresh&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,0,0&quot; Click=&quot;RefreshAll_OnClick&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="4418:4821" ph="&lt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="4825:5164" ph="&lt;&lt;Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ScaleTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;SkewTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RotateTransform Angle=&quot;90&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TranslateTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Separator.RenderTransform&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="4928:5148" ph="&lt;&lt;TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ScaleTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;SkewTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RotateTransform Angle=&quot;90&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TranslateTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/TransformGroup&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="4961:5115" ph="&lt;&lt;ScaleTransform /&gt; &lt;SkewTransform /&gt; &lt;RotateTransform Angle=&quot;90&quot; /&gt; &lt;TranslateTransform /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="5168:5783" ph="&lt;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/ResetTimelineView_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Default Sorting and Filtering&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="5382:5768" ph="&lt;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/ResetTimelineView_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt; &lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Default Sorting and Filtering&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="5425:5600" ph="&lt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="5606:5750" ph="&lt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="5787:6359" ph="&lt;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/GroupClause_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Default Grouping&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="5977:6344" ph="&lt;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/GroupClause_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt; &lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Default Grouping&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="6020:6189" ph="&lt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="6195:6326" ph="&lt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="6363:6911" ph="&lt;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/DeleteTableRow_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Delete Mode&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="6531:6896" ph="&lt;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/DeleteTableRow_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt; &lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Delete Mode&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="6574:6746" ph="&lt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="6752:6878" ph="&lt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="6915:7524" ph="&lt;!--...--&gt;" />
+            <marker date="1524842038270" expanded="true" signature="7528:7867" ph="&lt;&lt;Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ScaleTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;SkewTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RotateTransform Angle=&quot;90&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TranslateTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Separator.RenderTransform&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="7631:7851" ph="&lt;&lt;TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ScaleTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;SkewTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RotateTransform Angle=&quot;90&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TranslateTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/TransformGroup&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="7664:7818" ph="&lt;&lt;ScaleTransform /&gt; &lt;SkewTransform /&gt; &lt;RotateTransform Angle=&quot;90&quot; /&gt; &lt;TranslateTransform /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="7871:8098" ph="&lt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="8102:8307" ph="&lt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="8325:9034" ph="&lt;&lt;syncfusion:ButtonAdv DockPanel.Dock=&quot;Right&quot; FontSize=&quot;16&quot; x:Name=&quot;BarcodeInventoryCommit&quot; IconHeight=&quot;0&quot;&#10;&#9;&#9;&#9;                      IconWidth=&quot;0&quot; Label=&quot;Inventory Item&quot;&#10;&#9;&#9;&#9;                      ToolTip=&quot;Inventory item from a barcode to the Database.&quot;&#10;&#9;&#9;&#9;                      Click=&quot;BarcodeInventoryCommit_OnClick&quot; /&gt; &lt;syncfusion:SfTextBoxExt AcceptsTab=&quot;True&quot; TextWrapping=&quot;Wrap&quot; FontSize=&quot;16&quot; Watermark=&quot;Enter your barcode here...&quot;&#10;&#9;&#9;&#9;                         DockPanel.Dock=&quot;Left&quot; x:Name=&quot;BarcodeTextBox&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;                         ToolTip=&quot;Enter an Item Barcode here.&quot; KeyDown=&quot;BarcodeTextBox_OnKeyDown&quot; /&gt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="8388:8704" ph="&lt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="8708:9019" ph="&lt;.../&gt;" />
+            <marker date="1524842038270" expanded="true" signature="9037:9360" ph="&lt;.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/io/SqlDependencyEx.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <marker date="1524841979456" expanded="true" signature="6:215" ph="..." />
+            <marker date="1524841979456" expanded="true" signature="251:30980" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="308:30977" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="371:504" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="563:2924" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="828:922" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="959:1220" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="995:1205" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="1278:1896" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="1314:1881" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="1912:2264" ph="/// Converts an xml string into XElement with no invalid characters check. ... " />
+            <marker date="1524841979456" expanded="true" signature="2349:2913" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="2668:2856" ph="{...}" />
+            <marker date="1524841979456" expanded="false" signature="2936:18625" ph="Scripts" />
+            <marker date="1524841979456" expanded="false" signature="2963:8622" ph="Procedures" />
+            <marker date="1524841979456" expanded="true" signature="4240:4675" ph="/// T-SQL script-template which creates notification setup procedure. ... " />
+            <marker date="1524841979456" expanded="true" signature="7333:7718" ph="/// T-SQL script-template which creates notification uninstall procedure. ... " />
+            <marker date="1524841979456" expanded="false" signature="8634:11480" ph="ServiceBroker notification" />
+            <marker date="1524841979456" expanded="true" signature="8680:8964" ph="/// T-SQL script-template which prepares database for ServiceBroker notification. ... " />
+            <marker date="1524841979456" expanded="true" signature="10160:10391" ph="/// T-SQL script-template which removes database notification. ... " />
+            <marker date="1524841979456" expanded="false" signature="11492:14622" ph="Notification Trigger" />
+            <marker date="1524841979456" expanded="true" signature="11532:11719" ph="/// T-SQL script-template which creates notification trigger. ... " />
+            <marker date="1524841979456" expanded="true" signature="12106:12714" ph="/// T-SQL script-template which creates notification trigger. ... " />
+            <marker date="1524841979456" expanded="false" signature="14634:16345" ph="Miscellaneous" />
+            <marker date="1524841979456" expanded="true" signature="14667:14935" ph="/// T-SQL script-template which helps to receive changed data in monitorable table. ... " />
+            <marker date="1524841979456" expanded="true" signature="15452:15658" ph="/// T-SQL script-template which executes stored procedure. ... " />
+            <marker date="1524841979456" expanded="true" signature="15870:16033" ph="/// T-SQL script-template which returns all dependency identities in the database. ... " />
+            <marker date="1524841979456" expanded="false" signature="16357:18603" ph="Forced cleaning of database" />
+            <marker date="1524841979456" expanded="true" signature="16404:16552" ph="/// T-SQL script-template which cleans database from notifications. ... " />
+            <marker date="1524841979456" expanded="true" signature="18864:19007" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="18892:18996" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="19057:19202" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="19085:19191" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="19252:19393" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="19280:19382" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="19448:19608" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="19476:19597" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="19665:19827" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="19693:19816" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="20234:20299" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="20871:21220" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="21252:22036" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="21576:21750" ph="/* ASP.NET fix ... */" />
+            <marker date="1524841979456" expanded="true" signature="22067:22587" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="22335:22389" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="22445:22499" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="22621:22663" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="22763:23861" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="22817:22916" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="22954:23045" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="23258:23655" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="23948:24114" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="24170:24761" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="24198:24540" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="24243:24525" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="24411:24506" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="24573:24617" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="24639:24750" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="24854:25190" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="25019:25179" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="25232:26068" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="25647:26057" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="25870:26042" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="26137:27192" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="27259:28866" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="28924:29521" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="29570:29922" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="29969:30505" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="30561:30734" ph="{...}" />
+            <marker date="1524841979456" expanded="true" signature="30790:30970" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/io/ExcelWriter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+          <folding>
+            <marker date="1524887210398" expanded="false" signature="6:176" ph="..." />
+            <marker date="1524887210398" expanded="true" signature="211:2434" ph="{...}" />
+            <marker date="1524887210398" expanded="true" signature="239:2432" ph="{...}" />
+            <marker date="1524887210398" expanded="true" signature="324:1993" ph="{...}" />
+            <marker date="1524887210398" expanded="true" signature="519:1863" ph="{...}" />
+            <marker date="1524887210398" expanded="true" signature="775:994" ph="{...}" />
+            <marker date="1524887210398" expanded="true" signature="1039:1146" ph="{...}" />
+            <marker date="1524887210398" expanded="true" signature="1305:1858" ph="{...}" />
+            <marker date="1524887210398" expanded="true" signature="1406:1851" ph="{...}" />
+            <marker date="1524887210398" expanded="true" signature="2049:2197" ph="{...}" />
+            <marker date="1524887210398" expanded="true" signature="2104:2193" ph="{...}" />
+            <marker date="1524887210398" expanded="true" signature="2262:2429" ph="{...}" />
+            <marker date="1524887210398" expanded="true" signature="2328:2425" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/io/SvWriter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+          <folding>
+            <marker date="1524887224738" expanded="false" signature="6:107" ph="..." />
+            <marker date="1524887224738" expanded="true" signature="142:1034" ph="{...}" />
+            <marker date="1524887224738" expanded="true" signature="167:1032" ph="{...}" />
+            <marker date="1524887224738" expanded="true" signature="275:1029" ph="{...}" />
+            <marker date="1524887224738" expanded="true" signature="517:1025" ph="{...}" />
+            <marker date="1524887224738" expanded="true" signature="777:925" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/io/BarcodeGenerator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
+          <folding>
+            <marker date="1524887240588" expanded="false" signature="6:167" ph="..." />
+            <marker date="1524887240588" expanded="true" signature="202:1502" ph="{...}" />
+            <marker date="1524887240588" expanded="true" signature="235:1500" ph="{...}" />
+            <marker date="1524887240588" expanded="true" signature="305:1497" ph="{...}" />
+            <marker date="1524887240588" expanded="true" signature="461:1493" ph="{...}" />
+            <marker date="1524887240588" expanded="true" signature="538:1488" ph="{...}" />
+            <marker date="1524887240588" expanded="true" signature="600:1471" ph="{...}" />
+            <marker date="1524887240588" expanded="true" signature="1038:1184" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/FindAndReplace.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="59" column="62" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="62" />
+          <folding>
+            <marker date="1524887412963" expanded="false" signature="6:191" ph="..." />
+            <marker date="1524887412963" expanded="true" signature="223:3317" ph="{...}" />
+            <marker date="1524887412963" expanded="true" signature="227:307" ph="///     Interaction logic for FindAndReplace.xaml ... " />
+            <marker date="1524887412963" expanded="true" signature="353:3315" ph="{...}" />
+            <marker date="1524887412963" expanded="true" signature="543:758" ph="{...}" />
+            <marker date="1524887412963" expanded="true" signature="794:911" ph="{...}" />
+            <marker date="1524887412963" expanded="true" signature="836:907" ph="{...}" />
+            <marker date="1524887412963" expanded="true" signature="970:1026" ph="{...}" />
+            <marker date="1524887412963" expanded="true" signature="1056:1775" ph="{...}" />
+            <marker date="1524887412963" expanded="true" signature="1103:1252" ph="{...}" />
+            <marker date="1524887412963" expanded="true" signature="1879:2706" ph="{...}" />
+            <marker date="1524887412963" expanded="true" signature="2013:2097" ph="{...}" />
+            <marker date="1524887412963" expanded="true" signature="2108:2219" ph="{...}" />
+            <marker date="1524887412963" expanded="true" signature="2337:2484" ph="{...}" />
+            <marker date="1524887412963" expanded="true" signature="2495:2702" ph="{...}" />
+            <marker date="1524887412963" expanded="true" signature="2769:2789" ph="{...}" />
+            <marker date="1524887412963" expanded="true" signature="2847:2873" ph="{...}" />
+            <marker date="1524887412963" expanded="true" signature="2942:2992" ph="{...}" />
+            <marker date="1524887412963" expanded="true" signature="3031:3312" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/io/Extensor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/PrefabBuilder.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="694" column="52" selection-start-line="694" selection-start-column="52" selection-end-line="694" selection-end-column="52" />
+          <folding>
+            <marker date="1524887875146" expanded="false" signature="6:417" ph="..." />
+            <marker date="1524887875146" expanded="true" signature="449:21557" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="453:532" ph="///     Interaction logic for PrefabBuilder.xaml ... " />
+            <marker date="1524887875146" expanded="true" signature="577:21555" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="1258:1511" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="1573:2281" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="1873:2151" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="2317:2434" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="2359:2430" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="2492:4430" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="2558:4426" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="4163:4369" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="4471:10520" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="4549:4643" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="4710:4759" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="4798:4841" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="4952:5040" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="5430:5472" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="5511:5547" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="5644:5717" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="5765:6208" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="5972:6203" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="6261:6646" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="6677:6793" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="6831:7211" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="7080:7136" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="7219:7256" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="7295:7326" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="7359:7450" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="7513:7554" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="7593:7628" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="7660:7749" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="7811:7850" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="7889:7922" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="7954:8064" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="8072:8113" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="8152:8187" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="8216:8320" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="8355:8866" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="8534:8708" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="8725:8809" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="8874:8909" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="8948:8977" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="9203:9246" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="9285:9322" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="9408:10495" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="9587:9700" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="9717:9790" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="9796:10183" ph="/* try ... */" />
+            <marker date="1524887875146" expanded="true" signature="10552:11116" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="11154:11741" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="11201:11313" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="11802:19241" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="11930:19165" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="12174:12546" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="12189:12245" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="12262:12270" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="12280:12334" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="12351:12359" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="12369:12425" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="12442:12450" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="12460:12515" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="12532:12540" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="12642:12869" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="12769:12813" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="13131:13347" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="13517:13702" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="13926:14118" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="14345:14538" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="15049:15626" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="15092:15160" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="15170:15297" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="15386:15467" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="15478:15620" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="15635:15960" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="15728:15805" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="15816:15954" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="15991:16171" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="16180:16307" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="16338:16508" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="16517:16630" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="16661:16827" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="16836:16946" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="17462:17512" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="17695:17745" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="17874:17918" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="17965:18043" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="18052:18106" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="18121:18153" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="18374:18540" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="18572:18962" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="19317:19812" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="19524:19808" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="19875:19895" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="19975:20247" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="20330:20414" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="20497:21117" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="20552:21090" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="21156:21437" ph="{...}" />
+            <marker date="1524887875146" expanded="true" signature="21496:21552" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-834">
+          <caret line="586" column="35" selection-start-line="586" selection-start-column="35" selection-end-line="586" selection-end-column="35" />
+          <folding>
+            <marker date="1524887284909" expanded="false" signature="6:844" ph="..." />
+            <marker date="1524887284909" expanded="true" signature="876:19331" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="880:956" ph="///     Interaction logic for MainWindow.xaml ... " />
+            <marker date="1524887284909" expanded="true" signature="998:19329" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="1023:2321" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="1061:1183" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="1129:1178" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="1196:1551" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="2148:2173" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="2253:2278" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="2373:2398" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="2452:2480" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="2539:4564" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="3024:3433" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="3097:3209" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="3139:3164" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="3288:3409" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="3438:3583" ph="/* Debug.WriteLine(tabIndex); ... */" />
+            <marker date="1524887284909" expanded="true" signature="3909:4223" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="4231:4501" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="4601:4788" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="4818:5054" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="4929:5050" ph="/* foreach (var grid in MasterDataGrids) ... */" />
+            <marker date="1524887284909" expanded="true" signature="5141:5532" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="5595:5657" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="5701:8288" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="5864:8094" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="5877:7785" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="5953:7779" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="6038:7751" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="6232:6285" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="6347:6451" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="6463:6520" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="6541:7743" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="6554:7535" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="6752:6811" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="6822:6924" ph="/* Debug.WriteLine(table.TableName); ... */" />
+            <marker date="1524887284909" expanded="true" signature="6969:7484" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="7182:7401" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="7558:7734" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="7865:8042" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="8163:8223" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="8353:8599" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="8416:8568" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="8663:8995" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="8714:8815" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="9057:9403" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="9465:9811" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="9880:10483" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="9958:10429" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="9971:10172" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="10202:10302" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="10328:10424" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="10561:10598" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="10640:11631" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="10674:11569" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="10722:11361" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="10889:11170" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="11370:11564" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="11590:11627" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="11694:11875" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="11764:11871" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="11939:12098" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="12009:12094" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="12164:12324" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="12234:12320" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="12365:12473" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="12554:12715" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="12629:12679" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="12719:12929" ph="///     Called when [loaded]. ... " />
+            <marker date="1524887284909" expanded="true" signature="12987:13043" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="13047:13138" ph="///     On Visual Style Changed. ... " />
+            <marker date="1524887284909" expanded="true" signature="13176:13457" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="13523:13835" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="13902:13922" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="14005:14210" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="14084:14172" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="14290:14486" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="14363:14451" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="14558:14663" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="14589:14659" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="14744:14810" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="14853:16154" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="15174:15637" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="15570:15631" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="16034:16072" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="16211:16333" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="16396:16622" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="16450:16538" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="16678:16854" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="16735:16823" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="16905:16937" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="17006:17173" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="17240:17394" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="17288:17376" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="17463:17537" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="17616:17624" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="17705:17732" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="17786:17900" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="17797:17842" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="17855:17879" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="17963:17997" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="18062:18184" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="18188:18919" ph="Fields" />
+            <marker date="1524887284909" expanded="false" signature="18923:19326" ph="Properties" />
+            <marker date="1524887284909" expanded="true" signature="18945:19072" ph="///     Gets or sets the current visual style. ... " />
+            <marker date="1524887284909" expanded="true" signature="19107:19224" ph="{...}" />
+            <marker date="1524887284909" expanded="true" signature="19149:19220" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/App.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2348">
+          <caret line="355" column="57" selection-start-line="355" selection-start-column="57" selection-end-line="355" selection-end-column="57" />
+          <folding>
+            <marker date="1524887308743" expanded="false" signature="6:344" ph="..." />
+            <marker date="1524887308743" expanded="true" signature="346:411" ph="/* TODO: Recycleds window ... */" />
+            <marker date="1524887308743" expanded="true" signature="442:17446" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="446:535" ph="///     Interaction logic for App.xaml ... " />
+            <marker date="1524887308743" expanded="true" signature="575:17444" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="998:1911" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="1136:1862" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="1287:1331" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="1467:1511" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="1643:1687" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="1797:1838" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="1943:2019" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="2050:4007" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="2149:3954" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="2162:3773" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="2228:3767" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="2444:2494" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="2572:3739" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="2711:3321" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="3047:3241" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="3442:3492" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="3681:3731" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="3788:3902" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="4103:5076" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="4697:4801" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="4944:5072" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="5127:5836" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="5189:5832" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="5888:6594" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="5950:6590" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="6658:7246" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="6935:7205" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="6989:7200" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="7325:7690" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="7451:7649" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="7505:7644" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="7765:8119" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="7808:7902" ph="/* Set up a command with the given query and associate ... */" />
+            <marker date="1524887308743" expanded="true" signature="7976:8098" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="8030:8093" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="8208:8899" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="8402:8496" ph="/* Set up a command with the given query and associate ... */" />
+            <marker date="1524887308743" expanded="true" signature="8582:8878" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="8636:8873" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="9003:9677" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="9197:9291" ph="/* Set up a command with the given query and associate ... */" />
+            <marker date="1524887308743" expanded="true" signature="9377:9656" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="9431:9651" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="9752:10317" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="9961:10288" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="10403:11054" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="10465:11050" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="10790:11003" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="11117:11746" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="11179:11742" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="11487:11717" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="11778:12320" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="11896:12300" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="11972:12276" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="12082:12270" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="12137:12263" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="12367:13464" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="12469:13437" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="12562:13129" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="12672:13110" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="12770:13103" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="12840:13095" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="13130:13413" ph="/* using (SqlDependencyEx dependencyEx = ... */" />
+            <marker date="1524887308743" expanded="true" signature="13564:14603" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="13696:14110" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="13890:13934" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="14061:14105" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="14197:14599" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="14288:14594" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="14332:14588" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="14682:15190" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="14868:15161" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="15249:16208" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="15257:16187" ph="/* var inTypesProp = GetProp(prefab, &quot;Types&quot;); ... */" />
+            <marker date="1524887308743" expanded="true" signature="16308:16599" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="16673:16909" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="16982:16990" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="17034:17211" ph="{...}" />
+            <marker date="1524887308743" expanded="true" signature="17260:17441" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -36,27 +36,6 @@
 	<DockPanel>
 		<Menu DockPanel.Dock="Top">
 			<MenuItem Header="_File">
-				<MenuItem Header="_Table Manager" Click="OpenSheetManagerMenuItemClick">
-					<MenuItem.Icon>
-						<Image Source="Images/Table_16x.png" />
-					</MenuItem.Icon>
-				</MenuItem>
-				<MenuItem Header="_Prefab Manager" Click="OpenPrefabManagerMenuItemClick">
-					<MenuItem.Icon>
-						<Image Source="Images/Schema_16x.png" />
-					</MenuItem.Icon>
-				</MenuItem>
-				<MenuItem Header="_Database Manager" Click="OpenDatabaseManagerMenuItemClick">
-					<MenuItem.Icon>
-						<Image Source="Images/ConnectToDatabase_16x.png" />
-					</MenuItem.Icon>
-				</MenuItem>
-				<MenuItem Header="Change _Style" Click="OpenStyleChooser">
-					<MenuItem.Icon>
-						<Image Source="Images/StyleBlock_16x.png" />
-					</MenuItem.Icon>
-				</MenuItem>
-				<Separator />
 				<MenuItem FontStyle="Italic" Header="_Backup All" Click="BackupTables">
 					<MenuItem.Icon>
 						<Image Source="Images/Backward_16xMD.png" />
@@ -98,9 +77,36 @@
 						</MenuItem.Icon>
 					</MenuItem>
 				</MenuItem>
+				<MenuItem Header="_Save All" Click="Save_Changes">
+					<MenuItem.Icon>
+						<Image Source="Images/DataTable_16x.png" />
+					</MenuItem.Icon>
+				</MenuItem>
 				<MenuItem FontWeight="Bold" Header="Save and _Close" Click="CloseApplication">
 					<MenuItem.Icon>
 						<Image Source="Images/Close_red_16x.png" />
+					</MenuItem.Icon>
+				</MenuItem>
+			</MenuItem>
+			<MenuItem Header="_Edit">
+				<MenuItem Header="_Table Manager" Click="OpenSheetManagerMenuItemClick">
+					<MenuItem.Icon>
+						<Image Source="Images/Table_16x.png" />
+					</MenuItem.Icon>
+				</MenuItem>
+				<MenuItem Header="_Prefab Manager" Click="OpenPrefabManagerMenuItemClick">
+					<MenuItem.Icon>
+						<Image Source="Images/Schema_16x.png" />
+					</MenuItem.Icon>
+				</MenuItem>
+				<MenuItem Header="_Database Manager" Click="OpenDatabaseManagerMenuItemClick">
+					<MenuItem.Icon>
+						<Image Source="Images/ConnectToDatabase_16x.png" />
+					</MenuItem.Icon>
+				</MenuItem>
+				<MenuItem Header="Change _Style" Click="OpenStyleChooser">
+					<MenuItem.Icon>
+						<Image Source="Images/StyleBlock_16x.png" />
 					</MenuItem.Icon>
 				</MenuItem>
 			</MenuItem>
@@ -168,24 +174,11 @@
 					</TransformGroup>
 				</Separator.RenderTransform>
 			</Separator>
-			<syncfusion:ButtonAdv x:Name="SaveButton" VerticalAlignment="Center" FontSize="14" Margin="0,0,10,0"
-			                      Click="Save_Changes" Label="Save" SmallIcon="Images/DataTable_16x.png" />
 			<syncfusion:ButtonAdv x:Name="RevertChanges" VerticalAlignment="Center" IsEnabled="False" FontSize="14"
-			                      Margin="0,0,0,0" Click="Revert_Changes" SmallIcon="Images/Undo_16x.png" Label="Revert Changes" />
-			<Separator Margin="0,0,0,0" Width="30" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
-				<Separator.RenderTransform>
-					<TransformGroup>
-						<ScaleTransform />
-						<SkewTransform />
-						<RotateTransform Angle="90" />
-						<TranslateTransform />
-					</TransformGroup>
-				</Separator.RenderTransform>
-			</Separator>
+			                      Margin="0,0,10,0" Click="Revert_Changes" SmallIcon="Images/Undo_16x.png" Label="Revert Changes" />
 			<syncfusion:ButtonAdv x:Name="RefreshAll" VerticalAlignment="Center" SmallIcon="Images/Restart_16x.png"
 			                      Label="Refresh" FontSize="14" Margin="0,0,0,0" Click="RefreshAll_OnClick" />
 		</WrapPanel>
-
 		<DockPanel DockPanel.Dock="Bottom" Margin="10, 10, 10, 10">
 			<syncfusion:ButtonAdv DockPanel.Dock="Right" FontSize="16" x:Name="BarcodeInventoryCommit" IconHeight="0"
 			                      IconWidth="0" Label="Inventory Item"

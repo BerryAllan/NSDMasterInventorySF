@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Xml.Linq;
-using System.IO;
 using System.Xml;
+using System.Xml.Linq;
 
 namespace NSDMasterInventorySF.io
 {
-    public sealed class SqlDependencyEx : IDisposable
+	public sealed class SqlDependencyEx : IDisposable
     {
         [Flags]
         public enum NotificationTypes
@@ -49,11 +49,11 @@ namespace NSDMasterInventorySF.io
             {
                 get
                 {
-                    return (Data != null ? Data.Element(INSERTED_TAG) : null) != null
-                               ? (Data != null ? Data.Element(DELETED_TAG) : null) != null
+                    return Data?.Element(INSERTED_TAG) != null
+                               ? Data?.Element(DELETED_TAG) != null
                                      ? NotificationTypes.Update
                                      : NotificationTypes.Insert
-                               : (Data != null ? Data.Element(DELETED_TAG) : null) != null
+                               : Data?.Element(DELETED_TAG) != null
                                      ? NotificationTypes.Delete
                                      : NotificationTypes.None;
                 }
@@ -126,8 +126,10 @@ namespace NSDMasterInventorySF.io
                         BEGIN
                             -- Service Broker configuration statement.
                             {2}
+
                             -- Notification Trigger check statement.
                             {4}
+
                             -- Notification Trigger configuration statement.
                             DECLARE @triggerStatement NVARCHAR(MAX)
                             DECLARE @select NVARCHAR(MAX)
@@ -153,6 +155,7 @@ namespace NSDMasterInventorySF.io
                                                      , ''%inserted_select_statement%'', @sqlInserted)
                             SET @triggerStatement = REPLACE(@triggerStatement
                                                      , ''%deleted_select_statement%'', @sqlDeleted)
+
                             EXEC sp_executesql @triggerStatement
                         END
                         ')
@@ -179,8 +182,10 @@ namespace NSDMasterInventorySF.io
                         BEGIN
                             -- Notification Trigger drop statement.
                             {3}
+
                             -- Service Broker uninstall statement.
                             {2}
+
                             IF OBJECT_ID (''{4}.{5}'', ''P'') IS NOT NULL
                                 DROP PROCEDURE {4}.{5}
                             
@@ -206,13 +211,17 @@ namespace NSDMasterInventorySF.io
                 IF EXISTS (SELECT * FROM sys.databases 
                                     WHERE name = '{0}' AND (is_broker_enabled = 0 OR is_trustworthy_on = 0)) 
                 BEGIN
+
                     ALTER DATABASE [{0}] SET SINGLE_USER WITH ROLLBACK IMMEDIATE
                     ALTER DATABASE [{0}] SET ENABLE_BROKER; 
                     ALTER DATABASE [{0}] SET MULTI_USER WITH ROLLBACK IMMEDIATE
+
                     -- FOR SQL Express
                     ALTER AUTHORIZATION ON DATABASE::[{0}] TO [sa]
                     ALTER DATABASE [{0}] SET TRUSTWORTHY ON;
+
                 END
+
                 -- Create a queue which will hold the tracked information 
                 IF NOT EXISTS (SELECT * FROM sys.service_queues WHERE name = '{1}')
 	                CREATE QUEUE {3}.[{1}]
@@ -231,10 +240,12 @@ namespace NSDMasterInventorySF.io
                 DECLARE @serviceId INT
                 SELECT @serviceId = service_id FROM sys.services 
                 WHERE sys.services.name = '{1}'
+
                 DECLARE @ConvHandle uniqueidentifier
                 DECLARE Conv CURSOR FOR
                 SELECT CEP.conversation_handle FROM sys.conversation_endpoints CEP
                 WHERE CEP.service_id = @serviceId AND ([state] != 'CD' OR [lifetime] > GETDATE() + 1)
+
                 OPEN Conv;
                 FETCH NEXT FROM Conv INTO @ConvHandle;
                 WHILE (@@FETCH_STATUS = 0) BEGIN
@@ -243,6 +254,7 @@ namespace NSDMasterInventorySF.io
                 END
                 CLOSE Conv;
                 DEALLOCATE Conv;
+
                 -- Droping service and queue.
                 DROP SERVICE [{1}];
                 IF OBJECT_ID ('{2}.{0}', 'SQ') IS NOT NULL
@@ -284,26 +296,35 @@ namespace NSDMasterInventorySF.io
                 ON {5}.[{0}]
                 AFTER {2} 
                 AS
+
                 SET NOCOUNT ON;
+
                 --Trigger {0} is rising...
                 IF EXISTS (SELECT * FROM sys.services WHERE name = '{3}')
                 BEGIN
                     DECLARE @message NVARCHAR(MAX)
                     SET @message = N'<root/>'
+
                     IF ({4} EXISTS(SELECT 1))
                     BEGIN
                         DECLARE @retvalOUT NVARCHAR(MAX)
+
                         %inserted_select_statement%
+
                         IF (@retvalOUT IS NOT NULL)
                         BEGIN SET @message = N'<root>' + @retvalOUT END                        
+
                         %deleted_select_statement%
+
                         IF (@retvalOUT IS NOT NULL)
                         BEGIN
                             IF (@message = N'<root/>') BEGIN SET @message = N'<root>' + @retvalOUT END
                             ELSE BEGIN SET @message = @message + @retvalOUT END
                         END 
+
                         IF (@message != N'<root/>') BEGIN SET @message = @message + N'</root>' END
                     END
+
                 	--Beginning of dialog...
                 	DECLARE @ConvHandle UNIQUEIDENTIFIER
                 	--Determine the Initiator Service, Target Service and the Contract 
@@ -334,6 +355,7 @@ namespace NSDMasterInventorySF.io
                 WAITFOR (RECEIVE TOP(1) @ConvHandle=Conversation_Handle
                             , @message=message_body FROM {3}.[{1}]), TIMEOUT {2};
 	            BEGIN TRY END CONVERSATION @ConvHandle; END TRY BEGIN CATCH END CATCH
+
                 SELECT CAST(@message AS NVARCHAR(MAX)) 
             ";
 
@@ -371,8 +393,10 @@ namespace NSDMasterInventorySF.io
         /// </summary>
         private const string SQL_FORMAT_FORCED_DATABASE_CLEANING = @"
                 USE [{0}]
+
                 DECLARE @db_name VARCHAR(MAX)
                 SET @db_name = '{0}' -- provide your own db name                
+
                 DECLARE @proc_name VARCHAR(MAX)
                 DECLARE procedures CURSOR
                 FOR
@@ -380,31 +404,40 @@ namespace NSDMasterInventorySF.io
                 FROM    sys.objects 
                 INNER JOIN sys.schemas ON sys.objects.schema_id = sys.schemas.schema_id
                 WHERE sys.objects.[type] = 'P' AND sys.objects.[name] like 'sp_UninstallListenerNotification_%'
+
                 OPEN procedures;
                 FETCH NEXT FROM procedures INTO @proc_name
+
                 WHILE (@@FETCH_STATUS = 0)
                 BEGIN
                 EXEC ('USE [' + @db_name + '] EXEC ' + @proc_name + ' IF (OBJECT_ID (''' 
                                 + @proc_name + ''', ''P'') IS NOT NULL) DROP PROCEDURE '
                                 + @proc_name)
+
                 FETCH NEXT FROM procedures INTO @proc_name
                 END
+
                 CLOSE procedures;
                 DEALLOCATE procedures;
+
                 DECLARE procedures CURSOR
                 FOR
                 SELECT   sys.schemas.name + '.' + sys.objects.name
                 FROM    sys.objects 
                 INNER JOIN sys.schemas ON sys.objects.schema_id = sys.schemas.schema_id
                 WHERE sys.objects.[type] = 'P' AND sys.objects.[name] like 'sp_InstallListenerNotification_%'
+
                 OPEN procedures;
                 FETCH NEXT FROM procedures INTO @proc_name
+
                 WHILE (@@FETCH_STATUS = 0)
                 BEGIN
                 EXEC ('USE [' + @db_name + '] DROP PROCEDURE '
                                 + @proc_name)
+
                 FETCH NEXT FROM procedures INTO @proc_name
                 END
+
                 CLOSE procedures;
                 DEALLOCATE procedures;
             ";

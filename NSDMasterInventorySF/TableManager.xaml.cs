@@ -16,7 +16,7 @@ namespace NSDMasterInventorySF
 	/// <summary>
 	///     Interaction logic for TableManager.xaml
 	/// </summary>
-	public partial class TableManager
+	public partial class TableManager : Window
 	{
 		public static RoutedCommand CloseWindow = new RoutedCommand();
 		private readonly MainWindow _window;
@@ -176,7 +176,8 @@ namespace NSDMasterInventorySF
 					if (i < columns.Count)
 						using (var comm =
 							new SqlCommand(
-								$"sp_rename \'{Settings.Default.Schema}.{EditTable.TableName}.{columns[i]}\', \'{prefabTable.Rows[i]["COLUMNS"]}\', \'COLUMN\'", conn))
+								$"sp_rename \'{Settings.Default.Schema}.{EditTable.TableName}.{columns[i]}\', \'{prefabTable.Rows[i]["COLUMNS"]}\', \'COLUMN\'",
+								conn))
 						{
 							comm.ExecuteNonQuery();
 						}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Inventory@localhost" uuid="e30488da-7b7d-4e72-bd76-a41c13e38e7a">
+      <database-info product="Microsoft SQL Server" version="14.00.1000" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 6.0 for SQL Server" driver-version="6.0.8112.100">
+        <extra-name-characters>$#@</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>sa</user-name>
+      <introspection-schemas>Inventory:COMBOBOXES,INFORMATION_SCHEMA,IT\u0020Tables,IT\u0020Tables_BACKUPS,IT\u005Cu0020Tables,IT\u005Cu0020Tables_BACKUPS,IT\u005Cu005Cu0020Tables,IT\u005Cu005Cu0020Tables_BACKUPS,IT\u005Cu005Cu005Cu0020Tables,IT\u005Cu005Cu005Cu0020Tables_BACKUPS,IT\u005Cu005Cu005Cu005Cu0020Tables,IT\u005Cu005Cu005Cu005Cu0020Tables_BACKUPS,IT\u005Cu005Cu005Cu005Cu005Cu0020Tables,IT\u005Cu005Cu005Cu005Cu005Cu0020Tables_BACKUPS,IT\u005Cu005Cu005Cu005Cu005Cu005Cu0020Tables,IT\u005Cu005Cu005Cu005Cu005Cu005Cu0020Tables_BACKUPS,IT\u005Cu005Cu005Cu005Cu005Cu005Cu005Cu0020Tables,IT\u005Cu005Cu005Cu005Cu005Cu005Cu005Cu0020Tables_BACKUPS,IT\u005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu0020Tables,IT\u005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu0020Tables_BACKUPS,IT\u005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu0020Tables,IT\u005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu0020Tables_BACKUPS,IT\u005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu0020Tables,IT\u005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu0020Tables_BACKUPS,IT\u005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu0020Tables,IT\u005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu005Cu0020Tables_BACKUPS,PREFABS,RECYCLED,Test</introspection-schemas>
+    </data-source>
+  </component>
+</project>

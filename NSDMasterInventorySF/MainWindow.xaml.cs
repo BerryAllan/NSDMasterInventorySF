@@ -32,48 +32,11 @@ namespace NSDMasterInventorySF
 	/// <summary>
 	///     Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow
+	public partial class MainWindow : Window
 	{
-		#region Fields
-
-		private string _currentVisualStyle;
-		public static volatile List<DataTable> MasterDataTables = new List<DataTable>();
-		public static volatile List<DataTable> RevertDataTables = new List<DataTable>();
-		public static volatile List<SfDataGrid> MasterDataGrids = new List<SfDataGrid>();
-		public static volatile List<string> Prefabs = new List<string>();
-		public static volatile List<Dictionary<int, List<int>>> EditedCells = new List<Dictionary<int, List<int>>>();
-		public static RoutedCommand SaveCommand = new RoutedCommand();
-		public static RoutedCommand NewCommand = new RoutedCommand();
-		public static RoutedCommand FindReplaceCommand = new RoutedCommand();
-
-		#endregion
-
-		#region Properties
-
-		/// <summary>
-		///     Gets or sets the current visual style.
-		/// </summary>
-		/// <value></value>
-		/// <remarks></remarks>
-		public string CurrentVisualStyle
-		{
-			get => _currentVisualStyle;
-			set
-			{
-				_currentVisualStyle = value;
-				OnVisualStyleChanged();
-			}
-		}
-
-		private HashSet<string> SearchBoxAutoCompleteItems { get; } = new HashSet<string>();
-
-		#endregion
-
 		public MainWindow()
 		{
 			InitializeComponent();
-
-			
 
 			try
 			{
@@ -93,11 +56,13 @@ namespace NSDMasterInventorySF
 			}
 
 			Recycled.FillRecycledDataTable();
-			
+
 			SaveCommand.InputGestures.Add(new KeyGesture(Key.S, ModifierKeys.Control));
 			CommandBindings.Add(new CommandBinding(SaveCommand, Save_Changes));
-			FindReplaceCommand.InputGestures.Add(new KeyGesture(Key.F, ModifierKeys.Control));
+			FindReplaceCommand.InputGestures.Add(new KeyGesture(Key.F, ModifierKeys.Control | ModifierKeys.Shift));
 			CommandBindings.Add(new CommandBinding(FindReplaceCommand, FindReplace));
+			FindCommand.InputGestures.Add(new KeyGesture(Key.F, ModifierKeys.Control));
+			CommandBindings.Add(new CommandBinding(FindCommand, Find));
 
 			InitializeOrRefreshEverything(0);
 
@@ -136,7 +101,8 @@ namespace NSDMasterInventorySF
 			SearchField.AutoCompleteSource = SearchBoxAutoCompleteItems;
 
 			MasterTabControl.Items.Clear();
-			MasterDataTables.Clear();
+			var dataSets = App.Sets();
+			MasterDataTables = dataSets;
 			MasterDataGrids.Clear();
 			Prefabs.Clear();
 			EditedCells.Clear();
@@ -156,8 +122,9 @@ namespace NSDMasterInventorySF
 				}
 
 				var i = 0;
-				foreach (DataTable dt in App.GetDataTablesFromDb())
+				foreach (DataTable dt in MasterDataTables.Tables)
 				{
+					Debug.WriteLine(dt.Rows.Count);
 					WriteToDataGrid(dt, App.GetPrefabOfDataTable(conn, dt), (TabItem) MasterTabControl.Items[i]);
 					i++;
 				}
@@ -185,7 +152,6 @@ namespace NSDMasterInventorySF
 				ResetSorts.IsEnabled = false;
 				ResetGroupsBox.IsEnabled = false;
 				DeleteModeCheckBox.IsEnabled = false;
-				SaveButton.IsEnabled = false;
 				RevertChanges.IsEnabled = false;
 				RefreshAll.IsEnabled = false;
 				BarcodeTextBox.IsEnabled = false;
@@ -197,7 +163,6 @@ namespace NSDMasterInventorySF
 				ResetSorts.IsEnabled = true;
 				ResetGroupsBox.IsEnabled = true;
 				DeleteModeCheckBox.IsEnabled = true;
-				SaveButton.IsEnabled = true;
 				RefreshAll.IsEnabled = true;
 				BarcodeTextBox.IsEnabled = true;
 				BarcodeInventoryCommit.IsEnabled = true;
@@ -210,7 +175,7 @@ namespace NSDMasterInventorySF
 		{
 			RevertDataTables.Clear();
 
-			foreach (DataTable table in MasterDataTables) RevertDataTables.Add(table.Copy());
+			foreach (DataTable table in MasterDataTables.Tables) RevertDataTables.Add(table.Copy());
 
 			RevertChanges.IsEnabled = false;
 
@@ -235,7 +200,7 @@ namespace NSDMasterInventorySF
 		{
 			int sheetIndex = MasterTabControl.Items.IndexOf(tab);
 
-			MasterDataTables.Insert(sheetIndex, dataTable);
+			//MasterDataTables.Tables.Add(dataTable);
 			Prefabs.Insert(sheetIndex, prefab);
 			EditedCells.Insert(sheetIndex, new Dictionary<int, List<int>>());
 
@@ -248,7 +213,6 @@ namespace NSDMasterInventorySF
 		private void Save_Changes(object sender, RoutedEventArgs e)
 		{
 			SaveToDb(true);
-			//SaveButton.IsEnabled = false;
 		}
 
 		public void SaveToDb(bool userInitiated)
@@ -261,12 +225,12 @@ namespace NSDMasterInventorySF
 			{
 				try
 				{
-					using (var conn =
-						new SqlConnection(App.ConnectionString))
+					foreach (DataTable table in MasterDataTables.Tables)
 					{
-						conn.Open();
-						foreach (DataTable table in MasterDataTables)
+						using (var conn =
+							new SqlConnection(App.ConnectionString))
 						{
+							conn.Open();
 							if (App.GetTableNames(conn).Contains(table.TableName))
 								using (var comm = new SqlCommand($"TRUNCATE TABLE [{Settings.Default.Schema}].[{table.TableName}]",
 									conn))
@@ -274,19 +238,23 @@ namespace NSDMasterInventorySF
 									comm.ExecuteNonQuery();
 								}
 
-							var bulkCopy =
-								new SqlBulkCopy(conn)
-								{
-									DestinationTableName =
-										$"[{Settings.Default.Schema}].[{table.TableName}]"
-								};
+							conn.Close();
+						}
+
+						var bulkCopy = new SqlBulkCopy(App.ConnectionString, SqlBulkCopyOptions.FireTriggers)
+						{
+							DestinationTableName =
+								$"[{Settings.Default.Schema}].[{table.TableName}]"
+						};
+						try
+						{
+							bulkCopy.WriteToServer(table);
+						}
+						catch
+						{
 							try
 							{
-								bulkCopy.WriteToServer(table);
-							}
-							catch
-							{
-								try
+								using (var conn = new SqlConnection(App.ConnectionString))
 								{
 									if (App.GetTableNames(conn).Contains(table.TableName))
 										using (var comm =
@@ -316,17 +284,19 @@ namespace NSDMasterInventorySF
 										comm.ExecuteNonQuery();
 									}
 
-									bulkCopy.WriteToServer(table);
+									conn.Close();
 								}
-								catch
-								{
-									MessageBox.Show("Fatal Error. Please report this to 18grmathias@students.nekoosasd.net .", "Error!",
-										MessageBoxButton.OK, MessageBoxImage.Error);
-								}
+
+								bulkCopy.WriteToServer(table);
+							}
+							catch (Exception e)
+							{
+								MessageBox.Show("Fatal Error. Please report this to 18grmathias@students.nekoosasd.net .", "Error!",
+									MessageBoxButton.OK, MessageBoxImage.Error);
+								Debug.WriteLine(e);
+								throw;
 							}
 						}
-
-						conn.Close();
 					}
 				}
 				catch (Exception e) when (e is SqlException || e is NullReferenceException)
@@ -338,8 +308,7 @@ namespace NSDMasterInventorySF
 
 				Thread.CurrentThread.IsBackground = true;
 			});
-			if (userInitiated)
-				RefreshRevertTables();
+			if (userInitiated) RefreshRevertTables();
 			Task.Run(() =>
 			{
 				task.Wait();
@@ -351,10 +320,10 @@ namespace NSDMasterInventorySF
 
 		private void Revert_Changes(object sender, RoutedEventArgs e)
 		{
-			for (var i = 0; i < MasterDataTables.Count; i++)
+			for (var i = 0; i < MasterDataTables.Tables.Count; i++)
 			{
-				MasterDataTables[i].Rows.Clear();
-				foreach (DataRow row in RevertDataTables[i].Rows) MasterDataTables[i].ImportRow(row);
+				MasterDataTables.Tables[i].Rows.Clear();
+				foreach (DataRow row in RevertDataTables[i].Rows) MasterDataTables.Tables[i].ImportRow(row);
 			}
 
 			RefreshRevertTables();
@@ -434,9 +403,9 @@ namespace NSDMasterInventorySF
 					string selection = string.Empty;
 
 					var counter = 0;
-					foreach (DataColumn column in MasterDataTables[MasterTabControl.SelectedIndex].Columns)
+					foreach (DataColumn column in MasterDataTables.Tables[MasterTabControl.SelectedIndex].Columns)
 					{
-						if (counter != MasterDataTables[MasterTabControl.SelectedIndex].Columns.Count - 1)
+						if (counter != MasterDataTables.Tables[MasterTabControl.SelectedIndex].Columns.Count - 1)
 							selection += $"[{column.ColumnName}] LIKE \'{searchText}*\' OR ";
 						else
 							selection += $"[{column.ColumnName}] LIKE \'{searchText}*\'";
@@ -444,12 +413,12 @@ namespace NSDMasterInventorySF
 						counter++;
 					}
 
-					MasterDataTables[MasterTabControl.SelectedIndex].DefaultView.RowFilter = selection;
+					MasterDataTables.Tables[MasterTabControl.SelectedIndex].DefaultView.RowFilter = selection;
 					//MasterDataGrids[MasterTabControl.SelectedIndex].SearchHelper.Search(searchText);
 				}
 				else
 				{
-					MasterDataTables[MasterTabControl.SelectedIndex].DefaultView.RowFilter = string.Empty;
+					MasterDataTables.Tables[MasterTabControl.SelectedIndex].DefaultView.RowFilter = string.Empty;
 					//MasterDataGrids[MasterTabControl.SelectedIndex].SearchHelper.ClearSearch();
 				}
 			}
@@ -492,7 +461,7 @@ namespace NSDMasterInventorySF
 
 		private static void ClearRowFilters()
 		{
-			foreach (DataTable table in MasterDataTables) table.DefaultView.RowFilter = string.Empty;
+			foreach (DataTable table in MasterDataTables.Tables) table.DefaultView.RowFilter = string.Empty;
 		}
 
 		private void OpenPrefabManagerMenuItemClick(object sender, RoutedEventArgs e)
@@ -591,7 +560,7 @@ namespace NSDMasterInventorySF
 			if (bool.TryParse(item[0], out bool _)) item.RemoveAt(0);
 			var inventoried = false;
 
-			foreach (DataTable table in MasterDataTables)
+			foreach (DataTable table in MasterDataTables.Tables)
 			foreach (DataRow row in table.Rows)
 			{
 				List<string> fieldsInRow = row.ItemArray.Select(field => field.ToString()).ToList();
@@ -610,18 +579,18 @@ namespace NSDMasterInventorySF
 
 			if (inventoried) return;
 
-			DataRow newRow = MasterDataTables[MasterTabControl.SelectedIndex].NewRow();
+			DataRow newRow = MasterDataTables.Tables[MasterTabControl.SelectedIndex].NewRow();
 
-			if (MasterDataTables[MasterTabControl.SelectedIndex].Columns[0].ColumnName.Equals("Inventoried"))
+			if (MasterDataTables.Tables[MasterTabControl.SelectedIndex].Columns[0].ColumnName.Equals("Inventoried"))
 				newRow[0] = true;
-			int i = MasterDataTables[MasterTabControl.SelectedIndex].Columns[0].ColumnName.Equals("Inventoried") ? 1 : 0;
+			int i = MasterDataTables.Tables[MasterTabControl.SelectedIndex].Columns[0].ColumnName.Equals("Inventoried") ? 1 : 0;
 			foreach (string s in item)
 			{
 				newRow[i] = s;
 				i++;
 			}
 
-			MasterDataTables[MasterTabControl.SelectedIndex].Rows.Add(newRow);
+			MasterDataTables.Tables[MasterTabControl.SelectedIndex].Rows.Add(newRow);
 		}
 
 		private void BackupTables(object sender, EventArgs e)
@@ -651,7 +620,12 @@ namespace NSDMasterInventorySF
 				ShowInTaskbar = false,
 				ResizeMode = ResizeMode.NoResize
 			};
-			findAndReplace.ShowDialog();
+			findAndReplace.Show();
+		}
+
+		private void Find(object sender, EventArgs e)
+		{
+			SearchField.Focus();
 		}
 
 		private void SearchField_OnKeyDown(object sender, KeyEventArgs e)
@@ -708,11 +682,46 @@ namespace NSDMasterInventorySF
 
 		private void UnResetSorting(object sender, RoutedEventArgs e)
 		{
-			int j = 0;
-			foreach (var grid in MasterDataGrids)
+			var j = 0;
+			foreach (SfDataGrid grid in MasterDataGrids) UiHelper.ResetGridSorting(grid, Prefabs[j], false);
+		}
+
+		#region Fields
+
+		private string _currentVisualStyle;
+		public static volatile DataSet MasterDataTables;
+		public static volatile List<DataTable> RevertDataTables = new List<DataTable>();
+		public static volatile List<SfDataGrid> MasterDataGrids = new List<SfDataGrid>();
+		public static volatile List<string> Prefabs = new List<string>();
+		public static volatile List<Dictionary<int, List<int>>> EditedCells = new List<Dictionary<int, List<int>>>();
+
+		public static RoutedCommand SaveCommand = new RoutedCommand();
+
+		//public static RoutedCommand NewCommand = new RoutedCommand();
+		public static RoutedCommand FindReplaceCommand = new RoutedCommand();
+		public static RoutedCommand FindCommand = new RoutedCommand();
+
+		#endregion
+
+		#region Properties
+
+		/// <summary>
+		///     Gets or sets the current visual style.
+		/// </summary>
+		/// <value></value>
+		/// <remarks></remarks>
+		public string CurrentVisualStyle
+		{
+			get => _currentVisualStyle;
+			set
 			{
-				UiHelper.ResetGridSorting(grid, Prefabs[j], false);
+				_currentVisualStyle = value;
+				OnVisualStyleChanged();
 			}
 		}
+
+		private HashSet<string> SearchBoxAutoCompleteItems { get; } = new HashSet<string>();
+
+		#endregion
 	}
 }

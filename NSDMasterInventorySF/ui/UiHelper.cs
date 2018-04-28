@@ -6,13 +6,12 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Forms;
 using System.Windows.Media;
+using NSDMasterInventorySF.Properties;
 using Syncfusion.Data.Extensions;
 using Syncfusion.UI.Xaml.Grid;
 using Syncfusion.Windows.Shared;
 using Syncfusion.Windows.Tools.Controls;
-using Binding = System.Windows.Data.Binding;
 using DataColumn = System.Data.DataColumn;
 using DataRow = System.Data.DataRow;
 
@@ -88,7 +87,7 @@ namespace NSDMasterInventorySF.ui
 			{
 				DataRow row = Recycled.RecycledDataTable.NewRow();
 				foreach (object item in args.Items)
-					foreach (var field in ((DataRowView) item).Row.ItemArray)
+					foreach (object field in ((DataRowView) item).Row.ItemArray)
 						row[((DataRowView) item).Row.ItemArray.IndexOf(field)] = field;
 
 				Recycled.RecycledDataTable.Rows.Add(row);
@@ -121,6 +120,56 @@ namespace NSDMasterInventorySF.ui
 
 				//	dataGrid.UpdateDataRow(row);
 				//}
+			};
+			dataGrid.CurrentCellValidated += (sender, args) =>
+			{
+				DataTable table = (DataTable) dataGrid.ItemsSource;
+				int rowIndex = 0;
+				foreach (DataRow row in table.Rows)
+				{
+					if (row[dataGrid.Columns.IndexOf(args.Column)] == args.NewValue)
+						rowIndex = table.Rows.IndexOf(row);
+				}
+
+				using (var conn = new SqlConnection(App.ConnectionString))
+				{
+					conn.Open();
+
+					using (var cmd = new SqlCommand($"SELECT * FROM [{Settings.Default.Schema}].[{table.TableName}]", conn))
+					{
+						using (var sda = new SqlDataAdapter(cmd))
+						{
+							string updateComm = $"UPDATE [{Settings.Default.Schema}].[{table.TableName}] SET ";
+
+							int i = 0;
+							string[] columns = App.GetAllColumnsOfTable(conn, table.TableName).ToArray();
+							foreach (var column in columns)
+							{
+								if (i != columns.Length - 1)
+									updateComm += $"[{column}] = '{table.Rows[rowIndex][i]}', ";
+								else
+									updateComm += $"[{column}] = '{table.Rows[rowIndex][i]}' ";
+								i++;
+							}
+
+							updateComm += "WHERE ";
+							int k = 0;
+							foreach (var column in columns)
+							{
+								var value = k == dataGrid.Columns.IndexOf(args.Column) ? args.OldValue : table.Rows[rowIndex][k];
+								if (k != columns.Length - 1)
+									updateComm += $"[{column}] = '{value}' AND ";
+								else
+									updateComm += $"[{column}] = '{value}' ";
+								k++;
+							}
+							Debug.WriteLine(updateComm);
+							sda.UpdateCommand = new SqlCommand(updateComm, conn);
+						}
+					}
+
+					conn.Close();
+				}
 			};
 
 			var j = 0;

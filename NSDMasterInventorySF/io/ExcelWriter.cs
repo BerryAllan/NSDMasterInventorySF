@@ -10,13 +10,13 @@ namespace NSDMasterInventorySF.io
 {
 	public class ExcelWriter
 	{
-		public static void Write(List<DataTable> dataTables, string excelFilePath, bool isXssf)
+		public static void Write(DataSet dataTables, string excelFilePath, bool isXssf)
 		{
 			Cursor.Current = Cursors.AppStarting;
 			IWorkbook workbook;
 			workbook = isXssf ? (IWorkbook) new XSSFWorkbook() : new HSSFWorkbook();
 
-			foreach (DataTable table in dataTables)
+			foreach (DataTable table in dataTables.Tables)
 			{
 				string sheetName = table.TableName;
 

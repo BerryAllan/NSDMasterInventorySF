@@ -18,7 +18,7 @@ namespace NSDMasterInventorySF
 	/// <summary>
 	///     Interaction logic for PrefabBuilder.xaml
 	/// </summary>
-	public partial class PrefabBuilder
+	public partial class PrefabBuilder : Window
 	{
 		public static List<WrapPanel> WrapPanels;
 		public static List<SfTextBoxExt> ColumnNames;
@@ -33,12 +33,12 @@ namespace NSDMasterInventorySF
 
 		private readonly string _originalPrefab;
 
+		private readonly MainWindow _window;
+
 		private string _currentVisualStyle;
 		private bool _editButtonsEnabled;
 
 		private Dictionary<string, string> _originalToChangedComboBoxes;
-
-		private readonly MainWindow _window;
 
 		public PrefabBuilder()
 		{
@@ -63,7 +63,7 @@ namespace NSDMasterInventorySF
 
 			ClearAllLists();
 
-			foreach (DataTable table in MainWindow.MasterDataTables) TempTables.Add(table.Copy());
+			foreach (DataTable table in MainWindow.MasterDataTables.Tables) TempTables.Add(table.Copy());
 			using (var conn = new SqlConnection(App.ConnectionString))
 			{
 				conn.Open();
@@ -165,7 +165,7 @@ namespace NSDMasterInventorySF
 				ColumnNames.Add(columnName);
 			}
 
-			columnName.Watermark = $"Field{(ColumnNames.IndexOf(columnName) + 1)}";
+			columnName.Watermark = $"Field{ColumnNames.IndexOf(columnName) + 1}";
 
 			var fieldType = new ComboBox
 			{
@@ -434,7 +434,7 @@ namespace NSDMasterInventorySF
 		{
 			foreach (SfTextBoxExt v in ColumnNames)
 			{
-				v.Watermark = $"Field{(ColumnNames.IndexOf(v) + 1)}";
+				v.Watermark = $"Field{ColumnNames.IndexOf(v) + 1}";
 				v.Name = $"name{ColumnNames.IndexOf(v)}";
 			}
 
@@ -690,17 +690,33 @@ namespace NSDMasterInventorySF
 				}
 
 				var indices = new List<int>();
-				foreach (DataTable table in tablesOfPrefab) indices.Add(MainWindow.MasterDataTables.IndexOf(table));
+				foreach (DataTable table in tablesOfPrefab) indices.Add(MainWindow.MasterDataTables.Tables.IndexOf(table));
 
-				foreach (int i in indices) MainWindow.MasterDataTables[i] = TempTables[i].Copy();
+				//TODO: Make sure this frikin' works
+				foreach (int i in indices)
+				{
+					MainWindow.MasterDataTables.Tables[i].Rows.Clear();
+					MainWindow.MasterDataTables.Tables[i].Columns.Clear();
+
+					DataTable copy = TempTables[i].Copy();
+					foreach (DataColumn column in copy.Columns)
+					{
+						MainWindow.MasterDataTables.Tables[i].Columns.Add(column);
+					}
+
+					foreach (DataRow row in copy.Rows)
+					{
+						MainWindow.MasterDataTables.Tables[i].Rows.Add(row);
+					}
+				}
 
 				foreach (int i in indices)
 				{
-					for (var j = 0; j < MainWindow.MasterDataTables[i].Columns.Count; j++)
-						MainWindow.MasterDataTables[i].Columns[j].ColumnName = $"C_-_O_-_L_-_U_-_M_-_N_-_{j}";
+					for (var j = 0; j < MainWindow.MasterDataTables.Tables[i].Columns.Count; j++)
+						MainWindow.MasterDataTables.Tables[i].Columns[j].ColumnName = $"C_-_O_-_L_-_U_-_M_-_N_-_{j}";
 
-					for (var j = 0; j < MainWindow.MasterDataTables[i].Columns.Count; j++)
-						MainWindow.MasterDataTables[i].Columns[j].ColumnName = prefabTable.Rows[j]["COLUMNS"].ToString();
+					for (var j = 0; j < MainWindow.MasterDataTables.Tables[i].Columns.Count; j++)
+						MainWindow.MasterDataTables.Tables[i].Columns[j].ColumnName = prefabTable.Rows[j]["COLUMNS"].ToString();
 				}
 
 				if (_window != null)

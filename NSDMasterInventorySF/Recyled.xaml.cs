@@ -2,18 +2,10 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using NSDMasterInventorySF.Properties;
 using NSDMasterInventorySF.ui;
 using Syncfusion.UI.Xaml.Grid;
@@ -24,12 +16,11 @@ using DataRow = System.Data.DataRow;
 namespace NSDMasterInventorySF
 {
 	/// <summary>
-	/// Interaction logic for Recyled.xaml
+	///     Interaction logic for Recyled.xaml
 	/// </summary>
-	public partial class Recycled
+	public partial class Recycled : Window
 	{
 		public static volatile DataTable RecycledDataTable = new DataTable();
-		public HashSet<string> SearchBoxAutoCompleteItems { get; } = new HashSet<string>();
 		public static RoutedCommand SaveCommand = new RoutedCommand();
 
 		public Recycled()
@@ -42,6 +33,8 @@ namespace NSDMasterInventorySF
 			SearchField.AutoCompleteSource = SearchBoxAutoCompleteItems;
 			Refresh();
 		}
+
+		public HashSet<string> SearchBoxAutoCompleteItems { get; } = new HashSet<string>();
 
 		private void Refresh()
 		{
@@ -60,7 +53,10 @@ namespace NSDMasterInventorySF
 			RecycledGrid.Loaded += (sender, args) => { UiHelper.GenerateColumnsSfDataGrid(RecycledGrid, RecycledDataTable, string.Empty); };
 		}
 
-		private void SearchFieldTextChanged(object sender, TextChangedEventArgs e) => Search();
+		private void SearchFieldTextChanged(object sender, TextChangedEventArgs e)
+		{
+			Search();
+		}
 
 		private void SearchField_OnKeyDown(object sender, KeyEventArgs e)
 		{
@@ -130,23 +126,19 @@ namespace NSDMasterInventorySF
 			{
 				conn.Open();
 				if (!App.GetTableNames(conn, "RECYCLED").Contains(Settings.Default.Schema))
-				{
 					using (var comm = new SqlCommand())
 					{
 						comm.Connection = conn;
 						comm.CommandText = $"CREATE TABLE RECYCLED.[{Settings.Default.Schema}] ( ";
-						for (int i = 0; i < 250; i++)
-						{
+						for (var i = 0; i < 250; i++)
 							if (i != 249)
 								comm.CommandText += $"Column{i} TEXT,";
 							else
 								comm.CommandText += $"Column{i} TEXT";
-						}
 
 						comm.CommandText += " )";
 						comm.ExecuteNonQuery();
 					}
-				}
 
 				using (var cmd = new SqlCommand($"SELECT * FROM [RECYCLED].[{Settings.Default.Schema}]", conn))
 				{
@@ -219,7 +211,7 @@ namespace NSDMasterInventorySF
 			{
 				List<string> fieldsInRow = row.ItemArray.Select(field => field.ToString()).ToList();
 
-				foreach (var i in item)
+				foreach (string i in item)
 				{
 					if (!i.Equals(fieldsInRow[item.IndexOf(i)]))
 						break;
@@ -231,10 +223,7 @@ namespace NSDMasterInventorySF
 
 			DataRow newRow = RecycledDataTable.NewRow();
 
-			foreach (string s in item)
-			{
-				newRow[item.IndexOf(s)] = s;
-			}
+			foreach (string s in item) newRow[item.IndexOf(s)] = s;
 
 			RecycledDataTable.Rows.Add(newRow);
 		}
@@ -243,9 +232,7 @@ namespace NSDMasterInventorySF
 		{
 			if (MessageBox.Show("Are you sure? This action is irreversible. These records will be permanently deleted.",
 				    "Warning", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
-			{
 				e.Cancel = true;
-			}
 		}
 	}
 }

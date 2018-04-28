@@ -8,7 +8,7 @@ namespace NSDMasterInventorySF.io
 {
 	public class SvWriter
 	{
-		public static void Write(List<DataTable> dataTables, List<string> fileNames, string directoryName, string ext)
+		public static void Write(DataSet dataTables, List<string> fileNames, string directoryName, string ext)
 		{
 			DirectoryInfo di = Directory.CreateDirectory(directoryName + @"\TABLES\");
 			App.ClearDir(di.FullName);
@@ -16,7 +16,7 @@ namespace NSDMasterInventorySF.io
 			string commaOrTab = ext.Equals(".tsv") ? "\t" : ",";
 
 			var index = 0;
-			foreach (DataTable dataTable in dataTables)
+			foreach (DataTable dataTable in dataTables.Tables)
 			{
 				var sb = new StringBuilder();
 

@@ -21,7 +21,7 @@ namespace NSDMasterInventorySF
 	/// <summary>
 	///     Interaction logic for App.xaml
 	/// </summary>
-	public partial class App
+	public partial class App : Application
 	{
 		public static volatile bool SavingCurrently = false;
 		public static volatile bool BackingUpCurrently;
@@ -56,10 +56,15 @@ namespace NSDMasterInventorySF
 						comm.ExecuteNonQuery();
 					}
 
+				using (var comm = new SqlCommand($"ALTER DATABASE [{Settings.Default.Database}] SET ENABLE_BROKER", conn))
+				{
+					//comm.ExecuteNonQuery();
+				}
+
 				conn.Close();
 			}
 
-			SqlDependency.Start(ConnectionString);
+			//SqlDependency.Start(ConnectionString);
 		}
 
 		public static void Restart()
@@ -337,7 +342,7 @@ namespace NSDMasterInventorySF
 			return string.Empty;
 		}
 
-		public static List<DataTable> GetDatatablesOfPrefab(List<DataTable> tables, string prefab)
+		public static List<DataTable> GetDatatablesOfPrefab(DataSet tables, string prefab)
 		{
 			using (var conn = new SqlConnection(ConnectionString))
 			{
@@ -348,7 +353,7 @@ namespace NSDMasterInventorySF
 				string fieldNames = string.Empty;
 				for (var i = 0; i < prefabTable.Rows.Count; i++) fieldNames += prefabTable.Rows[i]["COLUMNS"];
 
-				foreach (DataTable table in tables)
+				foreach (DataTable table in tables.Tables)
 				{
 					string columnNames = string.Empty;
 					foreach (DataColumn column in table.Columns)
@@ -387,17 +392,64 @@ namespace NSDMasterInventorySF
 			}
 		}
 
-		public static List<DataTable> GetDataTablesFromDb()
+		public static DataSet Sets()
 		{
-			var dataTables = new List<DataTable>();
+			DataSet set = new DataSet(Settings.Default.Schema);
+
+			using (var conn = new SqlConnection(ConnectionString))
+			{
+				conn.Open();
+				int id = 1;
+				foreach (string tableName in GetTableNames(conn))
+				{
+					//string selectCom = "SELECT ";
+					//int i = 0;
+					//List<string> columns = GetAllColumnsOfTable(conn, tableName);
+					//foreach (var column in columns)
+					//{
+					//	if (i != columns.Count - 1)
+					//		selectCom += $"[{column}], ";
+					//	else
+					//		selectCom += $"[{column}]";
+					//	i++;
+					//}
+
+					//selectCom += $" FROM [{Settings.Default.Schema}].[{tableName}]";
+
+					//Debug.WriteLine(selectCom);
+					using (var cmd = new SqlCommand($"SELECT * FROM [{Settings.Default.Schema}].[{tableName}]", conn))
+					{
+						using (var sda = new SqlDataAdapter(cmd))
+						{
+							sda.FillSchema(set, SchemaType.Source, tableName);
+							sda.Fill(set, tableName);
+						}
+					}
+					SqlDependencyEx dep = new SqlDependencyEx(ConnectionString, Settings.Default.Database, tableName, $"[{Settings.Default.Schema}]", identity: id);
+					dep.TableChanged += (sender, args) => Debug.WriteLine("asdf");
+					dep.Start();
+					dep.Stop();
+					id++;
+				}
+
+				conn.Close();
+			}
+
+			return set;
+		}
+
+		public static DataSet GetDataTablesFromDb()
+		{
+			var dataTables = new DataSet();
 
 			using (var conn =
 				new SqlConnection(ConnectionString))
 			{
 				conn.Open();
 
-				int b = 0;
+				int id = 1;
 				foreach (string tableName in GetTableNames(conn))
+				{
 					using (var cmd = new SqlCommand($"SELECT * FROM [{Settings.Default.Schema}].[{tableName}]", conn))
 					{
 						cmd.CommandType = CommandType.Text;
@@ -413,49 +465,20 @@ namespace NSDMasterInventorySF
 										if (string.IsNullOrEmpty(row[i].ToString()))
 											row[i] = null;
 
-								dataTables.Add(dt);
-
-								SqlDependencyEx listener =
-									new SqlDependencyEx(ConnectionString, Settings.Default.Database, $"[{tableName}]", $"[{Settings.Default.Schema}]",
-										identity: b);
-								listener.TableChanged += (sender, args) => { Debug.WriteLine("asdf"); };
-								listener.Start();
-
-								/*int changesReceived = 0;
-								using (SqlCommand comm = new SqlCommand("SELECT ", conn))
-								{
-									int k = 0;
-									List<string> columns = GetAllColumnsOfTable(conn, tableName);
-									foreach (string column in columns)
-									{
-										if (k != columns.Count - 1)
-											comm.CommandText += $"[{column}], ";
-										else
-											comm.CommandText += $"[{column}] ";
-										k++;
-									}
-
-									comm.CommandText += $"Inventoried FROM [{Settings.Default.Schema}].[{dt.TableName}]";
-									Debug.WriteLine(comm.CommandText);
-									// Create a dependency and associate it with the SqlCommand.  
-									SqlDependency dependency = new SqlDependency(comm);
-									// Maintain the refence in a class member.
-									comm.ExecuteNonQuery();
-
-									// Subscribe to the SqlDependency event.  
-									dependency.OnChange += (sender, args) => { Debug.WriteLine(changesReceived++); };
-
-									/#1#/ Execute the command.  
-									using (SqlDataReader reader = comm.ExecuteReader())
-									{
-										// Process the DataReader.  
-									}#1#
-								}*/
+								dataTables.Tables.Add(dt);
 							}
 						}
-
-						b++;
 					}
+
+					id++;
+				}
+/*
+				using (SqlDependencyEx dependencyEx =
+					new SqlDependencyEx(ConnectionString, Settings.Default.Database, "AMS", Settings.Default.Schema, identity: id))
+				{
+					dependencyEx.TableChanged += (sender, args) => Console.WriteLine("asdf");
+					//dependencyEx.Start();
+				}*/
 
 				conn.Close();
 			}

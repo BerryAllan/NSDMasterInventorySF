@@ -11,12 +11,12 @@ namespace NSDMasterInventorySF
 	/// <summary>
 	///     Interaction logic for FindAndReplace.xaml
 	/// </summary>
-	public partial class FindAndReplace
+	public partial class FindAndReplace : Window
 	{
 		public static RoutedCommand CloseWindow = new RoutedCommand();
+		private readonly MainWindow _window;
 
 		private string _currentVisualStyle;
-		private readonly MainWindow _window;
 
 		public FindAndReplace(MainWindow window)
 		{
@@ -53,12 +53,14 @@ namespace NSDMasterInventorySF
 			}
 
 			if ((bool) AllTablesCheckBox.IsChecked)
-				foreach (DataTable table in MainWindow.MasterDataTables)
+				foreach (DataTable table in MainWindow.MasterDataTables.Tables)
 					FindReplace(table, FindBox.Text, ReplaceBox.Text, (bool) MatchEntireContentsCheckBox.IsChecked,
 						(bool) MatchCaseCheckBox.IsChecked);
 			else
-				FindReplace(MainWindow.MasterDataTables[_window.MasterTabControl.SelectedIndex], FindBox.Text, ReplaceBox.Text,
+				FindReplace(MainWindow.MasterDataTables.Tables[_window.MasterTabControl.SelectedIndex], FindBox.Text, ReplaceBox.Text,
 					(bool) MatchEntireContentsCheckBox.IsChecked, (bool) MatchCaseCheckBox.IsChecked);
+
+			_window.RevertChanges.IsEnabled = true;
 		}
 
 		public void FindReplace(DataTable dt, string find, string replace, bool isWholeCell, bool matchCase)

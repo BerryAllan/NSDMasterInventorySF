@@ -18,9 +18,9 @@ namespace NSDMasterInventorySF
 	{
 		public static RoutedCommand CloseWindow = new RoutedCommand();
 		private readonly string _columnName;
+		private readonly string _prefab;
 
 		private string _currentVisualStyle;
-		private readonly string _prefab;
 
 		public ComboBoxBuilder()
 		{

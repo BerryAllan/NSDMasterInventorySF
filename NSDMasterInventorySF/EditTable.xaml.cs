@@ -11,14 +11,14 @@ namespace NSDMasterInventorySF
 	/// <summary>
 	///     Interaction logic for EditTable.xaml
 	/// </summary>
-	public partial class EditTable
+	public partial class EditTable : Window
 	{
 		public static RoutedCommand CloseWindow = new RoutedCommand();
-
-		private string _currentVisualStyle;
 		private readonly TableManager _manager;
 		private readonly string _originalName;
 		private readonly bool _showWarning;
+
+		private string _currentVisualStyle;
 
 		public EditTable(MainWindow window, bool showWarning, string originalName, TableManager manager)
 		{

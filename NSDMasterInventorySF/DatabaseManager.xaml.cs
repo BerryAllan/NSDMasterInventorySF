@@ -14,7 +14,7 @@ namespace NSDMasterInventorySF
 	/// <summary>
 	///     Interaction logic for DatabaseManager.xaml
 	/// </summary>
-	public partial class DatabaseManager
+	public partial class DatabaseManager : Window
 	{
 		public static RoutedCommand CloseWindow = new RoutedCommand();
 		private readonly MainWindow _window;

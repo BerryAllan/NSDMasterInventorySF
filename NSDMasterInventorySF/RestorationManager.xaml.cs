@@ -9,7 +9,7 @@ namespace NSDMasterInventorySF
 	/// <summary>
 	///     Interaction logic for RestorationManager.xaml
 	/// </summary>
-	public partial class RestorationManager
+	public partial class RestorationManager : Window
 	{
 		public RestorationManager()
 		{
@@ -74,7 +74,7 @@ namespace NSDMasterInventorySF
 				{
 					comm.ExecuteNonQuery();
 				}
-				
+
 				conn.Close();
 			}
 

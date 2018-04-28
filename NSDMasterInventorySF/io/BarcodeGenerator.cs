@@ -10,7 +10,7 @@ namespace NSDMasterInventorySF.io
 {
 	public class BarcodeGenerator
 	{
-		public static void CreateDmCodes(string dir, List<DataTable> dataTables)
+		public static void CreateDmCodes(string dir, DataSet dataTables)
 		{
 			Directory.CreateDirectory(dir + @"\BARCODES\");
 			App.ClearDir(dir + @"\BARCODES\");
@@ -20,7 +20,7 @@ namespace NSDMasterInventorySF.io
 				var i = 0;
 				foreach (string filePath in App.GetTableNames(conn))
 				{
-					foreach (DataRow row in dataTables[i].Rows)
+					foreach (DataRow row in dataTables.Tables[i].Rows)
 					{
 						string item = string.Join("\t", row.ItemArray);
 

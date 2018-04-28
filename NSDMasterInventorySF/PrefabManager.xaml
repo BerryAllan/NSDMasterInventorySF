@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Prefab Manager" Height="400" Width="550" Closed="PrefabManager_OnClosed" ResizeMode="NoResize" Loaded="OnLoaded">
-    <DockPanel>
-        <StackPanel DockPanel.Dock="Left" Margin="10,10,10,10" VerticalAlignment="Center">
-            <Button FontSize="16" Content="Add" Click="OpenAddPrefabBuilder" Margin="0,0,0,0" />
-            <Button FontSize="16" Content="Edit" IsEnabled="False" Click="OpenEditPrefabBuilder" Margin="0,75,0,0"
-                    x:Name="EditButton" />
-            <Button FontSize="16" Content="Remove" Click="RemovePrefab" IsEnabled="False" Margin="0,75,0,0" x:Name="RemoveButton" />
-        </StackPanel>
-        <ListBox x:Name="PrefabListBox" SelectionMode="Single" DockPanel.Dock="Right"
-                 SelectionChanged="PrefabListBox_OnSelectionChanged" Margin="10,10,10,10" />
-    </DockPanel>
+	<DockPanel>
+		<StackPanel DockPanel.Dock="Left" Margin="10,10,10,10" VerticalAlignment="Center">
+			<Button FontSize="16" Content="Add" Click="OpenAddPrefabBuilder" Margin="0,0,0,0" />
+			<Button FontSize="16" Content="Edit" IsEnabled="False" Click="OpenEditPrefabBuilder" Margin="0,75,0,0"
+			        x:Name="EditButton" />
+			<Button FontSize="16" Content="Remove" Click="RemovePrefab" IsEnabled="False" Margin="0,75,0,0" x:Name="RemoveButton" />
+		</StackPanel>
+		<ListBox x:Name="PrefabListBox" SelectionMode="Single" DockPanel.Dock="Right"
+		         SelectionChanged="PrefabListBox_OnSelectionChanged" Margin="10,10,10,10" />
+	</DockPanel>
 </Window>

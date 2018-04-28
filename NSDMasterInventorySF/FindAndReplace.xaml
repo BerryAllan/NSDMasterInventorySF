@@ -5,22 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Find and Replace" Height="190" Width="425" Loaded="OnLoaded">
-    <DockPanel Margin="10">
-        <DockPanel DockPanel.Dock="Top" Margin="0,0,0,10">
-            <Label Content="Find:" />
-            <TextBox x:Name="FindBox" />
-        </DockPanel>
-        <DockPanel DockPanel.Dock="Top" Margin="0,0,0,10">
-            <Label Content="Replace:" />
-            <TextBox x:Name="ReplaceBox" KeyDown="ReplaceBox_OnKeyDown" />
-        </DockPanel>
-        <DockPanel DockPanel.Dock="Top">
-            <CheckBox x:Name="AllTablesCheckBox" Content="All Tables" Margin="10" />
-            <CheckBox x:Name="MatchEntireContentsCheckBox" Content="Match Entire Cell Contents" Margin="10" />
-            <CheckBox x:Name="MatchCaseCheckBox" Content="Match Case" Margin="10" />
-        </DockPanel>
-        <DockPanel LastChildFill="False" HorizontalAlignment="Right" Height="25">
-            <Button Content="Go!" Width="100" Click="Replace" />
-        </DockPanel>
-    </DockPanel>
+	<DockPanel Margin="10">
+		<DockPanel DockPanel.Dock="Top" Margin="0,0,0,10">
+			<Label Content="Find:" />
+			<TextBox x:Name="FindBox" />
+		</DockPanel>
+		<DockPanel DockPanel.Dock="Top" Margin="0,0,0,10">
+			<Label Content="Replace:" />
+			<TextBox x:Name="ReplaceBox" KeyDown="ReplaceBox_OnKeyDown" />
+		</DockPanel>
+		<DockPanel DockPanel.Dock="Top">
+			<CheckBox x:Name="AllTablesCheckBox" Content="All Tables" Margin="10" />
+			<CheckBox x:Name="MatchEntireContentsCheckBox" Content="Match Entire Cell Contents" Margin="10" />
+			<CheckBox x:Name="MatchCaseCheckBox" Content="Match Case" Margin="10" />
+		</DockPanel>
+		<DockPanel LastChildFill="False" HorizontalAlignment="Right" Height="25">
+			<Button Content="Go!" Width="100" Click="Replace" />
+		</DockPanel>
+	</DockPanel>
 </Window>

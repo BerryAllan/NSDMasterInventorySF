@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Restoration Manager" Height="300" Width="350">
-    <DockPanel>
-        <StackPanel DockPanel.Dock="Left" Margin="10,10,10,10" VerticalAlignment="Center">
-            <Button FontSize="16" Content="Restore" IsEnabled="True" Margin="0,0,0,0" Click="OnRestoreButtonClicked" x:Name="RestoreButton" />
-        </StackPanel>
-        <ListBox x:Name="SheetListBox" SelectionMode="Single" DockPanel.Dock="Right" SelectionChanged="SheetListBox_OnSelectionChanged"
-                 Margin="10,10,10,10" />
-    </DockPanel>
+	<DockPanel>
+		<StackPanel DockPanel.Dock="Left" Margin="10,10,10,10" VerticalAlignment="Center">
+			<Button FontSize="16" Content="Restore" IsEnabled="True" Margin="0,0,0,0" Click="OnRestoreButtonClicked" x:Name="RestoreButton" />
+		</StackPanel>
+		<ListBox x:Name="SheetListBox" SelectionMode="Single" DockPanel.Dock="Right" SelectionChanged="SheetListBox_OnSelectionChanged"
+		         Margin="10,10,10,10" />
+	</DockPanel>
 </Window>

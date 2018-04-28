@@ -6,9 +6,9 @@
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
         mc:Ignorable="d"
         Title="Edit Table" Height="200" Width="200" ResizeMode="NoResize" Loaded="OnLoaded">
-    <StackPanel HorizontalAlignment="Center" Margin="10" FocusManager.FocusedElement="{Binding ElementName=TableNameBox}">
-        <ComboBox IsDropDownOpen="True" Name="PrefabComboBox" Margin="0,0,0,30" />
-        <syncfusion:SfTextBoxExt x:Name="TableNameBox" Watermark="Table Name" Margin="0,0,0,30" />
-        <Button x:Name="ChooseButton" Content="Done" Click="DoneButtonOnClicked" />
-    </StackPanel>
+	<StackPanel HorizontalAlignment="Center" Margin="10" FocusManager.FocusedElement="{Binding ElementName=TableNameBox}">
+		<ComboBox IsDropDownOpen="True" Name="PrefabComboBox" Margin="0,0,0,30" />
+		<syncfusion:SfTextBoxExt x:Name="TableNameBox" Watermark="Table Name" Margin="0,0,0,30" />
+		<Button x:Name="ChooseButton" Content="Done" Click="DoneButtonOnClicked" />
+	</StackPanel>
 </Window>

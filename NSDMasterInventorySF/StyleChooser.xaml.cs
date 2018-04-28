@@ -10,7 +10,7 @@ namespace NSDMasterInventorySF
 	/// <summary>
 	///     Interaction logic for StyleChooser.xaml
 	/// </summary>
-	public partial class StyleChooser
+	public partial class StyleChooser : Window
 	{
 		public static RoutedCommand CloseWindow = new RoutedCommand();
 

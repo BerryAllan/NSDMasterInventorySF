@@ -232,3 +232,5 @@ C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\RestorationManager.g.cs
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Recycled.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Recycled.g.cs
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\System.ValueTuple.dll
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\System.ValueTuple.xml

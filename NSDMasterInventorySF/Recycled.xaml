@@ -72,6 +72,6 @@
 		                       AllowFiltering="True" AllowTriStateSorting="True" ShowSortNumbers="True" AllowResizingColumns="True"
 		                       AllowEditing="True" NavigationMode="Cell" SelectionUnit="Any" SelectionMode="Extended" GridValidationMode="InView"
 		                       IsEnabled="True" HeaderRowHeight="30" ShowGroupDropArea="True" ColumnSizer="Auto" AddNewRowPosition="FixedTop"
-		                       IsDynamicItemsSource="True" AutoGenerateColumns="False" RecordDeleting="RecycledGrid_OnRecordDeleting"/>
+		                       IsDynamicItemsSource="True" AutoGenerateColumns="False" RecordDeleting="RecycledGrid_OnRecordDeleting" />
 	</DockPanel>
 </Window>

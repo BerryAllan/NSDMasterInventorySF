@@ -115,14 +115,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Rapid Recorder.exe" size="454144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Rapid Recorder.exe" size="457216">
       <assemblyIdentity name="Rapid Recorder" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BG/L4r7ny1ssmmPAiuzhOYwcWNXm3mtVGycpZWnWuig=</dsig:DigestValue>
+        <dsig:DigestValue>/lOp0vUAkReSMyn1HiSybDkJSlU1XQksJfdhosgD8r0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1203,6 +1203,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>LiGsSnc+TWX7OEQlqK1XsSU8VFIjrh2gXgB6iCJkAUU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.ValueTuple.dll" size="79200">
+      <assemblyIdentity name="System.ValueTuple" version="4.0.2.0" publicKeyToken="CC7B13FFCD2DDD51" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>efrC6DVae7uU1A0l/g401c7fVCahdvIPHM1eBgbw8II=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

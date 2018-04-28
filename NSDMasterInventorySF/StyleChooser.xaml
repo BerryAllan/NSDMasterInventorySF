@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Style Chooser" Height="400" Width="400" Loaded="OnLoaded">
-    <DockPanel Margin="10">
-        <Button x:Name="SelectButton" HorizontalAlignment="Right" DockPanel.Dock="Bottom" Width="100" Content="Select"
-                Click="ButtonBase_OnClick" />
-        <ListBox x:Name="StylesListBox" Margin="10" SelectionMode="Single" SelectionChanged="StylesListBox_OnSelectionChanged" />
-    </DockPanel>
+	<DockPanel Margin="10">
+		<Button x:Name="SelectButton" HorizontalAlignment="Right" DockPanel.Dock="Bottom" Width="100" Content="Select"
+		        Click="ButtonBase_OnClick" />
+		<ListBox x:Name="StylesListBox" Margin="10" SelectionMode="Single" SelectionChanged="StylesListBox_OnSelectionChanged" />
+	</DockPanel>
 </Window>

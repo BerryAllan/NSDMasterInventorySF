@@ -12,7 +12,7 @@ namespace NSDMasterInventorySF
 	/// <summary>
 	///     Interaction logic for PrefabManager.xaml
 	/// </summary>
-	public partial class PrefabManager
+	public partial class PrefabManager : Window
 	{
 		public static RoutedCommand CloseWindow = new RoutedCommand();
 		private readonly MainWindow _window;
