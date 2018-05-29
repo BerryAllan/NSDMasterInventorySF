@@ -1902,15 +1902,7 @@
             </summary>
             <author>Vikram Aggarwal</author>
         </member>
-        <member name="T:ZXing.Client.Result.WifiResultParser">
-            <summary>
-            <p>Parses a WIFI configuration string. Strings will be of the form:</p>
-            <p>{@code WIFI:T:[network type];S:[network SSID];P:[network password];H:[hidden?];;}</p>
-            <p>The fields can appear in any order. Only "S:" is required.</p>
-            </summary>
-            <author>Vikram Aggarwal</author>
-            <author>Sean Owen</author>
-        </member>
+        <!-- Ungültiger XML-Kommentar wurde für den Member "T:ZXing.Client.Result.WifiResultParser" ignoriert -->
         <member name="T:ZXing.Common.BitArray">
             <summary>
             A simple, fast array of bits, represented compactly by an array of ints internally.
@@ -2855,6 +2847,12 @@
             most 1D formats.
             </summary>
         </member>
+        <member name="P:ZXing.Common.EncodingOptions.GS1Format">
+            <summary>
+            Specifies whether the data should be encoded to the GS1 standard;
+            FNC1 character is added in front of the data
+            </summary>
+        </member>
         <member name="M:ZXing.Common.EncodingOptions.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:ZXing.Common.EncodingOptions"/> class.
@@ -3399,19 +3397,23 @@
             <param name="hints"></param>
             <returns></returns>
         </member>
-        <member name="M:ZXing.Datamatrix.DataMatrixWriter.encodeLowLevel(ZXing.Datamatrix.Encoder.DefaultPlacement,ZXing.Datamatrix.Encoder.SymbolInfo)">
+        <member name="M:ZXing.Datamatrix.DataMatrixWriter.encodeLowLevel(ZXing.Datamatrix.Encoder.DefaultPlacement,ZXing.Datamatrix.Encoder.SymbolInfo,System.Int32,System.Int32)">
             <summary>
             Encode the given symbol info to a bit matrix.
             </summary>
             <param name="placement">The DataMatrix placement.</param>
             <param name="symbolInfo">The symbol info to encode.</param>
+            <param name="width"></param>
+            <param name="height"></param>
             <returns>The bit matrix generated.</returns>
         </member>
-        <member name="M:ZXing.Datamatrix.DataMatrixWriter.convertByteMatrixToBitMatrix(ZXing.QrCode.Internal.ByteMatrix)">
+        <member name="M:ZXing.Datamatrix.DataMatrixWriter.convertByteMatrixToBitMatrix(ZXing.QrCode.Internal.ByteMatrix,System.Int32,System.Int32)">
             <summary>
             Convert the ByteMatrix to BitMatrix.
             </summary>
             <param name="matrix">The input matrix.</param>
+            <param name="reqWidth">The requested width of the image (in pixels) with the Datamatrix code</param>
+            <param name="reqHeight">The requested height of the image (in pixels) with the Datamatrix code</param>
             <returns>The output matrix.</returns>
         </member>
         <member name="T:ZXing.Datamatrix.Internal.BitMatrixParser">
@@ -4199,6 +4201,12 @@
             type: <see cref="T:System.Int32" />, or <see cref="T:System.String" /> representation of the integer value
             </summary>
         </member>
+        <member name="F:ZXing.EncodeHintType.PDF417_ASPECT_RATIO">
+            <summary>
+            Specifies the aspect ratio to use.  Default is 4.
+            type: <see cref="T:ZXing.PDF417.Internal.PDF417AspectRatio" />, or 1-4.
+            </summary>
+        </member>
         <member name="F:ZXing.EncodeHintType.PDF417_COMPACT">
             <summary>
             Specifies whether to use compact mode for PDF417
@@ -4270,6 +4278,13 @@
             <summary>
             Specifies the exact version of QR code to be encoded.
             (Type <see cref="T:System.Int32" />, or <see cref="T:System.String" /> representation of the integer value).
+            </summary>
+        </member>
+        <member name="F:ZXing.EncodeHintType.GS1_FORMAT">
+            <summary>
+            Specifies whether the data should be encoded to the GS1 standard
+            type: <see cref="T:System.Boolean" />, or "true" or "false"
+            <see cref="T:System.String" /> value
             </summary>
         </member>
         <member name="T:ZXing.FormatException">
@@ -5206,7 +5221,7 @@
         </member>
         <member name="T:ZXing.OneD.Code39Reader">
             <summary>
-              <p>Decodes Code 39 barcodes. This does not support "Full ASCII Code 39" yet.</p>
+              <p>Decodes Code 39 barcodes. Supports "Full ASCII Code 39" if USE_CODE_39_EXTENDED_MODE is set.</p>
             	<author>Sean Owen</author>
             @see Code93Reader
             </summary>
@@ -7688,6 +7703,11 @@
             <param name="bits">Bits.</param>
             <param name="points">Points.</param>
         </member>
+        <member name="T:ZXing.PDF417.Internal.PDF417AspectRatio">
+            <summary>
+            defines the level of the error correction / count of error correction codewords
+            </summary>
+        </member>
         <member name="T:ZXing.PDF417.Internal.BarcodeMatrix">
              <summary>
              Holds all of the information for a barcode in a format where it can be easily accessible
@@ -7695,7 +7715,7 @@
              <author>Jacob Haynes</author>
              </summary>
         </member>
-        <member name="M:ZXing.PDF417.Internal.BarcodeMatrix.#ctor(System.Int32,System.Int32)">
+        <member name="M:ZXing.PDF417.Internal.BarcodeMatrix.#ctor(System.Int32,System.Int32,System.Boolean)">
             <summary>
             <param name="height">the height of the matrix (Rows)</param>
             <param name="width">the width of the matrix (Cols)</param>
@@ -7845,20 +7865,23 @@
             <param name="r">the number of rows in the symbol</param>
             <returns>the number of pad codewords</returns>
         </member>
-        <member name="M:ZXing.PDF417.Internal.PDF417.generateBarcodeLogic(System.String,System.Int32)">
+        <member name="M:ZXing.PDF417.Internal.PDF417.generateBarcodeLogic(System.String,System.Int32,System.Int32,System.Int32,System.Int32@)">
             <summary>
             Generates the barcode logic.
             </summary>
             <param name="msg">the message to encode</param>
             <param name="errorCorrectionLevel">PDF417 error correction level to use</param>
         </member>
-        <member name="M:ZXing.PDF417.Internal.PDF417.determineDimensions(System.Int32,System.Int32)">
+        <member name="M:ZXing.PDF417.Internal.PDF417.determineDimensions(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32@)">
             <summary>
             Determine optimal nr of columns and rows for the specified number of
             codewords.
             </summary>
             <param name="sourceCodeWords">number of code words</param>
             <param name="errorCorrectionCodeWords">number of error correction code words</param>
+            <param name="longDimension">The longest dimension of the barcode, used for columns</param>
+            <param name="shortDimension">The short dimension of the barcode, used for rows</param>
+            <param name="aspectRatio">The height of a row, will alter this parameter if aspectRatio>4 (aspectRatio==AUTO)</param>
             <returns>dimension object containing cols as width and rows as height</returns>
         </member>
         <member name="M:ZXing.PDF417.Internal.PDF417.setDimensions(System.Int32,System.Int32,System.Int32,System.Int32)">
@@ -7912,6 +7935,14 @@
             level.
             </summary>
             <param name="errorCorrectionLevel">the error correction level (0-8)</param>
+            <returns>the number of codewords generated for error correction</returns>
+        </member>
+        <member name="M:ZXing.PDF417.Internal.PDF417ErrorCorrection.getErrorCorrectionLevel(System.Int32,System.Int32)">
+            <summary>
+            Determines the error correction level for AUTO
+            </summary>
+            <param name="errorCorrectionLevel">The error correction level (0-9)</param>
+            <param name="sourceCodeWords">The number of codewords for AUTO errorCorrectionLevel</param>
             <returns>the number of codewords generated for error correction</returns>
         </member>
         <member name="M:ZXing.PDF417.Internal.PDF417ErrorCorrection.getRecommendedMinimumErrorCorrectionLevel(System.Int32)">
@@ -8120,6 +8151,11 @@
             Specifies what degree of error correction to use
             </summary>
         </member>
+        <member name="P:ZXing.PDF417.PDF417EncodingOptions.AspectRatio">
+            <summary>
+            Specifies what degree of error correction to use
+            </summary>
+        </member>
         <member name="P:ZXing.PDF417.PDF417EncodingOptions.CharacterSet">
             <summary>
             Specifies what character encoding to use where applicable (type {@link String})
@@ -8284,6 +8320,54 @@
             <author>Guenther Grau</author>
             </summary>
         </member>
+        <member name="P:ZXing.PDF417.PDF417ResultMetadata.SegmentIndex">
+            <summary>
+            The Segment ID represents the segment of the whole file distributed over different symbols.
+            </summary>
+        </member>
+        <member name="P:ZXing.PDF417.PDF417ResultMetadata.FileId">
+            <summary>
+            Is the same for each related PDF417 symbol
+            </summary>
+        </member>
+        <member name="P:ZXing.PDF417.PDF417ResultMetadata.OptionalData">
+            <summary>
+            always null
+            </summary>
+        </member>
+        <member name="P:ZXing.PDF417.PDF417ResultMetadata.IsLastSegment">
+            <summary>
+            true if it is the last segment
+            </summary>
+        </member>
+        <member name="P:ZXing.PDF417.PDF417ResultMetadata.SegmentCount">
+            <summary>
+            count of segments, -1 if not set
+            </summary>
+        </member>
+        <member name="P:ZXing.PDF417.PDF417ResultMetadata.FileName">
+            <summary>
+            Filename of the encoded file
+            </summary>
+        </member>
+        <member name="P:ZXing.PDF417.PDF417ResultMetadata.FileSize">
+            <summary>
+            filesize in bytes of the encoded file
+            returns filesize in bytes, -1 if not set
+            </summary>
+        </member>
+        <member name="P:ZXing.PDF417.PDF417ResultMetadata.Checksum">
+            <summary>
+            16-bit CRC checksum using CCITT-16
+            returns crc checksum, -1 if not set
+            </summary>
+        </member>
+        <member name="P:ZXing.PDF417.PDF417ResultMetadata.Timestamp">
+            <summary>
+            unix epock timestamp, elapsed seconds since 1970-01-01
+            returns elapsed seconds, -1 if not set
+            </summary>
+        </member>
         <member name="T:ZXing.PDF417.PDF417Writer">
             <summary>
             <author>Jacob Haynes</author>
@@ -8298,6 +8382,11 @@
         <member name="F:ZXing.PDF417.PDF417Writer.DEFAULT_ERROR_CORRECTION_LEVEL">
             <summary>
             default error correction level
+            </summary>
+        </member>
+        <member name="F:ZXing.PDF417.PDF417Writer.DEFAULT_ASPECT_RATIO">
+            <summary>
+            default aspect ratio
             </summary>
         </member>
         <member name="M:ZXing.PDF417.PDF417Writer.encode(System.String,ZXing.BarcodeFormat,System.Int32,System.Int32,System.Collections.Generic.IDictionary{ZXing.EncodeHintType,System.Object})">
@@ -8320,11 +8409,12 @@
             <param name="format">The barcode format to generate</param>
             <param name="width">The preferred width in pixels</param>
             <param name="height">The preferred height in pixels</param>
+            <param name="aspectRatio">The height of a row in the barcode</param>
             <returns>
             The generated barcode as a Matrix of unsigned bytes (0 == black, 255 == white)
             </returns>
         </member>
-        <member name="M:ZXing.PDF417.PDF417Writer.bitMatrixFromEncoder(ZXing.PDF417.Internal.PDF417,System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:ZXing.PDF417.PDF417Writer.bitMatrixFromEncoder(ZXing.PDF417.Internal.PDF417,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
             Takes encoder, accounts for width/height, and retrieves bit matrix
             </summary>
@@ -9220,7 +9310,7 @@
         </member>
         <member name="F:ZXing.QrCode.Internal.FinderPatternFinder.MAX_MODULES">
             <summary>
-            support up to version 10 for mobile clients
+            support up to version 20 for mobile clients
             </summary>
         </member>
         <member name="M:ZXing.QrCode.Internal.FinderPatternFinder.#ctor(ZXing.Common.BitMatrix)">
@@ -9258,16 +9348,24 @@
             used by finder patterns to be considered a match
             </returns>
         </member>
-        <member name="M:ZXing.QrCode.Internal.FinderPatternFinder.crossCheckDiagonal(System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:ZXing.QrCode.Internal.FinderPatternFinder.foundPatternDiagonal(System.Int32[])">
+            <summary>
+            </summary>
+            <param name="stateCount">count of black/white/black/white/black pixels just read</param>
+            <returns>true if the proportions of the counts is close enough to the 1/1/3/1/1 ratios
+            by finder patterns to be considered a match</returns>
+        </member>
+        <member name="M:ZXing.QrCode.Internal.FinderPatternFinder.crossCheckDiagonal(System.Int32,System.Int32)">
             <summary>
             After a vertical and horizontal scan finds a potential finder pattern, this method
             "cross-cross-cross-checks" by scanning down diagonally through the center of the possible
             finder pattern to see if the same proportion is detected.
+            @param maxCount maximum reasonable number of modules that should be
+             observed in any reading state, based on the results of the horizontal scan
+            @param originalStateCountTotal The original state count total.
             </summary>
-            <param name="startI">row where a finder pattern was detected</param>
+            <param name="centerI">row where a finder pattern was detected</param>
             <param name="centerJ">center of the section that appears to cross a finder pattern</param>
-            <param name="maxCount">maximum reasonable number of modules that should be observed in any reading state, based on the results of the horizontal scan</param>
-            <param name="originalStateCountTotal">The original state count total.</param>
             <returns>true if proportions are withing expected limits</returns>
         </member>
         <member name="M:ZXing.QrCode.Internal.FinderPatternFinder.crossCheckVertical(System.Int32,System.Int32,System.Int32,System.Int32)">
@@ -9293,6 +9391,16 @@
         </member>
         <member name="M:ZXing.QrCode.Internal.FinderPatternFinder.handlePossibleCenter(System.Int32[],System.Int32,System.Int32,System.Boolean)">
             <summary>
+            @see #handlePossibleCenter(int[], int, int)
+            </summary>
+            <param name="stateCount">reading state module counts from horizontal scan</param>
+            <param name="i">row where finder pattern may be found</param>
+            <param name="j">end of possible finder pattern in row</param>
+            <param name="pureBarcode">ignored</param>
+            <returns>true if a finder pattern candidate was found this time</returns>
+        </member>
+        <member name="M:ZXing.QrCode.Internal.FinderPatternFinder.handlePossibleCenter(System.Int32[],System.Int32,System.Int32)">
+            <summary>
               <p>This is called when a horizontal scan finds a possible alignment pattern. It will
             cross check with a vertical scan, and if successful, will, ah, cross-cross-check
             with another horizontal scan. This is needed primarily to locate the real horizontal
@@ -9306,7 +9414,6 @@
             <param name="stateCount">reading state module counts from horizontal scan</param>
             <param name="i">row where finder pattern may be found</param>
             <param name="j">end of possible finder pattern in row</param>
-            <param name="pureBarcode">true if in "pure barcode" mode</param>
             <returns>
             true if a finder pattern candidate was found this time
             </returns>

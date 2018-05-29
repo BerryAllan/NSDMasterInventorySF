@@ -7,7 +7,7 @@
         Title="Table Manager" Height="300" Width="350" Closed="SheetManager_OnClosed" Loaded="OnLoaded">
 	<DockPanel>
 		<StackPanel DockPanel.Dock="Left" Margin="10,10,10,10" VerticalAlignment="Center">
-			<Button FontSize="16" Content="Add" IsEnabled="True" Margin="0,0,0,0" Click="OnNewButtonClick" x:Name="Add" />
+			<Button FontSize="16" Content="Add" IsEnabled="True" Margin="0,0,0,0" Click="AddButtonClick" x:Name="Add" />
 			<Button FontSize="16" Content="Edit" IsEnabled="False" Margin="0,50,0,0" Click="EditButton_OnClick" x:Name="Edit" />
 			<Button FontSize="16" Content="Remove" IsEnabled="False" Click="RemoveSheetButton_OnClick" Margin="0,50,0,0"
 			        x:Name="RemoveSheetButton" />

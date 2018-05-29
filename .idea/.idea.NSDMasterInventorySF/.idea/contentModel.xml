@@ -3,12 +3,14 @@
   <component name="ContentModelStore">
     <e p="C:\Users\titom\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_NSDMasterInventorySF.2043959596.00" t="ExcludeRecursive" />
     <e p="C:\Users\titom\source\repos\NSDMasterInventorySF" t="IncludeFlat">
-      <e p="Installer\Installer.vdproj" t="IncludeRecursive" />
       <e p="NSDMasterInventorySF" t="IncludeRecursive">
         <e p="app.config" t="Include" />
+        <e p="app.manifest" t="Include" />
         <e p="App.xaml" t="Include" />
         <e p="App.xaml.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="ColumnChooser.xaml" t="Include" />
+        <e p="ColumnChooser.xaml.cs" t="Include" />
         <e p="ComboBoxBuilder.xaml" t="Include" />
         <e p="ComboBoxBuilder.xaml.cs" t="Include" />
         <e p="DatabaseManager.xaml" t="Include" />
@@ -17,6 +19,8 @@
         <e p="EditTable.xaml.cs" t="Include" />
         <e p="FindAndReplace.xaml" t="Include" />
         <e p="FindAndReplace.xaml.cs" t="Include" />
+        <e p="GenerateFromTable.xaml" t="Include" />
+        <e p="GenerateFromTable.xaml.cs" t="Include" />
         <e p="Images" t="Include">
           <e p="Backward_16xMD.png" t="Include" />
           <e p="Close_red_16x.png" t="Include" />
@@ -31,6 +35,7 @@
           <e p="FindDown_16x.png" t="Include" />
           <e p="FindSymbol_16x.png" t="Include" />
           <e p="GroupClause_16x.png" t="Include" />
+          <e p="NewKPI_16x.png" t="Include" />
           <e p="pete.ico" t="Include" />
           <e p="ResetTimelineView_16x.png" t="Include" />
           <e p="Restart_16x.png" t="Include" />
@@ -53,7 +58,7 @@
         </e>
         <e p="MainWindow.xaml" t="Include" />
         <e p="MainWindow.xaml.cs" t="Include" />
-        <e p="NSDMasterInventorySF.csproj" t="IncludeRecursive" />
+        <e p="NSDMasterInventorySFWPF.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
         <e p="PrefabBuilder.xaml" t="Include" />
@@ -72,6 +77,17 @@
         <e p="Recyled.xaml.cs" t="Include" />
         <e p="RestorationManager.xaml" t="Include" />
         <e p="RestorationManager.xaml.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="jquery-3.3.1.intellisense.js" t="Include" />
+          <e p="jquery-3.3.1.js" t="Include" />
+          <e p="jquery-3.3.1.min.js" t="Include" />
+          <e p="jquery-3.3.1.min.map" t="Include" />
+          <e p="jquery-3.3.1.slim.js" t="Include" />
+          <e p="jquery-3.3.1.slim.min.js" t="Include" />
+          <e p="jquery-3.3.1.slim.min.map" t="Include" />
+          <e p="jquery.signalR-2.2.3.js" t="Include" />
+          <e p="jquery.signalR-2.2.3.min.js" t="Include" />
+        </e>
         <e p="Settings.cs" t="Include" />
         <e p="StyleChooser.xaml" t="Include" />
         <e p="StyleChooser.xaml.cs" t="Include" />
@@ -80,7 +96,6 @@
         <e p="ui" t="Include">
           <e p="CellStyleSelector.cs" t="Include" />
           <e p="DataGridBehavior.cs" t="Include" />
-          <e p="GridCellComboBoxRendererExt.cs" t="Include" />
           <e p="GridColumnExtension.cs" t="Include" />
           <e p="RowIndexConverter.cs" t="Include" />
           <e p="SearchHelperExt.cs" t="Include" />
@@ -90,6 +105,7 @@
       </e>
       <e p="NSDMasterInventorySF.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="WPFInstaller\WPFInstaller.wixproj" t="IncludeRecursive" />
     </e>
   </component>
 </project>

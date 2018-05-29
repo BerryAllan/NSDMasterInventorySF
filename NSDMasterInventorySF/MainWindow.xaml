@@ -77,12 +77,12 @@
 						</MenuItem.Icon>
 					</MenuItem>
 				</MenuItem>
-				<MenuItem Header="_Save All" Click="Save_Changes">
+				<!--<MenuItem Header="_Save All" Click="Save_Changes">
 					<MenuItem.Icon>
 						<Image Source="Images/DataTable_16x.png" />
 					</MenuItem.Icon>
-				</MenuItem>
-				<MenuItem FontWeight="Bold" Header="Save and _Close" Click="CloseApplication">
+				</MenuItem>-->
+				<MenuItem FontWeight="Bold" Header="_Close" Click="CloseApplication">
 					<MenuItem.Icon>
 						<Image Source="Images/Close_red_16x.png" />
 					</MenuItem.Icon>
@@ -127,6 +127,8 @@
 					</TransformGroup>
 				</Separator.RenderTransform>
 			</Separator>
+			<syncfusion:ButtonAdv Label="New Row" x:Name="NewRowButton" SmallIcon="Images/NewKPI_16x.png" Margin="0,0,10,0"
+			                      Click="NewRowOnClicked" />
 			<CheckBox x:Name="ResetSorts" FontSize="14" Margin="0,0,10,0"
 			          HorizontalAlignment="Left" VerticalAlignment="Center" Checked="ResetSorting" Unchecked="UnResetSorting"
 			          IsChecked="True">
@@ -146,7 +148,7 @@
 					           Text="Default Grouping" />
 				</StackPanel>
 			</CheckBox>
-			<CheckBox x:Name="DeleteModeCheckBox" FontSize="14" Margin="0,0,10,0"
+			<CheckBox x:Name="DeleteModeCheckBox" FontSize="14" Margin="0,0,0,0"
 			          HorizontalAlignment="Center" VerticalAlignment="Center" Click="EnterDeleteMode">
 				<StackPanel Orientation="Horizontal">
 					<Image DockPanel.Dock="Left" Margin="4" HorizontalAlignment="Center" VerticalAlignment="Center"
@@ -174,10 +176,14 @@
 					</TransformGroup>
 				</Separator.RenderTransform>
 			</Separator>
-			<syncfusion:ButtonAdv x:Name="RevertChanges" VerticalAlignment="Center" IsEnabled="False" FontSize="14"
-			                      Margin="0,0,10,0" Click="Revert_Changes" SmallIcon="Images/Undo_16x.png" Label="Revert Changes" />
+			<!--<syncfusion:ButtonAdv x:Name="RevertChanges" VerticalAlignment="Center" IsEnabled="False" FontSize="14"
+			                      Margin="0,0,1,0" Click="Revert_Changes" SmallIcon="Images/Undo_16x.png" Label="Revert Changes" />-->
 			<syncfusion:ButtonAdv x:Name="RefreshAll" VerticalAlignment="Center" SmallIcon="Images/Restart_16x.png"
 			                      Label="Refresh" FontSize="14" Margin="0,0,0,0" Click="RefreshAll_OnClick" />
+			<Grid Margin="10,0,0,0" Visibility="Hidden" x:Name="ProgressGrid">
+				<ProgressBar x:Name="ProgressBar" IsIndeterminate="False" Minimum="0" Maximum="100" Width="200" />
+				<TextBlock x:Name="ProgressTextBlock" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+			</Grid>
 		</WrapPanel>
 		<DockPanel DockPanel.Dock="Bottom" Margin="10, 10, 10, 10">
 			<syncfusion:ButtonAdv DockPanel.Dock="Right" FontSize="16" x:Name="BarcodeInventoryCommit" IconHeight="0"

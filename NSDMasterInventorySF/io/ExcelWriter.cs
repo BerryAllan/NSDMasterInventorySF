@@ -5,6 +5,9 @@ using System.Windows.Forms;
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
+using Syncfusion.UI.Xaml.Grid;
+using DataColumn = System.Data.DataColumn;
+using DataRow = System.Data.DataRow;
 
 namespace NSDMasterInventorySF.io
 {
@@ -41,7 +44,7 @@ namespace NSDMasterInventorySF.io
 				}
 
 				//Debug.WriteLine(row0.GetCell(0).ToString());
-				if (row0.GetCell(0).ToString().Equals("Inventoried"))
+				if (row0.GetCell(0).ToString().Equals("Inventoried") && MainWindow.MasterDataGrids[dataTables.Tables.IndexOf(table)].Columns[0] is GridCheckBoxColumn)
 					for (var i = 2; i <= sheet.LastRowNum; i++)
 					{
 						IRow row = sheet.GetRow(i);

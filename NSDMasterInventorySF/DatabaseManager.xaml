@@ -19,7 +19,7 @@
 				                         GotFocus="BoxGotFocus" />
 			</WrapPanel>
 			<WrapPanel DockPanel.Dock="Left" HorizontalAlignment="Right">
-				<Label Content="User name: " />
+				<Label Content="Username: " />
 				<syncfusion:SfTextBoxExt x:Name="UserIDBox" VerticalAlignment="Center" LostFocus="OnLostFocus" Width="200"
 				                         GotFocus="BoxGotFocus" />
 			</WrapPanel>

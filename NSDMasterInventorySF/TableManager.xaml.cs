@@ -74,7 +74,8 @@ namespace NSDMasterInventorySF
 
 		private void DeleteSelectedItem()
 		{
-			MessageBoxResult box = MessageBox.Show("Are you sure you would like to delete this table? This action cannot be undone.",
+			MessageBoxResult box = MessageBox.Show(
+				"Are you sure you would like to delete this table? This action cannot be undone.",
 				"Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
 			if (box == MessageBoxResult.Yes)
@@ -96,7 +97,7 @@ namespace NSDMasterInventorySF
 				SheetListBox.Items.Remove(SheetListBox.SelectedItem);
 			}
 
-			//_window.InitializeOrRefreshEverything(_window.MasterTabControl.SelectedIndex);
+			_window.InitializeOrRefreshEverything(_window.MasterTabControl.SelectedIndex);
 		}
 
 		private void RemoveSheetButton_OnClick(object sender, RoutedEventArgs e)
@@ -134,14 +135,16 @@ namespace NSDMasterInventorySF
 			using (var conn = new SqlConnection(App.ConnectionString))
 			{
 				conn.Open();
-				DataTable prefabTable = App.GetPrefabDataTable(conn, "PREFABS", EditTable.PrefabSelected);
+				DataTable prefabTable = App.GetPrefabDataTable(conn, $"{Settings.Default.Schema}_PREFABS",
+					EditTable.PrefabSelected);
 
 				if (!App.GetTableNames(conn).Contains(EditTable.TableName))
 					using (var comm = new SqlCommand())
 					{
 						comm.Connection = conn;
 						//Debug.WriteLine(Path.GetFileNameWithoutExtension(file));
-						comm.CommandText = $"CREATE TABLE IF NOT EXISTS [{Settings.Default.Schema}].[{EditTable.TableName}] ( ";
+						comm.CommandText =
+							$"CREATE TABLE IF NOT EXISTS [{Settings.Default.Schema}].[{EditTable.TableName}] ( ";
 						for (var j = 0; j < prefabTable.Rows.Count; j++)
 							if (j != prefabTable.Rows.Count - 1)
 								comm.CommandText += $"[{prefabTable.Rows[j]["COLUMNS"]}] TEXT, ";
@@ -158,7 +161,8 @@ namespace NSDMasterInventorySF
 				{
 					using (var comm =
 						new SqlCommand(
-							$"sp_rename \'{Settings.Default.Schema}.{tableName}.{column}\', \'C_-_O_-_L_-_U_-_M_-_N_-_{k}\', \'COLUMN\'", conn))
+							$"sp_rename \'{Settings.Default.Schema}.{tableName}.{column}\', \'C_-_O_-_L_-_U_-_M_-_N_-_{k}\', \'COLUMN\'",
+							conn))
 					{
 						comm.ExecuteNonQuery();
 					}
@@ -184,7 +188,7 @@ namespace NSDMasterInventorySF
 					else
 						using (var comm =
 							new SqlCommand(
-								$"ALTER TABLE [{Settings.Default.Schema}].[{EditTable.TableName}]  ADD [{prefabTable.Rows[i]["COLUMNS"]}] TEXT",
+								$"ALTER TABLE [{Settings.Default.Schema}].[{EditTable.TableName}]  ADD [{prefabTable.Rows[i]["COLUMNS"]}] VARCHAR(MAX)",
 								conn))
 						{
 							comm.ExecuteNonQuery();
@@ -203,11 +207,12 @@ namespace NSDMasterInventorySF
 				conn.Close();
 			}
 
+			_window.InitializeOrRefreshEverything(_window.MasterTabControl.SelectedIndex);
 			EditTable.PrefabSelected = string.Empty;
 			EditTable.TableName = string.Empty;
 		}
 
-		private void OnNewButtonClick(object sender, EventArgs e)
+		private void AddButtonClick(object sender, EventArgs e)
 		{
 			var choosePrefab = new EditTable(_window, false, string.Empty, this)
 			{
@@ -215,37 +220,41 @@ namespace NSDMasterInventorySF
 				ShowInTaskbar = false
 			};
 			choosePrefab.ShowDialog();
-			string tableName = EditTable.TableName;
 
 			if (string.IsNullOrEmpty(EditTable.PrefabSelected)) return;
 			if (string.IsNullOrEmpty(EditTable.TableName)) return;
 
-			List<string> headers = (from TabItemExt tab in _window.MasterTabControl.Items select tab.Header.ToString()).ToList();
-			headers.Add(tableName);
-			headers.Sort();
-
-			var table = new DataTable();
 			using (var conn = new SqlConnection(App.ConnectionString))
 			{
 				conn.Open();
-				DataTable prefabTable = App.GetPrefabDataTable(conn, "PREFABS", EditTable.PrefabSelected);
-				for (var i = 0; i < prefabTable.Rows.Count; i++)
-					table.Columns.Add(new DataColumn(prefabTable.Rows[i]["COLUMNS"].ToString()));
+				using (var comm = new SqlCommand($"CREATE TABLE [{Settings.Default.Schema}].[{EditTable.TableName}] (",
+					conn))
+				{
+					var prefabTable = App.GetPrefabDataTable(conn, $"{Settings.Default.Schema}_PREFABS",
+						EditTable.PrefabSelected);
+					foreach (DataRow row in prefabTable.Rows)
+					{
+						if (prefabTable.Rows.IndexOf(row) != prefabTable.Rows.Count - 1)
+							comm.CommandText += $"[{row["COLUMNS"]}] NVARCHAR(MAX), ";
+						else
+							comm.CommandText += $"[{row["COLUMNS"]}] NVARCHAR(MAX)";
+					}
+
+					comm.CommandText += ")";
+					comm.ExecuteNonQuery();
+				}
+
 				conn.Close();
 			}
 
-			table.TableName = EditTable.TableName;
-
-			var tabItemExt = new TabItemExt {Header = tableName};
-			_window.MasterTabControl.Items.Insert(_window.MasterTabControl.Items.Count, tabItemExt);
-			_window.WriteToDataGrid(table, EditTable.PrefabSelected, tabItemExt);
-
-			_window.SaveToDb(true);
+			//_window.SaveToDb();
 			//_window.InitializeOrRefreshEverything(_window.MasterTabControl.SelectedIndex);
 
 			PopulateListBox();
+			_window.InitializeOrRefreshEverything(_window.MasterTabControl.SelectedIndex);
 
 			EditTable.PrefabSelected = string.Empty;
+			EditTable.TableName = string.Empty;
 		}
 
 		private void OnVisualStyleChanged()

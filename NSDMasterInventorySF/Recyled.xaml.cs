@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -15,10 +18,11 @@ using DataRow = System.Data.DataRow;
 
 namespace NSDMasterInventorySF
 {
+	/// <inheritdoc cref="Window" />
 	/// <summary>
 	///     Interaction logic for Recyled.xaml
 	/// </summary>
-	public partial class Recycled : Window
+	public partial class Recycled
 	{
 		public static volatile DataTable RecycledDataTable = new DataTable();
 		public static RoutedCommand SaveCommand = new RoutedCommand();
@@ -38,8 +42,8 @@ namespace NSDMasterInventorySF
 
 		private void Refresh()
 		{
-			RecycledDataTable.Clear();
-			FillRecycledDataTable();
+			//RecycledDataTable.Clear();
+			//FillRecycledDataTable();
 			RecycledGrid.ItemsSource = RecycledDataTable;
 			try
 			{
@@ -50,7 +54,10 @@ namespace NSDMasterInventorySF
 				// ignored
 			}
 
-			RecycledGrid.Loaded += (sender, args) => { UiHelper.GenerateColumnsSfDataGrid(RecycledGrid, RecycledDataTable, string.Empty); };
+			RecycledGrid.Loaded += (sender, args) =>
+			{
+				UiHelper.GenerateColumnsSfDataGrid(RecycledGrid, RecycledDataTable, string.Empty);
+			};
 		}
 
 		private void SearchFieldTextChanged(object sender, TextChangedEventArgs e)
@@ -67,10 +74,17 @@ namespace NSDMasterInventorySF
 
 		private void EnterDeleteMode(object sender, RoutedEventArgs e)
 		{
-			RecycledGrid.SelectionUnit = (bool) DeleteModeCheckBox.IsChecked ? GridSelectionUnit.Row : GridSelectionUnit.Any;
+			RecycledGrid.SelectionUnit = DeleteModeCheckBox.IsChecked != null && (bool) DeleteModeCheckBox.IsChecked
+				? GridSelectionUnit.Row
+				: GridSelectionUnit.Any;
 		}
 
 		private void Save_Changes(object sender, RoutedEventArgs e)
+		{
+			SaveRecycledTable();
+		}
+
+		public static void SaveRecycledTable()
 		{
 			System.Windows.Forms.Cursor.Current = Cursors.WaitCursor;
 			using (var conn = new SqlConnection(App.ConnectionString))
@@ -93,6 +107,7 @@ namespace NSDMasterInventorySF
 				}
 				catch
 				{
+					// ignored
 				}
 
 				conn.Close();
@@ -148,16 +163,17 @@ namespace NSDMasterInventorySF
 						RecycledDataTable.TableName = Settings.Default.Schema;
 
 						sda.Fill(RecycledDataTable);
-
-						foreach (DataRow row in RecycledDataTable.Rows)
-							for (var i = 0; i < row.ItemArray.Length; i++)
-								if (string.IsNullOrEmpty(row[i].ToString()))
-									row[i] = null;
 					}
 				}
 
 				conn.Close();
 			}
+
+			var autoSaveTimer = new Timer(12000)
+			{
+				Enabled = true
+			};
+			autoSaveTimer.Elapsed += (sender, args) => Task.Run(() => SaveRecycledTable());
 		}
 
 		private static void ClearRowFilters()
@@ -204,7 +220,7 @@ namespace NSDMasterInventorySF
 			if (string.IsNullOrEmpty(BarcodeTextBox.Text.Trim())) return;
 
 			List<string> item = BarcodeTextBox.Text.Split('\t').ToList();
-			if (bool.TryParse(item[0], out bool _)) item.RemoveAt(0);
+			//if (bool.TryParse(item[0], out bool _)) item.RemoveAt(0);
 			var inventoried = false;
 
 			foreach (DataRow row in RecycledDataTable.Rows)
@@ -225,7 +241,31 @@ namespace NSDMasterInventorySF
 
 			foreach (string s in item) newRow[item.IndexOf(s)] = s;
 
-			RecycledDataTable.Rows.Add(newRow);
+			bool wasDeleted = false;
+			foreach (DataTable table in MainWindow.MasterDataSet.Tables)
+			{
+				for (int j = 0; j < table.Rows.Count; j++)
+				{
+					bool allEqual = true;
+					//Debug.WriteLine(string.Join(" | ", table.Rows[j].ItemArray));
+					for (int i = 0; i < table.Rows[j].ItemArray.Length; i++)
+					{
+						//Debug.WriteLine(table.Rows[j][i] + " :: " + newRow[i]);
+						if (table.Rows[j][i].ToString().Equals(newRow[i].ToString()))
+							continue;
+						allEqual = false;
+					}
+
+					if (allEqual)
+					{
+						wasDeleted = true;
+						table.Rows[j].Delete();
+					}
+				}
+			}
+
+			if (!wasDeleted)
+				RecycledDataTable.Rows.Add(newRow);
 		}
 
 		private void RecycledGrid_OnRecordDeleting(object sender, RecordDeletingEventArgs e)

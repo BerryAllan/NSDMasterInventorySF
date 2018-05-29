@@ -31,10 +31,10 @@ namespace NSDMasterInventorySF.ui
 					char.TryParse(e.Text, out char text);
 					//Skip if the column is GridTemplateColumn and the column is not already in editing 
 					//Allow Editing only pressed letters digits and Minus sign key
-					if (dataColumn != null && !(dataColumn is GridTemplateColumn) && !dataColumn.IsEditing &&
+					if (dataColumn != null && !dataColumn.IsEditing &&
 					    SelectionController.CurrentCellManager.BeginEdit() &&
 					    char.IsLetterOrDigit(text) || char.IsPunctuation(text))
-						dataColumn.Renderer.PreviewTextInput(e);
+						dataColumn?.Renderer.PreviewTextInput(e);
 				}
 			}
 

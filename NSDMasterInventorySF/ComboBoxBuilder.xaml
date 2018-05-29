@@ -4,26 +4,45 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        xmlns:ui="clr-namespace:NSDMasterInventorySF.ui"
         mc:Ignorable="d"
-        Title="Choice Builder" Height="325" Width="400" Loaded="OnLoaded">
+        Title="Combo Choice Builder" Height="325" Width="400" Loaded="OnLoaded" Closed="ComboBoxBuilder_OnClosed">
+	<Window.Resources>
+		<ui:RowIndexConverter x:Key="Rowindexconverter" />
+		<Style TargetType="syncfusion:GridRowHeaderCell">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="syncfusion:GridRowHeaderCell">
+						<Border x:Name="PART_RowHeaderCellBorder"
+						        Background="{TemplateBinding Background}"
+						        BorderBrush="{TemplateBinding BorderBrush}"
+						        BorderThickness="0.18">
+							<TextBlock HorizontalAlignment="Center"
+							           VerticalAlignment="Center"
+							           TextAlignment="Center">
+								<TextBlock.Text>
+									<Binding Path="RowIndex" RelativeSource="{RelativeSource TemplatedParent}"
+									         Converter="{StaticResource Rowindexconverter}" />
+								</TextBlock.Text>
+							</TextBlock>
+						</Border>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</Window.Resources>
+
 	<DockPanel Margin="10,10,10,10">
-		<StackPanel Margin="0, 0, 10, 0">
-			<syncfusion:SfTextBoxExt x:Name="ChoiceNameTextBox" Watermark="Choice Name" Margin="0, 25" Width="100"
-			                         KeyDown="UIElement_OnKeyDown" />
-			<Button Content="Add" Margin="0, 25" Width="50" Click="ButtonBase_OnClick" />
-			<Button Content="Remove" Margin="0, 25" IsEnabled="False" x:Name="RemoveButton" Width="50" Click="RemoveButton_OnClick" />
-			<Button Content="Save" Margin="0, 25" IsEnabled="True" x:Name="SaveButton" Width="50" FontWeight="Bold"
-			        Click="SaveButton_OnClick" />
+		<StackPanel Orientation="Horizontal" DockPanel.Dock="Top" HorizontalAlignment="Right" Margin="10">
+			<Button x:Name="AddColumnButton" Click="AddColumnButton_OnClick" Content="Add Column" Margin="5,0" />
+			<Button x:Name="SaveButton" Click="SaveButton_OnClick" Content="Save" Margin="5,0" FontWeight="Bold"
+			        IsEnabled="False" />
 		</StackPanel>
-		<DockPanel>
-			<StackPanel DockPanel.Dock="Right" Margin="5,0,0,0">
-				<Button x:Name="MoveUpButton" Content="Move up" FontWeight="Bold" Margin="0,0,0,10" IsEnabled="False"
-				        Click="MoveUpButton_OnClick" />
-				<Button x:Name="MoveDownButton" Content="Move down" FontWeight="Bold" IsEnabled="False"
-				        Click="MoveDownButton_OnClick" />
-			</StackPanel>
-			<ListBox x:Name="ChoiceList" ItemsSource="{Binding Path=DataItemList}"
-			         SelectionChanged="ChoiceList_OnSelectionChanged" KeyDown="ChoiceList_OnKeyDown" />
-		</DockPanel>
+		<ScrollViewer>
+			<ui:SfDataGridExt x:Name="ComboGrid" AddNewRowPosition="Bottom" AllowDraggingRows="True" AllowEditing="True"
+			                  AllowSorting="False" AllowGrouping="False" ColumnSizer="Auto" SelectionUnit="Row"
+			                  SelectionMode="Extended" AllowDeleting="True" AutoGenerateColumns="False"
+			                  IsDynamicItemsSource="True" ShowRowHeader="True" HeaderRowHeight="30" />
+		</ScrollViewer>
 	</DockPanel>
 </Window>

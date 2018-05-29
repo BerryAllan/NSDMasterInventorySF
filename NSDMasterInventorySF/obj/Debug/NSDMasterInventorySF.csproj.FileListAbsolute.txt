@@ -1,6 +1,4 @@
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Rapid Recorder.exe.config
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Rapid Recorder.exe.manifest
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Rapid Recorder.application
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Rapid Recorder.exe
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Rapid Recorder.pdb
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\ICSharpCode.SharpZipLib.dll
@@ -218,19 +216,39 @@ C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\MainWindow.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\PrefabBuilder.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Rapid Recorder.g.resources
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySF.Properties.Resources.resources
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySF.csproj.GenerateResource.cache
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySF.csproj.CoreCompileInputs.cache
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Rapid Recorder.TrustInfo.xml
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Rapid Recorder.exe.manifest
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Rapid Recorder.application
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySF.csproj.CopyComplete
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Rapid Recorder.exe
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Rapid Recorder.pdb
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySF.csprojResolveAssemblyReference.cache
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\RestorationManager.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\RestorationManager.g.cs
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Recycled.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Recycled.g.cs
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\System.ValueTuple.dll
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\System.ValueTuple.xml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.Owin.Cors.dll
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.Owin.dll
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.Owin.Hosting.dll
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Newtonsoft.Json.dll
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Owin.dll
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\System.Web.Cors.dll
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.Owin.xml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.Owin.Cors.xml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.Owin.Hosting.xml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Newtonsoft.Json.xml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Rapid Recorder_Content.g.cs
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Microsoft.Owin.Host.HttpListener.xml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySF.Properties.Resources.resources
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySF.csproj.GenerateResource.cache
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySF.csprojAssemblyReference.cache

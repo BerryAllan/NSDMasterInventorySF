@@ -8,6 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/deletetable_16x.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scripts/jquery-3.3.1.intellisense.js")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scripts/jquery-3.3.1.js")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scripts/jquery-3.3.1.min.js")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scripts/jquery-3.3.1.slim.js")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scripts/jquery-3.3.1.slim.min.js")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scripts/jquery.signalr-2.2.3.js")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scripts/jquery.signalr-2.2.3.min.js")]
 
 

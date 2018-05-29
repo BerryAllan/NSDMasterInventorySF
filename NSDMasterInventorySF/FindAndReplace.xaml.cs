@@ -53,14 +53,14 @@ namespace NSDMasterInventorySF
 			}
 
 			if ((bool) AllTablesCheckBox.IsChecked)
-				foreach (DataTable table in MainWindow.MasterDataTables.Tables)
+				foreach (DataTable table in MainWindow.MasterDataSet.Tables)
 					FindReplace(table, FindBox.Text, ReplaceBox.Text, (bool) MatchEntireContentsCheckBox.IsChecked,
 						(bool) MatchCaseCheckBox.IsChecked);
 			else
-				FindReplace(MainWindow.MasterDataTables.Tables[_window.MasterTabControl.SelectedIndex], FindBox.Text, ReplaceBox.Text,
+				FindReplace(MainWindow.MasterDataSet.Tables[_window.MasterTabControl.SelectedIndex], FindBox.Text, ReplaceBox.Text,
 					(bool) MatchEntireContentsCheckBox.IsChecked, (bool) MatchCaseCheckBox.IsChecked);
 
-			_window.RevertChanges.IsEnabled = true;
+			//_window.RevertChanges.IsEnabled = true;
 		}
 
 		public void FindReplace(DataTable dt, string find, string replace, bool isWholeCell, bool matchCase)

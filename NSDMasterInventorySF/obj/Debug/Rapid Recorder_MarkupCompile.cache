@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\App.xaml
-11640117712
-
-30-1722775932
-176977729831
-EditTable.xaml;ComboBoxBuilder.xaml;DatabaseManager.xaml;FindAndReplace.xaml;MainWindow.xaml;PrefabBuilder.xaml;PrefabManager.xaml;Recycled.xaml;RestorationManager.xaml;StyleChooser.xaml;TableManager.xaml;
+13417896542
+71483643828
+31363846503
+189-693816735
+ColumnChooser.xaml;EditTable.xaml;ComboBoxBuilder.xaml;DatabaseManager.xaml;FindAndReplace.xaml;GenerateFromTable.xaml;MainWindow.xaml;PrefabBuilder.xaml;PrefabManager.xaml;Recycled.xaml;RestorationManager.xaml;StyleChooser.xaml;TableManager.xaml;
 
 False
 

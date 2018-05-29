@@ -3,49 +3,85 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using System.Dynamic;
 using System.IO;
 using System.Linq;
-using System.Text;
+using System.Net.Http;
+using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Threading;
+using Microsoft.AspNet.SignalR;
+using Microsoft.AspNet.SignalR.Client;
+using Microsoft.Owin.Cors;
+using Microsoft.Owin.Hosting;
 using NSDMasterInventorySF.io;
 using NSDMasterInventorySF.Properties;
+using Owin;
+using Syncfusion.Data.Extensions;
+using Syncfusion.UI.Xaml.Grid;
+using Syncfusion.Windows.Tools.Controls;
+using ConnectionState = System.Data.ConnectionState;
+using DataColumn = System.Data.DataColumn;
+using DataRow = System.Data.DataRow;
 
-//TODO: Recycleds window
-//TODO: DO NOT TOUCH UNTIL AP EXAMS OVER
 namespace NSDMasterInventorySF
 {
 	/// <inheritdoc />
 	/// <summary>
 	///     Interaction logic for App.xaml
 	/// </summary>
-	public partial class App : Application
+	public partial class App
 	{
 		public static volatile bool SavingCurrently = false;
+		public static volatile bool ThisMadeLastChange;
+		public static volatile bool ThisIsNowConcurrent;
 		public static volatile bool BackingUpCurrently;
+		public static readonly object AutoSaveLock = new object();
+		public static readonly object UpdateLock = new object();
+		private static Dispatcher _dispatcher;
+
+		private static readonly string GetLastExecutedQueriesCmd =
+			$@"SELECT deqs.last_execution_time AS [Time], dest.text AS [Query]
+										FROM sys.dm_exec_query_stats AS deqs
+										CROSS APPLY sys.dm_exec_sql_text(deqs.sql_handle) AS dest
+										CROSS APPLY sys.dm_exec_plan_attributes(deqs.plan_handle) depa
+										WHERE (depa.attribute = 'dbid' AND depa.value = db_id('{Settings.Default.Database}')) OR
+													 dest.dbid = db_id('{Settings.Default.Database}')
+										ORDER BY deqs.last_execution_time DESC";
 
 		public static volatile string ConnectionString =
 			$"Server={Settings.Default.Server};Database={Settings.Default.Database};User ID={Settings.Default.UserID};Password={Settings.Default.Password};";
 
+		//Client stuff
 		private static readonly Random Random = new Random();
+		public static IHubProxy HubProxy { get; set; }
+		const string ServerUriClient = "http://localhost:8080/signalr";
+		public static HubConnection Connection { get; set; }
+
+		//Server stuff
+		public static IDisposable SignalR { get; set; }
+		const string ServerUriServer = "http://localhost:8080";
 
 		protected override void OnStartup(StartupEventArgs e)
 		{
+			Thread.CurrentThread.Name = "Main UI Thread";
 			base.OnStartup(e);
+			_dispatcher = Dispatcher;
+
 			ConfigurationEcnrypterDecrypter.UnEncryptConfig();
 			using (var conn = new SqlConnection(ConnectionString))
 			{
 				conn.Open();
-				if (!GetAllNames(conn, "schemas").Contains("PREFABS"))
-					using (var comm = new SqlCommand("CREATE SCHEMA PREFABS", conn))
+				if (!GetAllNames(conn, "schemas").Contains($"{Settings.Default.Schema}_PREFABS"))
+					using (var comm = new SqlCommand($"CREATE SCHEMA [{Settings.Default.Schema}_PREFABS]", conn))
 					{
 						comm.ExecuteNonQuery();
 					}
 
-				if (!GetAllNames(conn, "schemas").Contains("COMBOBOXES"))
-					using (var comm = new SqlCommand("CREATE SCHEMA COMBOBOXES", conn))
+				if (!GetAllNames(conn, "schemas").Contains($"{Settings.Default.Schema}_COMBOBOXES"))
+					using (var comm = new SqlCommand($"CREATE SCHEMA [{Settings.Default.Schema}_COMBOBOXES]", conn))
 					{
 						comm.ExecuteNonQuery();
 					}
@@ -56,15 +92,120 @@ namespace NSDMasterInventorySF
 						comm.ExecuteNonQuery();
 					}
 
-				using (var comm = new SqlCommand($"ALTER DATABASE [{Settings.Default.Database}] SET ENABLE_BROKER", conn))
-				{
-					//comm.ExecuteNonQuery();
-				}
-
 				conn.Close();
 			}
 
-			//SqlDependency.Start(ConnectionString);
+			SqlDependency.Start(ConnectionString);
+			//Debug.WriteLine("Starting server...");
+			/*Task.Run(() =>
+			{
+				StartServer();
+				ConnectAsync();
+			});*/
+			//Debug.WriteLine("Connecting to server...");
+		}
+
+		public static void StartServer()
+		{
+			try
+			{
+				SignalR = WebApp.Start<Startup>(ServerUriServer);
+			}
+			catch (TargetInvocationException)
+			{
+				Debug.WriteLine("A server is already running at " + ServerUriServer);
+				return;
+			}
+
+			Debug.WriteLine("Server started at " + ServerUriServer);
+		}
+
+		public static async void ConnectAsync()
+		{
+			Connection = new HubConnection(ServerUriClient);
+			Connection.Closed += Connection_Closed;
+			HubProxy = Connection.CreateHubProxy("MyHub");
+			//Handle incoming event from server: use Invoke to write to console from SignalR's thread
+			HubProxy.On<string, string, string, string>("AddMessage", (command, tableName, oldRow, newRow) =>
+			{
+				Debug.WriteLine($"{command}: {tableName}: {oldRow}: {newRow}");
+				if (ThisMadeLastChange)
+				{
+					ThisMadeLastChange = false;
+					return;
+				}
+
+				Debug.WriteLine($"{newRow}");
+				string selectCommand = string.Empty;
+				int i = 0;
+				string[] oldValues = oldRow.Split('\t');
+				string[] newValues = newRow.Split('\t');
+				foreach (string value in oldValues)
+				{
+					if (i != oldValues.Length - 1)
+						selectCommand +=
+							$"[{NSDMasterInventorySF.MainWindow.MasterDataSet.Tables[tableName].Columns[i].ColumnName}] = '{value}' AND ";
+					else
+						selectCommand +=
+							$"[{NSDMasterInventorySF.MainWindow.MasterDataSet.Tables[tableName].Columns[i].ColumnName}] = '{value}'";
+					i++;
+				}
+
+				Debug.WriteLine(selectCommand);
+				switch (command)
+				{
+					case "UPDATE":
+						foreach (DataRow rowUpd in NSDMasterInventorySF.MainWindow.MasterDataSet.Tables[tableName]
+							.Select(selectCommand))
+						{
+							for (int k = 0; k < rowUpd.ItemArray.Length; k++)
+							{
+								ThisIsNowConcurrent = true;
+								rowUpd[k] = newValues[k];
+							}
+						}
+
+						break;
+					case "INSERT":
+						DataRow rowIns = NSDMasterInventorySF.MainWindow.MasterDataSet.Tables[tableName].NewRow();
+						foreach (string val in newValues)
+							rowIns[newValues.IndexOf(val)] = val;
+						ThisIsNowConcurrent = true;
+						NSDMasterInventorySF.MainWindow.MasterDataSet.Tables[tableName].Rows.Add(rowIns);
+						break;
+					case "DELETE":
+						foreach (DataRow rowDel in NSDMasterInventorySF.MainWindow.MasterDataSet.Tables[tableName]
+							.Select(selectCommand))
+						{
+							ThisIsNowConcurrent = true;
+							rowDel.Delete();
+						}
+
+						break;
+					default:
+						Debug.WriteLine("didn't update table");
+						break;
+				}
+			});
+			try
+			{
+				await Connection.Start();
+			}
+			catch (HttpRequestException)
+			{
+				Debug.WriteLine("Unable to connect to server: Start server before connecting clients.");
+				//No connection: Don't enable Send button or show chat UI
+				return;
+			}
+
+			//Show chat UI; hide login UI
+			Debug.WriteLine("Connected to server at " + ServerUriClient);
+		}
+
+		private static void Connection_Closed()
+		{
+			//Hide chat UI; show login UI
+			Debug.WriteLine("DISCONNECTED!!!");
 		}
 
 		public static void Restart()
@@ -75,7 +216,7 @@ namespace NSDMasterInventorySF
 
 		public static void Backup()
 		{
-			if (BackingUpCurrently) return;
+			/*if (BackingUpCurrently) return;
 			BackingUpCurrently = true;
 			Task task = Task.Run(() =>
 			{
@@ -104,9 +245,9 @@ namespace NSDMasterInventorySF
 									foreach (string column in columns)
 									{
 										if (j != columns.Count - 1)
-											comm.CommandText += $"[{column}] TEXT, ";
+											comm.CommandText += $"[{column}] NVARCHAR(MAX), ";
 										else
-											comm.CommandText += $"[{column}] TEXT";
+											comm.CommandText += $"[{column}] NVARCHAR(MAX)";
 										j++;
 									}
 
@@ -142,7 +283,7 @@ namespace NSDMasterInventorySF
 				Thread.CurrentThread.IsBackground = true;
 			});
 			task.Wait();
-			BackingUpCurrently = false;
+			BackingUpCurrently = false;*/
 		}
 
 		public static void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs)
@@ -181,7 +322,7 @@ namespace NSDMasterInventorySF
 			using (var conn = new SqlConnection(ConnectionString))
 			{
 				conn.Open();
-				DataTable prefabTable = GetPrefabDataTable(conn, "PREFABS", prefab);
+				DataTable prefabTable = GetPrefabDataTable(conn, $"{Settings.Default.Schema}_PREFABS", prefab);
 
 				var treeMap = new SortedDictionary<int, int>();
 				var sorts = new List<int>();
@@ -206,7 +347,7 @@ namespace NSDMasterInventorySF
 			using (var conn = new SqlConnection(ConnectionString))
 			{
 				conn.Open();
-				DataTable prefabTable = GetPrefabDataTable(conn, "PREFABS", prefab);
+				DataTable prefabTable = GetPrefabDataTable(conn, $"{Settings.Default.Schema}_PREFABS", prefab);
 
 				var treeMap = new SortedDictionary<int, int>();
 				var sorts = new List<int>();
@@ -252,6 +393,8 @@ namespace NSDMasterInventorySF
 
 			using (var cmd = new SqlCommand("SELECT * FROM INFORMATION_SCHEMA.TABLES", conn))
 			{
+				if (conn.State != ConnectionState.Open)
+					conn.Open();
 				using (IDataReader dr = cmd.ExecuteReader())
 				{
 					while (dr.Read())
@@ -268,7 +411,7 @@ namespace NSDMasterInventorySF
 		{
 			var list = new List<string>();
 
-			// Set up a command with the given query and associate
+			// MainSet up a command with the given query and associate
 			// this with the current connection.
 			using (var cmd = new SqlCommand($"SELECT name FROM sys.{type}", conn))
 			{
@@ -283,11 +426,8 @@ namespace NSDMasterInventorySF
 
 		public static List<string> GetAllColumnsOfTable(SqlConnection conn, string tableName)
 		{
-			//SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
 			var list = new List<string>();
 
-			// Set up a command with the given query and associate
-			// this with the current connection.
 			using (var cmd = new SqlCommand("SELECT * FROM INFORMATION_SCHEMA.COLUMNS", conn))
 			{
 				using (IDataReader dr = cmd.ExecuteReader())
@@ -304,11 +444,8 @@ namespace NSDMasterInventorySF
 
 		public static List<string> GetAllColumnsOfTable(SqlConnection conn, string schema, string tableName)
 		{
-			//SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
 			var list = new List<string>();
 
-			// Set up a command with the given query and associate
-			// this with the current connection.
 			using (var cmd = new SqlCommand("SELECT * FROM INFORMATION_SCHEMA.COLUMNS", conn))
 			{
 				using (IDataReader dr = cmd.ExecuteReader())
@@ -329,14 +466,14 @@ namespace NSDMasterInventorySF
 
 			foreach (string columnName in GetAllColumnsOfTable(conn, table)) columnNames += columnName;
 
-			foreach (string tablePrefabName in GetTableNames(conn, "PREFABS"))
+			foreach (string prefab in GetTableNames(conn, $"{Settings.Default.Schema}_PREFABS"))
 			{
-				DataTable propTable = GetPrefabDataTable(conn, "PREFABS", tablePrefabName);
+				DataTable propTable = GetPrefabDataTable(conn, $"{Settings.Default.Schema}_PREFABS", prefab);
 				string fieldNames = string.Empty;
 				for (var i = 0; i < propTable.Rows.Count; i++) fieldNames += propTable.Rows[i]["COLUMNS"];
 
 				if (columnNames.Equals(fieldNames))
-					return Path.GetFileNameWithoutExtension(tablePrefabName);
+					return prefab;
 			}
 
 			return string.Empty;
@@ -349,7 +486,7 @@ namespace NSDMasterInventorySF
 				conn.Open();
 				var dataTables = new List<DataTable>();
 
-				DataTable prefabTable = GetPrefabDataTable(conn, "PREFABS", prefab);
+				DataTable prefabTable = GetPrefabDataTable(conn, $"{Settings.Default.Schema}_PREFABS", prefab);
 				string fieldNames = string.Empty;
 				for (var i = 0; i < prefabTable.Rows.Count; i++) fieldNames += prefabTable.Rows[i]["COLUMNS"];
 
@@ -374,7 +511,7 @@ namespace NSDMasterInventorySF
 			{
 				var tables = new List<string>();
 
-				DataTable prefabTable = GetPrefabDataTable(conn, "PREFABS", prefab);
+				DataTable prefabTable = GetPrefabDataTable(conn, $"{Settings.Default.Schema}_PREFABS", prefab);
 				string fieldNames = string.Empty;
 				for (var i = 0; i < prefabTable.Rows.Count; i++) fieldNames += prefabTable.Rows[i]["COLUMNS"];
 
@@ -392,98 +529,251 @@ namespace NSDMasterInventorySF
 			}
 		}
 
-		public static DataSet Sets()
+		public static DataSet MainSet(MainWindow window)
 		{
-			DataSet set = new DataSet(Settings.Default.Schema);
+			DataSet dataTableList = new DataSet(Settings.Default.Schema);
 
-			using (var conn = new SqlConnection(ConnectionString))
+			var conn = new SqlConnection(ConnectionString);
+			conn.Open();
+			foreach (string tableName in GetTableNames(conn))
 			{
-				conn.Open();
-				int id = 1;
-				foreach (string tableName in GetTableNames(conn))
+				var cmd = new SqlCommand($"SELECT * FROM [{Settings.Default.Schema}].[{tableName}]", conn);
+				var sda = new SqlDataAdapter(cmd)
 				{
-					//string selectCom = "SELECT ";
-					//int i = 0;
-					//List<string> columns = GetAllColumnsOfTable(conn, tableName);
-					//foreach (var column in columns)
-					//{
-					//	if (i != columns.Count - 1)
-					//		selectCom += $"[{column}], ";
-					//	else
-					//		selectCom += $"[{column}]";
-					//	i++;
-					//}
+					AcceptChangesDuringUpdate = true,
+					AcceptChangesDuringFill = true
+				};
 
-					//selectCom += $" FROM [{Settings.Default.Schema}].[{tableName}]";
-
-					//Debug.WriteLine(selectCom);
-					using (var cmd = new SqlCommand($"SELECT * FROM [{Settings.Default.Schema}].[{tableName}]", conn))
-					{
-						using (var sda = new SqlDataAdapter(cmd))
-						{
-							sda.FillSchema(set, SchemaType.Source, tableName);
-							sda.Fill(set, tableName);
-						}
-					}
-					SqlDependencyEx dep = new SqlDependencyEx(ConnectionString, Settings.Default.Database, tableName, $"[{Settings.Default.Schema}]", identity: id);
-					dep.TableChanged += (sender, args) => Debug.WriteLine("asdf");
-					dep.Start();
-					dep.Stop();
-					id++;
+				DataTable table = new DataTable(tableName);
+				lock (AutoSaveLock)
+				{
+					sda.Fill(table);
 				}
 
-				conn.Close();
+				dataTableList.Tables.Add(table);
+				//foreach(DataRow row in set.Tables[tableName].Rows)
+				//	for(int i = 0; i < row.ItemArray.Length; i++)
+				//		if (string.IsNullOrEmpty(row[i].ToString()))
+				//			row[i] = null;
+
+				Task.Run(() =>
+				{
+					lock (AutoSaveLock)
+					{
+						Thread.CurrentThread.Name = $"AutoSave/Update {table.TableName}";
+						Thread.CurrentThread.IsBackground = true;
+						SetTableOnChangeds(table, sda, conn, window);
+					}
+				});
+				//Task.Run(() => NotifyNewItem(table, window, dataTableList.Tables.IndexOf(table)));
 			}
 
-			return set;
+			conn.Close();
+
+			return dataTableList;
 		}
 
-		public static DataSet GetDataTablesFromDb()
+		private static void SetTableOnChangeds(DataTable table, SqlDataAdapter sda, SqlConnection conn,
+			MainWindow window)
 		{
-			var dataTables = new DataSet();
-
-			using (var conn =
-				new SqlConnection(ConnectionString))
-			{
+			if (conn.State != ConnectionState.Open)
 				conn.Open();
+			table.RowChanged += (sender, args) =>
+			{
+				if (!(args.Action == DataRowAction.Add || args.Action == DataRowAction.Change)) return;
 
-				int id = 1;
-				foreach (string tableName in GetTableNames(conn))
+				SetSdaCommands(table, args, sda, conn, window);
+				ThisMadeLastChange = true;
+			};
+			table.RowDeleting += (sender, args) =>
+			{
+				DataRow newRecycledRow = Recycled.RecycledDataTable.NewRow();
+				for (int i = 0; i < args.Row.ItemArray.Length; i++)
+					newRecycledRow[i] = args.Row[i];
+				Recycled.RecycledDataTable.Rows.Add(newRecycledRow);
+			};
+			table.RowDeleted += (sender, args) =>
+			{
+				if (args.Action != DataRowAction.Delete) return;
+
+				SetSdaCommands(table, args, sda, conn, window);
+				ThisMadeLastChange = true;
+			};
+			if (conn.State != ConnectionState.Closed)
+				conn.Close();
+		}
+
+		private static void NotifyNewItem(DataTable table, MainWindow window, int index)
+		{
+			lock (UpdateLock)
+			{
+				var sqlConnection = new SqlConnection(ConnectionString);
+				sqlConnection.Open();
+				SqlCommand selectComm = new SqlCommand
 				{
-					using (var cmd = new SqlCommand($"SELECT * FROM [{Settings.Default.Schema}].[{tableName}]", conn))
+					Connection = sqlConnection,
+					CommandText = "SELECT "
+				};
+				int counter = 0;
+
+				string[] columns = GetAllColumnsOfTable(sqlConnection, table.TableName).ToArray();
+
+				foreach (string column in columns)
+				{
+					if (counter < columns.Length - 1)
+						selectComm.CommandText += $"[{column}], ";
+					else
+						selectComm.CommandText += $"[{column}] ";
+					counter++;
+				}
+
+				selectComm.CommandText += $"FROM [{Settings.Default.Schema}].[{table.TableName}]";
+				SqlDependency dependency = new SqlDependency(selectComm);
+				dependency.OnChange += (sender, args) =>
+				{
+					lock (UpdateLock)
 					{
-						cmd.CommandType = CommandType.Text;
-
-						using (var sda = new SqlDataAdapter(cmd))
+						if (SavingCurrently || ThisMadeLastChange)
 						{
-							using (var dt = new DataTable {TableName = tableName})
+							ThisMadeLastChange = false;
+							Task.Run(() => NotifyNewItem(table, window, index));
+							return;
+						}
+
+						Debug.WriteLine("CHANGED AND PASSED");
+						try
+						{
+							using (var getLastQueriesCmd = new SqlCommand(GetLastExecutedQueriesCmd, sqlConnection))
 							{
-								sda.Fill(dt);
+								if (sqlConnection.State != ConnectionState.Open)
+									sqlConnection.Open();
+								using (IDataReader reader = getLastQueriesCmd.ExecuteReader())
+								{
+									Retry:
+									reader.Read();
+									string lastExecutedCmdText = reader[1].ToString();
+									Debug.WriteLine(lastExecutedCmdText);
+									if (lastExecutedCmdText.ToLower().StartsWith("update"))
+									{
+										string selectText = lastExecutedCmdText
+											.Substring(lastExecutedCmdText.IndexOf("WHERE", StringComparison.Ordinal))
+											.Replace("WHERE ", string.Empty);
+										string setText = lastExecutedCmdText
+											.Substring(0,
+												lastExecutedCmdText.IndexOf("WHERE", StringComparison.Ordinal))
+											.Replace($"UPDATE [{Settings.Default.Schema}].[{table.TableName}] SET ",
+												string.Empty);
+										Debug.WriteLine("UPDATE SELECT TEXT: " + selectText);
+										foreach (DataRow row in table.Select(selectText))
+										{
+											//Debug.WriteLine(string.Join(" \\ ", row.ItemArray));
+											foreach (string line in Regex.Split(setText, ", "))
+											{
+												string[] splitLine = Regex.Split(line,
+													line.Contains(" IS ") ? " = " : " IS ");
+												string columnName = splitLine[0].Substring(0, splitLine[0].IndexOf(']'))
+													.Replace("[", string.Empty);
+												string itemName = splitLine[1].Replace("'", string.Empty).Trim();
+												itemName = itemName.Equals("NULL") ? null : itemName;
+												ThisIsNowConcurrent = true;
+												row[columnName] = itemName;
+											}
 
-								foreach (DataRow row in dt.Rows)
-									for (var i = 0; i < row.ItemArray.Length; i++)
-										if (string.IsNullOrEmpty(row[i].ToString()))
-											row[i] = null;
+											//Debug.WriteLine(string.Join(" \\ ", row.ItemArray));
+										}
+									}
+									else if (lastExecutedCmdText.ToLower().StartsWith("insert"))
+									{
+										string itemValues = lastExecutedCmdText
+											.Substring(lastExecutedCmdText.IndexOf("VALUES ", StringComparison.Ordinal))
+											.Replace("(", string.Empty)
+											.Replace(")", string.Empty).Replace("VALUES ", string.Empty);
+										DataRow newRow = table.NewRow();
+										int i = 0;
+										Debug.WriteLine("INSERTING: " + itemValues);
+										foreach (string item in Regex.Split(itemValues, ", "))
+										{
+											string itemName = item.Replace("'", string.Empty).Trim();
+											itemName = itemName.Equals("NULL") ? null : itemName;
+											newRow[i] = itemName;
+											i++;
+										}
 
-								dataTables.Tables.Add(dt);
+										ThisIsNowConcurrent = true;
+										table.Rows.Add(newRow);
+									}
+									else if (lastExecutedCmdText.ToLower().StartsWith("delete"))
+									{
+										string selectText = lastExecutedCmdText
+											.Substring(lastExecutedCmdText.IndexOf("WHERE", StringComparison.Ordinal))
+											.Replace("WHERE ", string.Empty);
+										Debug.WriteLine(selectText);
+										foreach (DataRow row in table.Select(selectText))
+										{
+											ThisIsNowConcurrent = true;
+											row.Delete();
+										}
+									}
+									else
+									{
+										goto Retry;
+									}
+								}
+
+								if (sqlConnection.State != ConnectionState.Closed)
+									sqlConnection.Close();
 							}
 						}
+						catch
+						{
+							//Debug.WriteLine(e);
+							//Debug.WriteLine("SUM TING WONG");
+							//create new table; dispatcher invoke set datagrid's item source to new table if failed?
+							_dispatcher.Invoke(() =>
+							{
+								SfDataGrid dataGrid =
+									(SfDataGrid) ((TabItemExt) window.MasterTabControl.Items[index]).Content;
+
+								if (NSDMasterInventorySF.MainWindow.MasterDataSet.Tables.ToList<DataTable>()
+									.Select(tab => tab.TableName)
+									.Contains(table.TableName))
+									using (SqlDataAdapter sda =
+										new SqlDataAdapter(
+											$"SELECT * FROM [{Settings.Default.Schema}].[{table.TableName}]",
+											ConnectionString))
+									{
+										DataTable newTable = new DataTable(table.TableName);
+										sda.Fill(newTable);
+										dataGrid.ItemsSource = newTable;
+										ThisIsNowConcurrent = true;
+										Task.Run(() => NotifyNewItem(newTable, window, index));
+									}
+
+								//return;
+							});
+							MessageBox.Show(
+								"Unfortunately, there was an error in retrieving changed data from the database.\nThe grid was refreshed; it should now be concurrent.",
+								"Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+						}
+
+						Task.Run(() => NotifyNewItem(table, window, index));
 					}
+				};
 
-					id++;
-				}
-/*
-				using (SqlDependencyEx dependencyEx =
-					new SqlDependencyEx(ConnectionString, Settings.Default.Database, "AMS", Settings.Default.Schema, identity: id))
-				{
-					dependencyEx.TableChanged += (sender, args) => Console.WriteLine("asdf");
-					//dependencyEx.Start();
-				}*/
+				if (!SavingCurrently)
+					try
+					{
+						selectComm.ExecuteReader().Dispose();
+					}
+					catch
+					{
+						Task.Run(() => NotifyNewItem(table, window, index));
+					}
+				else
+					Task.Run(() => NotifyNewItem(table, window, index));
 
-				conn.Close();
+				sqlConnection.Close();
 			}
-
-			return dataTables;
 		}
 
 		public static DataTable GetPrefabDataTable(SqlConnection conn, string schema, string prefabName)
@@ -493,7 +783,7 @@ namespace NSDMasterInventorySF
 
 			if (!GetTableNames(conn, schema).Contains(prefabName))
 			{
-				if (schema.Equals("PREFABS"))
+				if (schema.Equals($"{Settings.Default.Schema}_PREFABS"))
 					using (var comm = new SqlCommand(
 						$"CREATE TABLE [{schema}].[{prefabName}] (COLUMNS TEXT, TYPES TEXT, SORTBYS TEXT, GROUPS TEXT)",
 						conn))
@@ -501,11 +791,9 @@ namespace NSDMasterInventorySF
 						comm.ExecuteNonQuery();
 					}
 				else
-					using (var comm = new SqlCommand($"CREATE TABLE [{schema}].[{prefabName}] (_INITIAL_COLUMN_ TEXT)",
-						conn))
-					{
-						comm.ExecuteNonQuery();
-					}
+				{
+					return new DataTable();
+				}
 			}
 
 			using (var cmd = new SqlCommand($"SELECT * FROM [{schema}].[{prefabName}]", conn))
@@ -534,11 +822,11 @@ namespace NSDMasterInventorySF
 			string columnNames = string.Empty;
 			foreach (DataColumn column in dt.Columns) columnNames += column.ColumnName;
 
-			foreach (string tableName in GetTableNames(conn, "PREFABS"))
+			foreach (string tableName in GetTableNames(conn, $"{Settings.Default.Schema}_PREFABS"))
 			{
 				string fieldNames = string.Empty;
 
-				DataTable prefabTable = GetPrefabDataTable(conn, "PREFABS", tableName);
+				DataTable prefabTable = GetPrefabDataTable(conn, $"{Settings.Default.Schema}_PREFABS", tableName);
 				for (var i = 0; i < prefabTable.Rows.Count; i++)
 					fieldNames += prefabTable.Rows[i]["COLUMNS"];
 
@@ -547,64 +835,6 @@ namespace NSDMasterInventorySF
 			}
 
 			return string.Empty;
-		}
-
-		public static bool IdenticalPrefabExists(string prefab)
-		{
-			/*
-			var inTypesProp = GetProp(prefab, "Types");
-			var inFieldsProp = GetProp(prefab, "ColumnNames");
-
-			var inTypesTotal = string.Empty;
-			var inFieldsTotal = string.Empty;
-
-			foreach (var i in inTypesProp.Keys) inTypesTotal += inTypesProp[i];
-
-			foreach (var i in inFieldsProp.Keys) inFieldsTotal += inFieldsProp[i];
-
-			foreach (var dirName in Directory.GetDirectories(PrefabsDirectory))
-			{
-				var dirPrefab = Path.GetFileNameWithoutExtension(dirName);
-				if (dirPrefab.Equals(prefab)) continue;
-
-				var typesProp = GetProp(dirPrefab, "Types");
-				var fieldsProp = GetProp(dirPrefab, "ColumnNames");
-
-				var typesTotal = string.Empty;
-				var fieldsTotal = string.Empty;
-				foreach (var i in typesProp.Keys) typesTotal += typesProp[i];
-
-				foreach (var i in fieldsProp.Keys) fieldsTotal += fieldsProp[i];
-
-				if (typesTotal.Equals(inTypesTotal) && fieldsTotal.Equals(inFieldsTotal))
-					return true;
-			}
-			*/
-			return false;
-		}
-
-		public static void AddProperty(ExpandoObject expando, string propertyName, object propertyValue)
-		{
-			// ExpandoObject supports IDictionary so we can extend it like this
-			var expandoDict = expando as IDictionary<string, object>;
-			if (expandoDict.ContainsKey(propertyName))
-				expandoDict[propertyName] = propertyValue;
-			else
-				expandoDict.Add(propertyName, propertyValue);
-		}
-
-		public static bool SearchUsingScanner(string path, string searchQuery)
-		{
-			List<string> totalList = File.ReadAllLines(path).ToList();
-
-			var total = new StringBuilder();
-			foreach (string line in totalList) total.Append(line);
-
-			return total.ToString().ToLower().Contains(searchQuery.ToLower());
-		}
-
-		public static void MarkInventoried(string path, string textToReplace)
-		{
 		}
 
 		public static void ClearDir(string path)
@@ -617,9 +847,281 @@ namespace NSDMasterInventorySF
 
 		public static string RandomString(int length)
 		{
-			const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+			const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz";
 			return new string(Enumerable.Repeat(chars, length)
 				.Select(s => s[Random.Next(s.Length)]).ToArray());
+		}
+
+		public static void SetSdaCommands(DataTable table, DataRowChangeEventArgs args, SqlDataAdapter sda,
+			SqlConnection conn, MainWindow window)
+		{
+			lock (AutoSaveLock)
+			{
+				//Debug.WriteLine(string.Join(" | ", args.Row.ItemArray));
+				if (ThisIsNowConcurrent)
+				{
+					ThisIsNowConcurrent = false;
+					return;
+				}
+				/*List<object> oldRow = new List<object>();
+				try
+				{
+					for (int n = 0; n < args.Row.ItemArray.Length; n++)
+					{
+						try
+						{
+							oldRow.Add(args.Row[n, DataRowVersion.Original]);
+						}
+						catch
+						{
+							break;
+						}
+					}
+				}
+				catch
+				{
+					//ignored
+				}*/
+
+				int rowIndex = table.Rows.IndexOf(args.Row);
+
+				var sdaUpdateCommand = new SqlCommand
+				{
+					Connection = conn,
+					CommandText = $"UPDATE [{Settings.Default.Schema}].[{table.TableName}] SET "
+				};
+				var sdaInsertCommand = new SqlCommand
+				{
+					Connection = conn,
+					CommandText = $"INSERT INTO [{Settings.Default.Schema}].[{table.TableName}] ("
+				};
+				var sdaDeleteCommand = new SqlCommand
+				{
+					Connection = conn,
+					CommandText = $"DELETE FROM [{Settings.Default.Schema}].[{table.TableName}] WHERE "
+				};
+
+				int i = 0;
+				List<string> columnsList = new List<string>();
+				foreach (DataColumn col in table.Columns)
+					columnsList.Add(col.ColumnName);
+				string[] columns = columnsList.ToArray();
+				if (args.Action != DataRowAction.Delete)
+					foreach (var column in columns)
+					{
+						var value = $"'{table.Rows[rowIndex][i]}'";
+						if (table.Rows[rowIndex][i] is DBNull || table.Rows[rowIndex][i] == null)
+							value = "NULL";
+
+						/*_dispatcher.Invoke(() =>
+						{
+							if (string.IsNullOrEmpty(value.ToString()) &&
+							    NSDMasterInventorySF.MainWindow.MasterDataGrids[window.MasterTabControl.SelectedIndex].Columns[i] is
+								    GridCheckBoxColumn)
+								value = "False";
+						});*/
+						if (i != columns.Length - 1)
+						{
+							sdaUpdateCommand.CommandText += $"[{column}] = {value}, ";
+							sdaInsertCommand.CommandText += $"[{column}], ";
+						}
+						else
+						{
+							sdaUpdateCommand.CommandText += $"[{column}] = {value} ";
+							sdaInsertCommand.CommandText += $"[{column}]) ";
+						}
+
+						i++;
+					}
+
+				sdaUpdateCommand.CommandText += "WHERE ";
+				sdaInsertCommand.CommandText += "VALUES (";
+				int k = 0;
+
+				foreach (var column in columns)
+				{
+					string value = "NULL";
+					if (args.Row.HasVersion(DataRowVersion.Original))
+					{
+						value = $"'{table.Rows[rowIndex][k, DataRowVersion.Original]}'";
+						if (table.Rows[rowIndex][k, DataRowVersion.Original] is DBNull ||
+						    table.Rows[rowIndex][k, DataRowVersion.Original] == null)
+							value = "NULL";
+					}
+
+					if (k != columns.Length - 1)
+					{
+						switch (value)
+						{
+							case "NULL":
+								sdaUpdateCommand.CommandText += $"[{column}] IS {value} AND ";
+								sdaInsertCommand.CommandText += $"{value}, ";
+								sdaDeleteCommand.CommandText += $"[{column}] IS {value} AND ";
+								break;
+							default:
+								sdaUpdateCommand.CommandText += $"[{column}] = {value} AND ";
+								sdaInsertCommand.CommandText += $"{value}, ";
+								sdaDeleteCommand.CommandText += $"[{column}] = {value} AND ";
+								break;
+						}
+					}
+					else
+					{
+						switch (value)
+						{
+							case "NULL":
+								sdaUpdateCommand.CommandText += $"[{column}] IS {value} ";
+								sdaInsertCommand.CommandText += $"{value})";
+								sdaDeleteCommand.CommandText += $"[{column}] IS {value}";
+								break;
+							default:
+								sdaUpdateCommand.CommandText += $"[{column}] = {value} ";
+								sdaInsertCommand.CommandText += $"{value})";
+								sdaDeleteCommand.CommandText += $"[{column}] = {value}";
+								break;
+						}
+					}
+
+					k++;
+				}
+
+				sda.UpdateCommand = sdaUpdateCommand;
+				sda.InsertCommand = sdaInsertCommand;
+				sda.DeleteCommand = sdaDeleteCommand;
+				try
+				{
+					sda.Update(table);
+					ThisMadeLastChange = true;
+				}
+				catch
+				{
+					//Debug.WriteLine("UPDATE FAILED");
+					//table.AcceptChanges();
+					//Debug.WriteLine("Failed Row: " + table.Rows.IndexOf(args.Row) + ": " + string.Join(" | ", args.Row.ItemArray));
+					/*if (args.Action == DataRowAction.Change)
+					{
+						string selectTxt = sdaDeleteCommand.CommandText
+							.Substring(sdaDeleteCommand.CommandText.IndexOf("WHERE", StringComparison.Ordinal)).Replace("WHERE ", string.Empty);
+
+						foreach (DataRow row in table.Select(selectTxt))
+						{
+							for (int index = 0; index < row.ItemArray.Length; index++)
+							{
+								ThisIsNowConcurrent = true;
+								Debug.WriteLine("orig: " + row[index] + " change: " + args.Row[index]);
+								row[index] = args.Row[index];
+							}
+						}
+						if (conn.State != ConnectionState.Open)
+							conn.Open();
+						sda.InsertCommand.ExecuteNonQuery();
+						if (conn.State != ConnectionState.Closed)
+							conn.Close();
+						ThisMadeLastChange = true;
+					}*/
+					_dispatcher.Invoke(
+						() => window.InitializeOrRefreshEverything(window.MasterTabControl.SelectedIndex));
+					/*MessageBox.Show(
+						$"Failed to update Database {Settings.Default.Database}; Error occured.\nThis was most likely caused by a concurrency issue and/or duplicate rows. The datagrids have been refreshed.",
+						"Error!", MessageBoxButton.OK, MessageBoxImage.Error);*/
+					throw;
+					//ThisMadeLastChange = true;
+					//window.SaveToDb();
+				}
+
+				/*string selectText = sdaDeleteCommand.CommandText
+					.Substring(sdaDeleteCommand.CommandText.IndexOf("WHERE", StringComparison.Ordinal))
+					.Replace("WHERE ", string.Empty);*/
+
+				/*switch (args.Action)
+				{
+					case DataRowAction.Add:
+						break;
+					case DataRowAction.Change:
+						//foreach (DataRow row in table.Select(selectText))
+						//{
+						//	for (int index = 0; index < row.ItemArray.Length; index++)
+						//	{
+						//		ThisIsNowConcurrent = true;
+						//		Debug.WriteLine("orig: " + row[index] + " change: " + args.Row[index]);
+						//		row[index] = args.Row[index];
+						//	}
+						//}
+						break;
+					case DataRowAction.Delete:
+						foreach (DataRow row in table.Select(selectText))
+						{
+							ThisIsNowConcurrent = true;
+							row.Delete();
+						}
+						table.AcceptChanges();
+						break;
+				}*/
+
+				//ThisIsNowConcurrent = true;
+
+				/*switch (args.Action)
+				{
+					case DataRowAction.Delete:
+						HubProxy.Invoke("Send", "DELETE", table.TableName, string.Join("\t", oldRow.ToArray()),
+							string.Join("\t", oldRow));
+						break;
+					case DataRowAction.Change:
+						HubProxy.Invoke("Send", "UPDATE", table.TableName, string.Join("\t", oldRow.ToArray()),
+							string.Join("\t", args.Row.ItemArray));
+						break;
+					case DataRowAction.Add:
+						HubProxy.Invoke("Send", "INSERT", table.TableName, string.Join("\t", oldRow.ToArray()),
+							string.Join("\t", args.Row.ItemArray));
+						break;
+				}*/
+			}
+		}
+
+		private void App_OnExit(object sender, ExitEventArgs e)
+		{
+			//Connection.Stop();
+			//Connection.Dispose();
+			//SignalR.Dispose();
+			ConfigurationEcnrypterDecrypter.EncryptConfig();
+			SqlDependency.Stop(ConnectionString);
+		}
+	}
+	/// <summary>
+	/// Echoes messages sent using the Send newRow by calling the
+	/// addMessage method on the client. Also reports to the console
+	/// when clients connect and disconnect.
+	/// </summary>
+	public class MyHub : Hub
+	{
+		public void Send(string command, string tableName, string oldRow, string newRow)
+		{
+			Clients.All.addMessage(command, tableName, oldRow, newRow);
+		}
+
+		public override Task OnConnected()
+		{
+			Debug.WriteLine("Client connected: " + Context.ConnectionId);
+
+			return base.OnConnected();
+		}
+
+		public override Task OnDisconnected(bool stopCalled)
+		{
+			Debug.WriteLine("Client disconnected: " + Context.ConnectionId);
+
+			return base.OnDisconnected(stopCalled);
+		}
+	}
+	/// <summary>
+	/// Used by OWIN's startup process. 
+	/// </summary>
+	public class Startup
+	{
+		public void Configuration(IAppBuilder app)
+		{
+			app.UseCors(CorsOptions.AllowAll);
+			app.MapSignalR();
 		}
 	}
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
@@ -8,7 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Media;
 using NSDMasterInventorySF.Properties;
-using Syncfusion.Data.Extensions;
+using Syncfusion.Data;
 using Syncfusion.UI.Xaml.Grid;
 using Syncfusion.Windows.Shared;
 using Syncfusion.Windows.Tools.Controls;
@@ -19,6 +20,8 @@ namespace NSDMasterInventorySF.ui
 {
 	public static class UiHelper
 	{
+		public static bool ShouldFireGridSorting = true;
+
 		public static T GetChildOfType<T>(this DependencyObject depObj) where T : DependencyObject
 		{
 			if (depObj == null) return null;
@@ -77,100 +80,17 @@ namespace NSDMasterInventorySF.ui
 				HeaderRowHeight = 30,
 				ShowGroupDropArea = true,
 				ColumnSizer = GridLengthUnitType.Auto,
-				AddNewRowPosition = AddNewRowPosition.FixedTop,
-				IsDynamicItemsSource = true
-				//CellStyleSelector = new CellStyleSelector(sheetIndex)
+				IsDynamicItemsSource = true,
+				LiveDataUpdateMode = LiveDataUpdateMode.AllowDataShaping,
+				UsePLINQ = true
 			};
 
 			//dataGrid.SearchHelper = new SearchHelperExt(dataGrid);
-			dataGrid.RecordDeleting += (sender, args) =>
-			{
-				DataRow row = Recycled.RecycledDataTable.NewRow();
-				foreach (object item in args.Items)
-					foreach (object field in ((DataRowView) item).Row.ItemArray)
-						row[((DataRowView) item).Row.ItemArray.IndexOf(field)] = field;
-
-				Recycled.RecycledDataTable.Rows.Add(row);
-			};
-
-			dataGrid.RecordDeleted += (sender, args) => { window.RevertChanges.IsEnabled = true; }
-				;
-
-			dataGrid.CurrentCellValueChanged += (sender, args) =>
-			{
-				window.RevertChanges.IsEnabled = true;
-
-				//if ((bool) window.ViewChangesTextBox.IsChecked)
-				//{
-				//	int row = args.RowColumnIndex.RowIndex;
-				//	int column = args.RowColumnIndex.ColumnIndex;
-
-				//	//Debug.WriteLine(column);
-				//	//Debug.WriteLine(row);
-
-				//	List<int> columnIndices = new List<int>
-				//	{
-				//		column
-				//	};
-
-				//	if (!MainWindow.EditedCells[sheetIndex].ContainsKey(row))
-				//		MainWindow.EditedCells[sheetIndex].Add(row, columnIndices);
-				//	else if (!MainWindow.EditedCells[sheetIndex][row].Contains(column))
-				//		MainWindow.EditedCells[sheetIndex][row].Add(column);
-
-				//	dataGrid.UpdateDataRow(row);
-				//}
-			};
-			dataGrid.CurrentCellValidated += (sender, args) =>
-			{
-				DataTable table = (DataTable) dataGrid.ItemsSource;
-				int rowIndex = 0;
-				foreach (DataRow row in table.Rows)
-				{
-					if (row[dataGrid.Columns.IndexOf(args.Column)] == args.NewValue)
-						rowIndex = table.Rows.IndexOf(row);
-				}
-
-				using (var conn = new SqlConnection(App.ConnectionString))
-				{
-					conn.Open();
-
-					using (var cmd = new SqlCommand($"SELECT * FROM [{Settings.Default.Schema}].[{table.TableName}]", conn))
-					{
-						using (var sda = new SqlDataAdapter(cmd))
-						{
-							string updateComm = $"UPDATE [{Settings.Default.Schema}].[{table.TableName}] SET ";
-
-							int i = 0;
-							string[] columns = App.GetAllColumnsOfTable(conn, table.TableName).ToArray();
-							foreach (var column in columns)
-							{
-								if (i != columns.Length - 1)
-									updateComm += $"[{column}] = '{table.Rows[rowIndex][i]}', ";
-								else
-									updateComm += $"[{column}] = '{table.Rows[rowIndex][i]}' ";
-								i++;
-							}
-
-							updateComm += "WHERE ";
-							int k = 0;
-							foreach (var column in columns)
-							{
-								var value = k == dataGrid.Columns.IndexOf(args.Column) ? args.OldValue : table.Rows[rowIndex][k];
-								if (k != columns.Length - 1)
-									updateComm += $"[{column}] = '{value}' AND ";
-								else
-									updateComm += $"[{column}] = '{value}' ";
-								k++;
-							}
-							Debug.WriteLine(updateComm);
-							sda.UpdateCommand = new SqlCommand(updateComm, conn);
-						}
-					}
-
-					conn.Close();
-				}
-			};
+			//dataGrid.SortColumnDescriptions.CollectionChanged += (sender, args) =>
+			//{
+			//	window.ResetSorts.IsChecked = false;
+			//};
+			//dataGrid.RecordDeleted += (sender, args) => { window.RevertChanges.IsEnabled = true; };
 
 			var j = 0;
 			dataGrid.Loaded += (sender, args) =>
@@ -195,8 +115,9 @@ namespace NSDMasterInventorySF.ui
 				conn.Open();
 				if (!string.IsNullOrEmpty(prefab))
 				{
-					DataTable prefabTable = App.GetPrefabDataTable(conn, "PREFABS", prefab);
-					DataTable comboTable = App.GetPrefabDataTable(conn, "COMBOBOXES", prefab);
+					DataTable prefabTable = App.GetPrefabDataTable(conn, $"{Settings.Default.Schema}_PREFABS", prefab);
+					DataTable comboTable =
+						App.GetPrefabDataTable(conn, $"{Settings.Default.Schema}_COMBOBOXES", prefab);
 
 					//could loop by table.ColumnNames.Count; but if prebab is changed... problems; maybe not all columns showing
 					for (var i = 0; i < table.Columns.Count; i++)
@@ -215,8 +136,10 @@ namespace NSDMasterInventorySF.ui
 
 								var comboStrings = new HashSet<string>();
 								for (var j = 0; j < comboTable.Rows.Count; j++)
-									if (!string.IsNullOrEmpty(comboTable.Rows[j][prefabTable.Rows[i]["COLUMNS"].ToString()].ToString()))
-										comboStrings.Add(comboTable.Rows[j][prefabTable.Rows[i]["COLUMNS"].ToString()].ToString());
+									if (!string.IsNullOrEmpty(
+										comboTable.Rows[j][prefabTable.Rows[i]["COLUMNS"].ToString()].ToString()))
+										comboStrings.Add(comboTable.Rows[j][prefabTable.Rows[i]["COLUMNS"].ToString()]
+											.ToString());
 
 								var autoCompleteElem = new FrameworkElementFactory(typeof(AutoComplete));
 
@@ -243,10 +166,11 @@ namespace NSDMasterInventorySF.ui
 								autoCompleteElem.SetValue(AutoComplete.CustomSourceProperty, autoCompleteItemsBind);
 								autoCompleteElem.SetValue(AutoComplete.TextProperty, autoCompleteBind);
 								autoCompleteElem.SetValue(AutoComplete.CanResizePopupProperty, false);
-								autoCompleteElem.SetValue(AutoComplete.IsFilterProperty, true);
+								//autoCompleteElem.SetValue(AutoComplete.IsFilterProperty, true);
 								autoCompleteElem.SetValue(AutoComplete.EnableSortingProperty, false);
 
-								var cellEditingTemplate = new DataTemplate(typeof(AutoComplete)) {VisualTree = autoCompleteElem};
+								var cellEditingTemplate =
+									new DataTemplate(typeof(AutoComplete)) {VisualTree = autoCompleteElem};
 								((GridTemplateColumn) column).EditTemplate = cellEditingTemplate;
 
 								var defaultElement = new FrameworkElementFactory(typeof(TextBlock));
@@ -259,7 +183,8 @@ namespace NSDMasterInventorySF.ui
 								};
 
 								defaultElement.SetValue(TextBlock.TextProperty, bind);
-								defaultElement.SetValue(FrameworkElement.VerticalAlignmentProperty, VerticalAlignment.Center);
+								defaultElement.SetValue(FrameworkElement.VerticalAlignmentProperty,
+									VerticalAlignment.Center);
 
 								var defaultTemplate = new DataTemplate(typeof(TextBlock)) {VisualTree = defaultElement};
 								((GridTemplateColumn) column).CellTemplate = defaultTemplate;
@@ -341,8 +266,10 @@ namespace NSDMasterInventorySF.ui
 							{
 								var comboStrings = new HashSet<string>();
 								for (var j = 0; j < comboTable.Rows.Count; j++)
-									if (!string.IsNullOrEmpty(comboTable.Rows[j][prefabTable.Rows[i]["COLUMNS"].ToString()].ToString()))
-										comboStrings.Add(comboTable.Rows[j][prefabTable.Rows[i]["COLUMNS"].ToString()].ToString());
+									if (!string.IsNullOrEmpty(
+										comboTable.Rows[j][prefabTable.Rows[i]["COLUMNS"].ToString()].ToString()))
+										comboStrings.Add(comboTable.Rows[j][prefabTable.Rows[i]["COLUMNS"].ToString()]
+											.ToString());
 
 								column = new GridComboBoxColumn
 								{
@@ -401,7 +328,7 @@ namespace NSDMasterInventorySF.ui
 			using (var conn = new SqlConnection(App.ConnectionString))
 			{
 				conn.Open();
-				DataTable prefabTable = App.GetPrefabDataTable(conn, "PREFABS", prefab);
+				DataTable prefabTable = App.GetPrefabDataTable(conn, $"{Settings.Default.Schema}_PREFABS", prefab);
 
 				for (var i = 0; i < prefabTable.Rows.Count; i++)
 					dataTable.Columns[i].ColumnName = prefabTable.Rows[i]["COLUMNS"].ToString();
@@ -411,6 +338,12 @@ namespace NSDMasterInventorySF.ui
 
 		public static void ResetGridSorting(SfDataGrid dataGrid, string prefab, bool shouldSort)
 		{
+			if (!ShouldFireGridSorting)
+			{
+				ShouldFireGridSorting = true;
+				return;
+			}
+
 			if (!shouldSort)
 			{
 				dataGrid.SortColumnDescriptions.Clear();
@@ -425,7 +358,7 @@ namespace NSDMasterInventorySF.ui
 			using (var conn = new SqlConnection(App.ConnectionString))
 			{
 				conn.Open();
-				DataTable prefabTable = App.GetPrefabDataTable(conn, "PREFABS", prefab);
+				DataTable prefabTable = App.GetPrefabDataTable(conn, $"{Settings.Default.Schema}_PREFABS", prefab);
 
 				foreach (int i in sorts)
 				{
@@ -471,7 +404,7 @@ namespace NSDMasterInventorySF.ui
 			using (var conn = new SqlConnection(App.ConnectionString))
 			{
 				conn.Open();
-				DataTable prefabTable = App.GetPrefabDataTable(conn, "PREFABS", prefab);
+				DataTable prefabTable = App.GetPrefabDataTable(conn, $"{Settings.Default.Schema}_PREFABS", prefab);
 
 				foreach (int i in groups)
 				{

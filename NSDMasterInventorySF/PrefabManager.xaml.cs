@@ -48,7 +48,7 @@ namespace NSDMasterInventorySF
 			using (var conn = new SqlConnection(App.ConnectionString))
 			{
 				conn.Open();
-				foreach (string tableName in App.GetTableNames(conn, "PREFABS"))
+				foreach (string tableName in App.GetTableNames(conn, $"{Settings.Default.Schema}_PREFABS"))
 					if (!string.IsNullOrEmpty(tableName) &&
 					    !tableName.Equals("ComboBoxes"))
 						PrefabListBox.Items.Add(tableName);
@@ -61,7 +61,7 @@ namespace NSDMasterInventorySF
 
 		private void OpenAddPrefabBuilder(object sender, RoutedEventArgs e)
 		{
-			var prefabBuilder = new PrefabBuilder
+			var prefabBuilder = new PrefabBuilder(this)
 			{
 				Owner = this,
 				ShowInTaskbar = false
@@ -71,7 +71,7 @@ namespace NSDMasterInventorySF
 
 		private void OpenEditPrefabBuilder(object sender, RoutedEventArgs e)
 		{
-			var prefabBuilder = new PrefabBuilder(PrefabListBox.SelectedItem.ToString(), _window)
+			var prefabBuilder = new PrefabBuilder(PrefabListBox.SelectedItem.ToString(), this)
 			{
 				Owner = this,
 				ShowInTaskbar = false
@@ -88,14 +88,14 @@ namespace NSDMasterInventorySF
 			{
 				conn.Open();
 
-				if (App.GetTableNames(conn, "PREFABS").Contains(PrefabListBox.SelectedItem))
-					using (var comm = new SqlCommand($"DROP TABLE PREFABS.[{PrefabListBox.SelectedItem}]", conn))
+				if (App.GetTableNames(conn, $"{Settings.Default.Schema}_PREFABS").Contains(PrefabListBox.SelectedItem))
+					using (var comm = new SqlCommand($"DROP TABLE [{Settings.Default.Schema}_PREFABS].[{PrefabListBox.SelectedItem}]", conn))
 					{
 						comm.ExecuteNonQuery();
 					}
 
-				if (App.GetTableNames(conn, "COMBOBOXES").Contains(PrefabListBox.SelectedItem))
-					using (var comm = new SqlCommand($"DROP TABLE COMBOBOXES.[{PrefabListBox.SelectedItem}]", conn))
+				if (App.GetTableNames(conn, $"{Settings.Default.Schema}_COMBOBOXES").Contains(PrefabListBox.SelectedItem))
+					using (var comm = new SqlCommand($"DROP TABLE [{Settings.Default.Schema}_COMBOBOXES].[{PrefabListBox.SelectedItem}]", conn))
 					{
 						comm.ExecuteNonQuery();
 					}
@@ -142,6 +142,16 @@ namespace NSDMasterInventorySF
 		private void OnLoaded(object sender, RoutedEventArgs e)
 		{
 			CurrentVisualStyle = Settings.Default.Theme;
+		}
+
+		private void GenerateButton_OnClick(object sender, RoutedEventArgs e)
+		{
+			GenerateFromTable generator = new GenerateFromTable(this)
+			{
+				ShowInTaskbar = false,
+				Owner = this
+			};
+			generator.ShowDialog();
 		}
 	}
 }

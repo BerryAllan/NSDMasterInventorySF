@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
 using NSDMasterInventorySF.Properties;
 using Syncfusion.SfSkinManager;
+using Syncfusion.UI.Xaml.Grid;
+using Cursors = System.Windows.Forms.Cursors;
 
 namespace NSDMasterInventorySF
 {
@@ -17,33 +17,88 @@ namespace NSDMasterInventorySF
 	public partial class ComboBoxBuilder
 	{
 		public static RoutedCommand CloseWindow = new RoutedCommand();
-		private readonly string _columnName;
-		private readonly string _prefab;
+		private readonly DataTable _prefabTable;
+		public DataTable ComboTable;
+		private readonly string _prefabName;
+		private bool _wasTempTableCreated;
 
 		private string _currentVisualStyle;
 
-		public ComboBoxBuilder()
-		{
-			CloseWindow.InputGestures.Add(new KeyGesture(Key.Escape));
-			CommandBindings.Add(new CommandBinding(CloseWindow, CloseCurrentWindow));
-
-			InitializeComponent();
-		}
-
-		public ComboBoxBuilder(string columnName, string prefab)
+		public ComboBoxBuilder(DataTable prefabTable, string prefabName)
 		{
 			CloseWindow.InputGestures.Add(new KeyGesture(Key.Escape));
 			CommandBindings.Add(new CommandBinding(CloseWindow, CloseCurrentWindow));
 
 			InitializeComponent();
 
-			_columnName = columnName;
-			_prefab = prefab;
+			_prefabTable = prefabTable;
+			_prefabName = prefabName;
+			ComboTable = new DataTable(_prefabName);
 
-			PopulateListBox();
+			FillComboTable();
 		}
 
-		private ObservableCollection<string> DataItemList { get; set; }
+		private void FillComboTable()
+		{
+			ComboTable.RowChanged += (sender, args) =>
+			{
+				SaveButton.IsEnabled = true;
+				//Debug.WriteLine("asdf");
+				//if(args.Action == DataRowAction.Change)
+				//_comboTable.AcceptChanges();
+			};
+			ComboTable.RowDeleted += (sender, args) =>
+			{
+				SaveButton.IsEnabled = true;
+				ComboTable.AcceptChanges();
+			};
+
+			using (var conn =
+				new SqlConnection(App.ConnectionString))
+			{
+				conn.Open();
+
+				if (!App.GetTableNames(conn, $"{Settings.Default.Schema}_COMBOBOXES").Contains(_prefabName))
+					return;
+
+				using (var cmd = new SqlCommand($"SELECT * FROM [{Settings.Default.Schema}_COMBOBOXES].[{_prefabName}]",
+					conn))
+				{
+					using (var sda = new SqlDataAdapter(cmd))
+					{
+						sda.Fill(ComboTable);
+					}
+				}
+
+				conn.Close();
+			}
+
+			ComboGrid.ItemsSource = ComboTable;
+			int j = 0;
+			ComboGrid.Loaded += (sender, args) =>
+			{
+				if (j == 0)
+				{
+					GenerateColumns();
+				}
+
+				j++;
+			};
+		}
+
+		public void GenerateColumns()
+		{
+			ComboGrid.Columns.Clear();
+			for (var i = 0; i < ComboTable.Columns.Count; i++)
+			{
+				GridColumn column = new GridTextColumn
+				{
+					MappingName = ComboTable.Columns[i].ColumnName,
+					HeaderText = ComboTable.Columns[i].ColumnName
+				};
+				ComboGrid.Columns.Add(column);
+			}
+		}
 
 		public string CurrentVisualStyle
 		{
@@ -53,170 +108,6 @@ namespace NSDMasterInventorySF
 				_currentVisualStyle = value;
 				OnVisualStyleChanged();
 			}
-		}
-
-		private void PopulateListBox()
-		{
-			DataItemList = new ObservableCollection<string>();
-
-			using (var conn = new SqlConnection(App.ConnectionString))
-			{
-				conn.Open();
-				if (App.GetTableNames(conn, "COMBOBOXES").Contains(_prefab))
-				{
-					DataTable comboTable = App.GetPrefabDataTable(conn, "COMBOBOXES", _prefab);
-					if (comboTable.Columns.Contains(_columnName))
-						for (var i = 0; i < comboTable.Rows.Count; i++)
-							if (!string.IsNullOrEmpty(comboTable.Rows[i][_columnName].ToString()))
-								DataItemList.Add(comboTable.Rows[i][_columnName].ToString());
-				}
-
-				conn.Close();
-			}
-
-			ChoiceList.ItemsSource = DataItemList;
-		}
-
-		private void ChoiceList_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-			if (ChoiceList.SelectedItems.Count > 0)
-			{
-				RemoveButton.IsEnabled = true;
-				MoveDownButton.IsEnabled = true;
-				MoveUpButton.IsEnabled = true;
-			}
-			else
-			{
-				RemoveButton.IsEnabled = false;
-				MoveDownButton.IsEnabled = false;
-				MoveUpButton.IsEnabled = false;
-			}
-		}
-
-		private void SaveButton_OnClick(object sender, RoutedEventArgs e)
-		{
-			using (var conn = new SqlConnection(App.ConnectionString))
-			{
-				conn.Open();
-
-				DataTable comboTable = App.GetPrefabDataTable(conn, "COMBOBOXES", _prefab);
-
-				if (!comboTable.Columns.Contains(_columnName))
-					comboTable.Columns.Add(_columnName);
-
-				for (var i = 0; i < comboTable.Rows.Count; i++) comboTable.Rows[i][_columnName] = null;
-
-				for (var i = 0; i < DataItemList.Count; i++)
-					if (i < comboTable.Rows.Count)
-					{
-						comboTable.Rows[i][_columnName] = DataItemList[i];
-					}
-					else
-					{
-						DataRow row = comboTable.NewRow();
-						row[_columnName] = DataItemList[i];
-						comboTable.Rows.Add(row);
-					}
-
-				if (!App.GetAllColumnsOfTable(conn, "COMBOBOXES", _prefab).Contains(_columnName))
-					using (var comm = new SqlCommand($"ALTER TABLE COMBOBOXES.[{_prefab}] ADD [{_columnName}] TEXT",
-						conn))
-					{
-						comm.ExecuteNonQuery();
-					}
-
-				using (var comm = new SqlCommand($"TRUNCATE TABLE COMBOBOXES.[{_prefab}]",
-					conn))
-				{
-					comm.ExecuteNonQuery();
-				}
-
-				var bulkCopy = new SqlBulkCopy(conn)
-				{
-					DestinationTableName = $"COMBOBOXES.[{_prefab}]"
-				};
-				try
-				{
-					bulkCopy.WriteToServer(comboTable);
-				}
-				catch (Exception a)
-				{
-					Debug.WriteLine(a);
-				}
-
-				conn.Close();
-			}
-
-			Close();
-		}
-
-		private void MoveUpButton_OnClick(object sender, RoutedEventArgs e)
-		{
-			MoveItem(true);
-		}
-
-		private void MoveDownButton_OnClick(object sender, RoutedEventArgs e)
-		{
-			MoveItem(false);
-		}
-
-		private void MoveItem(bool up)
-		{
-			try
-			{
-				int currentIndex = ChoiceList.SelectedIndex;
-
-				//Index of the selected item
-				if (currentIndex < 0 || currentIndex >= DataItemList.Count) return;
-				int moveIndex = up ? currentIndex - 1 : currentIndex + 1;
-
-				//move the items
-				DataItemList.Move(moveIndex, currentIndex);
-			}
-			catch (Exception)
-			{
-				// ignored
-			}
-		}
-
-		private void UIElement_OnKeyDown(object sender, KeyEventArgs e)
-		{
-			if (e.Key != Key.Enter) return;
-			AddItem();
-		}
-
-		private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
-		{
-			AddItem();
-		}
-
-		private void AddItem()
-		{
-			if (!string.IsNullOrEmpty(ChoiceNameTextBox.Text))
-				DataItemList.Add(ChoiceNameTextBox.Text);
-			ChoiceNameTextBox.Clear();
-		}
-
-		private void RemoveButton_OnClick(object sender, RoutedEventArgs e)
-		{
-			RemoveItem();
-		}
-
-		private void RemoveItem()
-		{
-			int currentIndex = ChoiceList.SelectedIndex;
-
-			if (currentIndex >= 0) DataItemList.RemoveAt(currentIndex);
-		}
-
-		private void ChoiceList_OnKeyDown(object sender, KeyEventArgs e)
-		{
-			if (e.Key == Key.Delete)
-				RemoveItem(); /*
-			else if (e.Key == Key.Up)
-				MoveItem(true);
-			else if (e.Key == Key.Down)
-				MoveItem(false);*/
 		}
 
 		private void CloseCurrentWindow(object sender, EventArgs e)
@@ -236,6 +127,75 @@ namespace NSDMasterInventorySF
 			SfSkinManager.ApplyStylesOnApplication = true;
 			SfSkinManager.SetVisualStyle(this, visualStyle);
 			SfSkinManager.ApplyStylesOnApplication = false;
+		}
+
+		private void AddColumnButton_OnClick(object sender, RoutedEventArgs e)
+		{
+			var columnChooser = new ColumnChooser(_prefabTable, ComboTable, this)
+			{
+				ShowInTaskbar = false,
+				Owner = this
+			};
+			columnChooser.ShowDialog();
+		}
+
+		private void SaveButton_OnClick(object sender, RoutedEventArgs e)
+		{
+			SaveComboBoxes();
+			Close();
+		}
+
+		private void SaveComboBoxes()
+		{
+			System.Windows.Forms.Cursor.Current = Cursors.WaitCursor;
+			ComboTable.AcceptChanges();
+			using (var conn = new SqlConnection(App.ConnectionString))
+			{
+				conn.Open();
+				if (App.GetTableNames(conn, $"{Settings.Default.Schema}_COMBOBOXES").Contains(_prefabName))
+					using (var comm =
+						new SqlCommand($"DROP TABLE [{Settings.Default.Schema}_COMBOBOXES].[{_prefabName}]", conn))
+						comm.ExecuteNonQuery();
+				using (var comm = new SqlCommand())
+				{
+					comm.Connection = conn;
+					comm.CommandText = $"CREATE TABLE [{Settings.Default.Schema}_COMBOBOXES].[{_prefabName}] (";
+					for (int i = 0; i < ComboTable.Columns.Count; i++)
+					{
+						if (i != ComboTable.Columns.Count - 1)
+							comm.CommandText += $"[{ComboTable.Columns[i].ColumnName}] TEXT, ";
+						else
+							comm.CommandText += $"[{ComboTable.Columns[i].ColumnName}] TEXT";
+					}
+
+					comm.CommandText += ")";
+					comm.ExecuteNonQuery();
+				}
+
+				var bulkCopy = new SqlBulkCopy(conn)
+				{
+					DestinationTableName = $"[{Settings.Default.Schema}_COMBOBOXES].[{_prefabName}]"
+				};
+				bulkCopy.WriteToServer(ComboTable);
+				conn.Close();
+			}
+
+			_wasTempTableCreated = false;
+			System.Windows.Forms.Cursor.Current = Cursors.Default;
+			Close();
+		}
+
+		private void ComboBoxBuilder_OnClosed(object sender, EventArgs e)
+		{
+			if (!_wasTempTableCreated) return;
+			using (var conn = new SqlConnection(App.ConnectionString))
+			{
+				conn.Open();
+				using (var comm = new SqlCommand($"DROP TABLE [{Settings.Default.Schema}_COMBOBOXES].[{_prefabName}]",
+					conn))
+					comm.ExecuteNonQuery();
+				conn.Close();
+			}
 		}
 	}
 }

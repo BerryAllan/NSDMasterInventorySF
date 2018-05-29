@@ -30,7 +30,7 @@ namespace NSDMasterInventorySF
 			using (var conn = new SqlConnection(App.ConnectionString))
 			{
 				conn.Open();
-				foreach (string tableName in App.GetTableNames(conn, "PREFABS")) PrefabComboBox.Items.Add(tableName);
+				foreach (string tableName in App.GetTableNames(conn, $"{Settings.Default.Schema}_PREFABS")) PrefabComboBox.Items.Add(tableName);
 				conn.Close();
 			}
 
