@@ -1,0 +1,13 @@
+﻿<Window x:Class="NSDMasterInventorySF.ColumnChooser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Column Chooser" Height="300" Width="300">
+	<DockPanel>
+		<Button x:Name="DoneButton" Click="DoneButton_OnClick" Margin="10" DockPanel.Dock="Bottom" IsEnabled="False"
+		        Content="Choose" />
+		<ListBox x:Name="ViableColumnList" SelectionMode="Single" SelectionChanged="ViableColumnList_OnSelectionChanged" Margin="10" />
+	</DockPanel>
+</Window>

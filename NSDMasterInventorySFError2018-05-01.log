@@ -1,0 +1,43 @@
+
+
+Date:2018-05-01 14:46:40,278
+Thread:[1]
+Level:ERROR
+Logger:Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage                         [(null)]
+Message:System.Windows.Markup.XamlParseException: Provide value on 'System.Windows.StaticResourceExtension' threw an exception. ---> System.TypeInitializationException: The type initializer for 'Syncfusion.Windows.Tools.Controls.TreeViewItemAdv' threw an exception. ---> System.Resources.MissingManifestResourceException: Could not find any resources appropriate for the specified culture or the neutral culture.  Make sure "Syncfusion.Windows.Tools.Controls.Resources.Syncfusion.Tools.Wpf.en-US.resources" was correctly embedded or linked into assembly "Syncfusion.Tools.Wpf" at compile time, or that all the satellite assemblies required are loadable and fully signed.
+   at System.Resources.ManifestBasedResourceGroveler.HandleResourceStreamMissing(String fileName)
+   at System.Resources.ManifestBasedResourceGroveler.GrovelForResourceSet(CultureInfo culture, Dictionary`2 localResourceSets, Boolean tryParents, Boolean createIfNotExists, StackCrawlMark& stackMark)
+   at System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo requestedCulture, Boolean createIfNotExists, Boolean tryParents, StackCrawlMark& stackMark)
+   at System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo culture, Boolean createIfNotExists, Boolean tryParents)
+   at System.Resources.ResourceManager.GetString(String name, CultureInfo culture)
+   at System.Resources.ResourceManager.GetString(String name)
+   at Syncfusion.Windows.Tools.Controls.Resources.SR.GetString(CultureInfo culture, String name)
+   at Syncfusion.Windows.Tools.Controls.Resources.ResourceWrapper..ctor()
+   at Syncfusion.Windows.Tools.Controls.TreeViewItemAdv..cctor()
+   --- End of inner exception stack trace ---
+   at System.Runtime.CompilerServices.RuntimeHelpers._RunClassConstructor(RuntimeType type)
+   at System.Windows.DependencyProperty.FromName(String name, Type ownerType)
+   at System.Windows.Baml2006.Baml2006Reader.WriteTypeConvertedInstance(Int16 converterId, Int32 dataByteSize)
+   at System.Windows.Baml2006.Baml2006Reader.Process_PropertyCustom()
+   at System.Windows.Baml2006.Baml2006Reader.Process_OneBamlRecord()
+   at System.Windows.Baml2006.Baml2006Reader.ReadObject(KeyRecord record)
+   at System.Windows.ResourceDictionary.CreateObject(KeyRecord key)
+   at System.Windows.ResourceDictionary.OnGettingValue(Object key, Object& value, Boolean& canCache)
+   at System.Windows.ResourceDictionary.OnGettingValuePrivate(Object key, Object& value, Boolean& canCache)
+   at System.Windows.ResourceDictionary.GetValueWithoutLock(Object key, Boolean& canCache)
+   at System.Windows.ResourceDictionary.GetValue(Object key, Boolean& canCache)
+   at System.Windows.ResourceDictionary.GetValueWithoutLock(Object key, Boolean& canCache)
+   at System.Windows.ResourceDictionary.GetValue(Object key, Boolean& canCache)
+   at System.Windows.StaticResourceExtension.FindResourceInEnviroment(IServiceProvider serviceProvider, Boolean allowDeferredReference, Boolean mustReturnDeferredResourceReference)
+   at System.Windows.StaticResourceExtension.TryProvideValueImpl(IServiceProvider serviceProvider, Boolean allowDeferredReference, Boolean mustReturnDeferredResourceReference)
+   at System.Windows.StaticResourceExtension.ProvideValueInternal(IServiceProvider serviceProvider, Boolean allowDeferredReference)
+   at System.Windows.StaticResourceExtension.ProvideValue(IServiceProvider serviceProvider)
+   at MS.Internal.Xaml.Runtime.ClrObjectRuntime.CallProvideValue(MarkupExtension me, IServiceProvider serviceProvider)
+   --- End of inner exception stack trace ---
+   at System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   at System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   at System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   at System.Windows.Application.LoadComponent(Object component, Uri resourceLocator)
+   at SyncfusionInc.Syncfusion_VSExtension_Troubleshooter.View.SyncfusionTroubleshooterWindow.InitializeComponent()
+   at SyncfusionInc.Syncfusion_VSExtension_Troubleshooter.View.SyncfusionTroubleshooterWindow..ctor(Project project, String projectGuid)
+   at Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage.MenuItemCallback(Object sender, EventArgs e)

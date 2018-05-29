@@ -1,0 +1,9 @@
+
+
+Date:2018-05-21 09:42:49,004
+Thread:[1]
+Level:ERROR
+Logger:SyncfusionAssemblyReferenceUI.SyncfusionAssemblyReferenceVM                         [(null)]
+Message:System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at SyncfusionAssemblyReferenceUI.SyncfusionAssemblyReferenceVM.set_SelectedPlatformName(String value)
+   at SyncfusionAssemblyReferenceUI.SyncfusionAssemblyReferenceVM.SetSupportedPlatformsVisibility(String selectedVersion)

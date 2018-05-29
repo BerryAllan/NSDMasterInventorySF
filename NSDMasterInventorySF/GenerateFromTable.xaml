@@ -1,0 +1,15 @@
+﻿<Window x:Class="NSDMasterInventorySF.GenerateFromTable"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NSDMasterInventorySF"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        mc:Ignorable="d"
+        Title="Generate From Table" Height="300" Width="300">
+	<DockPanel>
+		<syncfusion:SfTextBoxExt x:Name="PrefabNameBox" Watermark="Prefab Name" DockPanel.Dock="Top" Margin="10" TextChanged="PrefabNameBox_OnTextChanged"/>
+		<Button x:Name="DoneButton" Content="Done" DockPanel.Dock="Bottom" IsEnabled="False" Click="DoneButton_OnClick" Margin="10"/>
+		<ListBox x:Name="TableList" SelectionChanged="TableList_OnSelectionChanged" SelectionMode="Single" Margin="10" />
+	</DockPanel>
+</Window>
