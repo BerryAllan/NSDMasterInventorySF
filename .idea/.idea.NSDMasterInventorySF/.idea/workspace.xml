@@ -2,32 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bba55b0-31ee-4b2f-9ffa-615f176d9aae" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NSDMasterInventorySF/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NSDMasterInventorySF/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NSDMasterInventorySF/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NSDMasterInventorySF/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NSDMasterInventorySF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NSDMasterInventorySF/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/NSDMasterInventorySF/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/NSDMasterInventorySF/v15/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/NSDMasterInventorySF/v15/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/NSDMasterInventorySF/v15/Server/sqlite3/storage.ide" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/NSDMasterInventorySF/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/NSDMasterInventorySF/v15/Server/sqlite3/storage.ide-shm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/NSDMasterInventorySF/v15/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/NSDMasterInventorySF/v15/Server/sqlite3/storage.ide-wal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF.sln" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/App.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/DatabaseManager.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/DatabaseManager.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/NSDMasterInventorySFWPF.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/NSDMasterInventorySFWPF.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/Properties/Settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/Properties/Settings.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/Properties/Settings.settings" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/Properties/Settings.settings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/app.config" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/app.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.exe" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.exe.Config" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.exe.Config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/NSDMasterInventorySFWPF.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/NSDMasterInventorySFWPF.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/NSDMasterInventorySFWPF.csproj.CopyComplete" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/NSDMasterInventorySFWPF.csproj.CoreCompileInputs.cache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/NSDMasterInventorySFWPF.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/NSDMasterInventorySFWPF.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/NSDMasterInventorySFWPF.csprojAssemblyReference.cache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.exe" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.g.resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder_MarkupCompile.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder_MarkupCompile.i.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder_MarkupCompile.i.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,37 +59,7 @@
     <favorites_list name="NSDMasterInventorySF" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BarcodeGenerator.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/io/BarcodeGenerator.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
-              <caret line="89" column="78" selection-start-line="71" selection-start-column="4" selection-end-line="89" selection-end-column="78" />
-              <folding>
-                <marker date="1527700615366" expanded="false" signature="6:296" ph="..." />
-                <marker date="1527700615366" expanded="true" signature="331:3500" ph="{...}" />
-                <marker date="1527700615366" expanded="true" signature="364:3498" ph="{...}" />
-                <marker date="1527700615366" expanded="true" signature="453:2926" ph="{...}" />
-                <marker date="1527700615366" expanded="true" signature="733:2922" ph="{...}" />
-                <marker date="1527700615366" expanded="true" signature="778:2917" ph="{...}" />
-                <marker date="1527700615366" expanded="true" signature="1544:1684" ph="{...}" />
-                <marker date="1527700615366" expanded="true" signature="1734:1826" ph="{...}" />
-                <marker date="1527700615366" expanded="true" signature="2448:2909" ph="{...}" />
-                <marker date="1527700615366" expanded="true" signature="2488:2779" ph="{...}" />
-                <marker date="1527700615366" expanded="true" signature="2561:2706" ph="{...}" />
-                <marker date="1527700615366" expanded="true" signature="2790:2902" ph="{...}" />
-                <marker date="1527700615366" expanded="true" signature="3029:3495" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NSDMasterInventorySF.sln" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF.sln">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -146,7 +105,7 @@
     <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/TableManager.xaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/io/ExcelWriter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/io/SvWriter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/io/BarcodeGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/io/BarcodeGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/ui/UiHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/ui/SearchHelperExt.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/ui/CellStyleSelector.cs" root0="FORCE_HIGHLIGHTING" />
@@ -236,7 +195,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -255,6 +213,7 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -337,7 +296,9 @@
       <workItem from="1527694640000" duration="639000" />
       <workItem from="1527695308277" duration="4446000" />
       <workItem from="1527701287514" duration="229000" />
-      <workItem from="1527706260010" duration="246000" />
+      <workItem from="1527706260010" duration="443000" />
+      <workItem from="1527707558324" duration="28000" />
+      <workItem from="1527707615228" duration="147000" />
     </task>
     <task id="LOCAL-00001" summary="Hopefully Good to Go">
       <created>1527620969588</created>
@@ -381,11 +342,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527701319173</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Hopefully Good to Go 8">
+      <created>1527706691323</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1527706691323</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77741000" />
+    <option name="totallyTimeSpent" value="78113000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -398,7 +366,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="0" sideWeight="0.5013423" side_tool="true" weight="0.32905984" />
       <window_info anchor="bottom" id="Errors In Solution" order="1" side_tool="true" weight="0.30612245" />
@@ -409,10 +376,10 @@
       <window_info anchor="bottom" id="Run" order="13" weight="0.32905984" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="NuGet" order="8" weight="0.3295325" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5811966" visible="true" weight="0.2342282" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.57834756" visible="true" weight="0.2409396" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info id="Database" order="2" sideWeight="0.552017" weight="0.2536913" />
-      <window_info id="Structure" order="1" sideWeight="0.41880342" side_tool="true" visible="true" weight="0.2342282" />
+      <window_info id="Structure" order="1" sideWeight="0.42165244" side_tool="true" visible="true" weight="0.2409396" />
       <window_info anchor="right" id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" auto_hide="true" id="Debug" internal_type="SLIDING" order="3" sideWeight="0.49932885" weight="0.3974359" />
       <window_info anchor="bottom" id="Stacktrace" order="6" weight="0.32905984" />
@@ -421,10 +388,10 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.3298969" />
-      <window_info anchor="bottom" auto_hide="true" id="Build" order="4" sideWeight="0.49932885" weight="0.32905984" />
+      <window_info anchor="bottom" id="Database Console" order="9" weight="0.32905984" />
       <window_info anchor="bottom" id="Message" order="11" />
       <window_info anchor="bottom" id="Cvs" order="14" weight="0.25" />
-      <window_info anchor="bottom" id="Database Console" order="9" weight="0.32905984" />
+      <window_info anchor="bottom" auto_hide="true" id="Build" order="4" sideWeight="0.49932885" weight="0.32905984" />
       <window_info anchor="bottom" id="Find" order="12" weight="0.3298969" />
     </layout>
   </component>
@@ -471,7 +438,8 @@
     <MESSAGE value="Hopefully Good to Go 5" />
     <MESSAGE value="Hopefully Good to Go 6" />
     <MESSAGE value="Hopefully Good to Go 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hopefully Good to Go 7" />
+    <MESSAGE value="Hopefully Good to Go 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hopefully Good to Go 8" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -746,106 +714,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="236" selection-start-line="236" selection-end-line="236" />
-          <folding>
-            <marker date="1527702832173" expanded="false" signature="6:790" ph="..." />
-            <marker date="1527702832173" expanded="true" signature="826:902" ph="///     Interaction logic for MainWindow.xaml ... " />
-            <marker date="1527702832173" expanded="true" signature="935:18065" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="960:2137" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="2073:2098" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="2207:2366" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="2432:2615" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="2511:2573" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="2684:2843" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="2895:2920" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="2979:5070" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="3572:3969" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="3645:3757" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="3687:3712" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="3824:3945" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="4343:4659" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="4667:4970" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="5108:5294" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="5324:5560" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="5435:5556" ph="/* foreach (var grid in MasterDataGrids) ... */" />
-            <marker date="1527702832173" expanded="true" signature="5647:5995" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="6060:6389" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="6068:6305" ph="/* for (var i = 0; i &lt; MasterDataSet.Tables.Count; i++) ... */" />
-            <marker date="1527702832173" expanded="true" signature="6453:6792" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="6504:6605" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="6650:6788" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="6854:7197" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="7259:7602" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="7671:8277" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="7749:8223" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="7762:7966" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="7996:8096" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="8122:8218" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="8355:8460" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="8502:9481" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="8536:9419" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="8584:9214" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="8748:9026" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="9223:9414" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="9440:9477" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="9544:9725" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="9614:9721" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="9789:9948" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="9859:9944" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="10014:10174" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="10084:10170" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="10215:10320" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="10401:10559" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="10473:10523" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="10563:10773" ph="///     Called when [loaded]. ... " />
-            <marker date="1527702832173" expanded="true" signature="10831:10887" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="10891:10982" ph="///     On Visual Style Changed. ... " />
-            <marker date="1527702832173" expanded="true" signature="11020:11301" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="11367:11679" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="11746:11766" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="11849:12051" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="11925:12013" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="12131:12324" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="12201:12289" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="12396:12501" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="12427:12497" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="12582:12648" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="12691:13981" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="12969:13491" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="13014:13486" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="13419:13480" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="13931:13977" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="14038:14110" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="14173:14396" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="14224:14312" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="14452:14628" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="14509:14597" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="14677:14709" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="14778:14945" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="15012:15163" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="15057:15145" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="15232:15306" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="15360:15474" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="15371:15416" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="15429:15453" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="15537:15571" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="15636:15758" ph="{...}" />
-            <marker date="1527702832173" expanded="false" signature="15762:16706" ph="Fields" />
-            <marker date="1527702832173" expanded="false" signature="16710:17113" ph="Properties" />
-            <marker date="1527702832173" expanded="true" signature="17179:18062" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="17393:17517" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="17615:17994" ph="{...}" />
-            <marker date="1527702832173" expanded="true" signature="17723:17873" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AI Setup Project/AI Setup Project.aip">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF.sln">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF/io/BarcodeGenerator.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="89" column="78" selection-start-line="71" selection-start-column="4" selection-end-line="89" selection-end-column="78" />
+        <state relative-caret-position="184">
+          <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
           <folding>
             <marker date="1527700615366" expanded="false" signature="6:296" ph="..." />
             <marker date="1527700615366" expanded="true" signature="331:3500" ph="{...}" />
@@ -863,9 +744,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NSDMasterInventorySF.sln">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

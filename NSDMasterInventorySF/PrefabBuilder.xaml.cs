@@ -238,7 +238,7 @@ namespace NSDMasterInventorySF
 		private void SavePrefab(object sender, RoutedEventArgs e)
 		{
 			if (MessageBox.Show(
-				    "Are you sure you would like to save these changes?\nColumns of data can be lost, and these actions are irreversible.",
+				    "Are you sure you would like to save these changes?\nColumns of data may be lost (depending on the changes you made), and these actions are irreversible.",
 				    "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No) return;
 			SaveChanges();
 			Close();
@@ -316,7 +316,7 @@ namespace NSDMasterInventorySF
 				{
 					using (var comm =
 						new SqlCommand(
-							$"SP_RENAME '{Settings.Default.Schema}_PREFABS.{_prefabName}', '{ItemNameField.Text}'",
+							$"sp_rename '{Settings.Default.Schema}_PREFABS.{_prefabName}', '{ItemNameField.Text}'",
 							conn))
 					{
 						comm.ExecuteNonQuery();
@@ -325,7 +325,7 @@ namespace NSDMasterInventorySF
 					if (App.GetTableNames(conn, $"{Settings.Default.Schema}_COMBOBOXES").Contains(_prefabName))
 						using (var comm =
 							new SqlCommand(
-								$"SP_RENAME '{Settings.Default.Schema}_COMBOBOXES.{_prefabName}', '{ItemNameField.Text}'",
+								$"sp_rename '{Settings.Default.Schema}_COMBOBOXES.{_prefabName}', '{ItemNameField.Text}'",
 								conn))
 						{
 							comm.ExecuteNonQuery();
@@ -351,7 +351,7 @@ namespace NSDMasterInventorySF
 						//string rand = App.RandomString(12);
 						if (key.Equals(_changedColumnNames[key])) continue;
 						using (var comm = new SqlCommand(
-							$"SP_RENAME '{Settings.Default.Schema}.{tableName}.{key}', '{_changedColumnNames[key]}', 'COLUMN'",
+							$"sp_rename '{Settings.Default.Schema}.{tableName}.{key}', '{_changedColumnNames[key]}', 'COLUMN'",
 							conn))
 						{
 							comm.ExecuteNonQuery();
@@ -360,12 +360,12 @@ namespace NSDMasterInventorySF
 						if (App.GetAllColumnsOfTable(conn, $"{Settings.Default.Schema}_COMBOBOXES", _prefabName)
 							.Contains(key))
 							using (var comm = new SqlCommand(
-								$"SP_RENAME '{Settings.Default.Schema}_COMBOBOXES.{_prefabName}.{key}', '{_changedColumnNames[key]}', 'COLUMN'",
+								$"sp_rename '{Settings.Default.Schema}_COMBOBOXES.{_prefabName}.{key}', '{_changedColumnNames[key]}', 'COLUMN'",
 								conn))
 								comm.ExecuteNonQuery();
 
 						/*using (var comm3 = new SqlCommand(
-							$"SP_RENAME '{Settings.Default.Schema}.{tableName}.{rand}', '{_changedColumnNames[key]}', 'COLUMN'", conn))
+							$"sp_rename '{Settings.Default.Schema}.{tableName}.{rand}', '{_changedColumnNames[key]}', 'COLUMN'", conn))
 						{
 							comm3.ExecuteNonQuery();
 						}*/
@@ -440,7 +440,7 @@ namespace NSDMasterInventorySF
 						comm.ExecuteNonQuery();
 
 					using (var comm =
-						new SqlCommand($"SP_RENAME '{Settings.Default.Schema}.{tmpTableName}', '{tableName}'", conn))
+						new SqlCommand($"sp_rename '{Settings.Default.Schema}.{tmpTableName}', '{tableName}'", conn))
 						comm.ExecuteNonQuery();
 				}
 

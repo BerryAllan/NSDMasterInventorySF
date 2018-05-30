@@ -247,14 +247,14 @@ C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Rapid Recorder.g.resources
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySF.Properties.Resources.resources
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySFWPF.csproj.GenerateResource.cache
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySFWPF.csproj.CoreCompileInputs.cache
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySFWPF.csproj.CopyComplete
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Rapid Recorder.exe
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Rapid Recorder.pdb
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\GenerateFromTable.g.cs
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\GenerateFromTable.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\ColumnChooser.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\ColumnChooser.g.cs
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySFWPF.csprojAssemblyReference.cache
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\DatabaseManagerError.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\DatabaseManagerError.g.cs
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySFWPF.csprojAssemblyReference.cache
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySFWPF.csproj.CoreCompileInputs.cache
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySFWPF.csproj.CopyComplete
