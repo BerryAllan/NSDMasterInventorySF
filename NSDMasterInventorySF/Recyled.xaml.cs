@@ -180,7 +180,7 @@ namespace NSDMasterInventorySF
 					RecycledDataTable.AcceptChanges();
 			};
 
-			var autoSaveTimer = new Timer(12000)
+			var autoSaveTimer = new Timer(6000)
 			{
 				Enabled = true
 			};
