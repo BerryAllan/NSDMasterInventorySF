@@ -82,7 +82,6 @@ namespace NSDMasterInventorySF
 			}
 			catch
 			{
-
 				DatabaseManagerError dme = new DatabaseManagerError
 				{
 					ShowInTaskbar = true
@@ -90,6 +89,7 @@ namespace NSDMasterInventorySF
 				dme.ShowDialog();
 				return;
 			}
+
 			using (var conn = new SqlConnection(ConnectionString))
 			{
 				conn.Open();
@@ -98,11 +98,13 @@ namespace NSDMasterInventorySF
 					{
 						comm.ExecuteNonQuery();
 					}
+
 				if (!GetAllNames(conn, "schemas").Contains($"{Settings.Default.Schema}_BACKUPS"))
 					using (var comm = new SqlCommand($"CREATE SCHEMA [{Settings.Default.Schema}_BACKUPS]", conn))
 					{
 						comm.ExecuteNonQuery();
 					}
+
 				if (!GetAllNames(conn, "schemas").Contains($"{Settings.Default.Schema}_PREFABS"))
 					using (var comm = new SqlCommand($"CREATE SCHEMA [{Settings.Default.Schema}_PREFABS]", conn))
 					{
@@ -939,7 +941,7 @@ namespace NSDMasterInventorySF
 				if (args.Action != DataRowAction.Delete)
 					foreach (var column in columns)
 					{
-						var value = $"'{table.Rows[rowIndex][i]}'";
+						var value = $"'{table.Rows[rowIndex][i].ToString().Replace("'", "''").Replace("\"", "\"\"")}'";
 						if (table.Rows[rowIndex][i] is DBNull || table.Rows[rowIndex][i] == null)
 							value = "NULL";
 
@@ -973,7 +975,8 @@ namespace NSDMasterInventorySF
 					string value = "NULL";
 					if (args.Row.HasVersion(DataRowVersion.Original))
 					{
-						value = $"'{table.Rows[rowIndex][k, DataRowVersion.Original]}'";
+						value =
+							$"'{table.Rows[rowIndex][k, DataRowVersion.Original].ToString().Replace("'", "''").Replace("\"", "\"\"")}'";
 						if (table.Rows[rowIndex][k, DataRowVersion.Original] is DBNull ||
 						    table.Rows[rowIndex][k, DataRowVersion.Original] == null)
 							value = "NULL";
@@ -1054,7 +1057,7 @@ namespace NSDMasterInventorySF
 					MessageBox.Show(
 						$"Failed to update Database {Settings.Default.Database}; Error occured.\nThis was most likely caused by a concurrency issue and/or duplicate rows. The datagrids have been refreshed.",
 						"Error!", MessageBoxButton.OK, MessageBoxImage.Error);
-					//throw;
+					throw;
 					//ThisMadeLastChange = true;
 					//window.SaveToDb();
 				}
