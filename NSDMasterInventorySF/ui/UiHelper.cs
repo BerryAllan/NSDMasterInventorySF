@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
@@ -14,7 +13,6 @@ using Syncfusion.UI.Xaml.Grid;
 using Syncfusion.Windows.Shared;
 using Syncfusion.Windows.Tools.Controls;
 using DataColumn = System.Data.DataColumn;
-using DataRow = System.Data.DataRow;
 
 namespace NSDMasterInventorySF.ui
 {
@@ -82,7 +80,8 @@ namespace NSDMasterInventorySF.ui
 				ColumnSizer = GridLengthUnitType.Auto,
 				IsDynamicItemsSource = true,
 				LiveDataUpdateMode = LiveDataUpdateMode.AllowDataShaping,
-				UsePLINQ = true
+				UsePLINQ = true,
+				AddNewRowPosition = AddNewRowPosition.FixedTop
 			};
 
 			//dataGrid.SearchHelper = new SearchHelperExt(dataGrid);

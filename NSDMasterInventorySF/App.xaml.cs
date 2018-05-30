@@ -74,6 +74,16 @@ namespace NSDMasterInventorySF
 			using (var conn = new SqlConnection(ConnectionString))
 			{
 				conn.Open();
+				if (!GetAllNames(conn, "schemas").Contains($"{Settings.Default.Schema}"))
+					using (var comm = new SqlCommand($"CREATE SCHEMA [{Settings.Default.Schema}]", conn))
+					{
+						comm.ExecuteNonQuery();
+					}
+				if (!GetAllNames(conn, "schemas").Contains($"{Settings.Default.Schema}_BACKUPS"))
+					using (var comm = new SqlCommand($"CREATE SCHEMA [{Settings.Default.Schema}_BACKUPS]", conn))
+					{
+						comm.ExecuteNonQuery();
+					}
 				if (!GetAllNames(conn, "schemas").Contains($"{Settings.Default.Schema}_PREFABS"))
 					using (var comm = new SqlCommand($"CREATE SCHEMA [{Settings.Default.Schema}_PREFABS]", conn))
 					{
@@ -95,7 +105,7 @@ namespace NSDMasterInventorySF
 				conn.Close();
 			}
 
-			SqlDependency.Start(ConnectionString);
+			//SqlDependency.Start(ConnectionString);
 			//Debug.WriteLine("Starting server...");
 			/*Task.Run(() =>
 			{
@@ -216,7 +226,7 @@ namespace NSDMasterInventorySF
 
 		public static void Backup()
 		{
-			/*if (BackingUpCurrently) return;
+			if (BackingUpCurrently) return;
 			BackingUpCurrently = true;
 			Task task = Task.Run(() =>
 			{
@@ -227,38 +237,36 @@ namespace NSDMasterInventorySF
 						conn.Open();
 
 						if (!GetAllNames(conn, "schemas").Contains($"{Settings.Default.Schema}_BACKUPS"))
-							using (var comm = new SqlCommand($"CREATE SCHEMA [{Settings.Default.Schema}_BACKUPS]", conn))
+							using (var comm = new SqlCommand($"CREATE SCHEMA [{Settings.Default.Schema}_BACKUPS]",
+								conn))
 							{
 								comm.ExecuteNonQuery();
 							}
 
 						foreach (string table in GetTableNames(conn, Settings.Default.Schema))
 						{
-							if (!GetTableNames(conn, $"{Settings.Default.Schema}_BACKUPS").Contains(table))
-								using (var comm = new SqlCommand())
-								{
-									comm.Connection = conn;
-									//Debug.WriteLine(Path.GetFileNameWithoutExtension(file));
-									comm.CommandText = $"CREATE TABLE [{Settings.Default.Schema}_BACKUPS].[{table}] ( ";
-									var j = 0;
-									List<string> columns = GetAllColumnsOfTable(conn, table);
-									foreach (string column in columns)
-									{
-										if (j != columns.Count - 1)
-											comm.CommandText += $"[{column}] NVARCHAR(MAX), ";
-										else
-											comm.CommandText += $"[{column}] NVARCHAR(MAX)";
-										j++;
-									}
-
-									comm.CommandText += " )";
-
+							if (GetTableNames(conn, $"{Settings.Default.Schema}_BACKUPS").Contains(table))
+								using (var comm =
+									new SqlCommand($"DROP TABLE [{Settings.Default.Schema}_BACKUPS].[{table}]", conn))
 									comm.ExecuteNonQuery();
+							using (var comm = new SqlCommand())
+							{
+								comm.Connection = conn;
+								//Debug.WriteLine(Path.GetFileNameWithoutExtension(file));
+								comm.CommandText = $"CREATE TABLE [{Settings.Default.Schema}_BACKUPS].[{table}] ( ";
+								var j = 0;
+								List<string> columns = GetAllColumnsOfTable(conn, table);
+								foreach (string column in columns)
+								{
+									if (j != columns.Count - 1)
+										comm.CommandText += $"[{column}] NVARCHAR(MAX), ";
+									else
+										comm.CommandText += $"[{column}] NVARCHAR(MAX)";
+									j++;
 								}
 
-							using (var comm = new SqlCommand($"TRUNCATE TABLE [{Settings.Default.Schema}_BACKUPS].[{table}]",
-								conn))
-							{
+								comm.CommandText += " )";
+
 								comm.ExecuteNonQuery();
 							}
 
@@ -276,14 +284,17 @@ namespace NSDMasterInventorySF
 				}
 				catch
 				{
-					MessageBox.Show("Failed Backup.", "Failure", MessageBoxButton.OK, MessageBoxImage.Error);
+					MessageBox.Show("Failed Backup.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 					throw;
 				}
 
 				Thread.CurrentThread.IsBackground = true;
 			});
-			task.Wait();
-			BackingUpCurrently = false;*/
+			Task.Run(() =>
+			{
+				task.Wait();
+				BackingUpCurrently = false;
+			});
 		}
 
 		public static void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs)
@@ -1021,10 +1032,10 @@ namespace NSDMasterInventorySF
 					}*/
 					_dispatcher.Invoke(
 						() => window.InitializeOrRefreshEverything(window.MasterTabControl.SelectedIndex));
-					/*MessageBox.Show(
+					MessageBox.Show(
 						$"Failed to update Database {Settings.Default.Database}; Error occured.\nThis was most likely caused by a concurrency issue and/or duplicate rows. The datagrids have been refreshed.",
-						"Error!", MessageBoxButton.OK, MessageBoxImage.Error);*/
-					throw;
+						"Error!", MessageBoxButton.OK, MessageBoxImage.Error);
+					//throw;
 					//ThisMadeLastChange = true;
 					//window.SaveToDb();
 				}
@@ -1084,7 +1095,7 @@ namespace NSDMasterInventorySF
 			//Connection.Dispose();
 			//SignalR.Dispose();
 			ConfigurationEcnrypterDecrypter.EncryptConfig();
-			SqlDependency.Stop(ConnectionString);
+			//SqlDependency.Stop(ConnectionString);
 		}
 	}
 	/// <summary>

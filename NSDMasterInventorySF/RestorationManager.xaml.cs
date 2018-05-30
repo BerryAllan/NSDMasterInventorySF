@@ -56,9 +56,9 @@ namespace NSDMasterInventorySF
 					foreach (string column in columns)
 					{
 						if (j != columns.Count - 1)
-							comm.CommandText += $"[{column}] TEXT, ";
+							comm.CommandText += $"[{column}] NVARCHAR(MAX), ";
 						else
-							comm.CommandText += $"[{column}] TEXT";
+							comm.CommandText += $"[{column}] NVARCHAR(MAX)";
 						j++;
 					}
 

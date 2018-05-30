@@ -472,38 +472,42 @@ namespace NSDMasterInventorySF
 			var inventoried = false;
 
 			foreach (DataTable table in MasterDataSet.Tables)
-			foreach (DataRow row in table.Rows)
 			{
-				List<string> fieldsInRow = row.ItemArray.Select(field => field.ToString()).ToList();
-
-				if (bool.TryParse(fieldsInRow[0], out bool _) && table.Columns[0].ColumnName.Equals("Inventoried"))
-					fieldsInRow.RemoveAt(0);
-
-				if (!item.SequenceEqual(fieldsInRow)) continue;
-
-				if (bool.TryParse(row[0].ToString(), out bool _) && table.Columns[0].ColumnName.Equals("Inventoried"))
+				foreach (DataRow row in table.Rows)
 				{
-					row[0] = true;
-					inventoried = true;
+					List<string> fieldsInRow = row.ItemArray.Select(field => field.ToString()).ToList();
+
+					if (bool.TryParse(fieldsInRow[0], out bool _) && table.Columns[0].ColumnName.Equals("Inventoried"))
+						fieldsInRow.RemoveAt(0);
+
+					if (!item.SequenceEqual(fieldsInRow)) continue;
+
+					if (bool.TryParse(row[0].ToString(), out bool _) &&
+					    table.Columns[0].ColumnName.Equals("Inventoried"))
+					{
+						row[0] = true;
+						inventoried = true;
+					}
 				}
 			}
 
 			if (inventoried) return;
 
-			DataRow newRow = MasterDataSet.Tables[MasterTabControl.SelectedIndex].NewRow();
-
-			if (MasterDataSet.Tables[MasterTabControl.SelectedIndex].Columns[0].ColumnName.Equals("Inventoried"))
-				newRow[0] = true;
+			DataTable dt = MasterDataSet.Tables[MasterTabControl.SelectedIndex];
+			DataRow newRow = dt.NewRow();
+			dt.Rows.Add(newRow);
+			int index = dt.Rows.IndexOf(newRow);
+			
+			if (dt.Columns[0].ColumnName.Equals("Inventoried"))
+				dt.Rows[index][0] = true;
 			int i = MasterDataSet.Tables[MasterTabControl.SelectedIndex].Columns[0].ColumnName.Equals("Inventoried")
 				? 1
 				: 0;
 			foreach (string s in item)
 			{
-				newRow[i] = s;
+				dt.Rows[index][i] = s;
 				i++;
 			}
-
-			MasterDataSet.Tables[MasterTabControl.SelectedIndex].Rows.Add(newRow);
 		}
 
 		private void BackupTables(object sender, EventArgs e)
@@ -561,15 +565,6 @@ namespace NSDMasterInventorySF
 		private void RefreshAll_OnClick(object sender, RoutedEventArgs e)
 		{
 			InitializeOrRefreshEverything(MasterTabControl.SelectedIndex);
-		}
-
-		private void ViewChangesTextBox_OnChecked(object sender, RoutedEventArgs e)
-		{
-		}
-
-		private void ViewChangesTextBox_OnUnChecked(object sender, RoutedEventArgs e)
-		{
-			ResetChanges();
 		}
 
 		public static bool IsAvailable(SqlConnection conn)

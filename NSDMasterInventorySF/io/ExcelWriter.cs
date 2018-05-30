@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
+using Syncfusion.Linq;
 using Syncfusion.UI.Xaml.Grid;
 using DataColumn = System.Data.DataColumn;
 using DataRow = System.Data.DataRow;
@@ -19,7 +20,12 @@ namespace NSDMasterInventorySF.io
 			IWorkbook workbook;
 			workbook = isXssf ? (IWorkbook) new XSSFWorkbook() : new HSSFWorkbook();
 
-			foreach (DataTable table in dataTables.Tables)
+			DataTable recycledTable = Recycled.RecycledDataTable.Copy();
+			recycledTable.TableName = "RECYCLED";
+			List<DataTable> absoluteDataTables =
+				new List<DataTable>(dataTables.Tables.ToList<DataTable>()) {recycledTable};
+
+			foreach (DataTable table in absoluteDataTables)
 			{
 				string sheetName = table.TableName;
 
@@ -44,7 +50,8 @@ namespace NSDMasterInventorySF.io
 				}
 
 				//Debug.WriteLine(row0.GetCell(0).ToString());
-				if (row0.GetCell(0).ToString().Equals("Inventoried") && MainWindow.MasterDataGrids[dataTables.Tables.IndexOf(table)].Columns[0] is GridCheckBoxColumn)
+				if (row0.GetCell(0).ToString().Equals("Inventoried") &&
+				    MainWindow.MasterDataGrids[dataTables.Tables.IndexOf(table)].Columns[0] is GridCheckBoxColumn)
 					for (var i = 2; i <= sheet.LastRowNum; i++)
 					{
 						IRow row = sheet.GetRow(i);

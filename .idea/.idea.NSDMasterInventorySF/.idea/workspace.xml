@@ -1,178 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9bba55b0-31ee-4b2f-9ffa-615f176d9aae" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NSDMasterInventorySF/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NSDMasterInventorySF/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NSDMasterInventorySF/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NSDMasterInventorySF/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NSDMasterInventorySF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NSDMasterInventorySF/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/NSDMasterInventorySF/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/NSDMasterInventorySF/v15/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/NSDMasterInventorySF/v15/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/NSDMasterInventorySF/v15/Server/sqlite3/storage.ide" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF.sln" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/App.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/App.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/ComboBoxBuilder.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/ComboBoxBuilder.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/ComboBoxBuilder.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/ComboBoxBuilder.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/DatabaseManager.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/DatabaseManager.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/EditTable.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/EditTable.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/FindAndReplace.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/FindAndReplace.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/NSDMasterInventorySF.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/NSDMasterInventorySF.csproj.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/PrefabBuilder.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/PrefabBuilder.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/PrefabBuilder.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/PrefabBuilder.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/PrefabManager.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/PrefabManager.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/PrefabManager.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/PrefabManager.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/Properties/Resources.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/Properties/Resources.resx" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/Properties/Resources.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/Recyled.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/Recyled.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/TableManager.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/TableManager.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/TableManager.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/TableManager.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/app.config" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/app.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.application" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.exe" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.exe.Config" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.exe.Config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.exe.manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/Rapid Recorder.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/app.publish/Rapid Recorder.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/zxing.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/zxing.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/zxing.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/zxing.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/zxing.presentation.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/zxing.presentation.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/zxing.presentation.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/zxing.presentation.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/zxing.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/bin/Debug/zxing.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/io/BarcodeGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/io/BarcodeGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/io/ExcelWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/io/ExcelWriter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/io/SqlDependencyEx.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/io/SqlDependencyEx.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/App.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/App.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/App.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/App.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/ComboBoxBuilder.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/ComboBoxBuilder.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/ComboBoxBuilder.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/ComboBoxBuilder.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/ComboBoxBuilder.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/ComboBoxBuilder.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/DatabaseManager.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/DatabaseManager.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/DatabaseManager.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/DatabaseManager.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/DatabaseManager.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/DatabaseManager.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/EditTable.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/EditTable.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/MainWindow.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/MainWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/MainWindow.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/NSDMasterInventorySF.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/NSDMasterInventorySF.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/NSDMasterInventorySF.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/NSDMasterInventorySF.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/NSDMasterInventorySF.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/NSDMasterInventorySF.csproj.GenerateResource.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/NSDMasterInventorySF.csprojResolveAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabBuilder.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabBuilder.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabBuilder.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabBuilder.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabBuilder.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabBuilder.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabManager.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabManager.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabManager.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabManager.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabManager.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/PrefabManager.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.TrustInfo.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.application" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.exe" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.exe.manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.g.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder_Content.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder_Content.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder_MarkupCompile.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder_MarkupCompile.i.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder_MarkupCompile.i.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder_MarkupCompile.i.lref" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder_MarkupCompile.i.lref" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder_MarkupCompile.lref" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Rapid Recorder_MarkupCompile.lref" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Recycled.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Recycled.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/TableManager.baml" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/TableManager.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/TableManager.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/TableManager.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/TableManager.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/TableManager.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Window1.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/obj/Debug/Window1.g.i.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/packages.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/ui/GridCellComboBoxRendererExt.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/ui/RowIndexConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/ui/RowIndexConverter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/ui/SfDataGridExt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/ui/SfDataGridExt.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NSDMasterInventorySF/ui/UiHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NSDMasterInventorySF/ui/UiHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/ZXing.Net.0.16.2.nupkg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/MonoAndroid/zxing.monoandroid.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/MonoAndroid/zxing.monoandroid.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/MonoAndroid/zxing.monoandroid.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/native/zxing.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/native/zxing.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/native/zxing.pri" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/native/zxing.winmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net20-cf/zxing.ce2.0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net20-cf/zxing.ce2.0.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net20-cf/zxing.ce2.0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net20/zxing.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net20/zxing.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net20/zxing.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net35-cf/zxing.ce3.5.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net35-cf/zxing.ce3.5.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net35-cf/zxing.ce3.5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net35/zxing.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net35/zxing.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net35/zxing.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net40/zxing.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net40/zxing.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net40/zxing.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net40/zxing.presentation.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net40/zxing.presentation.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net40/zxing.presentation.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net45/zxing.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net45/zxing.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net45/zxing.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net45/zxing.presentation.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net45/zxing.presentation.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net45/zxing.presentation.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net461/zxing.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net461/zxing.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net461/zxing.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net461/zxing.presentation.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net461/zxing.presentation.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net461/zxing.presentation.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net47/zxing.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net47/zxing.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net47/zxing.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net47/zxing.presentation.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net47/zxing.presentation.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/net47/zxing.presentation.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/netstandard1.0/zxing.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/netstandard1.0/zxing.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/netstandard1.0/zxing.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/netstandard1.1/zxing.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/netstandard1.1/zxing.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/netstandard1.1/zxing.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/netstandard1.3/zxing.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/netstandard1.3/zxing.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/netstandard1.3/zxing.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/portable-win+net40+sl4+sl5+wp7+wp71+wp8/zxing.portable.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/portable-win+net40+sl4+sl5+wp7+wp71+wp8/zxing.portable.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/portable-win+net40+sl4+sl5+wp7+wp71+wp8/zxing.portable.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/sl3-wp/zxing.wp7.0.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/sl3-wp/zxing.wp7.0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/sl3-wp/zxing.wp7.0.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/sl4-wp71/zxing.wp7.1.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/sl4-wp71/zxing.wp7.1.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/sl4-wp71/zxing.wp7.1.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/sl4/zxing.sl4.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/sl4/zxing.sl4.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/sl4/zxing.sl4.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/sl5/zxing.sl5.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/sl5/zxing.sl5.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/sl5/zxing.sl5.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/uap10/zxing.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/uap10/zxing.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/uap10/zxing.pri" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/uap10/zxing.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/windows8-managed/zxing.winrt.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/windows8-managed/zxing.winrt.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/windows8-managed/zxing.winrt.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/windows8/zxing.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/windows8/zxing.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/windows8/zxing.pri" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/windows8/zxing.winmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/wp8/zxing.wp8.0.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/wp8/zxing.wp8.0.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/ZXing.Net.0.16.2/lib/wp8/zxing.wp8.0.pdb" beforeDir="false" />
-    </list>
+    <list default="true" id="9bba55b0-31ee-4b2f-9ffa-615f176d9aae" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -214,7 +43,7 @@
     <favorites_list name="NSDMasterInventorySF" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -237,7 +66,13 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="BerryAllan &lt;titomathias73@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/NSDMasterInventorySF/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
@@ -336,7 +171,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -355,6 +189,7 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -433,11 +268,34 @@
       <workItem from="1525459439841" duration="1779000" />
       <workItem from="1525575833691" duration="2879000" />
       <workItem from="1527620696536" duration="108000" />
+      <workItem from="1527620846602" duration="404000" />
     </task>
+    <task id="LOCAL-00001" summary="Hopefully Good to Go">
+      <created>1527620969588</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1527620969588</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Hopefully Good to Go 2">
+      <created>1527621043219</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1527621043219</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Hopefully Good to Go 4">
+      <created>1527621215797</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1527621215797</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71777000" />
+    <option name="totallyTimeSpent" value="72181000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -451,22 +309,23 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="TODO" order="0" sideWeight="0.5013423" side_tool="true" weight="0.32905984" />
       <window_info anchor="bottom" id="Errors In Solution" order="1" side_tool="true" weight="0.30612245" />
       <window_info anchor="bottom" id="Event Log" internal_type="SLIDING" order="2" side_tool="true" type="SLIDING" weight="0.3295325" />
-      <window_info anchor="bottom" id="Unit Tests" order="5" />
+      <window_info anchor="bottom" id="Unit Tests" order="5" sideWeight="0.4986577" weight="0.32905984" />
       <window_info anchor="bottom" id="Database Changes" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.4986577" weight="0.32905984" />
       <window_info anchor="bottom" id="Run" order="13" weight="0.3298969" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="NuGet" order="8" weight="0.3295325" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.58831906" visible="true" weight="0.27919462" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5868946" visible="true" weight="0.28322148" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" auto_hide="true" id="Build" order="4" weight="0.32905984" />
+      <window_info anchor="bottom" auto_hide="true" id="Build" order="4" sideWeight="0.49932885" weight="0.32905984" />
       <window_info id="Database" order="2" sideWeight="0.552017" weight="0.2536913" />
-      <window_info id="Structure" order="1" sideWeight="0.4116809" side_tool="true" visible="true" weight="0.27919462" />
+      <window_info anchor="bottom" id="Find" order="12" weight="0.3298969" />
+      <window_info id="Structure" order="1" sideWeight="0.4131054" side_tool="true" visible="true" weight="0.28322148" />
       <window_info anchor="right" id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" auto_hide="true" id="Debug" internal_type="SLIDING" order="3" weight="0.3974359" />
+      <window_info anchor="bottom" auto_hide="true" id="Debug" internal_type="SLIDING" order="3" sideWeight="0.49932885" weight="0.3974359" />
       <window_info anchor="bottom" id="Stacktrace" order="6" weight="0.32905984" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="15" weight="0.4" />
@@ -476,7 +335,6 @@
       <window_info anchor="bottom" id="Database Console" order="9" weight="0.32905984" />
       <window_info anchor="bottom" id="Message" order="11" />
       <window_info anchor="bottom" id="Cvs" order="14" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="12" weight="0.3298969" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,8 +342,45 @@
   </component>
   <component name="UnityProjectConfiguration" isUnityUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Hopefully Good to Go" />
+    <MESSAGE value="Hopefully Good to Go 2" />
+    <MESSAGE value="Hopefully Good to Go 3" />
+    <MESSAGE value="Hopefully Good to Go 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hopefully Good to Go 4" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -743,11 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="459" column="24" selection-start-line="459" selection-start-column="24" selection-end-line="459" selection-end-column="24" />
-          <folding>
-            <marker date="1527606629496" expanded="false" signature="6:135" ph="..." />
-            <marker date="1527606629496" expanded="true" signature="34291:34295" ph="{...}" />
-            <marker date="1527606629496" expanded="true" signature="34291:34298" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -755,71 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="643">
           <caret line="550" column="18" selection-start-line="550" selection-start-column="18" selection-end-line="550" selection-end-column="18" />
-          <folding>
-            <marker date="1525460604655" expanded="false" signature="6:241" ph="..." />
-            <marker date="1525460604655" expanded="true" signature="329:25921" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="374:454" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="504:2115" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="719:781" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="806:976" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="819:971" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="1022:1321" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="1035:1316" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="1326:1628" ph="/// Converts an xml string into XElement with no invalid characters check. ... " />
-            <marker date="1525460604655" expanded="true" signature="1702:2111" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="1958:2078" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="2119:16895" ph="Scripts" />
-            <marker date="1525460604655" expanded="true" signature="2138:7549" ph="Procedures" />
-            <marker date="1525460604655" expanded="true" signature="3383:3755" ph="/// T-SQL script-template which creates notification setup procedure. ... " />
-            <marker date="1525460604655" expanded="true" signature="6353:6682" ph="/// T-SQL script-template which creates notification uninstall procedure. ... " />
-            <marker date="1525460604655" expanded="true" signature="7553:10239" ph="ServiceBroker notification" />
-            <marker date="1525460604655" expanded="true" signature="7591:7833" ph="/// T-SQL script-template which prepares database for ServiceBroker notification. ... " />
-            <marker date="1525460604655" expanded="true" signature="8992:9188" ph="/// T-SQL script-template which removes database notification. ... " />
-            <marker date="1525460604655" expanded="true" signature="10243:13179" ph="Notification Trigger" />
-            <marker date="1525460604655" expanded="true" signature="10275:10434" ph="/// T-SQL script-template which creates notification trigger. ... " />
-            <marker date="1525460604655" expanded="true" signature="10792:11330" ph="/// T-SQL script-template which creates notification trigger. ... " />
-            <marker date="1525460604655" expanded="true" signature="13183:14724" ph="Miscellaneous" />
-            <marker date="1525460604655" expanded="true" signature="13208:13434" ph="/// T-SQL script-template which helps to receive changed data in monitorable table. ... " />
-            <marker date="1525460604655" expanded="true" signature="13927:14098" ph="/// T-SQL script-template which executes stored procedure. ... " />
-            <marker date="1525460604655" expanded="true" signature="14291:14433" ph="/// T-SQL script-template which returns all dependency identities in the database. ... " />
-            <marker date="1525460604655" expanded="true" signature="14728:16881" ph="Forced cleaning of database" />
-            <marker date="1525460604655" expanded="true" signature="14767:14894" ph="/// T-SQL script-template which cleans database from notifications. ... " />
-            <marker date="1525460604655" expanded="true" signature="17101:17173" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="17214:17288" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="17329:17399" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="17445:17534" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="17582:17673" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="18511:18742" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="18765:19360" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="18990:19144" ph="/* ASP.NET fix ... */" />
-            <marker date="1525460604655" expanded="true" signature="19382:19798" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="19599:19672" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="19716:19738" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="19823:19842" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="19933:20735" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="19970:20037" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="20063:20122" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="20303:20602" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="20813:20930" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="20977:21430" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="20988:21258" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="21010:21253" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="21202:21247" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="21271:21349" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="21360:21426" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="21514:21764" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="21653:21760" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="21797:22384" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="22090:22380" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="22256:22374" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="22444:23185" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="23243:24320" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="24369:24838" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="24878:25125" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="25163:25564" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="25611:25735" ph="{...}" />
-            <marker date="1525460604655" expanded="true" signature="25782:25918" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -827,10 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="643">
           <caret line="423" column="20" selection-start-line="423" selection-start-column="20" selection-end-line="423" selection-end-column="20" />
-          <folding>
-            <marker date="1527615327551" expanded="false" signature="6:138" ph="..." />
-            <marker date="1527615327551" expanded="true" signature="18721:18724" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -838,59 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="643">
           <caret line="89" column="23" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
-          <folding>
-            <marker date="1527616772164" expanded="true" signature="628:1529" ph="&lt;&lt;ui:RowIndexConverter x:Key=&quot;Rowindexconverter&quot; /&gt; &lt;Style TargetType=&quot;syncfusion:GridRowHeaderCell&quot;&gt;&#10;&#9;&#9;&#9;&lt;Setter Property=&quot;Template&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;Setter.Value&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;ControlTemplate TargetType=&quot;syncfusion:GridRowHeaderCell&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Border x:Name=&quot;PART_RowHeaderCellBorder&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        Background=&quot;{TemplateBinding Background}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderBrush=&quot;{TemplateBinding BorderBrush}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderThickness=&quot;0.18&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           TextAlignment=&quot;Center&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Binding Path=&quot;RowIndex&quot; RelativeSource=&quot;{RelativeSource TemplatedParent}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;         Converter=&quot;{StaticResource Rowindexconverter}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/Border&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/ControlTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Setter.Value&gt;&#10;&#9;&#9;&#9;&lt;/Setter&gt;&#10;&#9;&#9;&lt;/Style&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="702:1508" ph="&lt;&lt;Setter Property=&quot;Template&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;Setter.Value&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;ControlTemplate TargetType=&quot;syncfusion:GridRowHeaderCell&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Border x:Name=&quot;PART_RowHeaderCellBorder&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        Background=&quot;{TemplateBinding Background}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderBrush=&quot;{TemplateBinding BorderBrush}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderThickness=&quot;0.18&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           TextAlignment=&quot;Center&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Binding Path=&quot;RowIndex&quot; RelativeSource=&quot;{RelativeSource TemplatedParent}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;         Converter=&quot;{StaticResource Rowindexconverter}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/Border&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/ControlTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Setter.Value&gt;&#10;&#9;&#9;&#9;&lt;/Setter&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="755:1497" ph="&lt;&lt;Setter.Value&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;ControlTemplate TargetType=&quot;syncfusion:GridRowHeaderCell&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Border x:Name=&quot;PART_RowHeaderCellBorder&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        Background=&quot;{TemplateBinding Background}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderBrush=&quot;{TemplateBinding BorderBrush}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderThickness=&quot;0.18&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           TextAlignment=&quot;Center&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Binding Path=&quot;RowIndex&quot; RelativeSource=&quot;{RelativeSource TemplatedParent}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;         Converter=&quot;{StaticResource Rowindexconverter}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/Border&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/ControlTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Setter.Value&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="788:1484" ph="&lt;&lt;ControlTemplate TargetType=&quot;syncfusion:GridRowHeaderCell&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Border x:Name=&quot;PART_RowHeaderCellBorder&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        Background=&quot;{TemplateBinding Background}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderBrush=&quot;{TemplateBinding BorderBrush}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderThickness=&quot;0.18&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           TextAlignment=&quot;Center&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Binding Path=&quot;RowIndex&quot; RelativeSource=&quot;{RelativeSource TemplatedParent}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;         Converter=&quot;{StaticResource Rowindexconverter}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/Border&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/ControlTemplate&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="808:1464" ph="&lt;&lt;Border x:Name=&quot;PART_RowHeaderCellBorder&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        Background=&quot;{TemplateBinding Background}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderBrush=&quot;{TemplateBinding BorderBrush}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;        BorderThickness=&quot;0.18&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           TextAlignment=&quot;Center&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Binding Path=&quot;RowIndex&quot; RelativeSource=&quot;{RelativeSource TemplatedParent}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;         Converter=&quot;{StaticResource Rowindexconverter}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/Border&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="874:1440" ph="&lt;&lt;TextBlock HorizontalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;           TextAlignment=&quot;Center&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Binding Path=&quot;RowIndex&quot; RelativeSource=&quot;{RelativeSource TemplatedParent}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;         Converter=&quot;{StaticResource Rowindexconverter}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="1075:1424" ph="&lt;&lt;TextBlock.Text&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Binding Path=&quot;RowIndex&quot; RelativeSource=&quot;{RelativeSource TemplatedParent}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;         Converter=&quot;{StaticResource Rowindexconverter}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/TextBlock.Text&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="1210:1404" ph="&lt;&lt;Binding Path=&quot;RowIndex&quot; RelativeSource=&quot;{RelativeSource TemplatedParent}&quot;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;         Converter=&quot;{StaticResource Rowindexconverter}&quot; /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="1236:1378" ph="&lt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="1532:9839" ph="&lt;&lt;Menu DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_File&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_Backup All&quot; Click=&quot;BackupTables&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Backward_16xMD.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_Restore from Backups&quot; Click=&quot;RestoreFromBackups&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RestoreDefaultView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_View Recycled&quot; Click=&quot;ViewRecycled&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/DeleteTable_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;Separator /&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Export...&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Export_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _Excel&quot; Click=&quot;ExportToExcel&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ExcelWorksheetView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _CSVs&quot; Click=&quot;ExportToCsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Comma_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _TSVs&quot; Click=&quot;ExportToTsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RuntimeToolbar_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _Barcodes&quot; Click=&quot;GenerateBarCodes&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/datamatrix.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;!--&lt;MenuItem Header=&quot;_Save All&quot; Click=&quot;Save_Changes&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/DataTable_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;--&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontWeight=&quot;Bold&quot; Header=&quot;_Close&quot; Click=&quot;CloseApplication&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Close_red_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Edit&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Table Manager&quot; Click=&quot;OpenSheetManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Table_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Prefab Manager&quot; Click=&quot;OpenPrefabManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Schema_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Database Manager&quot; Click=&quot;OpenDatabaseManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ConnectToDatabase_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;Change _Style&quot; Click=&quot;OpenStyleChooser&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/StyleBlock_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&lt;/Menu&gt; &lt;WrapPanel DockPanel.Dock=&quot;Top&quot; HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; Margin=&quot;5,5,5,5&quot;&gt;&#10;&#9;&#9;&#9;&lt;Image Source=&quot;Images/FindDown_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; Margin=&quot;0,0,5,0&quot; /&gt;&#10;&#9;&#9;&#9;&lt;syncfusion:SfTextBoxExt x:Name=&quot;SearchField&quot; TextWrapping=&quot;Wrap&quot; Width=&quot;225&quot;&#10;&#9;&#9;&#9;                         Margin=&quot;0,0,0,0&quot; HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; FontSize=&quot;14&quot;&#10;&#9;&#9;&#9;                         Watermark=&quot;Search...&quot; TextChanged=&quot;SearchFieldTextChanged&quot; AutoCompleteMode=&quot;SuggestAppend&quot;&#10;&#9;&#9;&#9;                         ToolTip=&quot;Search for an Item.&quot; KeyDown=&quot;SearchField_OnKeyDown&quot; /&gt;&#10;&#9;&#9;&#9;&lt;Separator Margin=&quot;0,0,0,0&quot; Width=&quot;30&quot; VerticalAlignment=&quot;Center&quot; RenderTransformOrigin=&quot;0.5,0.5&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ScaleTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;SkewTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RotateTransform Angle=&quot;90&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TranslateTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&lt;/Separator&gt;&#10;&#9;&#9;&#9;&lt;CheckBox x:Name=&quot;ResetSorts&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; Checked=&quot;ResetSorting&quot; Unchecked=&quot;UnResetSorting&quot;&#10;&#9;&#9;&#9;          IsChecked=&quot;True&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/ResetTimelineView_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Default Sorting and Filtering&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt;&#10;&#9;&#9;&#9;&lt;CheckBox x:Name=&quot;ResetGroupsBox&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; Checked=&quot;ResetGrouping&quot; Unchecked=&quot;UnResetGrouping&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/GroupClause_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Default Grouping&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt;&#10;&#9;&#9;&#9;&lt;CheckBox x:Name=&quot;DeleteModeCheckBox&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; Click=&quot;EnterDeleteMode&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/DeleteTableRow_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Delete Mode&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt;&#10;&#9;&#9;&#9;&lt;!--&lt;CheckBox x:Name=&quot;ViewChangesTextBox&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,0,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; Checked=&quot;ViewChangesTextBox_OnChecked&quot; Unchecked=&quot;ViewChangesTextBox_OnUnChecked&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/FindSymbol_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;View Changes&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt;--&gt;&#10;&#9;&#9;&#9;&lt;Separator Margin=&quot;0,0,0,0&quot; VerticalAlignment=&quot;Center&quot; Width=&quot;30&quot; RenderTransformOrigin=&quot;0.5,0.5&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ScaleTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;SkewTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RotateTransform Angle=&quot;90&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TranslateTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&lt;/Separator&gt;&#10;&#9;&#9;&#9;&lt;syncfusion:ButtonAdv x:Name=&quot;RevertChanges&quot; VerticalAlignment=&quot;Center&quot; IsEnabled=&quot;False&quot; FontSize=&quot;14&quot;&#10;&#9;&#9;&#9;                      Margin=&quot;0,0,1&#9;0,0&quot; Click=&quot;Revert_Changes&quot; SmallIcon=&quot;Images/Undo_16x.png&quot; Label=&quot;Revert Changes&quot; /&gt;&#10;&#9;&#9;&#9;&lt;syncfusion:ButtonAdv x:Name=&quot;RefreshAll&quot; VerticalAlignment=&quot;Center&quot; SmallIcon=&quot;Images/Restart_16x.png&quot;&#10;&#9;&#9;&#9;                      Label=&quot;Refresh&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,0,0&quot; Click=&quot;RefreshAll_OnClick&quot; /&gt;&#10;&#9;&#9;&lt;/WrapPanel&gt; &lt;DockPanel DockPanel.Dock=&quot;Bottom&quot; Margin=&quot;10, 10, 10, 10&quot;&gt;&#10;&#9;&#9;&#9;&lt;syncfusion:ButtonAdv DockPanel.Dock=&quot;Right&quot; FontSize=&quot;16&quot; x:Name=&quot;BarcodeInventoryCommit&quot; IconHeight=&quot;0&quot;&#10;&#9;&#9;&#9;                      IconWidth=&quot;0&quot; Label=&quot;Inventory Item&quot;&#10;&#9;&#9;&#9;                      ToolTip=&quot;Inventory item from a barcode to the Database.&quot;&#10;&#9;&#9;&#9;                      Click=&quot;BarcodeInventoryCommit_OnClick&quot; /&gt;&#10;&#9;&#9;&#9;&lt;syncfusion:SfTextBoxExt AcceptsTab=&quot;True&quot; TextWrapping=&quot;Wrap&quot; FontSize=&quot;16&quot; Watermark=&quot;Enter your barcode here...&quot;&#10;&#9;&#9;&#9;                         DockPanel.Dock=&quot;Left&quot; x:Name=&quot;BarcodeTextBox&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;                         ToolTip=&quot;Enter an Item Barcode here.&quot; KeyDown=&quot;BarcodeTextBox_OnKeyDown&quot; /&gt;&#10;&#9;&#9;&lt;/DockPanel&gt; &lt;syncfusion:TabControlExt ShowTabItemContextMenu=&quot;False&quot; AllowDragDrop=&quot;False&quot; TabScrollButtonVisibility=&quot;Auto&quot;&#10;&#9;&#9;                          TabScrollStyle=&quot;Extended&quot; DockPanel.Dock=&quot;Left&quot; TabStripPlacement=&quot;Bottom&quot;&#10;&#9;&#9;                          EnableLabelEdit=&quot;False&quot;&#10;&#9;&#9;                          x:Name=&quot;MasterTabControl&quot; /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="1546:4220" ph="&lt;&lt;MenuItem Header=&quot;_File&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_Backup All&quot; Click=&quot;BackupTables&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Backward_16xMD.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_Restore from Backups&quot; Click=&quot;RestoreFromBackups&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RestoreDefaultView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_View Recycled&quot; Click=&quot;ViewRecycled&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/DeleteTable_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;Separator /&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Export...&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Export_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _Excel&quot; Click=&quot;ExportToExcel&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ExcelWorksheetView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _CSVs&quot; Click=&quot;ExportToCsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Comma_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _TSVs&quot; Click=&quot;ExportToTsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RuntimeToolbar_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _Barcodes&quot; Click=&quot;GenerateBarCodes&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/datamatrix.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;!--&lt;MenuItem Header=&quot;_Save All&quot; Click=&quot;Save_Changes&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/DataTable_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;--&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem FontWeight=&quot;Bold&quot; Header=&quot;_Close&quot; Click=&quot;CloseApplication&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Close_red_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem Header=&quot;_Edit&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Table Manager&quot; Click=&quot;OpenSheetManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Table_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Prefab Manager&quot; Click=&quot;OpenPrefabManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Schema_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;_Database Manager&quot; Click=&quot;OpenDatabaseManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ConnectToDatabase_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;Change _Style&quot; Click=&quot;OpenStyleChooser&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/StyleBlock_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&lt;/MenuItem&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="1577:3426" ph="&lt;&lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_Backup All&quot; Click=&quot;BackupTables&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Backward_16xMD.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_Restore from Backups&quot; Click=&quot;RestoreFromBackups&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RestoreDefaultView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem FontStyle=&quot;Italic&quot; Header=&quot;_View Recycled&quot; Click=&quot;ViewRecycled&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/DeleteTable_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;Separator /&gt; &lt;MenuItem Header=&quot;_Export...&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Export_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _Excel&quot; Click=&quot;ExportToExcel&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ExcelWorksheetView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _CSVs&quot; Click=&quot;ExportToCsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Comma_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _TSVs&quot; Click=&quot;ExportToTsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RuntimeToolbar_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem Header=&quot;To _Barcodes&quot; Click=&quot;GenerateBarCodes&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/datamatrix.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem FontWeight=&quot;Bold&quot; Header=&quot;_Close&quot; Click=&quot;CloseApplication&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Close_red_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="1607:1788" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Backward_16xMD.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="1684:1772" ph="&lt;&lt;Image Source=&quot;Images/Backward_16xMD.png&quot; /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="1793:1998" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RestoreDefaultView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="1886:1982" ph="&lt;&lt;Image Source=&quot;Images/RestoreDefaultView_16x.png&quot; /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="2003:2188" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/DeleteTable_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="2083:2172" ph="&lt;&lt;Image Source=&quot;Images/DeleteTable_16x.png&quot; /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="2211:3057" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Export_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt; &lt;MenuItem Header=&quot;To _Excel&quot; Click=&quot;ExportToExcel&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ExcelWorksheetView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem Header=&quot;To _CSVs&quot; Click=&quot;ExportToCsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Comma_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem Header=&quot;To _TSVs&quot; Click=&quot;ExportToTsv&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RuntimeToolbar_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem Header=&quot;To _Barcodes&quot; Click=&quot;GenerateBarCodes&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/datamatrix.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="2247:2331" ph="&lt;&lt;Image Source=&quot;Images/Export_16x.png&quot; /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="2337:2510" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ExcelWorksheetView_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="2395:2493" ph="&lt;&lt;Image Source=&quot;Images/ExcelWorksheetView_16x.png&quot; /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="2516:2673" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Comma_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="2571:2656" ph="&lt;&lt;Image Source=&quot;Images/Comma_16x.png&quot; /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="2679:2845" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/RuntimeToolbar_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="2734:2828" ph="&lt;&lt;Image Source=&quot;Images/RuntimeToolbar_16x.png&quot; /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="2851:3041" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/datamatrix.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="2915:3024" ph="&lt;&lt;Image Source=&quot;Images/datamatrix.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="3062:3228" ph="&lt;!--...--&gt;" />
-            <marker date="1527616772164" expanded="true" signature="3233:3411" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Close_red_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="3308:3395" ph="&lt;&lt;Image Source=&quot;Images/Close_red_16x.png&quot; /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="3430:4210" ph="&lt;&lt;MenuItem Header=&quot;_Table Manager&quot; Click=&quot;OpenSheetManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Table_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem Header=&quot;_Prefab Manager&quot; Click=&quot;OpenPrefabManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Schema_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem Header=&quot;_Database Manager&quot; Click=&quot;OpenDatabaseManagerMenuItemClick&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ConnectToDatabase_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt; &lt;MenuItem Header=&quot;Change _Style&quot; Click=&quot;OpenStyleChooser&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/StyleBlock_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&lt;/MenuItem&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="3460:3637" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Table_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="3538:3621" ph="&lt;&lt;Image Source=&quot;Images/Table_16x.png&quot; /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="3642:3822" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/Schema_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="3722:3806" ph="&lt;&lt;Image Source=&quot;Images/Schema_16x.png&quot; /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="3827:4022" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/ConnectToDatabase_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="3911:4006" ph="&lt;&lt;Image Source=&quot;Images/ConnectToDatabase_16x.png&quot; /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="4027:4195" ph="&lt;&lt;MenuItem.Icon&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;Image Source=&quot;Images/StyleBlock_16x.png&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/MenuItem.Icon&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="4091:4179" ph="&lt;&lt;Image Source=&quot;Images/StyleBlock_16x.png&quot; /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="4223:8787" ph="&lt;&lt;Image Source=&quot;Images/FindDown_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; Margin=&quot;0,0,5,0&quot; /&gt; &lt;syncfusion:SfTextBoxExt x:Name=&quot;SearchField&quot; TextWrapping=&quot;Wrap&quot; Width=&quot;225&quot;&#10;&#9;&#9;&#9;                         Margin=&quot;0,0,0,0&quot; HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; FontSize=&quot;14&quot;&#10;&#9;&#9;&#9;                         Watermark=&quot;Search...&quot; TextChanged=&quot;SearchFieldTextChanged&quot; AutoCompleteMode=&quot;SuggestAppend&quot;&#10;&#9;&#9;&#9;                         ToolTip=&quot;Search for an Item.&quot; KeyDown=&quot;SearchField_OnKeyDown&quot; /&gt; &lt;Separator Margin=&quot;0,0,0,0&quot; Width=&quot;30&quot; VerticalAlignment=&quot;Center&quot; RenderTransformOrigin=&quot;0.5,0.5&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ScaleTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;SkewTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RotateTransform Angle=&quot;90&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TranslateTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&lt;/Separator&gt; &lt;CheckBox x:Name=&quot;ResetSorts&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; Checked=&quot;ResetSorting&quot; Unchecked=&quot;UnResetSorting&quot;&#10;&#9;&#9;&#9;          IsChecked=&quot;True&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/ResetTimelineView_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Default Sorting and Filtering&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt; &lt;CheckBox x:Name=&quot;ResetGroupsBox&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Left&quot; VerticalAlignment=&quot;Center&quot; Checked=&quot;ResetGrouping&quot; Unchecked=&quot;UnResetGrouping&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/GroupClause_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Default Grouping&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt; &lt;CheckBox x:Name=&quot;DeleteModeCheckBox&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;          HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; Click=&quot;EnterDeleteMode&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/DeleteTableRow_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Delete Mode&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&#9;&#9;&lt;/CheckBox&gt; &lt;Separator Margin=&quot;0,0,0,0&quot; VerticalAlignment=&quot;Center&quot; Width=&quot;30&quot; RenderTransformOrigin=&quot;0.5,0.5&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ScaleTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;SkewTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RotateTransform Angle=&quot;90&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TranslateTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&lt;/Separator&gt; &lt;syncfusion:ButtonAdv x:Name=&quot;RevertChanges&quot; VerticalAlignment=&quot;Center&quot; IsEnabled=&quot;False&quot; FontSize=&quot;14&quot;&#10;&#9;&#9;&#9;                      Margin=&quot;0,0,1&#9;0,0&quot; Click=&quot;Revert_Changes&quot; SmallIcon=&quot;Images/Undo_16x.png&quot; Label=&quot;Revert Changes&quot; /&gt; &lt;syncfusion:ButtonAdv x:Name=&quot;RefreshAll&quot; VerticalAlignment=&quot;Center&quot; SmallIcon=&quot;Images/Restart_16x.png&quot;&#10;&#9;&#9;&#9;                      Label=&quot;Refresh&quot; FontSize=&quot;14&quot; Margin=&quot;0,0,0,0&quot; Click=&quot;RefreshAll_OnClick&quot; /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="4416:4819" ph="&lt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="4823:5162" ph="&lt;&lt;Separator.RenderTransform&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ScaleTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;SkewTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RotateTransform Angle=&quot;90&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TranslateTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&lt;/Separator.RenderTransform&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="4926:5146" ph="&lt;&lt;TransformGroup&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ScaleTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;SkewTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;RotateTransform Angle=&quot;90&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TranslateTransform /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/TransformGroup&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="4959:5113" ph="&lt;&lt;ScaleTransform /&gt; &lt;SkewTransform /&gt; &lt;RotateTransform Angle=&quot;90&quot; /&gt; &lt;TranslateTransform /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="5166:5167" ph="&lt;&lt;StackPanel Orientation=&quot;Horizontal&quot;&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;Image DockPanel.Dock=&quot;Left&quot; Margin=&quot;4&quot; HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot;&#10;&#9;&#9;&#9;&#9;&#9;       Source=&quot;Images/ResetTimelineView_16x.png&quot; Width=&quot;16&quot; Height=&quot;16&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock HorizontalAlignment=&quot;Center&quot; VerticalAlignment=&quot;Center&quot; DockPanel.Dock=&quot;Left&quot;&#10;&#9;&#9;&#9;&#9;&#9;           Text=&quot;Default Sorting and Filtering&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/StackPanel&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="8771:8772" ph="&lt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="8790:9499" ph="&lt;&lt;syncfusion:ButtonAdv DockPanel.Dock=&quot;Right&quot; FontSize=&quot;16&quot; x:Name=&quot;BarcodeInventoryCommit&quot; IconHeight=&quot;0&quot;&#10;&#9;&#9;&#9;                      IconWidth=&quot;0&quot; Label=&quot;Inventory Item&quot;&#10;&#9;&#9;&#9;                      ToolTip=&quot;Inventory item from a barcode to the Database.&quot;&#10;&#9;&#9;&#9;                      Click=&quot;BarcodeInventoryCommit_OnClick&quot; /&gt; &lt;syncfusion:SfTextBoxExt AcceptsTab=&quot;True&quot; TextWrapping=&quot;Wrap&quot; FontSize=&quot;16&quot; Watermark=&quot;Enter your barcode here...&quot;&#10;&#9;&#9;&#9;                         DockPanel.Dock=&quot;Left&quot; x:Name=&quot;BarcodeTextBox&quot; Margin=&quot;0,0,10,0&quot;&#10;&#9;&#9;&#9;                         ToolTip=&quot;Enter an Item Barcode here.&quot; KeyDown=&quot;BarcodeTextBox_OnKeyDown&quot; /&gt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="8853:9169" ph="&lt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="9173:9484" ph="&lt;.../&gt;" />
-            <marker date="1527616772164" expanded="true" signature="9502:9825" ph="&lt;.../&gt;" />
-          </folding>
         </state>
       </provider>
     </entry>

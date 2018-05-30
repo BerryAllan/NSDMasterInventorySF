@@ -217,7 +217,6 @@ C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\zxing.xml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\zxing.presentation.pdb
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\zxing.presentation.xml
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySFWPF.csprojAssemblyReference.cache
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\EditTable.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\ComboBoxBuilder.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\DatabaseManager.baml
@@ -256,3 +255,4 @@ C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\GenerateFromTable.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\ColumnChooser.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\ColumnChooser.g.cs
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySFWPF.csprojAssemblyReference.cache

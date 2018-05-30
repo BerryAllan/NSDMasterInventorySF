@@ -169,6 +169,17 @@ namespace NSDMasterInventorySF
 				conn.Close();
 			}
 
+			RecycledDataTable.RowChanged += (sender, args) =>
+			{
+				if(args.Action == DataRowAction.Change || args.Action == DataRowAction.Add || args.Action == DataRowAction.Delete)
+					RecycledDataTable.AcceptChanges();
+			};
+			RecycledDataTable.RowDeleted += (sender, args) =>
+			{
+				if(args.Action == DataRowAction.Delete)
+					RecycledDataTable.AcceptChanges();
+			};
+
 			var autoSaveTimer = new Timer(12000)
 			{
 				Enabled = true
@@ -238,29 +249,30 @@ namespace NSDMasterInventorySF
 			if (inventoried) return;
 
 			DataRow newRow = RecycledDataTable.NewRow();
-
-			foreach (string s in item) newRow[item.IndexOf(s)] = s;
+			for (int i = 0; i < item.Count; i++)
+				newRow[i] = item[i];
+			Debug.WriteLine(string.Join(" | ", newRow.ItemArray));
 
 			bool wasDeleted = false;
 			foreach (DataTable table in MainWindow.MasterDataSet.Tables)
 			{
 				for (int j = 0; j < table.Rows.Count; j++)
 				{
-					bool allEqual = true;
-					//Debug.WriteLine(string.Join(" | ", table.Rows[j].ItemArray));
-					for (int i = 0; i < table.Rows[j].ItemArray.Length; i++)
-					{
-						//Debug.WriteLine(table.Rows[j][i] + " :: " + newRow[i]);
-						if (table.Rows[j][i].ToString().Equals(newRow[i].ToString()))
-							continue;
-						allEqual = false;
-					}
+					var tableRowArr = table.Rows[j].ItemArray.ToList();
+					var newRowArr = newRow.ItemArray.ToList();
 
-					if (allEqual)
+					if (table.Columns[0].ColumnName.ToLower().Equals("inventoried") &&
+					    bool.TryParse(tableRowArr[0].ToString(), out _))
 					{
-						wasDeleted = true;
-						table.Rows[j].Delete();
+						tableRowArr.RemoveAt(0);
 					}
+					Debug.WriteLine(string.Join(string.Empty, tableRowArr));
+					Debug.WriteLine(string.Join(string.Empty, newRowArr));
+
+					if (!string.Join(string.Empty, tableRowArr)
+						.Equals(string.Join(string.Empty, newRowArr))) continue;
+					table.Rows[j].Delete();
+					wasDeleted = true;
 				}
 			}
 

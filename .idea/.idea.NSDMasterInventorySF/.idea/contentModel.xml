@@ -105,7 +105,6 @@
       </e>
       <e p="NSDMasterInventorySF.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="WPFInstaller\WPFInstaller.wixproj" t="IncludeRecursive" />
     </e>
   </component>
 </project>
