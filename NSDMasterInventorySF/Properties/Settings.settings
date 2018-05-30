@@ -9,16 +9,16 @@
       <Value Profile="(Default)">Inventory</Value>
     </Setting>
     <Setting Name="Schema" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Tables</Value>
+      <Value Profile="(Default)">IT Tables</Value>
     </Setting>
     <Setting Name="Server" Type="System.String" Scope="User">
       <Value Profile="(Default)">10.13.100.21\MSSQLSERVER_INV</Value>
     </Setting>
     <Setting Name="UserID" Type="System.String" Scope="User">
-      <Value Profile="(Default)">install</Value>
+      <Value Profile="(Default)">sa</Value>
     </Setting>
     <Setting Name="Password" Type="System.String" Scope="User">
-      <Value Profile="(Default)">cig1997</Value>
+      <Value Profile="(Default)">Info7310</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -1,521 +1,528 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
-    <PropertyGroup>
-        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{3491BAAF-E43D-4F7E-BE17-D2FEC288E674}</ProjectGuid>
-        <OutputType>WinExe</OutputType>
-        <RootNamespace>NSDMasterInventorySF</RootNamespace>
-        <AssemblyName>Rapid Recorder</AssemblyName>
-        <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-        <FileAlignment>512</FileAlignment>
-        <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-        <WarningLevel>4</WarningLevel>
-        <IsWebBootstrapper>false</IsWebBootstrapper>
-        <PublishUrl>publish\</PublishUrl>
-        <Install>true</Install>
-        <InstallFrom>Disk</InstallFrom>
-        <UpdateEnabled>false</UpdateEnabled>
-        <UpdateMode>Foreground</UpdateMode>
-        <UpdateInterval>7</UpdateInterval>
-        <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-        <UpdatePeriodically>false</UpdatePeriodically>
-        <UpdateRequired>false</UpdateRequired>
-        <MapFileExtensions>true</MapFileExtensions>
-        <ApplicationRevision>0</ApplicationRevision>
-        <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-        <UseApplicationTrust>false</UseApplicationTrust>
-        <BootstrapperEnabled>true</BootstrapperEnabled>
-        <LangVersion>7.2</LangVersion>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-        <PlatformTarget>AnyCPU</PlatformTarget>
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>full</DebugType>
-        <Optimize>false</Optimize>
-        <OutputPath>bin\Debug\</OutputPath>
-        <DefineConstants>DEBUG;TRACE</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-        <LangVersion>7.3</LangVersion>
-        <UseVSHostingProcess>true</UseVSHostingProcess>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-        <PlatformTarget>AnyCPU</PlatformTarget>
-        <DebugType>pdbonly</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\Release\</OutputPath>
-        <DefineConstants>TRACE</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-    </PropertyGroup>
-    <PropertyGroup>
-        <ApplicationIcon>Images\pete.ico</ApplicationIcon>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-        <DebugSymbols>true</DebugSymbols>
-        <OutputPath>bin\x64\Debug\</OutputPath>
-        <DefineConstants>DEBUG;TRACE</DefineConstants>
-        <DebugType>full</DebugType>
-        <PlatformTarget>x64</PlatformTarget>
-        <ErrorReport>prompt</ErrorReport>
-        <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-        <Prefer32Bit>true</Prefer32Bit>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-        <OutputPath>bin\x64\Release\</OutputPath>
-        <DefineConstants>TRACE</DefineConstants>
-        <Optimize>true</Optimize>
-        <DebugType>pdbonly</DebugType>
-        <PlatformTarget>x64</PlatformTarget>
-        <ErrorReport>prompt</ErrorReport>
-        <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-        <Prefer32Bit>true</Prefer32Bit>
-    </PropertyGroup>
-    <PropertyGroup>
-        <SignAssembly>false</SignAssembly>
-    </PropertyGroup>
-    <PropertyGroup>
-        <SignManifests>false</SignManifests>
-    </PropertyGroup>
-    <PropertyGroup>
-        <TargetZone>LocalIntranet</TargetZone>
-    </PropertyGroup>
-    <PropertyGroup>
-        <GenerateManifests>false</GenerateManifests>
-    </PropertyGroup>
-    <PropertyGroup>
-        <ApplicationManifest>app.manifest</ApplicationManifest>
-    </PropertyGroup>
-    <ItemGroup>
-        <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
-            <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
-        </Reference>
-        <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-            <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.2.3\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
-        </Reference>
-        <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-            <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.3\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
-        </Reference>
-        <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-            <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.3\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
-        </Reference>
-        <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-            <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
-        </Reference>
-        <Reference Include="Microsoft.Owin.Cors, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-            <HintPath>..\packages\Microsoft.Owin.Cors.4.0.0\lib\net451\Microsoft.Owin.Cors.dll</HintPath>
-        </Reference>
-        <Reference Include="Microsoft.Owin.Host.HttpListener, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-            <HintPath>..\packages\Microsoft.Owin.Host.HttpListener.4.0.0\lib\net451\Microsoft.Owin.Host.HttpListener.dll</HintPath>
-        </Reference>
-        <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-            <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
-        </Reference>
-        <Reference Include="Microsoft.Owin.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-            <HintPath>..\packages\Microsoft.Owin.Hosting.4.0.0\lib\net451\Microsoft.Owin.Hosting.dll</HintPath>
-        </Reference>
-        <Reference Include="Microsoft.Owin.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-            <HintPath>..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
-        </Reference>
-        <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-            <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-        </Reference>
-        <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
-            <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.dll</HintPath>
-        </Reference>
-        <Reference Include="NPOI.OOXML, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
-            <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OOXML.dll</HintPath>
-        </Reference>
-        <Reference Include="NPOI.OpenXml4Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
-            <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
-        </Reference>
-        <Reference Include="NPOI.OpenXmlFormats, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
-            <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
-        </Reference>
-        <Reference Include="Ookii.Dialogs.Wpf, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0c15020868fd6249, processorArchitecture=MSIL">
-            <HintPath>..\packages\Ookii.Dialogs.1.0\lib\net35\Ookii.Dialogs.Wpf.dll</HintPath>
-        </Reference>
-        <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
-            <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
-        </Reference>
-        <Reference Include="Syncfusion.Calculate.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Chart.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Compression.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Data.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
-        <Reference Include="Syncfusion.Diagram.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.DocIO.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.DocIO.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Edit.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Gantt.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Gauge.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Grid.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.GridCommon.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Linq.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.OfficeChart.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Olap.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.OlapChart.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.OlapChartConverter.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.OlapClient.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.OlapGauge.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.OlapGrid.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.OlapGridCommon.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.OlapGridConverter.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.OlapShared.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.OlapTools.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Pdf.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.PdfViewer.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.PivotAnalysis.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.PivotAnalysis.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.PivotGridConverter.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Presentation.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.ProjIO.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.PropertyGrid.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.ReportControls.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.ReportDesigner.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.ReportViewer.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.ReportWriter.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.RichTextBoxAdv.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Schedule.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfAccordion.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfBarcode.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfBulletGraph.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfBusyIndicator.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfCellGrid.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfChart.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
-        <Reference Include="Syncfusion.SfChromelessWindow.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfColorPalette.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfDiagram.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
-        <Reference Include="Syncfusion.SfGauge.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfGrid.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
-        <Reference Include="Syncfusion.SfGridCommon.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfHeatMap.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfHubTile.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfInput.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfKanban.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfMaps.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfNavigationDrawer.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfRadialMenu.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfRichTextBoxAdv.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfRichTextRibbon.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfSchedule.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfShared.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfSkinManager.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
-        <Reference Include="Syncfusion.SfSmithChart.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfSpellChecker.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfSpreadsheet.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfTreeMap.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.SfTreeNavigator.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Shared.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Shared.MVVM.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Shared.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
-        <Reference Include="Syncfusion.SpellChecker.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Themes.Blend.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Themes.Lime.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Themes.Metro.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
-        <Reference Include="Syncfusion.Themes.Office2010Black.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Themes.Office2010Blue.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Themes.Office2010Silver.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Themes.Office2013DarkGray.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Themes.Office2013LightGray.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Themes.Office2013White.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Themes.Office2016Colorful.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Themes.Office2016DarkGray.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Themes.Office2016White.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Themes.Office365.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Themes.Saffron.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Themes.VisualStudio2013.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Themes.VisualStudio2015.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.Tools.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
-        <Reference Include="Syncfusion.XlsIO.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="Syncfusion.XlsIO.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
-        <Reference Include="System"/>
-        <Reference Include="System.ComponentModel"/>
-        <Reference Include="System.ComponentModel.DataAnnotations"/>
-        <Reference Include="System.Configuration"/>
-        <Reference Include="System.Configuration.Install"/>
-        <Reference Include="System.Data"/>
-        <Reference Include="System.Drawing.Design"/>
-        <Reference Include="System.Management"/>
-        <Reference Include="System.Net.Http"/>
-        <Reference Include="System.Runtime"/>
-        <Reference Include="System.Transactions"/>
-        <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-            <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
-        </Reference>
-        <Reference Include="System.Web.Cors, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-            <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.6\lib\net45\System.Web.Cors.dll</HintPath>
-        </Reference>
-        <Reference Include="System.Xml"/>
-        <Reference Include="Microsoft.CSharp"/>
-        <Reference Include="System.Core"/>
-        <Reference Include="System.Xml.Linq"/>
-        <Reference Include="System.Data.DataSetExtensions"/>
-        <Reference Include="System.Drawing"/>
-        <Reference Include="System.Runtime.Serialization.Formatters.Soap"/>
-        <Reference Include="System.Windows.Forms"/>
-        <Reference Include="UIAutomationProvider"/>
-        <Reference Include="UIAutomationTypes"/>
-        <Reference Include="WindowsFormsIntegration"/>
-        <Reference Include="System.Xaml">
-            <RequiredTargetFramework>4.0</RequiredTargetFramework>
-        </Reference>
-        <Reference Include="WindowsBase"/>
-        <Reference Include="PresentationCore"/>
-        <Reference Include="PresentationFramework"/>
-        <Reference Include="zxing, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
-            <HintPath>..\packages\ZXing.Net.0.16.4\lib\net461\zxing.dll</HintPath>
-        </Reference>
-        <Reference Include="zxing.presentation, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
-            <HintPath>..\packages\ZXing.Net.0.16.4\lib\net461\zxing.presentation.dll</HintPath>
-        </Reference>
-    </ItemGroup>
-    <ItemGroup>
-        <ApplicationDefinition Include="App.xaml">
-            <Generator>MSBuild:Compile</Generator>
-            <SubType>Designer</SubType>
-        </ApplicationDefinition>
-        <Compile Include="ColumnChooser.xaml.cs">
-            <DependentUpon>ColumnChooser.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="EditTable.xaml.cs">
-            <DependentUpon>EditTable.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="ComboBoxBuilder.xaml.cs">
-            <DependentUpon>ComboBoxBuilder.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="DatabaseManager.xaml.cs">
-            <DependentUpon>DatabaseManager.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="FindAndReplace.xaml.cs">
-            <DependentUpon>FindAndReplace.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="GenerateFromTable.xaml.cs">
-            <DependentUpon>GenerateFromTable.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="io\BarcodeGenerator.cs"/>
-        <Compile Include="io\ConfigGenerator.cs"/>
-        <Compile Include="io\ExcelWriter.cs"/>
-        <Compile Include="io\SqlDependencyEx.cs"/>
-        <Compile Include="io\SvWriter.cs"/>
-        <Compile Include="io\ConfigurationEcnrypterDecrypter.cs"/>
-        <Compile Include="PrefabBuilder.xaml.cs">
-            <DependentUpon>PrefabBuilder.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="PrefabManager.xaml.cs">
-            <DependentUpon>PrefabManager.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="Properties\Resources.Designer.cs">
-            <AutoGen>True</AutoGen>
-            <DesignTime>True</DesignTime>
-            <DependentUpon>Resources.resx</DependentUpon>
-        </Compile>
-        <Compile Include="Recyled.xaml.cs">
-            <DependentUpon>Recycled.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="RestorationManager.xaml.cs">
-            <DependentUpon>RestorationManager.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="Settings.cs"/>
-        <Compile Include="StyleChooser.xaml.cs">
-            <DependentUpon>StyleChooser.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="TableManager.xaml.cs">
-            <DependentUpon>TableManager.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="ui\CellStyleSelector.cs"/>
-        <Compile Include="ui\DataGridBehavior.cs"/>
-        <Compile Include="ui\GridColumnExtension.cs"/>
-        <Compile Include="ui\RowIndexConverter.cs"/>
-        <Compile Include="ui\SearchHelperExt.cs"/>
-        <Compile Include="ui\SfDataGridExt.cs"/>
-        <Compile Include="ui\UiHelper.cs"/>
-        <Page Include="ColumnChooser.xaml">
-            <SubType>Designer</SubType>
-            <Generator>MSBuild:Compile</Generator>
-        </Page>
-        <Page Include="EditTable.xaml">
-            <SubType>Designer</SubType>
-            <Generator>MSBuild:Compile</Generator>
-        </Page>
-        <Page Include="ComboBoxBuilder.xaml">
-            <Generator>MSBuild:Compile</Generator>
-            <SubType>Designer</SubType>
-        </Page>
-        <Page Include="DatabaseManager.xaml">
-            <SubType>Designer</SubType>
-            <Generator>MSBuild:Compile</Generator>
-        </Page>
-        <Page Include="FindAndReplace.xaml">
-            <SubType>Designer</SubType>
-            <Generator>MSBuild:Compile</Generator>
-        </Page>
-        <Page Include="GenerateFromTable.xaml">
-            <SubType>Designer</SubType>
-            <Generator>MSBuild:Compile</Generator>
-        </Page>
-        <Page Include="MainWindow.xaml">
-            <Generator>MSBuild:Compile</Generator>
-            <SubType>Designer</SubType>
-        </Page>
-        <Compile Include="App.xaml.cs">
-            <DependentUpon>App.xaml</DependentUpon>
-            <SubType>Code</SubType>
-        </Compile>
-        <Compile Include="MainWindow.xaml.cs">
-            <DependentUpon>MainWindow.xaml</DependentUpon>
-            <SubType>Code</SubType>
-        </Compile>
-        <Page Include="PrefabBuilder.xaml">
-            <Generator>MSBuild:Compile</Generator>
-            <SubType>Designer</SubType>
-        </Page>
-        <Page Include="PrefabManager.xaml">
-            <Generator>MSBuild:Compile</Generator>
-            <SubType>Designer</SubType>
-        </Page>
-        <Page Include="Recycled.xaml">
-            <SubType>Designer</SubType>
-            <Generator>MSBuild:Compile</Generator>
-        </Page>
-        <Page Include="RestorationManager.xaml">
-            <SubType>Designer</SubType>
-            <Generator>MSBuild:Compile</Generator>
-        </Page>
-        <Page Include="StyleChooser.xaml">
-            <SubType>Designer</SubType>
-            <Generator>MSBuild:Compile</Generator>
-        </Page>
-        <Page Include="TableManager.xaml">
-            <SubType>Designer</SubType>
-            <Generator>MSBuild:Compile</Generator>
-        </Page>
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="Properties\AssemblyInfo.cs">
-            <SubType>Code</SubType>
-        </Compile>
-        <Compile Include="Properties\Settings.Designer.cs">
-            <AutoGen>True</AutoGen>
-            <DependentUpon>Settings.settings</DependentUpon>
-            <DesignTimeSharedInput>True</DesignTimeSharedInput>
-        </Compile>
-        <None Include="app.config">
-            <SubType>Designer</SubType>
-        </None>
-        <None Include="app.manifest">
-            <SubType>Designer</SubType>
-        </None>
-        <None Include="packages.config"/>
-        <None Include="Properties\app.manifest"/>
-        <None Include="Properties\Settings.settings">
-            <Generator>SettingsSingleFileGenerator</Generator>
-            <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-        </None>
-        <None Include="Scripts\jquery-3.3.1.min.map"/>
-        <None Include="Scripts\jquery-3.3.1.slim.min.map"/>
-    </ItemGroup>
-    <ItemGroup>
-        <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
-            <Visible>False</Visible>
-            <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
-            <Install>true</Install>
-        </BootstrapperPackage>
-        <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-            <Visible>False</Visible>
-            <ProductName>.NET Framework 3.5 SP1</ProductName>
-            <Install>false</Install>
-        </BootstrapperPackage>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\pete.ico"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\table-save.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\datamatrix.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\DataTable_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\ConnectToDatabase_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\Table_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\Schema_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\Export_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\ExcelWorksheetView_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\Comma_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\SharedModule_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\RuntimeToolbar_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\Restart_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\Close_red_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\ResetTimelineView_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\DeleteTableRow_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\Backward_16xMD.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\RestoreDefaultView_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\GroupClause_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\StyleBlock_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\Undo_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\FindSymbol_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\FindDown_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\DeleteTable_16x.png"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Resource Include="Images\NewKPI_16x.png"/>
-        <Content Include="Scripts\jquery-3.3.1.intellisense.js"/>
-        <Content Include="Scripts\jquery-3.3.1.js"/>
-        <Content Include="Scripts\jquery-3.3.1.min.js"/>
-        <Content Include="Scripts\jquery-3.3.1.slim.js"/>
-        <Content Include="Scripts\jquery-3.3.1.slim.min.js"/>
-        <Content Include="Scripts\jquery.signalR-2.2.3.js"/>
-        <Content Include="Scripts\jquery.signalR-2.2.3.min.js"/>
-    </ItemGroup>
-    <ItemGroup>
-        <EmbeddedResource Include="Properties\Resources.resx">
-            <SubType>Designer</SubType>
-            <Generator>ResXFileCodeGenerator</Generator>
-            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-        </EmbeddedResource>
-    </ItemGroup>
-    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3491BAAF-E43D-4F7E-BE17-D2FEC288E674}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NSDMasterInventorySF</RootNamespace>
+    <AssemblyName>Rapid Recorder</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\pete.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.2.3\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.3\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.3\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.4.0.0\lib\net451\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.HttpListener, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.HttpListener.4.0.0\lib\net451\Microsoft.Owin.Host.HttpListener.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Hosting.4.0.0\lib\net451\Microsoft.Owin.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Ookii.Dialogs.Wpf, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0c15020868fd6249, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ookii.Dialogs.1.0\lib\net35\Ookii.Dialogs.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Calculate.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Chart.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Compression.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Data.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
+    <Reference Include="Syncfusion.Diagram.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.DocIO.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.DocIO.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Edit.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Gantt.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Gauge.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Grid.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.GridCommon.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Linq.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.OfficeChart.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Olap.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.OlapChart.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.OlapChartConverter.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.OlapClient.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.OlapGauge.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.OlapGrid.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.OlapGridCommon.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.OlapGridConverter.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.OlapShared.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.OlapTools.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Pdf.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.PdfViewer.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.PivotAnalysis.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.PivotAnalysis.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.PivotGridConverter.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Presentation.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.ProjIO.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.PropertyGrid.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.ReportControls.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.ReportDesigner.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.ReportViewer.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.ReportWriter.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.RichTextBoxAdv.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Schedule.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfAccordion.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfBarcode.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfBulletGraph.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfBusyIndicator.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfCellGrid.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfChart.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
+    <Reference Include="Syncfusion.SfChromelessWindow.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfColorPalette.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfDiagram.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
+    <Reference Include="Syncfusion.SfGauge.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfGrid.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
+    <Reference Include="Syncfusion.SfGridCommon.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfHeatMap.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfHubTile.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfInput.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfKanban.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfMaps.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfNavigationDrawer.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfRadialMenu.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfRichTextBoxAdv.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfRichTextRibbon.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfSchedule.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfShared.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfSkinManager.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
+    <Reference Include="Syncfusion.SfSmithChart.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfSpellChecker.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfSpreadsheet.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfTreeMap.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfTreeNavigator.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Shared.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Shared.MVVM.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Shared.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
+    <Reference Include="Syncfusion.SpellChecker.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Themes.Blend.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Themes.Lime.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Themes.Metro.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
+    <Reference Include="Syncfusion.Themes.Office2010Black.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Themes.Office2010Blue.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Themes.Office2010Silver.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Themes.Office2013DarkGray.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Themes.Office2013LightGray.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Themes.Office2013White.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Themes.Office2016Colorful.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Themes.Office2016DarkGray.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Themes.Office2016White.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Themes.Office365.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Themes.Saffron.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Themes.VisualStudio2013.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Themes.VisualStudio2015.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.Tools.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
+    <Reference Include="Syncfusion.XlsIO.Base, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.XlsIO.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="System"/>
+    <Reference Include="System.ComponentModel"/>
+    <Reference Include="System.ComponentModel.DataAnnotations"/>
+    <Reference Include="System.Configuration"/>
+    <Reference Include="System.Configuration.Install"/>
+    <Reference Include="System.Data"/>
+    <Reference Include="System.Drawing.Design"/>
+    <Reference Include="System.Management"/>
+    <Reference Include="System.Net.Http"/>
+    <Reference Include="System.Runtime"/>
+    <Reference Include="System.Transactions"/>
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.6\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml"/>
+    <Reference Include="Microsoft.CSharp"/>
+    <Reference Include="System.Core"/>
+    <Reference Include="System.Xml.Linq"/>
+    <Reference Include="System.Data.DataSetExtensions"/>
+    <Reference Include="System.Drawing"/>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap"/>
+    <Reference Include="System.Windows.Forms"/>
+    <Reference Include="UIAutomationProvider"/>
+    <Reference Include="UIAutomationTypes"/>
+    <Reference Include="WindowsFormsIntegration"/>
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase"/>
+    <Reference Include="PresentationCore"/>
+    <Reference Include="PresentationFramework"/>
+    <Reference Include="zxing, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net461\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net461\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ColumnChooser.xaml.cs">
+      <DependentUpon>ColumnChooser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseManagerError.xaml.cs">
+      <DependentUpon>DatabaseManagerError.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditTable.xaml.cs">
+      <DependentUpon>EditTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComboBoxBuilder.xaml.cs">
+      <DependentUpon>ComboBoxBuilder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseManager.xaml.cs">
+      <DependentUpon>DatabaseManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FindAndReplace.xaml.cs">
+      <DependentUpon>FindAndReplace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateFromTable.xaml.cs">
+      <DependentUpon>GenerateFromTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="io\BarcodeGenerator.cs"/>
+    <Compile Include="io\ConfigGenerator.cs"/>
+    <Compile Include="io\ExcelWriter.cs"/>
+    <Compile Include="io\SqlDependencyEx.cs"/>
+    <Compile Include="io\SvWriter.cs"/>
+    <Compile Include="io\ConfigurationEcnrypterDecrypter.cs"/>
+    <Compile Include="PrefabBuilder.xaml.cs">
+      <DependentUpon>PrefabBuilder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PrefabManager.xaml.cs">
+      <DependentUpon>PrefabManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Recyled.xaml.cs">
+      <DependentUpon>Recycled.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RestorationManager.xaml.cs">
+      <DependentUpon>RestorationManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs"/>
+    <Compile Include="StyleChooser.xaml.cs">
+      <DependentUpon>StyleChooser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TableManager.xaml.cs">
+      <DependentUpon>TableManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ui\CellStyleSelector.cs"/>
+    <Compile Include="ui\DataGridBehavior.cs"/>
+    <Compile Include="ui\GridColumnExtension.cs"/>
+    <Compile Include="ui\RowIndexConverter.cs"/>
+    <Compile Include="ui\SearchHelperExt.cs"/>
+    <Compile Include="ui\SfDataGridExt.cs"/>
+    <Compile Include="ui\UiHelper.cs"/>
+    <Page Include="ColumnChooser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DatabaseManagerError.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EditTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComboBoxBuilder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DatabaseManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FindAndReplace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GenerateFromTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="PrefabBuilder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PrefabManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Recycled.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RestorationManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StyleChooser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TableManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config"/>
+    <None Include="Properties\app.manifest"/>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Scripts\jquery-3.3.1.min.map"/>
+    <None Include="Scripts\jquery-3.3.1.slim.min.map"/>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pete.ico"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\table-save.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\datamatrix.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DataTable_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ConnectToDatabase_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Table_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Schema_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Export_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ExcelWorksheetView_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Comma_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SharedModule_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RuntimeToolbar_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Restart_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Close_red_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ResetTimelineView_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DeleteTableRow_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Backward_16xMD.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RestoreDefaultView_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GroupClause_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\StyleBlock_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Undo_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\FindSymbol_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\FindDown_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DeleteTable_16x.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NewKPI_16x.png"/>
+    <Content Include="Scripts\jquery-3.3.1.intellisense.js"/>
+    <Content Include="Scripts\jquery-3.3.1.js"/>
+    <Content Include="Scripts\jquery-3.3.1.min.js"/>
+    <Content Include="Scripts\jquery-3.3.1.slim.js"/>
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js"/>
+    <Content Include="Scripts\jquery.signalR-2.2.3.js"/>
+    <Content Include="Scripts\jquery.signalR-2.2.3.min.js"/>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 </Project>

@@ -126,22 +126,6 @@ namespace NSDMasterInventorySF
 		{
 			try
 			{
-				using (var conn = new SqlConnection(
-					$"Server={ServerBox.Text};Database={DatabaseComboBox.Text};User ID={UserIDBox.Text};Password={PasswordBox.Password};"))
-				{
-					if (!SchemaComboBox.Items.Contains(SchemaComboBox.Text))
-					{
-						conn.Open();
-
-						using (var comm = new SqlCommand($"CREATE SCHEMA [{SchemaComboBox.Text}]", conn))
-						{
-							comm.ExecuteNonQuery();
-						}
-
-						conn.Close();
-					}
-				}
-
 				Settings.Default.Server = ServerBox.Text;
 				Settings.Default.Database = DatabaseComboBox.Text;
 				Settings.Default.UserID = UserIDBox.Text;
@@ -152,7 +136,7 @@ namespace NSDMasterInventorySF
 				App.ConnectionString =
 					$"Server={Settings.Default.Server};Database={Settings.Default.Database};User ID={Settings.Default.UserID};Password={Settings.Default.Password};";
 
-				_window.InitializeOrRefreshEverything(_window.MasterTabControl.SelectedIndex);
+				App.Restart();
 
 				Close();
 			}

@@ -3,6 +3,10 @@
   <component name="ContentModelStore">
     <e p="C:\Users\titom\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_NSDMasterInventorySF.2043959596.00" t="ExcludeRecursive" />
     <e p="C:\Users\titom\source\repos\NSDMasterInventorySF" t="IncludeFlat">
+      <e p="AI Setup Project" t="IncludeRecursive">
+        <e p="AI Setup Project.aip" t="Include" />
+        <e p="AI Setup Project.aiproj" t="IncludeRecursive" />
+      </e>
       <e p="NSDMasterInventorySF" t="IncludeRecursive">
         <e p="app.config" t="Include" />
         <e p="app.manifest" t="Include" />
@@ -15,6 +19,8 @@
         <e p="ComboBoxBuilder.xaml.cs" t="Include" />
         <e p="DatabaseManager.xaml" t="Include" />
         <e p="DatabaseManager.xaml.cs" t="Include" />
+        <e p="DatabaseManagerError.xaml" t="Include" />
+        <e p="DatabaseManagerError.xaml.cs" t="Include" />
         <e p="EditTable.xaml" t="Include" />
         <e p="EditTable.xaml.cs" t="Include" />
         <e p="FindAndReplace.xaml" t="Include" />

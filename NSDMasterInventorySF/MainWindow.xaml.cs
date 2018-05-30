@@ -36,23 +36,6 @@ namespace NSDMasterInventorySF
 		{
 			InitializeComponent();
 
-			try
-			{
-				using (var conn = new SqlConnection(App.ConnectionString))
-				{
-					conn.Open();
-					conn.Close();
-				}
-			}
-			catch
-			{
-				MessageBox.Show(
-					"Failed to connect to specified server. \nEnsure your server is running, and that you have the correct fields entered in C:\\ProgramFiles (x86)\\SpeedyFeet Inc\\Rapid Recorder\\Rapid Recorder.exe.config.",
-					"Severe Failure!", MessageBoxButton.OK, MessageBoxImage.Error);
-				Application.Current.Shutdown();
-				return;
-			}
-
 			Recycled.FillRecycledDataTable();
 
 			NewRowCommand.InputGestures.Add(new KeyGesture(Key.N, ModifierKeys.Control));

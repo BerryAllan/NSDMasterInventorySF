@@ -51,8 +51,7 @@ namespace NSDMasterInventorySF
 													 dest.dbid = db_id('{Settings.Default.Database}')
 										ORDER BY deqs.last_execution_time DESC";
 
-		public static volatile string ConnectionString =
-			$"Server={Settings.Default.Server};Database={Settings.Default.Database};User ID={Settings.Default.UserID};Password={Settings.Default.Password};";
+		public static volatile string ConnectionString;
 
 		//Client stuff
 		private static readonly Random Random = new Random();
@@ -71,6 +70,26 @@ namespace NSDMasterInventorySF
 			_dispatcher = Dispatcher;
 
 			ConfigurationEcnrypterDecrypter.UnEncryptConfig();
+			ConnectionString =
+				$"Server={Settings.Default.Server};Database={Settings.Default.Database};User ID={Settings.Default.UserID};Password={Settings.Default.Password};";
+			try
+			{
+				using (var conn = new SqlConnection(ConnectionString))
+				{
+					conn.Open();
+					conn.Close();
+				}
+			}
+			catch
+			{
+
+				DatabaseManagerError dme = new DatabaseManagerError
+				{
+					ShowInTaskbar = true
+				};
+				dme.ShowDialog();
+				return;
+			}
 			using (var conn = new SqlConnection(ConnectionString))
 			{
 				conn.Open();

@@ -256,3 +256,5 @@ C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\ColumnChooser.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\ColumnChooser.g.cs
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySFWPF.csprojAssemblyReference.cache
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\DatabaseManagerError.baml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\DatabaseManagerError.g.cs
