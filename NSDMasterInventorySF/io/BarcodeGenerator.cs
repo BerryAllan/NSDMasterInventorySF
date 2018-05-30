@@ -1,11 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows;
-using Syncfusion.Data.Extensions;
 using ZXing;
 using ZXing.Datamatrix;
 using ZXing.Datamatrix.Encoder;
@@ -25,8 +22,7 @@ namespace NSDMasterInventorySF.io
 			double progress = 0;
 			double totalItems = 0;
 			foreach (DataTable table in dataTables.Tables)
-			foreach (DataRow row in table.Rows)
-				totalItems++;
+				totalItems += table.Rows.Count;
 			foreach (DataTable table in dataTables.Tables)
 			{
 				foreach (DataRow row in table.Rows)
@@ -76,7 +72,7 @@ namespace NSDMasterInventorySF.io
 						{
 							if (window.ProgressGrid.Visibility != Visibility.Visible)
 							{
-								window.ProgressTextBlock.Text = "Barcode Generation In Progress...";
+								window.ProgressTextBlock.Text = "Barcodes Generating...";
 								window.ProgressGrid.Visibility = Visibility.Visible;
 							}
 							window.ProgressBar.Value = progress / totalItems * 100.0;

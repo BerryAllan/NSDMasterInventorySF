@@ -7,7 +7,6 @@ using System.Windows;
 using System.Windows.Input;
 using NSDMasterInventorySF.Properties;
 using Syncfusion.SfSkinManager;
-using Syncfusion.Windows.Tools.Controls;
 using SelectionChangedEventArgs = System.Windows.Controls.SelectionChangedEventArgs;
 
 namespace NSDMasterInventorySF

@@ -21,6 +21,7 @@ using ZXing;
 using Cursors = System.Windows.Forms.Cursors;
 using DataColumn = System.Data.DataColumn;
 using DataRow = System.Data.DataRow;
+using Enum = System.Enum;
 using TextChangedEventArgs = System.Windows.Controls.TextChangedEventArgs;
 using Timer = System.Timers.Timer;
 
@@ -497,7 +498,7 @@ namespace NSDMasterInventorySF
 			DataRow newRow = dt.NewRow();
 			dt.Rows.Add(newRow);
 			int index = dt.Rows.IndexOf(newRow);
-			
+
 			if (dt.Columns[0].ColumnName.Equals("Inventoried"))
 				dt.Rows[index][0] = true;
 			int i = MasterDataSet.Tables[MasterTabControl.SelectedIndex].Columns[0].ColumnName.Equals("Inventoried")

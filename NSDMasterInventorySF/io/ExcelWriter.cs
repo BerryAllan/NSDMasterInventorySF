@@ -12,13 +12,12 @@ using DataRow = System.Data.DataRow;
 
 namespace NSDMasterInventorySF.io
 {
-	public class ExcelWriter
+	public static class ExcelWriter
 	{
 		public static void Write(DataSet dataTables, string excelFilePath, bool isXssf)
 		{
 			Cursor.Current = Cursors.AppStarting;
-			IWorkbook workbook;
-			workbook = isXssf ? (IWorkbook) new XSSFWorkbook() : new HSSFWorkbook();
+			IWorkbook workbook = isXssf ? (IWorkbook) new XSSFWorkbook() : new HSSFWorkbook();
 
 			DataTable recycledTable = Recycled.RecycledDataTable.Copy();
 			recycledTable.TableName = "RECYCLED";
@@ -50,6 +49,7 @@ namespace NSDMasterInventorySF.io
 				}
 
 				//Debug.WriteLine(row0.GetCell(0).ToString());
+
 				if (row0.GetCell(0).ToString().Equals("Inventoried") &&
 				    MainWindow.MasterDataGrids[dataTables.Tables.IndexOf(table)].Columns[0] is GridCheckBoxColumn)
 					for (var i = 2; i <= sheet.LastRowNum; i++)
@@ -57,19 +57,16 @@ namespace NSDMasterInventorySF.io
 						IRow row = sheet.GetRow(i);
 						ICell cell = row.GetCell(0);
 
-						if (cell != null)
-						{
-							ICellStyle style = workbook.CreateCellStyle();
+						if (cell == null) continue;
+						ICellStyle style = workbook.CreateCellStyle();
 
-							if (table.Rows[i - 2][0].ToString().ToLower().Equals("true"))
-								style.FillForegroundColor = IndexedColors.LightGreen.Index;
-							else
-								style.FillForegroundColor = IndexedColors.Rose.Index;
+						style.FillForegroundColor = table.Rows[i - 2][0].ToString().ToLower().Equals("true")
+							? IndexedColors.LightGreen.Index
+							: IndexedColors.Rose.Index;
 
-							style.FillPattern = FillPattern.SolidForeground;
-							//System.out.println(itemSchools.get(i - counter).isInventoried());
-							cell.CellStyle = style;
-						}
+						style.FillPattern = FillPattern.SolidForeground;
+						//System.out.println(itemSchools.get(i - counter).isInventoried());
+						cell.CellStyle = style;
 					}
 			}
 

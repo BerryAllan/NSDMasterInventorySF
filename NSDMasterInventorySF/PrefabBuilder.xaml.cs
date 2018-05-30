@@ -10,7 +10,6 @@ using System.Windows.Input;
 using NSDMasterInventorySF.Properties;
 using Syncfusion.SfSkinManager;
 using Syncfusion.UI.Xaml.Grid;
-using Syncfusion.Windows.Forms.Collections;
 using Cursors = System.Windows.Forms.Cursors;
 using DataRow = System.Data.DataRow;
 
