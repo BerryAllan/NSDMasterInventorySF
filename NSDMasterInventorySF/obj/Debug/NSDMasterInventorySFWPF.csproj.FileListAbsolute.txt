@@ -68,6 +68,7 @@ C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Syncfusion.SfGauge.WPF.dll
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Syncfusion.SfGrid.WPF.dll
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Syncfusion.SfGridCommon.WPF.dll
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Syncfusion.SfGridConverter.WPF.dll
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Syncfusion.SfHeatMap.WPF.dll
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Syncfusion.SfHubTile.WPF.dll
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Syncfusion.SfInput.WPF.dll
@@ -108,6 +109,7 @@ C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Syncfusion.Tools.WPF.dll
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Syncfusion.XlsIO.Base.dll
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Syncfusion.XlsIO.Wpf.dll
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\System.Security.Cryptography.ProtectedData.dll
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\System.ValueTuple.dll
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\System.Web.Cors.dll
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\zxing.dll
@@ -173,6 +175,7 @@ C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Syncfusion.SfGauge.WPF.xml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Syncfusion.SfGrid.WPF.xml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Syncfusion.SfGridCommon.WPF.xml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Syncfusion.SfGridConverter.WPF.xml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Syncfusion.SfHeatMap.WPF.xml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Syncfusion.SfHubTile.WPF.xml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\Syncfusion.SfInput.WPF.xml
@@ -217,19 +220,21 @@ C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\zxing.xml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\zxing.presentation.pdb
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\bin\Debug\zxing.presentation.xml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\ColumnChooser.baml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\DatabaseManagerError.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\EditTable.baml
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\ComboBoxBuilder.baml
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\DatabaseManager.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\FindAndReplace.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\PrefabManager.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Recycled.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\RestorationManager.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\StyleChooser.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\TableManager.baml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\ColumnChooser.g.cs
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\DatabaseManagerError.g.cs
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\EditTable.g.cs
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\ComboBoxBuilder.g.cs
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\DatabaseManager.g.cs
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\FindAndReplace.g.cs
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\GenerateFromTable.g.cs
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\MainWindow.g.cs
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\PrefabBuilder.g.cs
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\PrefabManager.g.cs
@@ -242,19 +247,23 @@ C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Rapid Recorder_MarkupCompile.cache
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Rapid Recorder_MarkupCompile.lref
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\ComboBoxBuilder.baml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\GenerateFromTable.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\MainWindow.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\PrefabBuilder.baml
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Rapid Recorder.g.resources
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySF.Properties.Resources.resources
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySFWPF.csproj.GenerateResource.cache
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Rapid Recorder.exe
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Rapid Recorder.pdb
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\GenerateFromTable.g.cs
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\GenerateFromTable.baml
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\ColumnChooser.baml
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\ColumnChooser.g.cs
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\DatabaseManagerError.baml
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\DatabaseManagerError.g.cs
-C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySFWPF.csprojAssemblyReference.cache
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySFWPF.csproj.CoreCompileInputs.cache
 C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySFWPF.csproj.CopyComplete
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Rapid Recorder.exe
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\Rapid Recorder.pdb
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\NSDMasterInventorySFWPF.csprojAssemblyReference.cache
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\ConnectionManager.baml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\ConnectionManager.g.cs
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\DatabaseManager.g.cs
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\DatabaseManager.baml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\SpreadsheetEditor.g.cs
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\SpreadsheetEditor.baml
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\AboutWindow.g.cs
+C:\Users\titom\source\repos\NSDMasterInventorySF\NSDMasterInventorySF\obj\Debug\AboutWindow.baml

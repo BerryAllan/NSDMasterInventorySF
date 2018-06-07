@@ -1,0 +1,70 @@
+﻿<Page
+	x:Class="NSDMasterInventorySFUWP.MasterTablePage"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="using:NSDMasterInventorySFUWP"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+	xmlns:input="using:Syncfusion.UI.Xaml.Controls.Input"
+	mc:Ignorable="d" RequestedTheme="Default">
+	<controls:DockPanel>
+		<controls:WrapPanel controls:DockPanel.Dock="Top" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left">
+			<AutoSuggestBox x:FieldModifier="public" Name="SearchBox" PlaceholderText="Find" TextChanged="SearchBox_TextChanged" QueryIcon="Find"
+			                QuerySubmitted="SearchBox_OnQuerySubmitted" SuggestionChosen="SearchBox_OnSuggestionChosen"
+			                Width="250" />
+			<Button x:FieldModifier="public" Name="NewRowButton" Margin="10,0,0,0" Click="NewRowButton_OnClick">
+				<StackPanel Orientation="Horizontal">
+					<SymbolIcon Symbol="ShowBcc" />
+					<TextBlock Text="New Row" Margin="5,0,0,0" />
+				</StackPanel>
+			</Button>
+			<AppBarSeparator />
+			<ToggleButton x:FieldModifier="public" Name="DefaultSortingButton" Margin="0,0,0,0" Click="ResetSorting">
+				<StackPanel Orientation="Horizontal">
+					<SymbolIcon Symbol="Bullets" />
+					<TextBlock Text="Default Sorting and Filtering" Margin="5,0,0,0" />
+				</StackPanel>
+			</ToggleButton>
+			<ToggleButton x:FieldModifier="public" Name="DefaultGroupingButton" Margin="10,0,0,0" Checked="ResetGrouping" Unchecked="UnResetGrouping">
+				<StackPanel Orientation="Horizontal">
+					<SymbolIcon Symbol="Bookmarks" />
+					<TextBlock Text="Default Grouping" Margin="5,0,0,0" />
+				</StackPanel>
+			</ToggleButton>
+			<AppBarSeparator />
+			<ToggleButton x:FieldModifier="public" Name="DeleteModeButton" Margin="0,0,0,0" Click="EnterDeleteMode">
+				<StackPanel Orientation="Horizontal" >
+					<SymbolIcon Symbol="Cancel" />
+					<TextBlock Text="Delete Mode" Margin="5,0,0,0" />
+				</StackPanel>
+			</ToggleButton>
+			<AppBarSeparator />
+			<Button x:FieldModifier="public" Name="RefreshAll" Click="RefreshAll_OnClick">
+				<StackPanel Orientation="Horizontal">
+					<SymbolIcon Symbol="Refresh" />
+					<TextBlock Text="Refresh" Margin="5,0,0,0" />
+				</StackPanel>
+				<Button.KeyboardAccelerators>
+					<KeyboardAccelerator Modifiers="Control" Key="R" />
+				</Button.KeyboardAccelerators>
+			</Button>
+		</controls:WrapPanel>
+		<controls:DockPanel Dock="Bottom" Margin="10">
+			<Button x:FieldModifier="public" Click="InventoryItemButton" Name="BarcodeButton" Content="Inventory Item" controls:DockPanel.Dock="Right" Margin="10,0,0,0" />
+			<TextBox x:FieldModifier="public" KeyDown="InventoryItem" Name="BarcodeTextBox" PlaceholderText="Enter Barcode Here" controls:DockPanel.Dock="Left" />
+		</controls:DockPanel>
+		<Pivot x:FieldModifier="public" Name="MasterPivot" />
+		<controls:DockPanel.KeyboardAccelerators>
+			<KeyboardAccelerator Modifiers="Control" Key="Tab" Invoked="ChangeTabKeyboardAcceleratorOnInvoked" />
+			<KeyboardAccelerator Modifiers="Control" Key="N" Invoked="NewRowOnInvoked" />
+			<KeyboardAccelerator Modifiers="Control" Key="R" Invoked="RefreshOnInvoked"/>
+			<KeyboardAccelerator Modifiers="Control" Key="S" Invoked="SetSortingOnInvoked" />
+			<KeyboardAccelerator Modifiers="Control" Key="G" Invoked="SetGroupingOnInvoked"/>
+			<KeyboardAccelerator Modifiers="Control" Key="D" Invoked="DeleteModeOnInvoked" />
+			<KeyboardAccelerator Modifiers="Control" Key="F" Invoked="FindOnInvoked" />
+			<KeyboardAccelerator Modifiers="Control, Shift" Key="F" Invoked="FindReplaceOnInvoked" />
+		</controls:DockPanel.KeyboardAccelerators>
+	</controls:DockPanel>
+
+</Page>

@@ -1,0 +1,2893 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfRibbon.UWP</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackstage">
+            <summary>
+            Represents class for SfBackStage
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackstage.#ctor">
+            <summary>
+            Initializes a new instance of the  class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackstage.SelectedItem">
+            <summary>
+            Gets or sets the SelectedItem.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackstage.SelectedItemProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for SelectedItem.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackstage.IsDropDownOpen">
+            <summary>
+            Gets or sets the IsDropDownOpen.
+            </summary>
+            <value>
+            The default value is false.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackstage.IsDropDownOpenProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for IsDropDownOpen.  This enables animation, styling, binding, etc...
+             </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackstage.Header">
+            <summary>
+            Gets or sets the Header.
+            </summary>
+            <value>
+            The default value is string.Empty.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackstage.HeaderProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Header.  This enables animation, styling, binding, etc...
+             </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackstage.PrepareContainerForItemOverride(Windows.UI.Xaml.DependencyObject,System.Object)">
+            <summary>
+            Arranges the container for overrided items
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackstage.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container
+            </summary> 
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackstage.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item
+            </summary> 
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackstage.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements of the SfBackStage 
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageButton">
+            <summary>
+            Represents class for SfBackStageButton
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageButton.#ctor">
+            <summary>
+            Initializes a new instance of the  class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageButton.Label">
+            <summary>
+            Gets or sets the Label.
+            </summary>
+            <value>
+            The default value is string.Empty
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageButton.LabelProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Label.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageButton.SizeMode">
+            <summary>
+            Gets or sets the SizeMode.
+            </summary>
+            <value>
+            The default value is SizeMode.Small
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageButton.SizeModeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for SizeMode.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageButton.Icon">
+            <summary>
+            Gets or sets the Icon.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageButton.IconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Icon.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageButton.FontIcon">
+            <summary>
+            Gets or sets the FontIcon.
+            </summary>
+            <value>
+            The default value is empty string.        
+            </value>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageButton.FontIconSize">
+            <summary>
+            Gets or sets the FontIconSize.
+            </summary>
+            <value>
+                    
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageButton.FontIconSizeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconSize.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageButton.FontIconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIcon.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageButton.FontIconFontFamily">
+            <summary>
+            Gets or sets the FontIcon's FontFamily.
+            </summary>
+            <value>
+            The default value is null.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageButton.FontIconFontFamilyProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconFontFamily.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageButton.OnPointerEntered(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer enters the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageButton.OnPointerExited(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer leaves the area of this element.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageTabItem">
+            <summary>
+            Represents class for SfBackStageTabItem
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageTabItem.#ctor">
+            <summary>
+            Initializes a new instance of the  class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageTabItem.OnPointerReleased(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when the pointer device initiates a Press action within this element
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageTabItem.OnPointerEntered(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer enters the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageTabItem.OnPointerExited(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer leaves the area of this element.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageTabItem.IsChecked">
+            <summary>
+             Gets or sets the IsChecked.
+            </summary>
+            <value>
+            The default value is false.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageTabItem.IsCheckedProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for IsChecked.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageTabItem.Header">
+            <summary>
+            Gets or sets the Header.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageTabItem.HeaderProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Header.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageTabItem.Icon">
+            <summary>
+            Gets or sets the Icon.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageTabItem.IconProperty">
+             <summary>
+            Using a DependencyProperty as the backing store for Icon.  This enables animation, styling, binding, etc... 
+             </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageTabItem.FontIcon">
+            <summary>
+            Gets or sets the FontIcon.
+            </summary>
+            <value>
+            The default value is empty string.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageTabItem.FontIconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIcon.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageTabItem.FontIconSize">
+            <summary>
+            Gets or sets the FontIconSize.
+            </summary>
+            <value>
+                    
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageTabItem.FontIconSizeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconSize.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageTabItem.FontIconFontFamily">
+            <summary>
+            Gets or sets the FontIcon's FontFamily.
+            </summary>
+            <value>
+            The default value is null.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfBackStageTabItem.FontIconFontFamilyProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconFontFamily.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase">
+            <summary>
+            Represents class for SfButtonBase
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.#ctor">
+            <summary>
+            Initializes a new instance of the  class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.Label">
+            <summary>
+            Gets or sets the Label.
+            </summary>
+            <value>
+            The default value is string.Empty        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.LabelProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Label.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.SizeMode">
+            <summary>
+            Gets or sets the SizeMode.
+            </summary>
+            <value>
+            The default value is SizeMode.Small        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.SizeModeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for SizeMode.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.Icon">
+            <summary>
+            Gets or sets the Icon.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.IconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Icon.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.ToolTip">
+            <summary>
+            Gets or sets the ToolTip.
+            </summary>
+            <value>
+            The default value is null.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.ToolTipProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for ToolTip.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.FontIcon">
+            <summary>
+            Gets or sets the FontIcon.
+            </summary>
+            <value>
+            The default value is empty string.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.FontIconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIcon.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.FontIconSize">
+            <summary>
+            Gets or sets the FontIconSize.
+            </summary>
+            <value>
+                    
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.FontIconSizeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconSize.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.FontIconFontFamily">
+            <summary>
+            Gets or sets the FontIcon's FontFamily.
+            </summary>
+            <value>
+            The default value is null.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.FontIconFontFamilyProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconFontFamily.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements of the SfButtonBase 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.OnPointerEntered(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Occurs when a pointer enters the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfButtonBase.OnPointerExited(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Occurs when a pointer leaves the area of this element.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton">
+            <summary>
+            Represents class for SfDropDownButton
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.#ctor">
+            <summary>
+            Initializes a new instance of the  class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements of the SfDropDownButton 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.OnPointerExited(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer leaves the area of this element.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.IsDropDownOpen">
+            <summary>
+            Gets or sets the IsDropDownOpen.
+            </summary>
+            <value>
+            The default value is false.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.IsDropDownOpenProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for IsDropDownOpen.  This enables animation, styling, binding, etc...
+             </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.Header">
+            <summary>
+            Gets or sets the Header.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.HeaderProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Header.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.Label">
+            <summary>
+            Gets or sets the Label.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.LabelProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Label.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.SizeMode">
+            <summary>
+            Gets or sets the SizeMode.
+            </summary>
+            <value>
+            The default value is SizeMode.Small.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.SizeModeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for SizeMode.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.Icon">
+            <summary>
+            Gets or sets the Icon.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.IconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Icon.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.ToolTip">
+            <summary>
+            Gets or sets the ToolTip.
+            </summary>
+            <value>
+            The default value is null.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.ToolTipProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for ToolTip.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.FontIcon">
+            <summary>
+            Gets or sets the FontIcon.
+            </summary>
+            <value>
+            The default value is empty string.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.FontIconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIcon.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.FontIconSize">
+            <summary>
+            Gets or sets the FontIconSize.
+            </summary>
+            <value>
+                    
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.FontIconSizeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconSize.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.FontIconFontFamily">
+            <summary>
+            Gets or sets the FontIcon's FontFamily.
+            </summary>
+            <value>
+            The default value is null.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfDropDownButton.FontIconFontFamilyProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconFontFamily.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonButton">
+            <summary>
+            Represents class for SfRibbonButton
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonButton.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonButton.OnPointerExited(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer leaves the area of this element.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton">
+            <summary>
+            Represents class for SfRibbonToggleButton
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.OnToggle">
+            <summary>
+            Called when this instance is Toggled
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.Header">
+            <summary>
+            Gets or sets the Header.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.HeaderProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Header.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.Label">
+            <summary>
+            Gets or sets the Label.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.LabelProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Label.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.SizeMode">
+            <summary>
+            Gets or sets the SizeMode.
+            </summary>
+            <value>
+            The default value is SizeMode.Small.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.SizeModeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for SizeMode.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.Icon">
+            <summary>
+            Gets or sets the Icon.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.IconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Icon.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.ToolTip">
+            <summary>
+            Gets or sets the ToolTip.
+            </summary>
+            <value>
+            The default value is null.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.ToolTipProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for ToolTip.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.FontIcon">
+            <summary>
+            Gets or sets the FontIcon.
+            </summary>
+            <value>
+            The default value is empty string.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.FontIconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIcon.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.FontIconSize">
+            <summary>
+            Gets or sets the FontIconSize.
+            </summary>
+            <value>
+                    
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.FontIconSizeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconSize.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.FontIconFontFamily">
+            <summary>
+            Gets or sets the FontIcon's FontFamily.
+            </summary>
+            <value>
+            The default value is null.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.FontIconFontFamilyProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconFontFamily.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.OnPointerExited(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer leaves the area of this element.
+            </summary>
+            
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.OnPointerEntered(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer enters the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonToggleButton.OnPointerMoved(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer moves over the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.OnPointerCaptureLost(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called before the PointerCaptureLost event occurs
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.IsDropDownOpen">
+            <summary>
+            Gets or sets the IsDropDownOpen.
+            </summary>
+            <value>
+            The default value is false.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.IsDropDownOpenProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for IsDropDownOpen.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.Header">
+            <summary>
+            Gets or sets the Header.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.HeaderProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Header.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.Label">
+            <summary>
+            Gets or sets the Label.
+            </summary>
+            <value>
+            The default value is string.Empty.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.LabelProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Label.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.SizeForm">
+            <summary>
+            Gets or sets the SizeForm.
+            </summary>
+            <value>
+            The default value is SizeMode.Small.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.SizeFormProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for SizeForm.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.Icon">
+            <summary>
+            Gets or sets the Icon.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.IconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Icon.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.FontIcon">
+            <summary>
+            Gets or sets the FontIcon.
+            </summary>
+            <value>
+            The default value is empty string.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.FontIconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIcon.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.FontIconSize">
+            <summary>
+            Gets or sets the FontIconSize.
+            </summary>
+            <value>
+                    
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.FontIconSizeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconSize.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.FontIconFontFamily">
+            <summary>
+            Gets or sets the FontIcon's FontFamily.
+            </summary>
+            <value>
+            The default value is null.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.FontIconFontFamilyProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconFontFamily.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.PopUpHeight">
+            <summary>
+            Gets or sets the PopUpHeight.
+            </summary>
+            <value>
+            The default value is 400.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfSplitButton.PopUpHeightProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for PopUpHeight.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonComboBox">
+            <summary>
+            Represents class for SfRibbonComboBox
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonComboBox.#ctor">
+            <summary>
+            Initializes a new instance of the  class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonComboBox.ToolTip">
+            <summary>
+            Gets or sets the ToolTip.
+            </summary>
+            <value>
+            The default value is null.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonComboBox.ToolTipProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for ToolTip.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonComboBox.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements of the RibbonComboBox 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonComboBox.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonComboBox.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonComboBox.PrepareContainerForItemOverride(Windows.UI.Xaml.DependencyObject,System.Object)">
+            <summary>
+            Arranges the container for overrided items
+            </summary>
+            <param name="element"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonComboBox.OnPointerExited(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer leaves the area of this element.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonComboBoxItem">
+            <summary>
+            Represents class for RibbonComboBoxItem
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonComboBoxItem.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery">
+            <summary>
+            Represents class for SfRibbonGallery
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.#ctor">
+            <summary>
+            Initializes a new instance of the  class.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.Click">
+            <summary>
+            Represents click event
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements of the SfRibbonGallery 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.OnPointerExited(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer leaves the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.OnPointerCaptureLost(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called before the PointerCaptureLost event occurs
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.PrepareContainerForItemOverride(Windows.UI.Xaml.DependencyObject,System.Object)">
+            <summary>
+            Arranges the container for overrided items
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.Label">
+            <summary>
+            Gets or sets the Label.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.LabelProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Label.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.Icon">
+            <summary>
+            Gets or sets the Icon.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.IconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Icon.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.IsDropDownOpen">
+            <summary>
+            Gets or sets the IsDropDownOpen.
+            </summary>
+            <value>
+            The default value is false.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.IsDropDownOpenProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for IsDropDownOpen.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.Header">
+            <summary>
+            Gets or sets the Header.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.HeaderProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Header.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.ToolTip">
+            <summary>
+            Gets or sets the ToolTip.
+            </summary>
+            <value>
+            The default value is null.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.ToolTipProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for ToolTip.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.SizeMode">
+            <summary>
+            Gets or Sets SizeMode value
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.SizeModeProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for SizeMode.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.Command">
+            <summary>
+            Gets the command that will be executed when the command source is invoked.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.CommandProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Command.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.CommandParameter">
+            <summary>
+            Represents a user defined data value that can be passed to the command when it is executed.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.CommandParameterProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for CommandParameter.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.PopUpHeight">
+            <summary>
+            Gets or sets the PopUpHeight.
+            </summary>
+            <value>
+            The default value is 400.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.PopUpHeightProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for PopUpHeight.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.FontIcon">
+            <summary>
+            Gets or sets the FontIcon.
+            </summary>
+            <value>
+            The default value is empty string.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.FontIconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIcon.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.FontIconSize">
+            <summary>
+            Gets or sets the FontIconSize.
+            </summary>
+            <value>
+                    
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.FontIconSizeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconSize.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.FontIconFontFamily">
+            <summary>
+            Gets or sets the FontIcon's FontFamily.
+            </summary>
+            <value>
+            The default value is null.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGallery.FontIconFontFamilyProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconFontFamily.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGalleryGroup">
+            <summary>
+            Represents class for SfRibbonGalleryGroup
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGalleryGroup.#ctor">
+            <summary>
+            Initializes a new instance of the  class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGalleryGroup.Header">
+            <summary>
+            Gets or sets the Header.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGalleryGroup.HeaderProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Header.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGalleryItem">
+            <summary>
+            Represents class for SfRibbonGalleryItem
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGalleryItem.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGalleryItem.Click">
+            <summary>
+            Represents click event
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGalleryItem.Command">
+            <summary>
+            Gets the command that will be executed when the command source is invoked.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGalleryItem.CommandProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Command.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGalleryItem.CommandParameter">
+            <summary>
+            Represents a user defined data value that can be passed to the command when it is executed.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGalleryItem.CommandParameterProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for CommandParameter.  This enables animation, styling, binding, etc...
+             </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGalleryItem.OnTapped(Windows.UI.Xaml.Input.TappedRoutedEventArgs)">
+            <summary>
+            Called when an otherwise Tap interaction occurs over the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGalleryItem.OnPointerReleased(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when the pointer device that previously initiated a Press action is released
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar">
+            <summary>
+            Represents class for SfRibbonGroupBar
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.OnPointerExited(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer leaves the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.OnPointerReleased(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when the pointer device that previously initiated a Press action is released
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.OnPointerCaptureLost(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called before the PointerCaptureLost event occurs
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.PrepareContainerForItemOverride(Windows.UI.Xaml.DependencyObject,System.Object)">
+            <summary>
+            Arranges the container for overrided items
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.GetContainerForItemOverride">
+             <summary>
+            Creates or identifies the element that is used to display the given item
+             </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.IsItemItsOwnContainerOverride(System.Object)">
+             <summary>
+            Determines if the specified item is (or is eligible to be) its own container
+             </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.Label">
+            <summary>
+            Gets or sets the Label.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.LabelProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Label.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.Icon">
+            <summary>
+            Gets or sets the Icon.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.IconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Icon.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.IsDropDownOpen">
+            <summary>
+            Gets or sets the IsDropDownOpen.
+            </summary>
+            <value>
+            The default value is false.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.IsDropDownOpenProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for IsDropDownOpen.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.Header">
+            <summary>
+            Gets or sets the Header.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.HeaderProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Header.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.ToolTip">
+            <summary>
+            Gets or sets the ToolTip.
+            </summary>
+            <value>
+            The default value is null.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.ToolTipProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for ToolTip.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.SizeMode">
+            <summary>
+            Gets or Sets SizeMode value
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.SizeModeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for SizeMode.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.Command">
+            <summary>
+            Gets the command that will be executed when the command source is invoked.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.CommandProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Command.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.CommandParameter">
+            <summary>
+            Represents a user defined data value that can be passed to the command when it is executed.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.CommandParameterProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for CommandParameter.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.FontIcon">
+            <summary>
+            Gets or sets the FontIcon.
+            </summary>
+            <value>
+            The default value is empty string.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.FontIconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIcon.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.FontIconSize">
+            <summary>
+            Gets or sets the FontIconSize.
+            </summary>
+            <value>
+                    
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.FontIconSizeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconSize.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.FontIconFontFamily">
+            <summary>
+            Gets or sets the FontIcon's FontFamily.
+            </summary>
+            <value>
+            The default value is null.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.FontIconFontFamilyProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconFontFamily.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.PopUpHeight">
+            <summary>
+            Gets or sets the PopUpHeight.
+            </summary>
+            <value>
+            The default value is 400.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.PopUpHeightProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for PopUpHeight.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBar.Click">
+            <summary>
+            Represents click event
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBarItem">
+            <summary>
+            Represents class for SfRibbonGroupBarItem
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBarItem.#ctor">
+            <summary>
+            Initializes a new instance of the  class.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBarItem.Click">
+            <summary>
+            Represents the Click event
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBarItem.IsSelected">
+            <summary>
+            Gets or Sets a value indicating whether this instance is selected.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBarItem.IsSelectedProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for IsSelected.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBarItem.Command">
+            <summary>
+            Gets or Sets the Command value that will be executed when the command source is invoked
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBarItem.CommandProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Command.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBarItem.CommandParameter">
+            <summary>
+            Represents a user defined data value that can be passed to the command when it is executed
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBarItem.CommandParameterProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for CommandParameter.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBarItem.OnPointerEntered(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer enters the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBarItem.OnPointerExited(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer leaves the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBarItem.OnPointerPressed(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when the pointer device initiates a Press action within this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupBarItem.OnPointerReleased(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when the pointer device that previously initiated a Press action is released
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupView">
+            <summary>
+            Represents class for SfRibbonGroupView
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupView.#ctor">
+            <summary>
+            Initializes all the child elements 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupView.Header">
+            <summary>
+            Gets or sets the Header.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupView.HeaderProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Header.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupView.Orientation">
+            <summary>
+            Gets or sets the orientation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonGroupView.OrientationProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Orientation.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu">
+            <summary>
+            Represents class for SfRibbonMenu
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.Click">
+            <summary>
+            Represents click event
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.Label">
+            <summary>
+            Gets or sets the Label.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.LabelProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Label.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.Icon">
+            <summary>
+            Gets or sets the Icon.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.IconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Icon.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.IsDropDownOpen">
+            <summary>
+            Gets or sets the IsDropDownOpen.
+            </summary>
+            <value>
+            The default value is false.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.IsDropDownOpenProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for IsDropDownOpen.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.Header">
+            <summary>
+            Gets or sets the Header.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.HeaderProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Header.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.ToolTip">
+            <summary>
+            Gets or sets the ToolTip.
+            </summary>
+            <value>
+            The default value is null.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.ToolTipProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for ToolTip.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.SizeMode">
+            <summary>
+            Gets or sets the size form.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.SizeModeProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for SizeMode.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.Command">
+            <summary>
+            Gets the command that will be executed when the command source is invoked.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.CommandProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Command.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.CommandParameter">
+            <summary>
+            Represents a user defined data value that can be passed to the command when it is executed.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.CommandParameterProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for CommandParameter.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.FontIcon">
+            <summary>
+            Gets or sets the FontIcon.
+            </summary>
+            <value>
+            The default value is empty string.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.FontIconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIcon.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.FontIconSize">
+            <summary>
+            Gets or sets the FontIconSize.
+            </summary>
+            <value>
+                    
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.FontIconSizeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconSize.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.FontIconFontFamily">
+            <summary>
+            Gets or sets the FontIcon's FontFamily.
+            </summary>
+            <value>
+            The default value is null.        
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.FontIconFontFamilyProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontIconFontFamily.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.PopUpHeight">
+            <summary>
+            Gets or sets the PopupHeight.
+            </summary>
+            <value>
+            The default value is 400.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.PopUpHeightProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for PopUpHeight.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements of the SfRibbonMenu
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.PrepareContainerForItemOverride(Windows.UI.Xaml.DependencyObject,System.Object)">
+            <summary>
+            Arranges the container for overrided items
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.OnPointerReleased(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when the pointer device that previously initiated a Press action is released
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.OnPointerExited(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer leaves the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenu.OnPointerCaptureLost(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called before the PointerCaptureLost event occurs
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem">
+            <summary>
+            Represents class for SfRibbonMenuItem
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.#ctor">
+            <summary>
+            Initializes a new instance of the  class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.HasItems">
+            <summary>
+            Gets or Sets a value indicating whether this instance contains items
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.Click">
+            <summary>
+            Represents Click event
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.IsExpanded">
+            <summary>
+            Gets or sets a value indicating whether this instance is expanded.
+            </summary>
+            <value>
+            true if this instance is expanded; otherwise, false
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.IsExpandedProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for IsExpanded.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.Command">
+            <summary>
+            Gets the command that will be executed when the command source is invoked.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.CommandProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Command.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.CommandParameter">
+            <summary>
+            Represents a user defined data value that can be passed to the command when it is executed.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.CommandParameterProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for CommandParameter.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.Content">
+            <summary>
+            Gets or Sets the Content
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.ContentProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for Content.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.OnApplyTemplate">
+            <summary>
+            Called when the pointer device initiates a Press action within this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.OnPointerReleased(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+             <summary>
+            Called when the pointer device that previously initiated a Press action is released
+             </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.OnPointerEntered(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer enters the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.OnPointerExited(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer leaves the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.PrepareContainerForItemOverride(Windows.UI.Xaml.DependencyObject,System.Object)">
+            <summary>
+            Arranges the container for overrided items
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonMenuItem.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon">
+            <summary>
+            Represents class for SfRibbon
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.Title">
+            <summary>
+            Get or sets the Title
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.TitleProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Title.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.TitleAlignment">
+            <summary>
+            Get or sets the TitleAlignment
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.TitleAlignmentProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for TitleAlignment.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.Icon">
+            <summary>
+            Get or sets the Icon
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.IconProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Icon.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.SelectedIndex">
+            <summary>
+            Get or sets the SelectedIndex
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.SelectedIndexProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for SelectedIndex.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.SelectedItem">
+            <summary>
+            Get or sets the SelectedItem
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.SelectedItemProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for SelectedItem.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.QuickAccessToolBar">
+            <summary>
+            Get or sets the QuickAccessToolBar
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.QuickAccessToolBarProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for QuickAccessToolBar.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.AccentBrush">
+            <summary>
+            Get or sets the AccentBrush
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.AccentBrushProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for AccentBrush.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.TabPanelItem">
+            <summary>
+            Get or sets the TabPanelItem
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.TabPanelItemProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for TabPanelItem.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.QATVisibility">
+            <summary>
+            Get or sets the QATVisibility
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.QATVisibilityProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for QATVisibility.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.TabPanelVisibility">
+            <summary>
+            Get or sets the TabPanelVisibility
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.TabPanelVisibilityProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for TabPanelVisibility.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.ToggleButtonVisibility">
+            <summary>
+            Get or sets the ToggleButtonVisibility
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.ToggleButtonVisibilityProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for ToggleButtonVisibility.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.BackStage">
+            <summary>
+            Get or sets the BackStage
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.BackStageProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for BackStage.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.RibbonState">
+            <summary>
+            Get or sets the RibbonState
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.RibbonStateProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for RibbonState.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.IsQATBelow">
+            <summary>
+            Get or sets the IsQATBelow
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.IsQATBelowProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for IsQATBelow.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.BackStageWidth">
+            <summary>
+            Get or sets the BackStageWidth
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.BackStageWidthProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for BackStageWidth.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.BackStageHeader">
+            <summary>
+            Get or sets the BackStageHeader
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.BackStageHeaderProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for BackStageHeader.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.RibbonTabPopupWidth">
+            <summary>
+            Get or sets the RibbonTabComboBoxPopupWidth
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.RibbonTabPopupWidthProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for RibbonTabPopupWidth.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements of the SfRibbon
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.PrepareContainerForItemOverride(Windows.UI.Xaml.DependencyObject,System.Object)">
+            <summary>
+            Arranges the container for overrided items
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.Serialize">
+            <summary>
+            Save the RibbonState, Ribbon SelectedIndex and QAT customization.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.DeSerialize">
+            <summary>
+            Load the RibbonState, Ribbon SelectedIndex and QAT customization.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.OpenBackStage">
+            <summary>
+            Method to OpenBackStage
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.CloseBackStage">
+            <summary>
+            Method to CloseBackStage
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.RibbonTabPanelClosed">
+            <summary>
+            Occurs when Ribbon tab panel is closed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.RibbonTabPanelOpened">
+            <summary>
+            Occurs when Ribbon tab panel is opened.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.BackStageClosed">
+            <summary>
+            BackStageClosed event will be raised when backstage is closed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbon.BackStageOpened">
+            <summary>
+            BackStageOpened event will be raised when backstage is opened.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBar">
+            <summary>
+            Represents class for SfRibbonBar
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBar.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBar.Header">
+            <summary>
+            Gets or sets the Header.
+            </summary>
+            <value>
+            The default value is null
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBar.HeaderProperty">
+             <summary>
+            Using a DependencyProperty as the backing store for Header.  This enables animation, styling, binding, etc... 
+             </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBar.SeparatorBrush">
+            <summary>
+            Gets or sets the SeparatorBrush.
+            </summary>
+            <value>
+            The default value is Black
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBar.SeparatorBrushProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for SeparatorColor.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBar.LauncherButtonVisibility">
+            <summary>
+            Gets or sets the LauncherButtonVisibility.
+            </summary>
+            <value>
+            The default value is Visibility.Collapsed
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBar.LauncherButtonVisibilityProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for LauncherButtonVisibility.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBar.LauncherCommand">
+            <summary>
+            Gets or sets the LauncherCommand.
+            </summary>
+            <value>
+            The default value is null
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBar.LauncherCommandProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for LauncherCommand.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBar.LauncherCommandParameter">
+            <summary>
+            Gets or sets the LauncherCommandParameter.
+            </summary>
+            <value>
+            The default value is null
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBar.LauncherCommandParameterProperty">
+            <summary>
+             Using a DependencyProperty as the backing store for LauncherCommandParameter.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBar.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements of the SfRibbonbar
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBarPanel.ElementInfo">
+            <property name="flag" value="Finished" />
+            <summary>
+            ElementInfo storage structure.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBarPanel.ElementInfo.#ctor(Windows.Foundation.Size,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBarPanel.ElementInfo"/> struct.
+            </summary>
+            <param name="size">The size value</param>
+            <param name="index">The index value.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBarPanel.ElementInfo.#ctor(Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBarPanel.ElementInfo,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBarPanel.ElementInfo"/> struct.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="added">if set to <c>true</c> [added].</param>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBarPanel.ElementInfo.m_ElementSize">
+            <property name="flag" value="Finished" />
+            <summary>
+            Defines element size.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBarPanel.ElementInfo.m_Added">
+            <property name="flag" value="Finished" />
+            <summary>
+            Defines whether element is added.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBarPanel.ElementInfo.m_Index">
+            <property name="flag" value="Finished" />
+            <summary>
+            Defines element index.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBarPanel.ItemWidthProperty">
+            <property name="flag" value="Finished" />
+            <summary>
+            Using a DependencyProperty as the backing store for
+            LauncherButton. This enables animation, styling, binding data
+            etc...
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBarPanel.ItemHeightProperty">
+            <property name="flag" value="Finished" />
+            <summary>
+            Using a DependencyProperty as the backing store for
+            LauncherButton. This enables animation, styling, binding data
+            etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBarPanel.ItemHeight">
+            <summary>
+            Gets or sets item height value.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBarPanel.ItemWidth">
+            <summary>
+            Gets or sets item width value.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBarPanel.#ctor">
+            <summary>
+            Initializes a new instance of the GroupPanel class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBarPanel.ArrangeLine(System.Double,System.Double,System.Int32,System.Int32,System.Boolean,System.Double)">
+            <property name="flag" value="Finished" />
+            <summary>
+            Arrange the items in one line.
+            </summary>
+            <param name="y">y coordinate.</param>
+            <param name="height">Height of the line.</param>
+            <param name="start">Start index.</param>
+            <param name="end">End index.</param>
+            <param name="useItemU">Defines whether to use itemU
+            parameter.</param>
+            <param name="itemU">Element width.</param>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBarPanel.ArrangeOverride(Windows.Foundation.Size)">
+            <property name="flag" value="Finished" />
+            <summary>
+            Positions child elements.
+            </summary>
+            <param name="finalSize">The final area within the parent
+            that this element should use to
+            arrange itself and its children.</param>
+            <returns>
+            The actual size used.
+            </returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonBarPanel.MeasureOverride(Windows.Foundation.Size)">
+            <property name="flag" value="Finished" />
+            <summary>
+            Measures the size in layout required for child elements and
+            determines a size.
+            </summary>
+            <param name="availableSize">The available size that this
+            element can give to the child.
+            Infinity can be specified as a
+            value to indicate that the element
+            will size to whatever content is
+            available.</param>
+            <returns>
+            The size that this element determines it needs during layout,
+            based on its calculations of children's sizes.
+            </returns>
+            
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab">
+            <summary>
+            Represents class for SfRibbonTab
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.#ctor">
+            <summary>
+            Initializes a new instance of the  class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.Caption">
+            <summary>
+            Gets or sets the Caption.
+            </summary>
+            <value>
+            The default value is string.Empty
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.CaptionProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Title.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.Header">
+            <summary>
+            Gets or sets the Header.
+            </summary>
+            <value>
+            The default value is string.Empty
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.HeaderProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Header.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.IsChecked">
+            <summary>
+            Gets or sets the IsChecked.
+            </summary>
+            <value>
+            The default value is false.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.IsCheckedProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for IsChecked.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.SelectedForeground">
+            <summary>
+            Gets or sets the SelectedForeground.
+            </summary>
+            <value>
+            The default value is Blue.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.SelectedForegroundProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for SelectedForeground.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.TabHoverBrush">
+            <summary>
+            <value>
+            The default value is Blue.
+            </value>
+            </summary>         
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.TabHoverBrushProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for TabHoverBrush.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.TabBackground">
+            <summary>
+            Gets or sets the TabBackground.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.TabBackgroundProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for TabBackground.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.TabForeground">
+            <summary>
+            Gets or sets the TabForeground.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.TabForegroundProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for TabForeground.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.ItemsSourcePath">
+            <summary>
+            Gets or sets the ItemsSourcePath.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.ItemsSourcePathProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for ItemsSourcePath.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.OnPointerPressed(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when the pointer device initiates a Press action within this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.OnPointerEntered(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer enters the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.OnPointerExited(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer leaves the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.OnTapped(Windows.UI.Xaml.Input.TappedRoutedEventArgs)">
+            <summary>
+            Called when a Tap interaction occurs over the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.OnDoubleTapped(Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs)">
+            <summary>
+            Called when the DoubleTap interaction occurs over the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.OnIsCheckedChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when the value of the IsChecked property changed
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.OnSelectedForegroundChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when the Selected Foreground is changed
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.OnForegroundChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when the value of the Foreground property changed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTab.OnBackgroundChanged(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when the value of the Background property changes.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTabItemsControl">
+            <summary>
+            Represents class for SfRibbonTabItemsControl
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTabItemsControl.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTabItemsControl.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTabItemsControl.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own container
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTabItemsControl.PrepareContainerForItemOverride(Windows.UI.Xaml.DependencyObject,System.Object)">
+            <summary>
+            Arranges the container for overrided items
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTabItemsControl.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements  
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonTabItemsControl.OnItemsChanged(System.Object)">
+            <summary>
+            Called when the itemscollection is changed
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonPage">
+            <summary>
+            Represents class for SfRibbonPage
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonPage.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonPage.BackStage">
+            <summary>
+            Gets or sets the BackStage.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonPage.BackStageProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for BackStage.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SfRibbonPage.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements 
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.QATListBox">
+            <summary>
+            Class for QATListBox
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.QATListBox.#ctor">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.QATListBox.AllowDragDrop">
+            <summary>
+            Gets or Sets a value indicating whether QATListBox can be Dragged and Dropped
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.QATListBox.AllowDragDropProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for AllowDragDrop.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.QATListBox.OnManipulationCompleted(Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs)">
+            <summary>
+            Called when the is Completed 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.QATListBox.OnManipulationStarted(Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs)">
+            <summary>
+            Called before the Manipulation starts
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.QATListBox.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements of the QATListBox 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.QATListBox.OnPointerMoved(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer moves within the area
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.QATListBox.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.QATListBox.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own ItemContainer
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.QATListBox.PrepareContainerForItemOverride(Windows.UI.Xaml.DependencyObject,System.Object)">
+            <summary>
+            Arranges the container for overrided items
+            </summary>
+            <param name="element"></param>
+            <param name="item"></param>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.QATListBoxItem">
+            <summary>
+            Class represents QATListBoxItem
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.QATListBoxItem.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements of the QATListBoxItem 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.QATListBoxItem.OnDoubleTapped(Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs)">
+            <summary>
+            Called  when DoubleTap interaction occurs over the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.QATListBoxItem.OnPointerEntered(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer enters the area of this element.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.QATListBoxItem.OnPointerExited(Windows.UI.Xaml.Input.PointerRoutedEventArgs)">
+            <summary>
+            Called when a pointer leaves the area of this element.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.QuickAccessToolBar">
+            <summary>
+            Class represents QuickAccessToolBar
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.QuickAccessToolBar.#ctor">
+            <summary>
+            Initializes a new instance of the  class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.QuickAccessToolBar.DisplayItemsCount">
+            <summary>
+            Get or sets the DisplayItemsCount
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.QuickAccessToolBar.DisplayItemsCountProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for DisplayItemsCount.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.QuickAccessToolBar.OnApplyTemplate">
+            <summary>
+            Initializes all the child elements of the QuickAccessToolBar 
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.QuickAccessToolBarItem">
+            <summary>
+            Class represents QuickAccessToolBarItem
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.QuickAccessToolBarItem.Header">
+            <summary>
+            Gets or Sets the Header of QuickAccessToolBarItem
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.RibbonCommandManager">
+            <summary>
+            Represents class for RibbonCommandManager
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.RibbonCommandManager.GetSynchronizedItem(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Gets or sets the SynchronizedItem.
+            </summary>
+            <value>
+            The default value is string.Empty.
+            </value>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.RibbonCommandManager.SetSynchronizedItem(Windows.UI.Xaml.DependencyObject,System.String)">
+            <summary>
+            Sets the SynchronizedItem.
+            </summary>
+            <value>
+            The default value is string.Empty.
+            </value>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.RibbonCommandManager.SynchronizedItemProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for SynchronizedItem.  This enables animation, styling, binding, etc...
+            </summary> 
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.RibbonCommandManager.GetShowInCustomization(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Returns the ShowInCustomization property value of a specified object.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.RibbonCommandManager.SetShowInCustomization(Windows.UI.Xaml.DependencyObject,System.Boolean)">
+            <summary>
+            Sets the value of a ShowInCustomization property,
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.RibbonCommandManager.ShowInCustomizationProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for ShowInCustomization.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.ClassReferenceAttribute">
+            <summary>
+            Class represents ReferenceAttribute
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.ClassReferenceAttribute.IsReviewed">
+            <summary>
+            Returns a value when set
+            </summary>
+            <value>
+            <c>true</c> if instance is created ; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.ClassReferenceAttribute.ShouldInclude">
+            <summary>
+            Returns a value when set
+            </summary>
+            <value>
+            <c>true</c> if instance is created ; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.CloneableAttribute">
+            <summary>
+            Class represents CloneableAttribute
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.CloneableAttribute.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the  class
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.CloneableAttribute.IsCloneable">
+            <summary>
+            Gets or Sets IsCloneable Value
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.BooleanToVisibilityConverter">
+            <summary>
+            Represents the converter that converts Boolean values to and
+            from visibility enumeration values
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.BooleanToVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            Converts bool variable to visibility
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.BooleanToVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            Converts back into default type
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.InverseBooleanToVisibilityConverter">
+            <summary>
+            Represents the converter that converts InverseBoolean values to and
+            from visibility enumeration values
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.InverseBooleanToVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            Converts Boolean to visibility
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.InverseBooleanToVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            Converts back into default type
+            </summary>
+            <param name="value"></param>
+            <param name="targetType"></param>
+            <param name="parameter"></param>
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SizeModeToVisibilityConverter">
+            <summary>
+            Convert SizeMode into Visibility
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SizeModeToVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            Converts a value of SizeMode to Visibility
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.SizeModeToVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.String)">
+            <summary>
+            Inverse of Convert Method
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.RibbonState">
+            <summary>
+            Represents the State of the Ribbon.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.RibbonState.Normal">
+            <summary>
+            Normal Ribbon State.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.RibbonState.Adorner">
+            <summary>
+            Adorner Ribbon State.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.RibbonState.Hide">
+            <summary>
+            Hide Ribbon State.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.SizeMode">
+            <summary>
+            Gets or sets the size form.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SizeMode.ExtraSmall">
+            <summary>
+            Text is only rendered in ExtraSmall variants.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SizeMode.Small">
+            <summary>
+            Text is only rendered in Small variants.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.SizeMode.Large">
+            <summary>
+            Text is only rendered in Large variants.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.ItemsSourceHelper">
+            <summary>
+            Class for ItemsSourceHelper
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.ItemsSourceHelper.ItemsSource">
+            <summary>
+            Gets or Sets ItemsSource
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.ItemsSourceHelper.GetPropertyBinding(Windows.UI.Xaml.DependencyObject)">
+            <summary>
+            Used to Get the Value of the Property
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.ItemsSourceHelper.SetPropertyBinding(Windows.UI.Xaml.DependencyObject,Syncfusion.UI.Xaml.Controls.SfRibbon.ItemsSourceHelper)">
+            <summary>
+            Used to bind the Property to the Value
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.ItemsSourceHelper.PropertyBindingProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for PropertyBinding.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.HeaderedItemsControl">
+            <summary>
+             Represents a control that contains multiple items and has a header.
+            </summary>
+            <seealso cref="T:Syncfusion.UI.Xaml.Primitives.HeaderedItemsControl"/>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.HeaderedItemsControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see
+            cref="T:Syncfusion.UI.Xaml.Primitives.HeaderedItemsControl"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.HeaderedItemsControl.HeaderStyle">
+            <summary>
+            Gets or sets  the style that appearance of the <see
+            cref="P:Syncfusion.UI.Xaml.Primitives.HeaderedItemsControl.Header"/>.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+            <seealso
+            cref="P:Syncfusion.UI.Xaml.Primitives.HeaderedItemsControl.HeaderTemplate"/>
+            <seealso
+            cref="P:Syncfusion.UI.Xaml.Primitives.HeaderedItemsControl.HeaderTemplateSelector"/>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.HeaderedItemsControl.HeaderStyleProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for HeaderStyle.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.HeaderedItemsControl.Header">
+            <summary>
+            Gets or sets the data used for the header of each control.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+            <seealso
+            cref="P:Syncfusion.UI.Xaml.Primitives.HeaderedItemsControl.HeaderStyle"/>
+            <seealso
+            cref="P:Syncfusion.UI.Xaml.Primitives.HeaderedItemsControl.HeaderTemplate"/>
+            <seealso
+            cref="P:Syncfusion.UI.Xaml.Primitives.HeaderedItemsControl.HeaderTemplateSelector"/>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.HeaderedItemsControl.HeaderProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Header.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.HeaderedItemsControl.HeaderTemplate">
+            <summary>
+            Gets or sets the <see cref="N:Windows.UI.Xaml.DataTemplate">DataTemplate</see> used
+            to display the content of the control&apos;s <see
+            cref="P:Syncfusion.UI.Xaml.Primitives.HeaderedItemsControl.Header"/>.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+            <seealso
+            cref="P:Syncfusion.UI.Xaml.Primitives.HeaderedItemsControl.HeaderStyle"/>
+            <seealso
+            cref="P:Syncfusion.UI.Xaml.Primitives.HeaderedItemsControl.HeaderTemplateSelector"/>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.HeaderedItemsControl.HeaderTemplateProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for HeaderTemplate.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.HeaderedItemsControl.HeaderTemplateSelector">
+            <summary>
+            Gets or sets a <see
+            cref="N:Windows.UI.Xaml.Controls.DataTemplateSelector">DataTemplateSelector</see> that provides
+            custom logic for choosing the template used to display the <see
+            cref="P:Syncfusion.UI.Xaml.Primitives.HeaderedItemsControl.Header"/>.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+            <seealso
+            cref="P:Syncfusion.UI.Xaml.Primitives.HeaderedItemsControl.HeaderStyle"/>
+            <seealso
+            cref="P:Syncfusion.UI.Xaml.Primitives.HeaderedItemsControl.HeaderTemplate"/>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.HeaderedItemsControl.HeaderTemplateSelectorProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for HeaderTemplateSelector.  This enables animation, styling, binding, etc...
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.HeaderedItemsControl.PrepareHeaderedItemsControlContainer(System.Object,Windows.UI.Xaml.Controls.ItemsControl)">
+            <summary>
+            Arranges the container for overrided items
+            </summary>
+            <param name="item"></param>
+            <param name="parentItemsControl"></param>
+        </member>
+        <member name="T:Syncfusion.UI.Xaml.Controls.SfRibbon.HierarchicalDataTemplate">
+            <summary>
+            Represents a <see cref="T:System.Windows.DataTemplate" /> that supports
+            <see cref="T:System.Windows.Controls.HeaderedItemsControl" /> objects,
+            such as <see cref="T:System.Windows.Controls.TreeViewItem" />.
+            </summary>
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.HierarchicalDataTemplate.ItemsSource">
+            <summary>
+            Gets or sets the values for the item source
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.HierarchicalDataTemplate._itemTemplate">
+            <summary>
+            The DataTemplate to apply to the ItemTemplate property on a
+            generated HeaderedItemsControl (such as a MenuItem or a
+            TreeViewItem), to indicate how to display items from the next level
+            in the data hierarchy.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.HierarchicalDataTemplate.IsItemTemplateSet">
+            <summary>
+            Gets a value indicating whether the ItemTemplate property was set on
+            the template.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.HierarchicalDataTemplate.ItemTemplate">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.DataTemplate" /> to
+            apply to the
+            <see cref="P:System.Windows.Controls.ItemsControl.ItemTemplate" />
+            property on a generated
+            <see cref="T:System.Windows.Controls.HeaderedItemsControl" />, such
+            as a <see cref="T:System.Windows.Controls.TreeViewItem" />, to
+            indicate how to display items from the next sublevel in the data
+            hierarchy.
+            </summary>
+            <value>
+            The <see cref="T:System.Windows.DataTemplate" /> to apply to the
+            <see cref="P:System.Windows.Controls.ItemsControl.ItemTemplate" />
+            property on a generated
+            <see cref="T:System.Windows.Controls.HeaderedItemsControl" />, such
+            as a <see cref="T:System.Windows.Controls.TreeViewItem" />, to
+            indicate how to display items from the next sublevel in the data
+            hierarchy.
+            </value>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.HierarchicalDataTemplate.Template">
+            <summary>
+            Gets or sets the value for the template
+            </summary>
+        </member>
+        <member name="F:Syncfusion.UI.Xaml.Controls.SfRibbon.HierarchicalDataTemplate._itemContainerStyle">
+            <summary>
+            The Style to apply to the ItemContainerStyle property on a generated
+            HeaderedItemsControl (such as a MenuItem or a TreeViewItem), to
+            indicate how to style items from the next level in the data
+            hierarchy.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.HierarchicalDataTemplate.IsItemContainerStyleSet">
+            <summary>
+            Gets a value indicating whether the ItemContainerStyle property was
+            set on the template.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.UI.Xaml.Controls.SfRibbon.HierarchicalDataTemplate.ItemContainerStyle">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> that is
+            applied to the item container for each child item.
+            </summary>
+            <value>
+            The style that is applied to the item container for each child item.
+            </value>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.HierarchicalDataTemplate.#ctor">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate" /> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.Syncfusion_SfRibbon_UWP_2015_XamlTypeInfo.XamlMetaDataProvider.GetXamlType(System.Type)">
+            <summary>
+            GetXamlType(Type)
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.Syncfusion_SfRibbon_UWP_2015_XamlTypeInfo.XamlMetaDataProvider.GetXamlType(System.String)">
+            <summary>
+            GetXamlType(String)
+            </summary>
+        </member>
+        <member name="M:Syncfusion.UI.Xaml.Controls.SfRibbon.Syncfusion_SfRibbon_UWP_2015_XamlTypeInfo.XamlMetaDataProvider.GetXmlnsDefinitions">
+            <summary>
+            GetXmlnsDefinitions()
+            </summary>
+        </member>
+    </members>
+</doc>

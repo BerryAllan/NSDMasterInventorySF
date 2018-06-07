@@ -133,7 +133,8 @@ namespace NSDMasterInventorySF
 			var columnChooser = new ColumnChooser(_prefabTable, ComboTable, this)
 			{
 				ShowInTaskbar = false,
-				Owner = this
+				Owner = this,
+				ResizeMode = ResizeMode.NoResize
 			};
 			columnChooser.ShowDialog();
 		}
@@ -162,9 +163,9 @@ namespace NSDMasterInventorySF
 					for (int i = 0; i < ComboTable.Columns.Count; i++)
 					{
 						if (i != ComboTable.Columns.Count - 1)
-							comm.CommandText += $"[{ComboTable.Columns[i].ColumnName}] TEXT, ";
+							comm.CommandText += $"[{ComboTable.Columns[i].ColumnName}] NVARCHAR(MAX), ";
 						else
-							comm.CommandText += $"[{ComboTable.Columns[i].ColumnName}] TEXT";
+							comm.CommandText += $"[{ComboTable.Columns[i].ColumnName}] NVARCHAR(MAX)";
 					}
 
 					comm.CommandText += ")";

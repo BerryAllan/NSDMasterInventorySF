@@ -20,8 +20,6 @@ using NSDMasterInventorySF.io;
 using NSDMasterInventorySF.Properties;
 using Owin;
 using Syncfusion.Data.Extensions;
-using Syncfusion.UI.Xaml.Grid;
-using Syncfusion.Windows.Tools.Controls;
 using ConnectionState = System.Data.ConnectionState;
 using DataColumn = System.Data.DataColumn;
 using DataRow = System.Data.DataRow;
@@ -65,11 +63,15 @@ namespace NSDMasterInventorySF
 
 		protected override void OnStartup(StartupEventArgs e)
 		{
-			Thread.CurrentThread.Name = "Main UI Thread";
+			Thread.CurrentThread.Name = "Main Application Thread";
 			base.OnStartup(e);
 			_dispatcher = Dispatcher;
 
-			ConfigurationEcnrypterDecrypter.UnEncryptConfig();
+			Settings.Default.Password =
+				ConfigurationEcnrypterDecrypter.ToInsecureString(
+					ConfigurationEcnrypterDecrypter.DecryptString(Settings.Default.Password));
+
+			//ConfigurationEcnrypterDecrypter.UnEncryptConfig();
 			ConnectionString =
 				$"Server={Settings.Default.Server};Database={Settings.Default.Database};User ID={Settings.Default.UserID};Password={Settings.Default.Password};";
 			try
@@ -94,10 +96,14 @@ namespace NSDMasterInventorySF
 			{
 				conn.Open();
 				if (!GetAllNames(conn, "schemas").Contains($"{Settings.Default.Schema}"))
-					using (var comm = new SqlCommand($"CREATE SCHEMA [{Settings.Default.Schema}]", conn))
+				{
+					DatabaseManagerError dme = new DatabaseManagerError
 					{
-						comm.ExecuteNonQuery();
-					}
+						ShowInTaskbar = true
+					};
+					dme.ShowDialog();
+					return;
+				}
 
 				if (!GetAllNames(conn, "schemas").Contains($"{Settings.Default.Schema}_BACKUPS"))
 					using (var comm = new SqlCommand($"CREATE SCHEMA [{Settings.Default.Schema}_BACKUPS]", conn))
@@ -639,6 +645,7 @@ namespace NSDMasterInventorySF
 		{
 			lock (UpdateLock)
 			{
+				if (SavingCurrently) Task.Run(() => NotifyNewItem(table, window, index));
 				var sqlConnection = new SqlConnection(ConnectionString);
 				sqlConnection.Open();
 				SqlCommand selectComm = new SqlCommand
@@ -673,8 +680,8 @@ namespace NSDMasterInventorySF
 						}
 
 						Debug.WriteLine("CHANGED AND PASSED");
-						try
-						{
+						/*try
+						{*/
 							using (var getLastQueriesCmd = new SqlCommand(GetLastExecutedQueriesCmd, sqlConnection))
 							{
 								if (sqlConnection.State != ConnectionState.Open)
@@ -755,7 +762,7 @@ namespace NSDMasterInventorySF
 								if (sqlConnection.State != ConnectionState.Closed)
 									sqlConnection.Close();
 							}
-						}
+						/*}
 						catch
 						{
 							//Debug.WriteLine(e);
@@ -783,10 +790,11 @@ namespace NSDMasterInventorySF
 
 								//return;
 							});
-							MessageBox.Show(
+							throw;
+							/*MessageBox.Show(
 								"Unfortunately, there was an error in retrieving changed data from the database.\nThe grid was refreshed; it should now be concurrent.",
-								"Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-						}
+								"Error", MessageBoxButton.OK, MessageBoxImage.Warning);#1#
+						}*/
 
 						Task.Run(() => NotifyNewItem(table, window, index));
 					}
@@ -800,6 +808,7 @@ namespace NSDMasterInventorySF
 					catch
 					{
 						Task.Run(() => NotifyNewItem(table, window, index));
+						throw;
 					}
 				else
 					Task.Run(() => NotifyNewItem(table, window, index));
@@ -817,7 +826,7 @@ namespace NSDMasterInventorySF
 			{
 				if (schema.Equals($"{Settings.Default.Schema}_PREFABS"))
 					using (var comm = new SqlCommand(
-						$"CREATE TABLE [{schema}].[{prefabName}] (COLUMNS TEXT, TYPES TEXT, SORTBYS TEXT, GROUPS TEXT)",
+						$"CREATE TABLE [{schema}].[{prefabName}] (COLUMNS NVARCHAR(MAX), TYPES NVARCHAR(MAX), SORTBYS NVARCHAR(MAX), GROUPS NVARCHAR(MAX))",
 						conn))
 					{
 						comm.ExecuteNonQuery();
@@ -1057,7 +1066,7 @@ namespace NSDMasterInventorySF
 					MessageBox.Show(
 						$"Failed to update Database {Settings.Default.Database}; Error occured.\nThis was most likely caused by a concurrency issue and/or duplicate rows. The datagrids have been refreshed.",
 						"Error!", MessageBoxButton.OK, MessageBoxImage.Error);
-					throw;
+					//throw;
 					//ThisMadeLastChange = true;
 					//window.SaveToDb();
 				}
@@ -1116,8 +1125,12 @@ namespace NSDMasterInventorySF
 			//Connection.Stop();
 			//Connection.Dispose();
 			//SignalR.Dispose();
-			ConfigurationEcnrypterDecrypter.EncryptConfig();
+			//ConfigurationEcnrypterDecrypter.EncryptConfig();
 			//SqlDependency.Stop(ConnectionString);
+			Settings.Default.Password =
+				ConfigurationEcnrypterDecrypter.EncryptString(
+					ConfigurationEcnrypterDecrypter.ToSecureString(Settings.Default.Password));
+			Settings.Default.Save();
 		}
 	}
 	/// <summary>

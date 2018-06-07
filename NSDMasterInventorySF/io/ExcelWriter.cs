@@ -1,22 +1,100 @@
 ﻿using System.Collections.Generic;
-using System.Data;
 using System.IO;
+using System.Windows;
 using System.Windows.Forms;
-using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
-using NPOI.XSSF.UserModel;
-using Syncfusion.Linq;
 using Syncfusion.UI.Xaml.Grid;
+using Syncfusion.UI.Xaml.Grid.Converter;
+using Syncfusion.XlsIO;
 using DataColumn = System.Data.DataColumn;
 using DataRow = System.Data.DataRow;
+using DataTable = System.Data.DataTable;
+using MessageBox = System.Windows.MessageBox;
+using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
 
 namespace NSDMasterInventorySF.io
 {
 	public static class ExcelWriter
 	{
-		public static void Write(DataSet dataTables, string excelFilePath, bool isXssf)
+		public static void Write(List<SfDataGrid> grids)
 		{
 			Cursor.Current = Cursors.AppStarting;
+
+			var sfd = new SaveFileDialog
+			{
+				FilterIndex = 3,
+				Filter =
+					@"Excel 97 to 2003 Files(*.xls)|*.xls|Excel 2007 to 2010 Files(*.xlsx)|*.xlsx|Excel 2013 File(*.xlsx)|*.xlsx"
+			};
+
+			if (sfd.ShowDialog() == true)
+			{
+				ExcelEngine excelEngine = new ExcelEngine();
+				string tempSheetName = App.RandomString(12);
+				var workBook = excelEngine.Excel.Workbooks.Create(new[] {tempSheetName});
+
+				using (Stream stream = sfd.OpenFile())
+				{
+					switch (sfd.FilterIndex)
+					{
+						case 1:
+							workBook.Version = ExcelVersion.Excel97to2003;
+							break;
+						case 2:
+							workBook.Version = ExcelVersion.Excel2010;
+							break;
+						default:
+							workBook.Version = ExcelVersion.Excel2013;
+							break;
+					}
+
+					foreach (var grid in grids)
+					{
+						DataTable itemsSource = (DataTable) grid.ItemsSource;
+						var options = new ExcelExportingOptions
+						{
+							ExcelVersion = workBook.Version,
+							AllowOutlining = true
+						};
+						switch (sfd.FilterIndex)
+						{
+							case 1:
+								options.ExcelVersion = ExcelVersion.Excel97to2003;
+								break;
+							case 2:
+								options.ExcelVersion = ExcelVersion.Excel2010;
+								break;
+							default:
+								options.ExcelVersion = ExcelVersion.Excel2013;
+								break;
+						}
+
+						if (grid.View != null && !grid.View.IsEmpty)
+						{
+							var tempExcelEngine = grid.ExportToExcel(grid.View, options);
+							var workSheet = tempExcelEngine.Excel.Workbooks[0].Worksheets[0];
+							workSheet.Name = itemsSource.TableName;
+							workBook.Worksheets.AddCopy(workSheet);
+						}
+						else
+						{
+							var workSheet = workBook.Worksheets.Create(itemsSource.TableName);
+							workSheet.ImportDataTable(itemsSource, true, 1, 1);
+						}
+					}
+
+					workBook.Worksheets.Remove(tempSheetName);
+					workBook.SaveAs(stream);
+				}
+				if (MessageBox.Show("Do you want to edit the spreadsheet?", "Spreadsheet has been created",
+					    MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
+				{
+					new SpreadsheetEditor(sfd.FileName).Show();
+				}
+			}
+
+/*
+
 			IWorkbook workbook = isXssf ? (IWorkbook) new XSSFWorkbook() : new HSSFWorkbook();
 
 			DataTable recycledTable = Recycled.RecycledDataTable.Copy();
@@ -71,7 +149,7 @@ namespace NSDMasterInventorySF.io
 			}
 
 			workbook.Write(new FileStream(excelFilePath, FileMode.Create));
-			workbook.Close();
+			workbook.Close();*/
 			Cursor.Current = Cursors.Default;
 		}
 

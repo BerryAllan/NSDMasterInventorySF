@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using NSDMasterInventorySF.Properties;
+using NSDMasterInventorySF.ui;
 using Syncfusion.SfSkinManager;
 using SelectionChangedEventArgs = System.Windows.Controls.SelectionChangedEventArgs;
 
@@ -122,7 +124,7 @@ namespace NSDMasterInventorySF
 		private void EditButton_OnClick(object sender, RoutedEventArgs e)
 		{
 			string tableName = SheetListBox.SelectedItem.ToString();
-			var prefabChooser = new EditTable(_window, true, tableName, this)
+			var prefabChooser = new EditTable(true, tableName, true, false)
 			{
 				Owner = this,
 				ShowInTaskbar = false
@@ -146,9 +148,9 @@ namespace NSDMasterInventorySF
 							$"CREATE TABLE IF NOT EXISTS [{Settings.Default.Schema}].[{EditTable.TableName}] ( ";
 						for (var j = 0; j < prefabTable.Rows.Count; j++)
 							if (j != prefabTable.Rows.Count - 1)
-								comm.CommandText += $"[{prefabTable.Rows[j]["COLUMNS"]}] TEXT, ";
+								comm.CommandText += $"[{prefabTable.Rows[j]["COLUMNS"]}] NVARCHAR(MAX), ";
 							else
-								comm.CommandText += $"[{prefabTable.Rows[j]["COLUMNS"]}] TEXT";
+								comm.CommandText += $"[{prefabTable.Rows[j]["COLUMNS"]}] NVARCHAR(MAX)";
 
 						comm.CommandText += " )";
 
@@ -213,12 +215,13 @@ namespace NSDMasterInventorySF
 
 		private void AddButtonClick(object sender, EventArgs e)
 		{
-			var choosePrefab = new EditTable(_window, false, string.Empty, this)
+			var choosePrefab = new EditTable(false, string.Empty, true, false)
 			{
 				Owner = this,
 				ShowInTaskbar = false
 			};
-			choosePrefab.ShowDialog();
+			if (UiHelper.IsWindowOpen<EditTable>(choosePrefab.Name))
+				choosePrefab.ShowDialog();
 
 			if (string.IsNullOrEmpty(EditTable.PrefabSelected)) return;
 			if (string.IsNullOrEmpty(EditTable.TableName)) return;

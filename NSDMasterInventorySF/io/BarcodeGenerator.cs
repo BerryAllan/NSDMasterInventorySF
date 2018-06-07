@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using ZXing;
 using ZXing.Datamatrix;
@@ -27,44 +29,23 @@ namespace NSDMasterInventorySF.io
 			{
 				foreach (DataRow row in table.Rows)
 				{
-					List<string> rowItemArray = new List<string>();
-					foreach (var v in row.ItemArray)
-						rowItemArray.Add(v.ToString());
-					if (bool.TryParse(rowItemArray[0], out bool _) &&
-					    table.Columns[0].ColumnName.ToLower().Equals("inventoried"))
-						rowItemArray.RemoveAt(0);
-					string item = string.Join("\t", rowItemArray);
+					string item = GetItemStringFromDataRow(row);
 
+					DirectoryInfo di = Directory.CreateDirectory($@"{dir}\BARCODES\{table.TableName}\");
 					string itemFileName = item.Replace('\t', '_');
 					itemFileName = itemFileName.Replace('/', '∕');
 					itemFileName = itemFileName.Replace('\\', '∕');
 					itemFileName = itemFileName.Replace(':', '꞉');
 					itemFileName = itemFileName.Replace('?', '？');
+					itemFileName = itemFileName.Replace('>', '›');
+					itemFileName = itemFileName.Replace('<', '‹');
+					itemFileName = itemFileName.Replace('*', '✻');
+					itemFileName = itemFileName.Replace('"', '\'');
+					itemFileName = itemFileName.Replace('|', '│');
 
 					if (string.IsNullOrEmpty(item) || string.IsNullOrEmpty(itemFileName)) continue;
+					SaveBarcode(item, itemFileName, di.FullName + itemFileName + ".png");
 
-					var datamatrixEncodingOptions = new DatamatrixEncodingOptions
-					{
-						Height = 300,
-						Width = 300,
-						PureBarcode = true,
-						Margin = 0,
-						SymbolShape = SymbolShapeHint.FORCE_SQUARE
-					};
-					var barcodeWriter = new BarcodeWriter
-					{
-						Format = BarcodeFormat.DATA_MATRIX,
-						Options = datamatrixEncodingOptions
-					};
-
-					DirectoryInfo di = Directory.CreateDirectory($@"{dir}\BARCODES\{table.TableName}\");
-					Bitmap oldMap = barcodeWriter.Write(item);
-					Bitmap newMap = ResizeCanvas(oldMap, oldMap.Width, oldMap.Height + 30, 0, 0);
-					Graphics gfx = Graphics.FromImage(newMap);
-					gfx.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-					Font arialFont = new Font("Calibri Light", 10, FontStyle.Regular);
-					gfx.DrawString(itemFileName, arialFont, Brushes.Black, new Point(0, oldMap.Height + 5));
-					newMap.Save(di.FullName + itemFileName + ".png");
 					progress++;
 					window.Dispatcher.Invoke(() =>
 					{
@@ -75,6 +56,7 @@ namespace NSDMasterInventorySF.io
 								window.ProgressTextBlock.Text = "Barcodes Generating...";
 								window.ProgressGrid.Visibility = Visibility.Visible;
 							}
+
 							window.ProgressBar.Value = progress / totalItems * 100.0;
 						}
 						else
@@ -87,10 +69,51 @@ namespace NSDMasterInventorySF.io
 			}
 		}
 
-		static Bitmap ResizeCanvas(Bitmap imageToEmbed, int iconSizeX, int iconSizeY, int gridX, int gridY)
+		public static string GetItemStringFromDataRow(DataRow row)
+		{
+			List<string> rowItemArray = row.ItemArray.Select(v => v.ToString()).ToList();
+			if (bool.TryParse(rowItemArray[0], out bool _) &&
+			    row.Table.Columns[0].ColumnName.ToLower().Equals("inventoried"))
+				rowItemArray.RemoveAt(0);
+			return string.Join("\t", rowItemArray);
+		}
+
+		public static void SaveBarcode(string item, string fileName, string location)
+		{
+			var datamatrixEncodingOptions = new DatamatrixEncodingOptions
+			{
+				Height = 400,
+				Width = 400,
+				PureBarcode = true,
+				Margin = 0,
+				SymbolShape = SymbolShapeHint.FORCE_SQUARE
+			};
+			var barcodeWriter = new BarcodeWriter
+			{
+				Format = BarcodeFormat.DATA_MATRIX,
+				Options = datamatrixEncodingOptions
+			};
+
+			Bitmap oldMap = barcodeWriter.Write(item);
+			Bitmap newMap = ResizeCanvas(oldMap, oldMap.Width, oldMap.Height + 30, 0, 0);
+			Graphics gfx = Graphics.FromImage(newMap);
+			gfx.SmoothingMode = SmoothingMode.HighQuality;
+			Font arialFont = new Font("Calibri Light", 10, FontStyle.Regular);
+			gfx.DrawString(fileName, arialFont, Brushes.Black, new Point(0, oldMap.Height + 5));
+			try
+			{
+				newMap.Save(location);
+			}
+			catch
+			{
+				// ignored
+			}
+		}
+
+		private static Bitmap ResizeCanvas(Image imageToEmbed, int iconSizeX, int iconSizeY, int gridX, int gridY)
 		{
 			// Load the image and determine new dimensions
-			System.Drawing.Image img = imageToEmbed;
+			Image img = imageToEmbed;
 			// Define the new dimensions
 			Size szDimensions = new Size(iconSizeX, iconSizeY);
 

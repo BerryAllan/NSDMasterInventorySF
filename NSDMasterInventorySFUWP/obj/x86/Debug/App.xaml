@@ -1,0 +1,12 @@
+﻿<Application
+	x:Class="NSDMasterInventorySFUWP.App"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="using:NSDMasterInventorySFUWP">
+	<Application.Resources>
+		<SolidColorBrush x:Key="SystemControlRevealFocusVisualBrush" Color=" #FF767676 " />
+		<SolidColorBrush x:Key="SystemControlFocusVisualSecondaryBrush" Color=" #99FFFFFF " />
+		<AcrylicBrush x:Key="CustomAcrylicBrush" BackgroundSource="Backdrop"
+		              TintOpacity="0.5" TintColor="#FF000000" FallbackColor="#FF008000" />
+	</Application.Resources>
+</Application>

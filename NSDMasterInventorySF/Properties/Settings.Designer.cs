@@ -25,7 +25,7 @@ namespace NSDMasterInventorySF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Metro")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Theme {
             get {
                 return ((string)(this["Theme"]));
@@ -37,7 +37,7 @@ namespace NSDMasterInventorySF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Inventory")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Database {
             get {
                 return ((string)(this["Database"]));
@@ -49,7 +49,7 @@ namespace NSDMasterInventorySF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("IT Tables")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Schema {
             get {
                 return ((string)(this["Schema"]));
@@ -61,7 +61,7 @@ namespace NSDMasterInventorySF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("10.13.100.21\\MSSQLSERVER_INV")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Server {
             get {
                 return ((string)(this["Server"]));
@@ -73,7 +73,7 @@ namespace NSDMasterInventorySF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("sa")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string UserID {
             get {
                 return ((string)(this["UserID"]));
@@ -85,7 +85,7 @@ namespace NSDMasterInventorySF.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Info7310")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Password {
             get {
                 return ((string)(this["Password"]));

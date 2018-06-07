@@ -25,6 +25,7 @@ using Syncfusion.UI.Xaml.Diagram.Panels;
 using Syncfusion.UI.Xaml.Diagram.Stencil;
 using Syncfusion.UI.Xaml.Gauges;
 using Syncfusion.UI.Xaml.Grid;
+using Syncfusion.UI.Xaml.Grid.Converter;
 using Syncfusion.UI.Xaml.Grid.RowFilter;
 using Syncfusion.UI.Xaml.HeatMap;
 using Syncfusion.UI.Xaml.Maps;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Threading;
 using System.Windows;
 using System.Windows.Input;
 using NSDMasterInventorySF.Properties;
@@ -11,16 +12,17 @@ namespace NSDMasterInventorySF
 	/// <summary>
 	///     Interaction logic for EditTable.xaml
 	/// </summary>
-	public partial class EditTable : Window
+	public partial class EditTable
 	{
 		public static RoutedCommand CloseWindow = new RoutedCommand();
-		private readonly TableManager _manager;
 		private readonly string _originalName;
 		private readonly bool _showWarning;
 
 		private string _currentVisualStyle;
+		private readonly bool _showPrefabs;
+		private readonly bool _isCreatingSchema;
 
-		public EditTable(MainWindow window, bool showWarning, string originalName, TableManager manager)
+		public EditTable(bool showWarning, string originalName, bool showPrefabs, bool isCreatingSchema)
 		{
 			InitializeComponent();
 
@@ -30,23 +32,47 @@ namespace NSDMasterInventorySF
 			using (var conn = new SqlConnection(App.ConnectionString))
 			{
 				conn.Open();
-				foreach (string tableName in App.GetTableNames(conn, $"{Settings.Default.Schema}_PREFABS")) PrefabComboBox.Items.Add(tableName);
+				foreach (string tableName in App.GetTableNames(conn, $"{Settings.Default.Schema}_PREFABS"))
+					PrefabComboBox.Items.Add(tableName);
 				conn.Close();
+			}
+
+			if (PrefabComboBox.Items.Count <= 0)
+			{
+				MessageBox.Show("Please create a Prefab first.", "Cannot create table", MessageBoxButton.OK,
+					MessageBoxImage.Warning);
+				Close();
+				return;
 			}
 
 			_showWarning = showWarning;
 			_originalName = originalName;
-			_manager = manager;
+			_showPrefabs = showPrefabs;
+			_isCreatingSchema = isCreatingSchema;
 
 			TableNameBox.TextChanged += (sender, args) =>
 			{
-				ChooseButton.IsEnabled = !string.IsNullOrEmpty(TableNameBox.Text) && PrefabComboBox.SelectedIndex >= 0;
+				if (showPrefabs)
+					ChooseButton.IsEnabled =
+						!string.IsNullOrEmpty(TableNameBox.Text) && PrefabComboBox.SelectedIndex >= 0;
+				else
+					ChooseButton.IsEnabled = !string.IsNullOrEmpty(TableNameBox.Text);
 			};
-			PrefabComboBox.SelectionChanged += (sender, args) =>
+			if (showPrefabs)
 			{
-				ChooseButton.IsEnabled = !string.IsNullOrEmpty(TableNameBox.Text) && PrefabComboBox.SelectedIndex >= 0;
-			};
-			PrefabComboBox.SelectedValue = PrefabComboBox.Items[0];
+				PrefabComboBox.SelectionChanged += (sender, args) =>
+				{
+					ChooseButton.IsEnabled =
+						!string.IsNullOrEmpty(TableNameBox.Text) && PrefabComboBox.SelectedIndex >= 0;
+				};
+				PrefabComboBox.SelectedValue = PrefabComboBox.Items[0];
+			}
+			else
+			{
+				PrefabComboBox.Visibility = Visibility.Hidden;
+				PrefabComboBox.IsDropDownOpen = false;
+				TableNameBox.Focus();
+			}
 
 			if (string.IsNullOrEmpty(originalName)) return;
 			TableNameBox.Focus();
@@ -69,7 +95,7 @@ namespace NSDMasterInventorySF
 				conn.Open();
 				//Debug.WriteLine(App.GetPrefabOfTable(conn, originalName));
 				PrefabComboBox.SelectedValue = App.GetPrefabOfTable(conn, originalName);
-				Debug.WriteLine(App.GetPrefabOfTable(conn, originalName));
+				//Debug.WriteLine(App.GetPrefabOfTable(conn, originalName));
 				conn.Close();
 			}
 
@@ -96,6 +122,26 @@ namespace NSDMasterInventorySF
 
 		private void DoneButtonOnClicked(object sender, RoutedEventArgs e)
 		{
+			if (!_showPrefabs && _isCreatingSchema)
+			{
+				using (var conn = new SqlConnection(App.ConnectionString))
+				{
+					conn.Open();
+					if (App.GetAllNames(conn, "schemas").Contains(TableNameBox.Text))
+					{
+						MessageBox.Show("Identical schema exists. Please enter a different name.",
+							"Cannot create schema", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+						return;
+					}
+					using (var comm = new SqlCommand($"CREATE SCHEMA [{TableNameBox.Text}]", conn))
+						comm.ExecuteNonQuery();
+					conn.Close();
+				}
+
+				Close();
+				return;
+			}
+
 			if (_showWarning)
 				if (MessageBox.Show(
 					    "Are you sure you would like to change this table? It could result in permanent loss of data (columns).",
@@ -113,7 +159,8 @@ namespace NSDMasterInventorySF
 				{
 					conn.Open();
 					using (var comm =
-						new SqlCommand($"sp_rename \'{Settings.Default.Schema}.{_originalName}\', \'{TableNameBox.Text}\'",
+						new SqlCommand(
+							$"sp_rename \'{Settings.Default.Schema}.{_originalName}\', \'{TableNameBox.Text}\'",
 							conn))
 					{
 						comm.ExecuteNonQuery();
@@ -125,7 +172,6 @@ namespace NSDMasterInventorySF
 			PrefabSelected = PrefabComboBox.Text;
 			TableName = TableNameBox.Text;
 			Close();
-			_manager.PopulateListBox();
 		}
 
 		private void CloseCurrentWindow(object sender, EventArgs e)

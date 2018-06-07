@@ -20,14 +20,14 @@ namespace NSDMasterInventorySF.ui
 			{
 				var numerator = (int) value;
 
-				result = numerator - 1 + 1;
+				result = numerator - 1;
 			}
 			catch
 			{
 				//ignored
 			}
 
-			//if (result == 0) return "＋";
+			if (result == 0) return "＋";
 			//if (result == 0) return "➕";
 
 			return result;

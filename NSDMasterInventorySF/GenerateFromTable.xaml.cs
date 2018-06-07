@@ -48,7 +48,7 @@ namespace NSDMasterInventorySF
 					conn.Open();
 				using (var comm =
 					new SqlCommand(
-						$"CREATE TABLE [{Settings.Default.Schema}_PREFABS].[{PrefabNameBox.Text}] (COLUMNS TEXT, TYPES TEXT, SORTBYS TEXT, GROUPS TEXT)",
+						$"CREATE TABLE [{Settings.Default.Schema}_PREFABS].[{PrefabNameBox.Text}] (COLUMNS NVARCHAR(MAX), TYPES NVARCHAR(MAX), SORTBYS NVARCHAR(MAX), GROUPS NVARCHAR(MAX))",
 						conn))
 				{
 					comm.ExecuteNonQuery();

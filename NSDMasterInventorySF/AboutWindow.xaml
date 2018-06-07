@@ -1,0 +1,49 @@
+﻿<Window x:Class="NSDMasterInventorySF.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NSDMasterInventorySF"
+        mc:Ignorable="d"
+        Title="About" Height="450" Width="800">
+	<ScrollViewer Margin="10">
+		<TreeView>
+			<TreeViewItem Header="Shortcuts:">
+				<TreeViewItem xml:space="preserve" Header="F11:&#x09;&#x09;Fullscreen" />
+				<TreeViewItem xml:space="preserve" Header="Ctrl-R:&#x09;&#x09;Refresh" />
+				<TreeViewItem xml:space="preserve" Header="Ctrl-C:&#x09;&#x09;Copy" />
+				<TreeViewItem xml:space="preserve" Header="Ctrl-V:&#x09;&#x09;Paste" />
+				<TreeViewItem xml:space="preserve" Header="Ctrl-B:&#x09;&#x09;Export Singular Barcode" />
+				<TreeViewItem xml:space="preserve" Header="Ctrl-S:&#x09;&#x09;Export Singular Spreadsheet" />
+				<TreeViewItem xml:space="preserve" Header="Ctrl-N:&#x09;&#x09;New Row (With Filters Applied)" />
+				<TreeViewItem xml:space="preserve" Header="Ctrl-F:&#x09;&#x09;Find" />
+				<TreeViewItem xml:space="preserve" Header="Ctrl-Tab:&#x09;&#x09;Switch Tabs" />
+				<TreeViewItem xml:space="preserve" Header="Ctrl-Shift-Tab:&#x09;Switch Tabs" />
+				<TreeViewItem xml:space="preserve" Header="Ctrl-Shift-F:&#x09;Find and Replace" />
+			</TreeViewItem>
+			<TreeViewItem Header="Windows:">
+				<TreeViewItem xml:space="preserve" Header="Change Style:&#x09;&#x09;Change the Visual Style of the Application" />
+				<TreeViewItem xml:space="preserve" Header="Table Manager:&#x09;&#x09;Manage your Tables; Add, Edit, and Delete." />
+				<TreeViewItem xml:space="preserve" Header="Prefab Manager:&#x09;&#x09;Manage your Prefabs; Add, Edit, and Delete." />
+				<TreeViewItem xml:space="preserve"
+				              Header="Database Manager:&#x09;Manage your Database; Move tables, Add and Delete Schemas." />
+				<TreeViewItem xml:space="preserve"
+				              Header="Connection Manager:&#x09;Change your connection; Connect to a different Server, Database, or Schema." />
+				<TreeViewItem xml:space="preserve"
+				              Header="View Recycled:&#x09;&#x09;View the Recycled table. Every row you delete is automatically inserted into this table.&#x0d;&#x09;&#x09;&#x09;You can scan a barcode in this window. If it exists in the main Tables it is removed and inserted in the Recycled Table." />
+				<TreeViewItem xml:space="preserve"
+				              Header="Restore From Backups:&#x09;&#x09;A GUI to restore a table from its Backup. Backups are created every 240 seconds." />
+			</TreeViewItem>
+			<TreeViewItem Header="Terminology:">
+				<TreeViewItem xml:space="preserve"
+				              Header="Prefab:&#x09;&#x09;A Prefab is a definition for a table.&#x0d;&#x09;&#x09;Once you create a prefab with the same column names as a table(s), it will automatically bind itself to that table(s).&#x0d;&#x09;&#x09;Prefabs contains definitions for the tables' column names, column types, sorting, and grouping." />
+				<TreeViewItem xml:space="preserve"
+				              Header="Table:&#x09;&#x09;A Table contains the data you are inventory-ing. It is displayed in a grid format." />
+				<TreeViewItem xml:space="preserve"
+				              Header="Schema:&#x09;&#x09;Schemas are essentialy 'directories' that contain tables, or rather own them." />
+				<TreeViewItem xml:space="preserve"
+				              Header="Database:&#x09;The Database you are connected to contains the tables and prefabs you see and interact with." />
+			</TreeViewItem>
+		</TreeView>
+	</ScrollViewer>
+</Window>

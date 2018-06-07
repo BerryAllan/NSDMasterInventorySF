@@ -3,22 +3,22 @@
   <Profiles />
   <Settings>
     <Setting Name="Theme" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Metro</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Database" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Inventory</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Schema" Type="System.String" Scope="User">
-      <Value Profile="(Default)">IT Tables</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Server" Type="System.String" Scope="User">
-      <Value Profile="(Default)">10.13.100.21\MSSQLSERVER_INV</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="UserID" Type="System.String" Scope="User">
-      <Value Profile="(Default)">sa</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Password" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Info7310</Value>
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

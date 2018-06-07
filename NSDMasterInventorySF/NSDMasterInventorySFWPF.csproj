@@ -190,6 +190,7 @@
     <Reference Include="Syncfusion.SfGauge.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
     <Reference Include="Syncfusion.SfGrid.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
     <Reference Include="Syncfusion.SfGridCommon.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
+    <Reference Include="Syncfusion.SfGridConverter.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL"/>
     <Reference Include="Syncfusion.SfHeatMap.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
     <Reference Include="Syncfusion.SfHubTile.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
     <Reference Include="Syncfusion.SfInput.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89"/>
@@ -240,9 +241,13 @@
     <Reference Include="System.Management"/>
     <Reference Include="System.Net.Http"/>
     <Reference Include="System.Runtime"/>
+    <Reference Include="System.Security"/>
+    <Reference Include="System.Security.Cryptography.ProtectedData, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.ProtectedData.4.5.0\lib\net461\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
     <Reference Include="System.Transactions"/>
-    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Cors, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.6\lib\net45\System.Web.Cors.dll</HintPath>
@@ -276,8 +281,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ColumnChooser.xaml.cs">
       <DependentUpon>ColumnChooser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseManager.xaml.cs">
+      <DependentUpon>DatabaseManager.xaml</DependentUpon>
     </Compile>
     <Compile Include="DatabaseManagerError.xaml.cs">
       <DependentUpon>DatabaseManagerError.xaml</DependentUpon>
@@ -288,8 +299,8 @@
     <Compile Include="ComboBoxBuilder.xaml.cs">
       <DependentUpon>ComboBoxBuilder.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseManager.xaml.cs">
-      <DependentUpon>DatabaseManager.xaml</DependentUpon>
+    <Compile Include="ConnectionManager.xaml.cs">
+      <DependentUpon>ConnectionManager.xaml</DependentUpon>
     </Compile>
     <Compile Include="FindAndReplace.xaml.cs">
       <DependentUpon>FindAndReplace.xaml</DependentUpon>
@@ -321,6 +332,9 @@
       <DependentUpon>RestorationManager.xaml</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs"/>
+    <Compile Include="SpreadsheetEditor.xaml.cs">
+      <DependentUpon>SpreadsheetEditor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StyleChooser.xaml.cs">
       <DependentUpon>StyleChooser.xaml</DependentUpon>
     </Compile>
@@ -334,7 +348,15 @@
     <Compile Include="ui\SearchHelperExt.cs"/>
     <Compile Include="ui\SfDataGridExt.cs"/>
     <Compile Include="ui\UiHelper.cs"/>
+    <Page Include="AboutWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ColumnChooser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DatabaseManager.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -350,7 +372,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="DatabaseManager.xaml">
+    <Page Include="ConnectionManager.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -387,6 +409,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RestorationManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SpreadsheetEditor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -509,6 +535,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\NewKPI_16x.png"/>
+    <Resource Include="Images\Structure_grey_16x.png"/>
     <Content Include="Scripts\jquery-3.3.1.intellisense.js"/>
     <Content Include="Scripts\jquery-3.3.1.js"/>
     <Content Include="Scripts\jquery-3.3.1.min.js"/>

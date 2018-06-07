@@ -1,4 +1,6 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
+using System.Security;
 
 namespace NSDMasterInventorySF.io
 {
@@ -98,23 +100,23 @@ namespace NSDMasterInventorySF.io
 					if (!configSection.ElementInformation.IsLocked)
 					{
 						//DataProtectionConfigurationProvider
-						configSection.SectionInformation.ProtectSection("RsaProtectedConfigurationProvider");
+						configSection.SectionInformation.ProtectSection("DataProtectionConfigurationProvider");
 						configSection.SectionInformation.ForceSave = true;
 						config.Save(ConfigurationSaveMode.Full);
 					}
 
-			//foreach (ConfigurationSection section in config.Sections)
-			//	if (section != null)
-			//		if (!section.SectionInformation.IsProtected)
-			//			if (!section.ElementInformation.IsLocked)
-			//			{
-			//				try
-			//				{
-			//					section.SectionInformation.ProtectSection("DataProtectionConfigurationProvider");
-			//					section.SectionInformation.ForceSave = true;
-			//					config.Save(ConfigurationSaveMode.Full);
-			//				} catch{}
-			//			}
+			/*foreach (ConfigurationSection section in config.Sections)
+				if (section != null)
+					if (!section.SectionInformation.IsProtected)
+						if (!section.ElementInformation.IsLocked)
+						{
+							try
+							{
+								section.SectionInformation.ProtectSection("DataProtectionConfigurationProvider");
+								section.SectionInformation.ForceSave = true;
+								config.Save(ConfigurationSaveMode.Full);
+							} catch{}
+						}*/
 		}
 
 		public static void UnEncryptConfig()
@@ -130,15 +132,68 @@ namespace NSDMasterInventorySF.io
 						config.Save(ConfigurationSaveMode.Full);
 					}
 
-			//foreach (ConfigurationSection section in config.Sections)
-			//	if (section != null)
-			//		if (!section.SectionInformation.IsProtected)
-			//			if (!section.ElementInformation.IsLocked)
-			//			{
-			//				section.SectionInformation.UnprotectSection();
-			//				section.SectionInformation.ForceSave = true;
-			//				config.Save(ConfigurationSaveMode.Full);
-			//			}
+			/*foreach (ConfigurationSection section in config.Sections)
+				if (section != null)
+					if (!section.SectionInformation.IsProtected)
+						if (!section.ElementInformation.IsLocked)
+						{
+							section.SectionInformation.UnprotectSection();
+							section.SectionInformation.ForceSave = true;
+							config.Save(ConfigurationSaveMode.Full);
+						}*/
+		}
+
+		private static readonly byte[] Entropy = System.Text.Encoding.Unicode.GetBytes("Salt Is Not A Password");
+
+		public static string EncryptString(System.Security.SecureString input)
+		{
+			byte[] encryptedData = System.Security.Cryptography.ProtectedData.Protect(
+				System.Text.Encoding.Unicode.GetBytes(ToInsecureString(input)),
+				Entropy,
+				System.Security.Cryptography.DataProtectionScope.CurrentUser);
+			return Convert.ToBase64String(encryptedData);
+		}
+
+		public static SecureString DecryptString(string encryptedData)
+		{
+			try
+			{
+				byte[] decryptedData = System.Security.Cryptography.ProtectedData.Unprotect(
+					Convert.FromBase64String(encryptedData),
+					Entropy,
+					System.Security.Cryptography.DataProtectionScope.CurrentUser);
+				return ToSecureString(System.Text.Encoding.Unicode.GetString(decryptedData));
+			}
+			catch
+			{
+				return new SecureString();
+			}
+		}
+
+		public static SecureString ToSecureString(string input)
+		{
+			SecureString secure = new SecureString();
+			foreach (char c in input)
+			{
+				secure.AppendChar(c);
+			}
+			secure.MakeReadOnly();
+			return secure;
+		}
+
+		public static string ToInsecureString(SecureString input)
+		{
+			string returnValue = string.Empty;
+			IntPtr ptr = System.Runtime.InteropServices.Marshal.SecureStringToBSTR(input);
+			try
+			{
+				returnValue = System.Runtime.InteropServices.Marshal.PtrToStringBSTR(ptr);
+			}
+			finally
+			{
+				System.Runtime.InteropServices.Marshal.ZeroFreeBSTR(ptr);
+			}
+			return returnValue;
 		}
 
 		/*

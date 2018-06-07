@@ -11,7 +11,7 @@ using Syncfusion.Windows.Tools.Controls;
 namespace NSDMasterInventorySF
 {
 	/// <summary>
-	///     Interaction logic for DatabaseManager.xaml
+	///     Interaction logic for ConnectionManager.xaml
 	/// </summary>
 	public partial class DatabaseManagerError
 	{
