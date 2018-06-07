@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -18,7 +18,12 @@ namespace NSDMasterInventorySF.ui
 {
 	public static class UiHelper
 	{
-		public static bool ShouldFireGridSorting = true;
+		public static bool IsWindowOpen<T>(string name = "") where T : Window
+		{
+			return string.IsNullOrEmpty(name)
+				? Application.Current.Windows.OfType<T>().Any()
+				: Application.Current.Windows.OfType<T>().Any(w => w.Name.Equals(name));
+		}
 
 		public static T GetChildOfType<T>(this DependencyObject depObj) where T : DependencyObject
 		{
@@ -85,10 +90,14 @@ namespace NSDMasterInventorySF.ui
 			};
 
 			//dataGrid.SearchHelper = new SearchHelperExt(dataGrid);
-			//dataGrid.SortColumnDescriptions.CollectionChanged += (sender, args) =>
-			//{
-			//	window.ResetSorts.IsChecked = false;
-			//};
+			/*dataGrid.SortColumnDescriptions.CollectionChanged += (sender, args) =>
+			{
+				window.ResetSorts.IsChecked = false;
+			};
+			dataGrid.GroupColumnDescriptions.CollectionChanged += (sender, args) =>
+			{
+				window.ResetGroupsBox.IsChecked = false;
+			};*/
 			//dataGrid.RecordDeleted += (sender, args) => { window.RevertChanges.IsEnabled = true; };
 
 			var j = 0;
@@ -103,7 +112,6 @@ namespace NSDMasterInventorySF.ui
 
 				j++;
 			};
-
 			return dataGrid;
 		}
 
@@ -337,12 +345,6 @@ namespace NSDMasterInventorySF.ui
 
 		public static void ResetGridSorting(SfDataGrid dataGrid, string prefab, bool shouldSort)
 		{
-			if (!ShouldFireGridSorting)
-			{
-				ShouldFireGridSorting = true;
-				return;
-			}
-
 			if (!shouldSort)
 			{
 				dataGrid.SortColumnDescriptions.Clear();
@@ -374,7 +376,7 @@ namespace NSDMasterInventorySF.ui
 					}
 					catch
 					{
-						Debug.WriteLine("sorter ERROR!");
+						//Debug.WriteLine("sorter ERROR!");
 					}
 				}
 
@@ -390,8 +392,6 @@ namespace NSDMasterInventorySF.ui
 				//ResetGridSorting(dataGrid, prefab, true);
 
 				window.ResetGroupsBox.IsChecked = false;
-
-				window.SearchField.IsEnabled = true;
 
 				return;
 			}
@@ -418,7 +418,7 @@ namespace NSDMasterInventorySF.ui
 				conn.Close();
 			}
 
-			window.SearchField.IsEnabled = false;
+			//window.SearchField.IsEnabled = false;
 
 			//ResetGridSorting(dataGrid, prefab);
 		}

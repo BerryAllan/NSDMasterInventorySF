@@ -247,7 +247,6 @@ namespace NSDMasterInventorySF
 		private void SaveChanges()
 		{
 			System.Windows.Forms.Cursor.Current = Cursors.WaitCursor;
-			App.SavingCurrently = true;
 			_prefabTable.AcceptChanges();
 
 			List<string> rows = new List<string>();
@@ -274,7 +273,7 @@ namespace NSDMasterInventorySF
 				{
 					using (var cmd =
 						new SqlCommand(
-							$"CREATE TABLE [{Settings.Default.Schema}_PREFABS].[{_prefabName}] ([COLUMNS] TEXT, [TYPES] TEXT, [SORTBYS] TEXT, [GROUPS] TEXT)",
+							$"CREATE TABLE [{Settings.Default.Schema}_PREFABS].[{_prefabName}] ([COLUMNS] NVARCHAR(MAX), [TYPES] NVARCHAR(MAX), [SORTBYS] NVARCHAR(MAX), [GROUPS] NVARCHAR(MAX))",
 							conn))
 						cmd.ExecuteNonQuery();
 				}
@@ -447,7 +446,6 @@ namespace NSDMasterInventorySF
 				conn.Close();
 			}
 
-			App.SavingCurrently = false;
 			System.Windows.Forms.Cursor.Current = Cursors.Default;
 		}
 

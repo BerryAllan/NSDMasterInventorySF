@@ -8,6 +8,8 @@
         <e p="AI Setup Project.aiproj" t="IncludeRecursive" />
       </e>
       <e p="NSDMasterInventorySF" t="IncludeRecursive">
+        <e p="AboutWindow.xaml" t="Include" />
+        <e p="AboutWindow.xaml.cs" t="Include" />
         <e p="app.config" t="Include" />
         <e p="app.manifest" t="Include" />
         <e p="App.xaml" t="Include" />
@@ -17,6 +19,8 @@
         <e p="ColumnChooser.xaml.cs" t="Include" />
         <e p="ComboBoxBuilder.xaml" t="Include" />
         <e p="ComboBoxBuilder.xaml.cs" t="Include" />
+        <e p="ConnectionManager.xaml" t="Include" />
+        <e p="ConnectionManager.xaml.cs" t="Include" />
         <e p="DatabaseManager.xaml" t="Include" />
         <e p="DatabaseManager.xaml.cs" t="Include" />
         <e p="DatabaseManagerError.xaml" t="Include" />
@@ -49,6 +53,7 @@
           <e p="RuntimeToolbar_16x.png" t="Include" />
           <e p="Schema_16x.png" t="Include" />
           <e p="SharedModule_16x.png" t="Include" />
+          <e p="Structure_grey_16x.png" t="Include" />
           <e p="StyleBlock_16x.png" t="Include" />
           <e p="table-save.png" t="Include" />
           <e p="Table_16x.png" t="Include" />
@@ -95,6 +100,8 @@
           <e p="jquery.signalR-2.2.3.min.js" t="Include" />
         </e>
         <e p="Settings.cs" t="Include" />
+        <e p="SpreadsheetEditor.xaml" t="Include" />
+        <e p="SpreadsheetEditor.xaml.cs" t="Include" />
         <e p="StyleChooser.xaml" t="Include" />
         <e p="StyleChooser.xaml.cs" t="Include" />
         <e p="TableManager.xaml" t="Include" />
@@ -110,6 +117,37 @@
         </e>
       </e>
       <e p="NSDMasterInventorySF.sln" t="IncludeFlat" />
+      <e p="NSDMasterInventorySFUWP" t="IncludeRecursive">
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="Assets" t="Include">
+          <e p="LockScreenLogo.scale-200.png" t="Include" />
+          <e p="SplashScreen.scale-200.png" t="Include" />
+          <e p="Square150x150Logo.scale-200.png" t="Include" />
+          <e p="Square44x44Logo.scale-200.png" t="Include" />
+          <e p="Square44x44Logo.targetsize-24_altform-unplated.png" t="Include" />
+          <e p="StoreLogo.png" t="Include" />
+          <e p="Wide310x150Logo.scale-200.png" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="MainPage.xaml" t="Include" />
+        <e p="MainPage.xaml.cs" t="Include" />
+        <e p="MasterTablePage.xaml" t="Include" />
+        <e p="MasterTablePage.xaml.cs" t="Include" />
+        <e p="NSDMasterInventorySFUWP.csproj" t="IncludeRecursive" />
+        <e p="NSDMasterInventorySFUWP_TemporaryKey.pfx" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Package.appxmanifest" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Default.rd.xml" t="Include" />
+        </e>
+        <e p="Recycled.xaml" t="Include" />
+        <e p="Recycled.xaml.cs" t="Include" />
+        <e p="ui" t="Include">
+          <e p="UiHelper.cs" t="Include" />
+        </e>
+      </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>

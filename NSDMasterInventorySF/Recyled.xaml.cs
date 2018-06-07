@@ -147,9 +147,9 @@ namespace NSDMasterInventorySF
 						comm.CommandText = $"CREATE TABLE RECYCLED.[{Settings.Default.Schema}] ( ";
 						for (var i = 0; i < 250; i++)
 							if (i != 249)
-								comm.CommandText += $"Column{i} TEXT,";
+								comm.CommandText += $"Column{i} NVARCHAR(MAX),";
 							else
-								comm.CommandText += $"Column{i} TEXT";
+								comm.CommandText += $"Column{i} NVARCHAR(MAX)";
 
 						comm.CommandText += " )";
 						comm.ExecuteNonQuery();

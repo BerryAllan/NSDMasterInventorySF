@@ -16,14 +16,14 @@ using NSDMasterInventorySF.ui;
 using Ookii.Dialogs.Wpf;
 using Syncfusion.SfSkinManager;
 using Syncfusion.UI.Xaml.Grid;
+using Syncfusion.UI.Xaml.Grid.Converter;
 using Syncfusion.Windows.Tools.Controls;
+using Syncfusion.XlsIO;
 using ZXing;
 using Cursors = System.Windows.Forms.Cursors;
 using DataColumn = System.Data.DataColumn;
 using DataRow = System.Data.DataRow;
-using Enum = System.Enum;
 using TextChangedEventArgs = System.Windows.Controls.TextChangedEventArgs;
-using Timer = System.Timers.Timer;
 
 namespace NSDMasterInventorySF
 {
@@ -50,6 +50,12 @@ namespace NSDMasterInventorySF
 			CommandBindings.Add(new CommandBinding(NextTabCommand, NextTab));
 			PreviousTabCommand.InputGestures.Add(new KeyGesture(Key.Tab, ModifierKeys.Control | ModifierKeys.Shift));
 			CommandBindings.Add(new CommandBinding(PreviousTabCommand, PreviousTab));
+			CreateBarcodeCommand.InputGestures.Add(new KeyGesture(Key.B, ModifierKeys.Control));
+			CommandBindings.Add(new CommandBinding(CreateBarcodeCommand, CreateBarcode));
+			SaveCurrentSheetCommand.InputGestures.Add(new KeyGesture(Key.S, ModifierKeys.Control));
+			CommandBindings.Add(new CommandBinding(SaveCurrentSheetCommand, ExportCurrentSheetToExcel));
+			RefreshCommand.InputGestures.Add(new KeyGesture(Key.R, ModifierKeys.Control));
+			CommandBindings.Add(new CommandBinding(RefreshCommand, RefreshAll_OnClick));
 
 			InitializeOrRefreshEverything(0);
 
@@ -58,6 +64,91 @@ namespace NSDMasterInventorySF
 				Enabled = true
 			};
 			backupTimer.Elapsed += Backup;
+		}
+
+		private void ExportCurrentSheetToExcel(object sender, ExecutedRoutedEventArgs e)
+		{
+			var options = new ExcelExportingOptions {ExcelVersion = ExcelVersion.Excel2013};
+			var excelEngine = new ExcelEngine();
+			DataTable itemsSource = ((DataTable) MasterDataGrids[MasterTabControl.SelectedIndex].ItemsSource);
+			string tempSheetName = App.RandomString(12);
+			var workBook = excelEngine.Excel.Workbooks.Create(new[] {tempSheetName});
+
+			var tempExcelEngine = MasterDataGrids[MasterTabControl.SelectedIndex]
+				.ExportToExcel(MasterDataGrids[MasterTabControl.SelectedIndex].View, options);
+			var workSheet = tempExcelEngine.Excel.Workbooks[0].Worksheets[0];
+			workSheet.Name = itemsSource.TableName;
+			workBook.Worksheets.AddCopy(workSheet);
+			//workBook.Worksheets.Remove(1);
+			SaveFileDialog sfd = new SaveFileDialog
+			{
+				FilterIndex = 3,
+				Filter =
+					"Excel 97 to 2003 Files(*.xls)|*.xls|Excel 2007 to 2010 Files(*.xlsx)|*.xlsx|Excel 2013 File(*.xlsx)|*.xlsx"
+			};
+
+			if (sfd.ShowDialog() == true)
+			{
+				using (Stream stream = sfd.OpenFile())
+				{
+					if (sfd.FilterIndex == 1)
+						workBook.Version = ExcelVersion.Excel97to2003;
+
+					else if (sfd.FilterIndex == 2)
+						workBook.Version = ExcelVersion.Excel2010;
+
+					else
+						workBook.Version = ExcelVersion.Excel2013;
+					workBook.Worksheets.Remove(tempSheetName);
+					workBook.SaveAs(stream);
+				}
+
+				//Message box confirmation to view the created workbook.
+
+				if (MessageBox.Show("Do you want to view the spreadsheet?", "Spreadsheet has been created",
+					    MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
+				{
+					new SpreadsheetEditor(sfd.FileName).Show();
+				}
+			}
+		}
+
+		private void CreateBarcode(object sender, ExecutedRoutedEventArgs e)
+		{
+			if (MasterDataGrids[MasterTabControl.SelectedIndex].SelectionController.SelectedCells.Count > 0)
+			{
+				var sfd = new SaveFileDialog
+				{
+					DefaultExt = ".png",
+					Filter = @"PNG File (*.png)|*.png|JPG File(*.jpg)|*.jpg|JPEG File(*.jpeg)|*.jpeg"
+				};
+
+				if (sfd.ShowDialog() != true) return;
+
+				string item = BarcodeGenerator.GetItemStringFromDataRow(
+					((DataRowView) MasterDataGrids[MasterTabControl.SelectedIndex].SelectionController
+						.SelectedCells[
+							MasterDataGrids[MasterTabControl.SelectedIndex].SelectionController.SelectedCells.Count - 1]
+						.RowData).Row);
+				BarcodeGenerator.SaveBarcode(item, Path.GetFileNameWithoutExtension(sfd.FileName), sfd.FileName);
+			}
+			else if (MasterDataGrids[MasterTabControl.SelectedIndex].SelectionController.SelectedRows.Count > 0)
+			{
+				var sfd = new SaveFileDialog
+				{
+					DefaultExt = ".png",
+					Filter = @"PNG File (*.png)|*.png|JPG File(*.jpg)|*.jpg|JPEG File(*.jpeg)|*.jpeg"
+				};
+
+				if (sfd.ShowDialog() != true) return;
+
+				string item = BarcodeGenerator.GetItemStringFromDataRow(
+					((DataRowView) MasterDataGrids[MasterTabControl.SelectedIndex].SelectionController
+						.SelectedRows[
+							MasterDataGrids[MasterTabControl.SelectedIndex].SelectionController.SelectedRows.Count - 1]
+						.RowData).Row);
+				BarcodeGenerator.SaveBarcode(item, Path.GetFileNameWithoutExtension(sfd.FileName), sfd.FileName);
+			}
 		}
 
 		private void PreviousTab(object sender, ExecutedRoutedEventArgs e)
@@ -107,8 +198,8 @@ namespace NSDMasterInventorySF
 			var dataSets = App.MainSet(this);
 			MasterDataSet = dataSets;
 			MasterDataGrids.Clear();
-			Prefabs.Clear();
 			EditedCells.Clear();
+			ProgressGrid.Visibility = Visibility.Hidden;
 
 			using (var conn =
 				new SqlConnection(App.ConnectionString))
@@ -150,6 +241,7 @@ namespace NSDMasterInventorySF
 				ResetGroupsBox.IsEnabled = false;
 				DeleteModeCheckBox.IsEnabled = false;
 				//RevertChanges.IsEnabled = false;
+				NewRowButton.IsEnabled = false;
 				RefreshAll.IsEnabled = false;
 				BarcodeTextBox.IsEnabled = false;
 				BarcodeInventoryCommit.IsEnabled = false;
@@ -164,6 +256,7 @@ namespace NSDMasterInventorySF
 				RefreshAll.IsEnabled = true;
 				BarcodeTextBox.IsEnabled = true;
 				BarcodeInventoryCommit.IsEnabled = true;
+				NewRowButton.IsEnabled = true;
 			}
 
 			Recycled.FillRecycledDataTable();
@@ -199,7 +292,6 @@ namespace NSDMasterInventorySF
 		{
 			int sheetIndex = MasterTabControl.Items.IndexOf(tab);
 
-			Prefabs.Insert(sheetIndex, prefab);
 			EditedCells.Insert(sheetIndex, new Dictionary<int, List<int>>());
 
 			SfDataGrid dataGrid = UiHelper.DefaultDataGridTemplate(dataTable, sheetIndex, this, prefab);
@@ -208,6 +300,7 @@ namespace NSDMasterInventorySF
 			tab.Content = dataGrid;
 		}
 
+/*
 		private void Revert_Changes(object sender, RoutedEventArgs e)
 		{
 			//for (var i = 0; i < MasterDataSet.Tables.Count; i++)
@@ -220,19 +313,11 @@ namespace NSDMasterInventorySF
 			foreach (DataTable table in MasterDataSet.Tables)
 				table.RejectChanges();
 		}
+*/
 
 		private void ExportToExcel(object sender, RoutedEventArgs e)
 		{
-			var saveFileDialog = new SaveFileDialog
-			{
-				DefaultExt = ".xlsx",
-				Filter = "Excel 2007+ (*.xlsx)|*.xlsx|Excel 2007- (*.xls)|*.xls"
-			};
-			if (saveFileDialog.ShowDialog() == true)
-			{
-				ExcelWriter.Write(MasterDataSet, saveFileDialog.FileName,
-					!Path.GetExtension(saveFileDialog.FileName).Equals(".xls"));
-			}
+			ExcelWriter.Write(MasterDataGrids);
 		}
 
 		private void ExportToCsv(object sender, RoutedEventArgs e)
@@ -325,38 +410,54 @@ namespace NSDMasterInventorySF
 
 		private void ResetSorting(object sender, RoutedEventArgs e)
 		{
-			var j = 0;
-			foreach (SfDataGrid dataGrid in MasterDataGrids)
+			using (var conn = new SqlConnection(App.ConnectionString))
 			{
-				UiHelper.ResetGridSorting(dataGrid, Prefabs[j], true);
-				dataGrid.ClearFilters();
-				j++;
+				foreach (SfDataGrid dataGrid in MasterDataGrids)
+				{
+					if (ResetSorts.IsChecked != null && (bool) ResetSorts.IsChecked)
+					{
+						UiHelper.ResetGridSorting(dataGrid,
+							App.GetPrefabOfDataTable(conn, (DataTable) dataGrid.ItemsSource), true);
+					}
+					else
+					{
+						UiHelper.ResetGridSorting(dataGrid,
+							App.GetPrefabOfDataTable(conn, (DataTable) dataGrid.ItemsSource), false);
+					}
+
+					dataGrid.ClearFilters();
+				}
 			}
 		}
 
 		private void ResetGrouping(object sender, RoutedEventArgs e)
 		{
-			var j = 0;
-			foreach (SfDataGrid dataGrid in MasterDataGrids)
+			using (var conn = new SqlConnection(App.ConnectionString))
 			{
-				UiHelper.ResetGridGrouping(dataGrid, Prefabs[j], this, true);
-				j++;
+				conn.Open();
+				foreach (SfDataGrid dataGrid in MasterDataGrids)
+				{
+					if (ResetGroupsBox.IsChecked != null && (bool) ResetGroupsBox.IsChecked)
+					{
+						UiHelper.ResetGridGrouping(dataGrid,
+							App.GetPrefabOfDataTable(conn, (DataTable) dataGrid.ItemsSource), this, true);
+					}
+					else
+					{
+						UiHelper.ResetGridGrouping(dataGrid,
+							App.GetPrefabOfDataTable(conn, (DataTable) dataGrid.ItemsSource), this, false);
+					}
+				}
+
+				conn.Close();
 			}
 		}
 
-		private void UnResetGrouping(object sender, RoutedEventArgs e)
+		private void ClearRowFilters()
 		{
-			var j = 0;
-			foreach (SfDataGrid dataGrid in MasterDataGrids)
-			{
-				UiHelper.ResetGridGrouping(dataGrid, Prefabs[j], this, false);
-				j++;
-			}
-		}
-
-		private static void ClearRowFilters()
-		{
-			foreach (DataTable table in MasterDataSet.Tables) table.DefaultView.RowFilter = string.Empty;
+			MasterDataSet.Tables[MasterTabControl.SelectedIndex].DefaultView.RowFilter = string.Empty;
+			MasterDataGrids[MasterTabControl.SelectedIndex].ClearFilters();
+			MasterDataGrids[MasterTabControl.SelectedIndex].GroupColumnDescriptions.Clear();
 		}
 
 		private void OpenPrefabManagerMenuItemClick(object sender, RoutedEventArgs e)
@@ -408,16 +509,16 @@ namespace NSDMasterInventorySF
 			Close();
 		}
 
-		private void OpenDatabaseManagerMenuItemClick(object sender, RoutedEventArgs e)
+		private void OpenConnectionManagerMenuItemClick(object sender, RoutedEventArgs e)
 		{
 			//SaveToDb();
-			var databaseManager = new DatabaseManager(this)
+			var connectionManager = new ConnectionManager(this)
 			{
 				Owner = this,
 				ShowInTaskbar = false,
 				ResizeMode = ResizeMode.NoResize
 			};
-			databaseManager.ShowDialog();
+			connectionManager.ShowDialog();
 		}
 
 		private void OpenSheetManagerMenuItemClick(object sender, RoutedEventArgs e)
@@ -551,6 +652,7 @@ namespace NSDMasterInventorySF
 			InitializeOrRefreshEverything(MasterTabControl.SelectedIndex);
 		}
 
+/*
 		public static bool IsAvailable(SqlConnection conn)
 		{
 			try
@@ -565,16 +667,11 @@ namespace NSDMasterInventorySF
 
 			return true;
 		}
+*/
 
 		private void ViewRecycled(object sender, RoutedEventArgs e)
 		{
 			new Recycled().Show();
-		}
-
-		private void UnResetSorting(object sender, RoutedEventArgs e)
-		{
-			var j = 0;
-			foreach (SfDataGrid grid in MasterDataGrids) UiHelper.ResetGridSorting(grid, Prefabs[j], false);
 		}
 
 		#region Fields
@@ -583,16 +680,17 @@ namespace NSDMasterInventorySF
 		public static volatile DataSet MasterDataSet;
 		public static volatile List<DataTable> RevertDataTables = new List<DataTable>();
 		public static volatile List<SfDataGrid> MasterDataGrids = new List<SfDataGrid>();
-		public static volatile List<string> Prefabs = new List<string>();
 		public static volatile List<Dictionary<int, List<int>>> EditedCells = new List<Dictionary<int, List<int>>>();
 
-		//public static RoutedCommand NewCommand = new RoutedCommand();
-		public static RoutedCommand FindReplaceCommand = new RoutedCommand();
-		public static RoutedCommand FindCommand = new RoutedCommand();
-		public static RoutedCommand NewRowCommand = new RoutedCommand();
-		public static RoutedCommand FullScreenCommand = new RoutedCommand();
-		public static RoutedCommand NextTabCommand = new RoutedCommand();
-		public static RoutedCommand PreviousTabCommand = new RoutedCommand();
+		public  RoutedCommand FindReplaceCommand = new RoutedCommand();
+		public  RoutedCommand FindCommand = new RoutedCommand();
+		public  RoutedCommand NewRowCommand = new RoutedCommand();
+		public  RoutedCommand FullScreenCommand = new RoutedCommand();
+		public  RoutedCommand NextTabCommand = new RoutedCommand();
+		public  RoutedCommand PreviousTabCommand = new RoutedCommand();
+		public  RoutedCommand CreateBarcodeCommand = new RoutedCommand();
+		public  RoutedCommand SaveCurrentSheetCommand = new RoutedCommand();
+		public  RoutedCommand RefreshCommand = new RoutedCommand();
 
 		#endregion
 
@@ -642,6 +740,33 @@ namespace NSDMasterInventorySF
 			//newRow.AcceptChanges();
 
 			App.ThisMadeLastChange = true;
+		}
+
+		private void MasterTabControl_OnSelectedItemChangedEvent(object sender, SelectedItemChangedEventArgs e)
+		{
+			/*if (MasterDataGrids != null && MasterDataGrids.Count > 0)
+				SearchField.IsEnabled =
+					!(MasterDataGrids[MasterTabControl.SelectedIndex].GroupColumnDescriptions.Count > 0);*/
+		}
+
+		private void OpenDatabaseManagerMenuItemClick(object sender, RoutedEventArgs e)
+		{
+			var databaseManager = new DatabaseManager(this)
+			{
+				Owner = this,
+				ShowInTaskbar = false,
+				ResizeMode = ResizeMode.NoResize
+			};
+			databaseManager.ShowDialog();
+		}
+
+		private void AboutMenuItemClick(object sender, RoutedEventArgs e)
+		{
+			new AboutWindow
+			{
+				ShowInTaskbar = false,
+				Owner = this
+			}.ShowDialog();
 		}
 	}
 }

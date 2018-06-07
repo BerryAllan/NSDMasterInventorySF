@@ -3,43 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NSDMasterInventorySF"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
         mc:Ignorable="d"
-        Title="Database Manager" Height="300" Width="310" Loaded="OnLoaded">
-	<DockPanel Margin="10" VerticalAlignment="Center">
-		<StackPanel>
-			<Label FontWeight="Bold">
-				<TextBlock TextWrapping="WrapWithOverflow" IsEnabled="False">
-					Enter information to connect to the selected SQL Server and Database.
-				</TextBlock>
-			</Label>
-			<WrapPanel DockPanel.Dock="Left" HorizontalAlignment="Right">
-				<Label Content="Server: " />
-				<syncfusion:SfTextBoxExt x:Name="ServerBox" VerticalAlignment="Center" LostFocus="OnLostFocus" Width="200"
-				                         GotFocus="BoxGotFocus" />
-			</WrapPanel>
-			<WrapPanel DockPanel.Dock="Left" HorizontalAlignment="Right">
-				<Label Content="Username: " />
-				<syncfusion:SfTextBoxExt x:Name="UserIDBox" VerticalAlignment="Center" LostFocus="OnLostFocus" Width="200"
-				                         GotFocus="BoxGotFocus" />
-			</WrapPanel>
-			<WrapPanel DockPanel.Dock="Left" HorizontalAlignment="Right">
-				<Label Content="Password: " />
-				<PasswordBox x:Name="PasswordBox" VerticalAlignment="Center" LostFocus="OnLostFocus" Width="200"
-				             GotFocus="PasswordBox_OnGotKeyboardFocus" />
-			</WrapPanel>
-			<WrapPanel DockPanel.Dock="Left" HorizontalAlignment="Right">
-				<Label Content="Database: " />
-				<syncfusion:AutoComplete x:Name="DatabaseComboBox" Focusable="False" LostFocus="OnLostFocus" IsAutoAppend="True"
-				                         GotFocus="AutoCompleteGotFocus" CanResizePopup="False" VerticalAlignment="Center"
-				                         Width="200" />
-			</WrapPanel>
-			<WrapPanel DockPanel.Dock="Left" HorizontalAlignment="Right">
-				<Label Content="Schema: " />
-				<syncfusion:AutoComplete x:Name="SchemaComboBox" LostFocus="OnLostFocus" CanResizePopup="False" IsAutoAppend="True"
-				                         GotFocus="AutoCompleteGotFocus" VerticalAlignment="Center" Width="200" />
-			</WrapPanel>
-			<Button Margin="10" Content="Connect" Click="ConnectClicked" />
+        Title="Database Manager" Height="450" Width="400" Loaded="OnLoaded" Closed="DatabaseManager_OnClosed">
+	<DockPanel>
+		<StackPanel DockPanel.Dock="Left" Margin="10,10,10,10" VerticalAlignment="Center">
+			<Button Content="Add" FontSize="16" IsEnabled="True" Margin="0,0,0,0" x:Name="AddButton" Click="AddSchemaClick" />
+			<Button FontSize="16" Content="Delete" IsEnabled="False" Click="DeleteButtonClick" Margin="0,100,0,0"
+			        x:Name="DeleteButton" />
 		</StackPanel>
+		<TreeView x:Name="DbTreeView" DockPanel.Dock="Right" SelectedItemChanged="SheetListBox_OnSelectionChanged"
+		                        Margin="10,10,10,10" KeyDown="TreeGridOnKeyDown" />
 	</DockPanel>
 </Window>

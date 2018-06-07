@@ -1,0 +1,71 @@
+﻿<Page
+	x:Class="NSDMasterInventorySFUWP.MasterTablePage"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="using:NSDMasterInventorySFUWP"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+	xmlns:input="using:Syncfusion.UI.Xaml.Controls.Input"
+	mc:Ignorable="d" RequestedTheme="Default">
+	<controls:DockPanel>
+		<controls:WrapPanel controls:DockPanel.Dock="Top" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left">
+			<AutoSuggestBox x:ConnectionId='5' x:FieldModifier="public" Name="SearchBox" PlaceholderText="Find"                                     QueryIcon="Find"
+			                                                                                                           
+			                Width="250" />
+			<Button x:ConnectionId='6' x:FieldModifier="public" Name="NewRowButton" Margin="10,0,0,0"                             >
+				<StackPanel Orientation="Horizontal">
+					<SymbolIcon Symbol="ShowBcc" />
+					<TextBlock Text="New Row" Margin="5,0,0,0" />
+				</StackPanel>
+			</Button>
+			<AppBarSeparator />
+			<ToggleButton x:ConnectionId='7' x:FieldModifier="public" Name="DefaultSortingButton" Margin="0,0,0,0"                     >
+				<StackPanel Orientation="Horizontal">
+					<SymbolIcon Symbol="Bullets" />
+					<TextBlock Text="Default Sorting and Filtering" Margin="5,0,0,0" />
+				</StackPanel>
+			</ToggleButton>
+			<ToggleButton x:ConnectionId='8' x:FieldModifier="public" Name="DefaultGroupingButton" Margin="10,0,0,0"                                                    >
+				<StackPanel Orientation="Horizontal">
+					<SymbolIcon Symbol="Bookmarks" />
+					<TextBlock Text="Default Grouping" Margin="5,0,0,0" />
+				</StackPanel>
+			</ToggleButton>
+			<AppBarSeparator />
+			<ToggleButton x:ConnectionId='9' x:FieldModifier="public" Name="DeleteModeButton" Margin="0,0,0,0"                        >
+				<StackPanel Orientation="Horizontal" >
+					<SymbolIcon Symbol="Cancel" />
+					<TextBlock Text="Delete Mode" Margin="5,0,0,0" />
+				</StackPanel>
+			</ToggleButton>
+			<AppBarSeparator />
+			<Button x:ConnectionId='10' x:FieldModifier="public" Name="RefreshAll"                           >
+				<StackPanel Orientation="Horizontal">
+					<SymbolIcon Symbol="Refresh" />
+					<TextBlock Text="Refresh" Margin="5,0,0,0" />
+				</StackPanel>
+				<Button.KeyboardAccelerators>
+					<KeyboardAccelerator Modifiers="Control" Key="R" />
+				</Button.KeyboardAccelerators>
+			</Button>
+		</controls:WrapPanel>
+		<controls:DockPanel Dock="Bottom" Margin="10">
+			<Button x:ConnectionId='3' x:FieldModifier="public"                             Name="BarcodeButton" Content="Inventory Item" controls:DockPanel.Dock="Right" Margin="10,0,0,0" />
+			<TextBox x:ConnectionId='4' x:FieldModifier="public"                         Name="BarcodeTextBox" PlaceholderText="Enter Barcode Here" controls:DockPanel.Dock="Left" />
+		</controls:DockPanel>
+		<Pivot x:ConnectionId='2' x:FieldModifier="public" Name="MasterPivot" />
+		<controls:DockPanel.KeyboardAccelerators>
+			<KeyboardAccelerator x:ConnectionId='11' Modifiers="Control" Key="Tab"                                                 />
+			<KeyboardAccelerator x:ConnectionId='12' Modifiers="Control" Key="N"                           />
+			<KeyboardAccelerator x:ConnectionId='13' Modifiers="Control" Key="R"                           />
+			<KeyboardAccelerator x:ConnectionId='14' Modifiers="Control" Key="S"                               />
+			<KeyboardAccelerator x:ConnectionId='15' Modifiers="Control" Key="G"                               />
+			<KeyboardAccelerator x:ConnectionId='16' Modifiers="Control" Key="D"                               />
+			<KeyboardAccelerator x:ConnectionId='17' Modifiers="Control" Key="F"                         />
+			<KeyboardAccelerator x:ConnectionId='18' Modifiers="Control, Shift" Key="F"                                />
+		</controls:DockPanel.KeyboardAccelerators>
+	</controls:DockPanel>
+
+</Page>
+

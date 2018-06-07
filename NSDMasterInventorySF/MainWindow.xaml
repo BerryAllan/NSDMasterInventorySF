@@ -89,6 +89,11 @@
 				</MenuItem>
 			</MenuItem>
 			<MenuItem Header="_Edit">
+				<MenuItem Header="Change _Style" Click="OpenStyleChooser">
+					<MenuItem.Icon>
+						<Image Source="Images/StyleBlock_16x.png" />
+					</MenuItem.Icon>
+				</MenuItem>
 				<MenuItem Header="_Table Manager" Click="OpenSheetManagerMenuItemClick">
 					<MenuItem.Icon>
 						<Image Source="Images/Table_16x.png" />
@@ -96,19 +101,22 @@
 				</MenuItem>
 				<MenuItem Header="_Prefab Manager" Click="OpenPrefabManagerMenuItemClick">
 					<MenuItem.Icon>
-						<Image Source="Images/Schema_16x.png" />
+						<Image Source="Images/Structure_grey_16x.png" />
 					</MenuItem.Icon>
 				</MenuItem>
 				<MenuItem Header="_Database Manager" Click="OpenDatabaseManagerMenuItemClick">
 					<MenuItem.Icon>
+						<Image Source="Images/Schema_16x.png" />
+					</MenuItem.Icon>
+				</MenuItem>
+				<MenuItem Header="_Connection Manager" Click="OpenConnectionManagerMenuItemClick">
+					<MenuItem.Icon>
 						<Image Source="Images/ConnectToDatabase_16x.png" />
 					</MenuItem.Icon>
 				</MenuItem>
-				<MenuItem Header="Change _Style" Click="OpenStyleChooser">
-					<MenuItem.Icon>
-						<Image Source="Images/StyleBlock_16x.png" />
-					</MenuItem.Icon>
-				</MenuItem>
+			</MenuItem>
+			<MenuItem Header="_Help">
+				<MenuItem Header="_About" Click="AboutMenuItemClick"></MenuItem>
 			</MenuItem>
 		</Menu>
 		<WrapPanel DockPanel.Dock="Top" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,5,5">
@@ -130,7 +138,7 @@
 			<syncfusion:ButtonAdv Label="New Row" x:Name="NewRowButton" SmallIcon="Images/NewKPI_16x.png" Margin="0,0,10,0"
 			                      Click="NewRowOnClicked" />
 			<CheckBox x:Name="ResetSorts" FontSize="14" Margin="0,0,10,0"
-			          HorizontalAlignment="Left" VerticalAlignment="Center" Checked="ResetSorting" Unchecked="UnResetSorting"
+			          HorizontalAlignment="Left" VerticalAlignment="Center" Click="ResetSorting"
 			          IsChecked="True">
 				<StackPanel Orientation="Horizontal">
 					<Image DockPanel.Dock="Left" Margin="4" HorizontalAlignment="Center" VerticalAlignment="Center"
@@ -140,7 +148,7 @@
 				</StackPanel>
 			</CheckBox>
 			<CheckBox x:Name="ResetGroupsBox" FontSize="14" Margin="0,0,10,0"
-			          HorizontalAlignment="Left" VerticalAlignment="Center" Checked="ResetGrouping" Unchecked="UnResetGrouping">
+			          HorizontalAlignment="Left" VerticalAlignment="Center" Click="ResetGrouping">
 				<StackPanel Orientation="Horizontal">
 					<Image DockPanel.Dock="Left" Margin="4" HorizontalAlignment="Center" VerticalAlignment="Center"
 					       Source="Images/GroupClause_16x.png" Width="16" Height="16" />
@@ -194,9 +202,9 @@
 			                         DockPanel.Dock="Left" x:Name="BarcodeTextBox" Margin="0,0,10,0"
 			                         ToolTip="Enter an Item Barcode here." KeyDown="BarcodeTextBox_OnKeyDown" />
 		</DockPanel>
-		<syncfusion:TabControlExt ShowTabItemContextMenu="False" AllowDragDrop="False" TabScrollButtonVisibility="Auto"
+		<syncfusion:TabControlExt ShowTabItemContextMenu="False" AllowDragDrop="True" TabScrollButtonVisibility="Auto"
 		                          TabScrollStyle="Extended" DockPanel.Dock="Left" TabStripPlacement="Bottom"
-		                          EnableLabelEdit="False"
+		                          EnableLabelEdit="False" SelectedItemChangedEvent="MasterTabControl_OnSelectedItemChangedEvent"
 		                          x:Name="MasterTabControl" />
 	</DockPanel>
 </Window>
